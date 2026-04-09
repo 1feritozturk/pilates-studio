@@ -5,17 +5,48 @@ import { useState } from 'react';
 const iletisimBilgileri = [
   { emoji: '📍', baslik: 'Adres', icerik: 'Moda Cad. No:48/B\nKadıköy, İstanbul' },
   { emoji: '📞', baslik: 'Telefon', icerik: '+90 (212) 123 45 67' },
-  { emoji: '✉️', baslik: 'E-posta', icerik: 'info@studiozen.com.tr' },
+  { emoji: '✉️', baslik: 'E-posta', icerik: 'info@elvinozturk.com.tr' },
   { emoji: '🕐', baslik: 'Çalışma Saatleri', icerik: 'Pzt–Cum: 07:00–21:00\nCmt–Paz: 09:00–18:00' },
 ];
 
 export default function IletisimPage() {
   const [form, setForm] = useState({ ad: '', email: '', telefon: '', mesaj: '' });
   const [gonderildi, setGonderildi] = useState(false);
+  const [gonderiliyor, setGonderiliyor] = useState(false);
+  const [hata, setHata] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setGonderildi(true);
+    setGonderiliyor(true);
+    setHata('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: form.ad,
+          email: form.email,
+          phone: form.telefon,
+          message: form.mesaj,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setHata(result.error || 'Mesaj gonderilirken bir sorun olustu.');
+        return;
+      }
+
+      setGonderildi(true);
+    } catch {
+      setHata('Mesaj gonderilirken baglanti hatasi olustu.');
+    } finally {
+      setGonderiliyor(false);
+    }
   };
 
   return (
@@ -70,7 +101,7 @@ export default function IletisimPage() {
                 rel="noopener noreferrer"
                 className="text-xs text-[#7D9B76] underline underline-offset-4 mt-1 inline-block"
               >
-                Google Haritalar'da görüntüle
+                Google Haritalar&apos;da görüntüle
               </a>
             </div>
           </div>
@@ -140,11 +171,18 @@ export default function IletisimPage() {
                 />
               </div>
 
+              {hata ? (
+                <div className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">
+                  {hata}
+                </div>
+              ) : null}
+
               <button
                 type="submit"
-                className="w-full py-3.5 bg-[#7D9B76] text-white text-sm font-medium rounded-xl hover:bg-[#6A8B63] transition-colors"
+                disabled={gonderiliyor}
+                className="w-full py-3.5 bg-[#7D9B76] text-white text-sm font-medium rounded-xl hover:bg-[#6A8B63] transition-colors disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Gönder
+                {gonderiliyor ? 'Gonderiliyor...' : 'Gonder'}
               </button>
             </form>
           )}

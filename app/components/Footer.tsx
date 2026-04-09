@@ -12,7 +12,7 @@ export default function Footer() {
               <p className="text-xs tracking-[0.2em] text-[#7D9B76] uppercase">Online Pilates</p>
             </div>
             <p className="text-sm leading-relaxed">
-              Nerede olursanız olun, online grup ve bireysel derslerle Pilates'in gücünü keşfedin.
+              Nerede olursanız olun, online grup ve bireysel derslerle Pilates&apos;in gucunu kesfedin.
             </p>
           </div>
 

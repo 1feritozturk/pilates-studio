@@ -69,7 +69,7 @@ export default function Home() {
               bağlantı kurun.
             </h1>
             <p className="text-[#5A5A5A] text-lg leading-relaxed mb-10 max-w-md">
-              Nerede olursanız olun, online grup ve bireysel derslerle Pilates'in gücünü keşfedin.
+              Nerede olursanız olun, online grup ve bireysel derslerle Pilates&apos;in gucunu kesfedin.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -238,7 +238,7 @@ export default function Home() {
             Ben Elvin Öztürk.
           </h2>
           <p className="text-[#5A5A5A] leading-relaxed mb-5">
-            Pilates'i yalnızca bir egzersiz olarak değil, yaşam kalitesini artıran bir pratik olarak görüyorum. Yıllardır öğrencilerimle birebir çalışarak her bedene uygun programlar hazırlıyorum.
+            Pilates&apos;i yalnizca bir egzersiz olarak degil, yasam kalitesini artiran bir pratik olarak goruyorum. Yillardir ogrencilerimle birebir calisarak her bedene uygun programlar hazirliyorum.
           </p>
           <p className="text-[#5A5A5A] leading-relaxed mb-8">
             Online derslerimle artık dünyanın her yerinden öğrencilerimle buluşabiliyorum. Hedefim her seansta size gerçekten fayda sağlamak.

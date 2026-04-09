@@ -27,10 +27,46 @@ export default function RandevuPage() {
     not: '',
   });
   const [gonderildi, setGonderildi] = useState(false);
+  const [gonderiliyor, setGonderiliyor] = useState(false);
+  const [hata, setHata] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setGonderildi(true);
+    setGonderiliyor(true);
+    setHata('');
+
+    try {
+      const response = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          first_name: form.ad,
+          last_name: form.soyad,
+          email: form.email,
+          phone: form.telefon,
+          lesson: form.ders,
+          preferred_date: form.tarih,
+          preferred_time: form.saat,
+          experience_level: form.deneyim,
+          note: form.not,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setHata(result.error || 'Kayit sirasinda bir sorun olustu.');
+        return;
+      }
+
+      setGonderildi(true);
+    } catch {
+      setHata('Kayit gonderilirken baglanti hatasi olustu.');
+    } finally {
+      setGonderiliyor(false);
+    }
   };
 
   if (gonderildi) {
@@ -113,6 +149,12 @@ export default function RandevuPage() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
+          {hata ? (
+            <div className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">
+              {hata}
+            </div>
+          ) : null}
+
           {/* Ad Soyad */}
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -252,13 +294,14 @@ export default function RandevuPage() {
 
           <button
             type="submit"
-            className="w-full py-4 bg-[#7D9B76] text-white font-medium rounded-xl hover:bg-[#6A8B63] transition-colors text-sm tracking-wide"
+            disabled={gonderiliyor}
+            className="w-full py-4 bg-[#7D9B76] text-white font-medium rounded-xl hover:bg-[#6A8B63] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Kaydı Tamamla
+            {gonderiliyor ? 'Kayit gonderiliyor...' : 'Kaydi Tamamla'}
           </button>
 
           <p className="text-center text-xs text-[#9E9E9E]">
-            Zoom bağlantısı 24 saat içinde e-posta adresinize iletilecektir.
+            Zoom baglantisi 24 saat icinde e-posta adresinize iletilecektir.
           </p>
         </form>
       </section>

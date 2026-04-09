@@ -145,7 +145,7 @@ export default function DerslerPage() {
             >
               Online Bireysel Ders
             </h2>
-            <span className="text-sm text-white bg-[#7D9B76] px-3 py-1 rounded-full">1'e 1</span>
+            <span className="text-sm text-white bg-[#7D9B76] px-3 py-1 rounded-full">1&apos;e 1</span>
           </div>
           {bireyselDersler.map((ders) => (
             <div
