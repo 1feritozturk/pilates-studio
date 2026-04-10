@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { createMetadata, defaultKeywords, siteConfig } from '@/lib/seo';
 
 const dersler = [
   {
@@ -37,9 +39,77 @@ const avantajlar = [
   },
 ];
 
+const sikSorulanlar = [
+  {
+    soru: 'Online Pilates dersleri kimler icin uygundur?',
+    cevap:
+      'Baslangic seviyesinden duzenli spor yapanlara kadar farkli seviyelerde katilim saglanabilir. Ders icerigi mevcut seviyenize ve ihtiyaciniza gore sekillenir.',
+  },
+  {
+    soru: 'Dersler hangi platform uzerinden yapiliyor?',
+    cevap:
+      'Tum online Pilates dersleri Zoom uzerinden canli olarak yapilir. Bilgisayar, tablet veya telefon ile baglanabilirsiniz.',
+  },
+  {
+    soru: 'Istanbul disindan da katilabilir miyim?',
+    cevap:
+      'Evet. Dersler online oldugu icin Istanbul, Ankara, Izmir veya yurt disindan da katilim saglayabilirsiniz.',
+  },
+  {
+    soru: 'Bireysel Pilates dersi ile grup dersi arasindaki fark nedir?',
+    cevap:
+      'Grup dersleri ortak bir program akisi ile ilerler. Bireysel derslerde ise hedef, tempo ve hareket secimi tamamen size gore planlanir.',
+  },
+];
+
+export const metadata: Metadata = createMetadata({
+  title: 'Online Pilates Dersleri',
+  description:
+    'Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Evden canli derslerle esneklik, guc ve durus calismalari yapin.',
+  path: '/',
+  keywords: [...defaultKeywords, 'evde pilates', 'zoom pilates dersi'],
+});
+
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Elvin Ozturk',
+    jobTitle: 'Pilates Egitmeni',
+    description: siteConfig.description,
+    url: siteConfig.url,
+    email: siteConfig.email,
+    telephone: siteConfig.phone,
+    worksFor: {
+      '@type': 'SportsActivityLocation',
+      name: siteConfig.name,
+    },
+    sameAs: ['https://www.instagram.com/elvinozturk.pilates'],
+  };
+
+  const faqStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: sikSorulanlar.map((item) => ({
+      '@type': 'Question',
+      name: item.soru,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.cevap,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
       {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0">
@@ -69,7 +139,7 @@ export default function Home() {
               bağlantı kurun.
             </h1>
             <p className="text-[#5A5A5A] text-lg leading-relaxed mb-10 max-w-md">
-              Nerede olursanız olun, online grup ve bireysel derslerle Pilates&apos;in gucunu kesfedin.
+              Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Istanbul merkezli canli derslerle durus, esneklik ve beden farkindaligi uzerine duzenli calisin.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -85,6 +155,9 @@ export default function Home() {
                 Dersleri Keşfet
               </Link>
             </div>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-[#5A5A5A]">
+              Online Pilates dersi ariyorsaniz; evden, ofisten ya da seyahatteyken programa baglanabilirsiniz. Kucuk grup dersleri ve bireysel Pilates seanslari sayesinde daha kontrollu ve duzenli bir egzersiz rutini kurabilirsiniz.
+            </p>
           </div>
 
           {/* Sağ: Online ders kartları */}
@@ -107,6 +180,29 @@ export default function Home() {
               <p className="text-sm text-white/80">Birebir · 55 dk · Size özel program</p>
               <p className="text-xs text-white mt-3 group-hover:underline">Randevu al →</p>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid gap-8 rounded-[2rem] border border-[#EDE0CF] bg-white p-8 md:grid-cols-3">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#7D9B76]">Online Pilates Dersi</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">
+              Duzenli online Pilates dersleri ile omurga destegi, core guclenmesi ve hareket kalitesi uzerinde calisabilirsiniz.
+            </p>
+          </div>
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#7D9B76]">Istanbul Merkezli</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">
+              Istanbul Kadikoy cikisli bir egitmenle calisirken, derslere Turkiye’nin veya dunyanin farkli noktalarindan baglanabilirsiniz.
+            </p>
+          </div>
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#7D9B76]">Bireysel ve Grup</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">
+              Hedefiniz toparlanmak, guclenmek veya daha duzenli hareket etmekse size uygun ders formatini secerek ilerleyebilirsiniz.
+            </p>
           </div>
         </div>
       </section>
@@ -151,6 +247,35 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-20 max-w-6xl mx-auto px-6">
+        <div className="grid gap-10 md:grid-cols-2 items-start">
+          <div>
+            <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">Kimler Icin?</p>
+            <h2
+              className="text-4xl font-semibold text-[#1C1C1C]"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Online Pilates ile daha dengeli bir rutin kurun
+            </h2>
+            <p className="mt-4 text-[#5A5A5A] leading-relaxed">
+              Online Pilates dersleri; masa basi calisanlar, evden spor yapmak isteyenler, esneklik ve durus uzerine calismak isteyenler icin guclu bir secenektir. Baslangic seviyesinde olsaniz da daha once deneyiminiz olsa da programa uygun bir ders yapisi bulunabilir.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {[
+              'Durus bozuklugu ve hareketsizlik hissi yasayanlar',
+              'Evden duzenli spor yapmak isteyenler',
+              'Birebir egitmen destegi arayanlar',
+              'Kucuk grup enerjisi ile motive olmak isteyenler',
+            ].map((item) => (
+              <div key={item} className="rounded-2xl border border-[#EDE0CF] bg-[#FAFAF8] px-5 py-4 text-sm text-[#5A5A5A]">
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -243,12 +368,37 @@ export default function Home() {
           <p className="text-[#5A5A5A] leading-relaxed mb-8">
             Online derslerimle artık dünyanın her yerinden öğrencilerimle buluşabiliyorum. Hedefim her seansta size gerçekten fayda sağlamak.
           </p>
+          <p className="text-[#5A5A5A] leading-relaxed mb-8">
+            Istanbul merkezli online Pilates derslerimde amacim, ekrandan da olsa her ogrencinin hareketini dikkatle takip etmek ve daha guvenli bir egzersiz deneyimi sunmak.
+          </p>
           <Link
             href="/hakkimda"
             className="text-sm text-[#7D9B76] font-medium underline underline-offset-4 hover:text-[#6A8B63]"
           >
             Daha fazlası →
           </Link>
+        </div>
+      </section>
+
+      <section className="bg-[#F4F3F1] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">Sik Sorulan Sorular</p>
+            <h2
+              className="text-4xl font-semibold text-[#1C1C1C]"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Online Pilates hakkinda merak edilenler
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {sikSorulanlar.map((item) => (
+              <div key={item.soru} className="rounded-2xl border border-[#EDE0CF] bg-white p-6">
+                <h3 className="text-lg font-semibold text-[#1C1C1C]">{item.soru}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#5A5A5A]">{item.cevap}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

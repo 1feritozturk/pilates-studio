@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { createMetadata, defaultKeywords } from '@/lib/seo';
 
 const sertifikalar = [
   'STOTT Pilates® Sertifikası',
@@ -27,6 +29,14 @@ const degerler = [
   },
 ];
 
+export const metadata: Metadata = createMetadata({
+  title: 'Hakkimda',
+  description:
+    'Elvin Ozturk’un Pilates yaklasimini, egitimlerini ve online derslerdeki calisma bicimini kesfedin.',
+  path: '/hakkimda',
+  keywords: [...defaultKeywords, 'pilates egitmeni', 'elvin ozturk hakkinda'],
+});
+
 export default function HakkimdaPage() {
   return (
     <>
@@ -50,6 +60,20 @@ export default function HakkimdaPage() {
           >
             Hakkımda
           </h1>
+        </div>
+      </section>
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="rounded-[2rem] border border-[#EDE0CF] bg-white p-8">
+          <h2
+            className="text-3xl font-semibold text-[#1C1C1C] mb-4"
+            style={{ fontFamily: 'var(--font-playfair), serif' }}
+          >
+            Online Pilates calismalarinda odak noktam
+          </h2>
+          <p className="max-w-3xl text-sm leading-relaxed text-[#5A5A5A]">
+            Her ogrencinin beden farkindaligini artirmak, daha kontrollu hareket etmesini saglamak ve surekliligi destekleyen bir ders duzeni kurmak. Online formatta da net anlatim, dikkatli takip ve uygulanabilir egzersiz planlari benim icin oncelikli.
+          </p>
         </div>
       </section>
 

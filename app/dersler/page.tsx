@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { createMetadata, defaultKeywords } from '@/lib/seo';
 
 const grupDersleri = [
   {
@@ -46,6 +48,14 @@ const bireyselDersler = [
   },
 ];
 
+export const metadata: Metadata = createMetadata({
+  title: 'Online Pilates Dersleri',
+  description:
+    'Online grup dersleri ve bireysel Pilates seanslari. Baslangic, orta seviye ve birebir canli ders seceneklerini inceleyin.',
+  path: '/dersler',
+  keywords: [...defaultKeywords, 'online pilates ders programi', 'birebir pilates'],
+});
+
 export default function DerslerPage() {
   return (
     <>
@@ -76,6 +86,9 @@ export default function DerslerPage() {
       <section className="py-12 max-w-6xl mx-auto px-6 border-b border-[#EDE0CF]">
         <p className="text-[#5A5A5A] max-w-2xl leading-relaxed">
           İki farklı ders formatı sunuyorum: küçük gruplarla yapılan canlı online grup dersleri ve tamamen size özel bireysel seanslar. İkisi de Zoom üzerinden gerçekleşiyor, kayıt opsiyonu mevcut.
+        </p>
+        <p className="text-[#5A5A5A] max-w-3xl leading-relaxed mt-4">
+          Online Pilates ders programi, evden duzenli spor yapmak isteyenler icin hazirlandi. Istanbul merkezli olsa da derslere Turkiye’nin her yerinden veya yurt disindan baglanabilirsiniz.
         </p>
       </section>
 
@@ -132,6 +145,37 @@ export default function DerslerPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="rounded-[2rem] border border-[#EDE0CF] bg-white p-8">
+          <h2
+            className="text-3xl font-semibold text-[#1C1C1C] mb-4"
+            style={{ fontFamily: 'var(--font-playfair), serif' }}
+          >
+            Hangi ders size daha uygun?
+          </h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div>
+              <h3 className="font-semibold text-[#1C1C1C] mb-2">Baslangic seviyesindeyseniz</h3>
+              <p className="text-sm leading-relaxed text-[#5A5A5A]">
+                Grup dersleri ile temel nefes, durus ve hareket kaliplari uzerinde duzenli bir baslangic yapabilirsiniz.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#1C1C1C] mb-2">Kisiye ozel destek istiyorsaniz</h3>
+              <p className="text-sm leading-relaxed text-[#5A5A5A]">
+                Bireysel Pilates dersi; hedefe yonelik plan, tempo kontrolu ve daha yakindan takip imkani sunar.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#1C1C1C] mb-2">Duzenli rutine ihtiyaciniz varsa</h3>
+              <p className="text-sm leading-relaxed text-[#5A5A5A]">
+                Haftalik programli ders saatleri sayesinde egzersizi gunluk yasaminiza daha kolay yerlestirebilirsiniz.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

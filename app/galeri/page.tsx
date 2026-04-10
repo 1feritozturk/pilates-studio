@@ -1,5 +1,7 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { createMetadata, defaultKeywords } from '@/lib/seo';
 
 const fotograflar = [
   {
@@ -57,6 +59,14 @@ const fotograflar = [
     span: '',
   },
 ];
+
+export const metadata: Metadata = createMetadata({
+  title: 'Pilates Galeri',
+  description:
+    'Online Pilates derslerinden, grup seanslarindan ve bireysel calismalardan secilmis gorselleri inceleyin.',
+  path: '/galeri',
+  keywords: [...defaultKeywords, 'pilates galeri', 'pilates gorselleri'],
+});
 
 export default function GaleriPage() {
   return (

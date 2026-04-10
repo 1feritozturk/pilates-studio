@@ -64,6 +64,9 @@ export default function IletisimPage() {
           <p className="text-[#5A5A5A] max-w-xl leading-relaxed">
             Sorularınız için bize yazın ya da arayın. En kısa sürede dönüş yapacağız.
           </p>
+          <p className="text-[#5A5A5A] max-w-2xl leading-relaxed mt-4">
+            Online Pilates dersi, bireysel seanslar veya grup dersleri hakkinda bilgi almak icin formu doldurabilirsiniz. Istanbul Kadikoy merkezli calisiyor olsak da dersler online oldugu icin farkli sehirlerden de ogrenci kabul ediyoruz.
+          </p>
         </div>
       </section>
 
