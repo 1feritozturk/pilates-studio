@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#1C1C1C] text-[#9E9E9E] py-12 mt-auto">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div>
             <div className="mb-3">
@@ -22,9 +22,27 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: '/dersler', label: 'Dersler' },
+                { href: '/blog', label: 'Blog' },
                 { href: '/galeri', label: 'Galeri' },
                 { href: '/hakkimda', label: 'Hakkımda' },
                 { href: '/iletisim', label: 'İletişim' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-white text-sm font-medium tracking-wider uppercase mb-4">Guven</p>
+            <ul className="space-y-2 text-sm">
+              {[
+                { href: '/gizlilik-politikasi', label: 'Gizlilik Politikasi' },
+                { href: '/cerez-politikasi', label: 'Cerez Politikasi' },
+                { href: '/kullanim-kosullari', label: 'Kullanim Kosullari' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
@@ -51,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="pt-2">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/elvinozturk.pilates"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -69,7 +87,7 @@ export default function Footer() {
             href="/randevu"
             className="px-5 py-2 bg-[#7D9B76] text-white text-sm font-medium rounded-full hover:bg-[#6A8B63] transition-colors"
           >
-            Derse Kaydol
+            Ucretsiz tanisma talebi
           </Link>
         </div>
       </div>
