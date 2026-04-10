@@ -12,7 +12,7 @@ const grupDersleri = [
     gunler: 'Pzt & Çrş',
     saat: '08:00 / 19:00',
     seviye: 'Başlangıç',
-    img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80&fit=crop',
+    img: '/images/grup-ders-1.jpg.webp',
   },
   {
     ad: 'Orta Seviye Grubu',
@@ -22,7 +22,7 @@ const grupDersleri = [
     gunler: 'Salı & Perşembe',
     saat: '07:30 / 18:30',
     seviye: 'Orta',
-    img: 'https://images.unsplash.com/photo-1593810451564-2b9b9e4e0d6c?w=600&q=80&fit=crop',
+    img: '/images/grup-ders-2.jpg',
   },
 ];
 
@@ -34,7 +34,7 @@ const bireyselDersler = [
     gunler: 'Her gün',
     saat: 'Randevuya göre',
     ozellikler: ['Kişisel program', 'Anlık geri bildirim', 'Hızlı ilerleme', 'Esnek saat'],
-    img: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80&fit=crop',
+    img: '/images/bireysel-ders.png',
   },
 ];
 

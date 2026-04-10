@@ -10,14 +10,14 @@ const dersler = [
     aciklama: 'Küçük gruplarla, canlı video üzerinden gerçekleştirilen interaktif Pilates seansları. Topluluk enerjisiyle motive olun.',
     sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
-    img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80&fit=crop',
+    img: '/images/grup-ders-1.jpg.webp',
   },
   {
     ad: 'Online Bireysel Ders',
     aciklama: 'Birebir, tamamen size özel hazırlanmış program. Kendi hızınızda, kendi alanınızda ilerleyin.',
     sure: '50 dk',
     kapasite: '1 kişi',
-    img: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80&fit=crop',
+    img: '/images/bireysel-ders.png',
   },
 ];
 

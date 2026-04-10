@@ -17,12 +17,12 @@ const degerler = [
   {
     baslik: 'Kalite, niceliğin önünde',
     aciklama: 'Az ama doğru hareket, çok ama yanlış hareketten çok daha değerlidir. Her seansta buna odaklanıyorum.',
-    img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80&fit=crop',
+    img: '/images/kalite.jpg',
   },
   {
     baslik: 'Süreklilik',
     aciklama: 'Pilates bir yaşam biçimidir. Sizi bir süreliğine değil, kalıcı olarak bu pratiğin içine çekmeyi hedefliyorum.',
-    img: 'https://images.unsplash.com/photo-1593810451564-2b9b9e4e0d6c?w=400&q=80&fit=crop',
+    img: '/images/sureklilik.jpg',
   },
 ];
 
