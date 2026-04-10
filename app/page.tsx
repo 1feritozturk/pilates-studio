@@ -10,14 +10,14 @@ const dersler = [
     aciklama: 'Küçük gruplarla, canlı video üzerinden gerçekleştirilen interaktif Pilates seansları. Topluluk enerjisiyle motive olun.',
     sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
-    img: 'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=600&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80&fit=crop',
   },
   {
     ad: 'Online Bireysel Ders',
     aciklama: 'Birebir, tamamen size özel hazırlanmış program. Kendi hızınızda, kendi alanınızda ilerleyin.',
     sure: '50 dk',
     kapasite: '1 kişi',
-    img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80&fit=crop',
   },
 ];
 
@@ -143,7 +143,7 @@ export default function Home() {
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=1600&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1600&q=85&fit=crop"
             alt="Online Pilates"
             fill
             className="object-cover"
@@ -377,7 +377,7 @@ export default function Home() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1400&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&fit=crop"
             alt="Pilates"
             fill
             className="object-cover"
@@ -447,7 +447,7 @@ export default function Home() {
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
-            src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=85&fit=crop"
             alt="Elvin Öztürk"
             fill
             className="object-cover"

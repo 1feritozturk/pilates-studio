@@ -12,7 +12,7 @@ const grupDersleri = [
     gunler: 'Pzt & Çrş',
     saat: '08:00 / 19:00',
     seviye: 'Başlangıç',
-    img: 'https://images.unsplash.com/photo-1616279969965-f7b53f8a726e?w=600&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80&fit=crop',
   },
   {
     ad: 'Orta Seviye Grubu',
@@ -22,7 +22,7 @@ const grupDersleri = [
     gunler: 'Salı & Perşembe',
     saat: '07:30 / 18:30',
     seviye: 'Orta',
-    img: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1593810451564-2b9b9e4e0d6c?w=600&q=80&fit=crop',
   },
 ];
 
@@ -34,7 +34,7 @@ const bireyselDersler = [
     gunler: 'Her gün',
     saat: 'Randevuya göre',
     ozellikler: ['Kişisel program', 'Anlık geri bildirim', 'Hızlı ilerleme', 'Esnek saat'],
-    img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80&fit=crop',
   },
 ];
 
@@ -53,7 +53,7 @@ export default function DerslerPage() {
       <section className="relative h-64 flex items-end">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=1400&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1573384667915-e3b9b96c55d1?w=1400&q=85&fit=crop"
             alt="Online Dersler"
             fill
             className="object-cover"
