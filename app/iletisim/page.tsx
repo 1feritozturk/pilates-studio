@@ -3,10 +3,8 @@
 import { useState } from 'react';
 
 const iletisimBilgileri = [
-  { emoji: '📍', baslik: 'Adres', icerik: 'Moda Cad. No:48/B\nKadıköy, İstanbul' },
-  { emoji: '📞', baslik: 'Telefon', icerik: '+90 (212) 123 45 67' },
-  { emoji: '✉️', baslik: 'E-posta', icerik: 'info@elvinozturk.com.tr' },
-  { emoji: '🕐', baslik: 'Çalışma Saatleri', icerik: 'Pzt–Cum: 07:00–21:00\nCmt–Paz: 09:00–18:00' },
+  { emoji: '📞', baslik: 'Telefon', icerik: '05380188954' },
+  { emoji: '✉️', baslik: 'E-posta', icerik: '1elvinozturk@gmail.com' },
 ];
 
 export default function IletisimPage() {
@@ -65,7 +63,7 @@ export default function IletisimPage() {
             Sorularınız için bize yazın ya da arayın. En kısa sürede dönüş yapacağız.
           </p>
           <p className="text-[#5A5A5A] max-w-2xl leading-relaxed mt-4">
-            Online Pilates dersi, bireysel seanslar veya grup dersleri hakkinda bilgi almak icin formu doldurabilirsiniz. Istanbul Kadikoy merkezli calisiyor olsak da dersler online oldugu icin farkli sehirlerden de ogrenci kabul ediyoruz.
+            Online Pilates dersi, bireysel seanslar veya grup dersleri hakkinda bilgi almak icin formu doldurabilirsiniz.
           </p>
         </div>
       </section>
@@ -93,21 +91,6 @@ export default function IletisimPage() {
             ))}
           </div>
 
-          {/* Harita placeholder */}
-          <div className="mt-10 bg-[#F4F3F1] rounded-2xl h-56 flex items-center justify-center border border-[#EDE0CF]">
-            <div className="text-center">
-              <p className="text-4xl mb-2">🗺️</p>
-              <p className="text-sm text-[#9E9E9E]">Harita yakında eklenecek</p>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-[#7D9B76] underline underline-offset-4 mt-1 inline-block"
-              >
-                Google Haritalar&apos;da görüntüle
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Sağ: Form */}

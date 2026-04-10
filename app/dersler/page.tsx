@@ -7,7 +7,7 @@ const grupDersleri = [
   {
     ad: 'Başlangıç Grubu',
     aciklama: 'Pilates\'e yeni başlayanlar için temel hareketler, doğru nefes teknikleri ve postür farkındalığı.',
-    sure: '55 dk',
+    sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
     gunler: 'Pzt & Çrş',
     saat: '08:00 / 19:00',
@@ -17,22 +17,12 @@ const grupDersleri = [
   {
     ad: 'Orta Seviye Grubu',
     aciklama: 'Temel bilgiye sahip olanlar için ileri teknikler, core güçlendirme ve esneklik çalışmaları.',
-    sure: '55 dk',
+    sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
     gunler: 'Salı & Perşembe',
     saat: '07:30 / 18:30',
     seviye: 'Orta',
     img: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&q=80&fit=crop',
-  },
-  {
-    ad: 'Pilates & Nefes',
-    aciklama: 'Pilates hareketlerini nefes ve mindfulness ile buluşturan, stres azaltan özel format.',
-    sure: '60 dk',
-    kapasite: 'Maks. 8 kişi',
-    gunler: 'Cuma & Cumartesi',
-    saat: '10:00 / 16:00',
-    seviye: 'Tüm seviyeler',
-    img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&fit=crop',
   },
 ];
 
@@ -40,7 +30,7 @@ const bireyselDersler = [
   {
     ad: '1\'e 1 Bireysel Ders',
     aciklama: 'Tamamen size özel hazırlanmış program. Hedeflerinize, bedeninize ve seviyenize göre kişiselleştirilmiş içerik.',
-    sure: '55 dk',
+    sure: '50 dk',
     gunler: 'Her gün',
     saat: 'Randevuya göre',
     ozellikler: ['Kişisel program', 'Anlık geri bildirim', 'Hızlı ilerleme', 'Esnek saat'],
@@ -86,9 +76,6 @@ export default function DerslerPage() {
       <section className="py-12 max-w-6xl mx-auto px-6 border-b border-[#EDE0CF]">
         <p className="text-[#5A5A5A] max-w-2xl leading-relaxed">
           İki farklı ders formatı sunuyorum: küçük gruplarla yapılan canlı online grup dersleri ve tamamen size özel bireysel seanslar. İkisi de Zoom üzerinden gerçekleşiyor, kayıt opsiyonu mevcut.
-        </p>
-        <p className="text-[#5A5A5A] max-w-3xl leading-relaxed mt-4">
-          Online Pilates ders programi, evden duzenli spor yapmak isteyenler icin hazirlandi. Istanbul merkezli olsa da derslere Turkiye’nin her yerinden veya yurt disindan baglanabilirsiniz.
         </p>
       </section>
 

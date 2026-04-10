@@ -4,11 +4,8 @@ import Image from 'next/image';
 import { createMetadata, defaultKeywords } from '@/lib/seo';
 
 const sertifikalar = [
-  'STOTT Pilates® Sertifikası',
-  'Balanced Body® Reformer Eğitimi',
-  'APPI Pilates Sertifikası',
-  'Prenatal & Postnatal Pilates',
-  'Mindfulness & Nefes Teknikleri',
+  '2. Seviye TCF Onayli Pilates Egitmenligi',
+  'Hamile Pilatesi Egitimi',
 ];
 
 const degerler = [
@@ -63,20 +60,6 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="rounded-[2rem] border border-[#EDE0CF] bg-white p-8">
-          <h2
-            className="text-3xl font-semibold text-[#1C1C1C] mb-4"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            Online Pilates calismalarinda odak noktam
-          </h2>
-          <p className="max-w-3xl text-sm leading-relaxed text-[#5A5A5A]">
-            Her ogrencinin beden farkindaligini artirmak, daha kontrollu hareket etmesini saglamak ve surekliligi destekleyen bir ders duzeni kurmak. Online formatta da net anlatim, dikkatli takip ve uygulanabilir egzersiz planlari benim icin oncelikli.
-          </p>
-        </div>
-      </section>
-
       {/* Tanıtım */}
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
@@ -95,13 +78,19 @@ export default function HakkimdaPage() {
             Ben Elvin Öztürk.
           </h2>
           <p className="text-[#5A5A5A] leading-relaxed mb-4">
-            Pilates ile tanışmam tesadüften çok bir kader gibiydi. Uzun yıllar boyunca kendi bedenimdeki değişimi fark ettikçe, bu deneyimi başkalarıyla paylaşmak istediğimi anladım.
+            Pilatesle 7 yil once, bir teknoloji sirketinde beyaz yaka olarak calistigim donemde tanistim. Spor, hayatimin her zaman onemli bir parcasiydi; ancak pilatesle birlikte bedenimi cok daha yakindan tanimaya, gucun ve dengenin yalnizca fiziksel degil, zihinsel bir karsiligi da oldugunu kesfetmeye basladim.
           </p>
           <p className="text-[#5A5A5A] leading-relaxed mb-4">
-            Bugün online grup ve bireysel derslerle, dünyanın farklı yerlerinden öğrencilere ulaşabiliyorum. Her seans, yalnızca fiziksel bir çalışma değil; bedenle kurulan yeni bir diyalog.
+            Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BABS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
+          </p>
+          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+            Bir sure beyaz yaka kariyerimi surdururken part-time olarak pilates egitmenligi yaptim. Zamanla pilates, hayatimda bir ilgi alaninin otesine gecti; yasam kalitemi donusturen, beni besleyen ve baskalarina da katki sunmak istedigim guclu bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yone cevirerek, bugun tum odagimi pilatese ve ogrencilerime ayiriyorum.
+          </p>
+          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+            Online bireysel ve grup derslerimde amacim; her seviyeden katilimcinin kendi bedenini daha iyi tanimasina, daha guclu, dengeli ve iyi hissetmesine destek olmak. Her dersi, kisinin ihtiyacini merkeze alan; guvenli, etkili ve surdurulebilir bir deneyim olarak planliyorum.
           </p>
           <p className="text-[#5A5A5A] leading-relaxed mb-8">
-            Amacım; her seviyeden bireyin, kendi bedenini daha iyi tanımasına ve günlük yaşamda daha rahat, daha güçlü hissetmesine katkı sağlamak.
+            Pilates benim icin yalnizca bir egzersiz yontemi degil; bedenle daha bilincli, guclu ve dengeli bir bag kurmanin yolu.
           </p>
 
           {/* Sertifikalar */}

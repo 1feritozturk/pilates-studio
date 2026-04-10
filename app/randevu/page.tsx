@@ -5,7 +5,6 @@ import { useState } from 'react';
 const dersSecenekleri = [
   'Online Grup — Başlangıç',
   'Online Grup — Orta Seviye',
-  'Online Grup — Pilates & Nefes',
   'Online Bireysel Ders',
 ];
 
@@ -105,7 +104,7 @@ export default function RandevuPage() {
             </div>
           </div>
           <p className="text-xs text-[#9E9E9E]">
-            Sorularınız için: <a href="mailto:info@elvinozturk.com.tr" className="text-[#7D9B76]">info@elvinozturk.com.tr</a>
+            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#7D9B76]">1elvinozturk@gmail.com</a>
           </p>
         </div>
       </div>

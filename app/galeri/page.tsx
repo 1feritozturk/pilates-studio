@@ -133,7 +133,7 @@ export default function GaleriPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/elvinozturk.pilates"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3 bg-[#1C1C1C] text-white text-sm font-medium rounded-full hover:bg-[#333] transition-colors"
@@ -144,10 +144,10 @@ export default function GaleriPage() {
             @elvinozturk.pilates
           </a>
           <Link
-            href="/randevu"
+            href="/iletisim"
             className="inline-flex items-center gap-2 px-7 py-3 bg-[#7D9B76] text-white text-sm font-medium rounded-full hover:bg-[#6A8B63] transition-colors"
           >
-            Deneme Dersi Al
+            Bilgi Al
           </Link>
         </div>
       </section>

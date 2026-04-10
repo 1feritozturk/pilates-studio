@@ -8,14 +8,14 @@ const dersler = [
   {
     ad: 'Online Grup Ders',
     aciklama: 'Küçük gruplarla, canlı video üzerinden gerçekleştirilen interaktif Pilates seansları. Topluluk enerjisiyle motive olun.',
-    sure: '55 dk',
+    sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
     img: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=600&q=80&fit=crop',
   },
   {
     ad: 'Online Bireysel Ders',
     aciklama: 'Birebir, tamamen size özel hazırlanmış program. Kendi hızınızda, kendi alanınızda ilerleyin.',
-    sure: '55 dk',
+    sure: '50 dk',
     kapasite: '1 kişi',
     img: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80&fit=crop',
   },
@@ -52,9 +52,9 @@ const sikSorulanlar = [
       'Tum online Pilates dersleri Zoom uzerinden canli olarak yapilir. Bilgisayar, tablet veya telefon ile baglanabilirsiniz.',
   },
   {
-    soru: 'Istanbul disindan da katilabilir miyim?',
+    soru: 'Farkli sehirlerden de katilabilir miyim?',
     cevap:
-      'Evet. Dersler online oldugu icin Istanbul, Ankara, Izmir veya yurt disindan da katilim saglayabilirsiniz.',
+      'Evet. Dersler online oldugu icin Turkiye’nin farkli sehirlerinden veya yurt disindan da katilim saglayabilirsiniz.',
   },
   {
     soru: 'Bireysel Pilates dersi ile grup dersi arasindaki fark nedir?',
@@ -80,14 +80,14 @@ const yorumlar = [
     isim: 'Ece T.',
     hedef: 'Esneklik ve duzen',
     yorum:
-      'Istanbul disinda yasamama ragmen duzenli olarak ayni egitmenle calisabiliyorum. Bu devamli hissi benim icin en degerli seylerden biri oldu.',
+      'Bulundugum sehir fark etmeden duzenli olarak ayni egitmenle calisabiliyorum. Bu devamli hissi benim icin en degerli seylerden biri oldu.',
   },
 ];
 
 const istatistikler = [
   { deger: '150+', etiket: 'duzenli katilim gosteren ogrenci' },
   { deger: '1.200+', etiket: 'tamamlanan online ders saati' },
-  { deger: '3', etiket: 'farkli ders formati ve seviye secenegi' },
+  { deger: '2', etiket: 'farkli ders formati ve seviye secenegi' },
   { deger: '10+', etiket: 'farkli sehirden duzenli katilim' },
 ];
 
@@ -168,7 +168,7 @@ export default function Home() {
               bağlantı kurun.
             </h1>
             <p className="text-[#5A5A5A] text-lg leading-relaxed mb-10 max-w-md">
-              Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Istanbul merkezli canli derslerle durus, esneklik ve beden farkindaligi uzerine duzenli calisin.
+              Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Canli derslerle durus, esneklik ve beden farkindaligi uzerine duzenli calisin.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -197,7 +197,7 @@ export default function Home() {
             >
               <p className="text-xs text-[#7D9B76] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
               <h3 className="text-lg font-semibold text-[#1C1C1C] mb-1">Online Grup Pilates</h3>
-              <p className="text-sm text-[#5A5A5A]">Maks. 8 kişi · 55 dk · Canlı yayın</p>
+              <p className="text-sm text-[#5A5A5A]">Maks. 8 kişi · 50 dk · Canlı yayın</p>
               <p className="text-xs text-[#7D9B76] mt-3 group-hover:underline">Programa bak →</p>
             </Link>
             <Link
@@ -206,7 +206,7 @@ export default function Home() {
             >
               <p className="text-xs text-white/70 font-medium tracking-wider uppercase mb-2">Bireysel Ders</p>
               <h3 className="text-lg font-semibold mb-1">Online Özel Pilates</h3>
-              <p className="text-sm text-white/80">Birebir · 55 dk · Size özel program</p>
+              <p className="text-sm text-white/80">Birebir · 50 dk · Size özel program</p>
               <p className="text-xs text-white mt-3 group-hover:underline">Randevu al →</p>
             </Link>
           </div>
@@ -222,9 +222,9 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#7D9B76]">Istanbul Merkezli</p>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#7D9B76]">Online ve Esnek</p>
             <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">
-              Istanbul Kadikoy cikisli bir egitmenle calisirken, derslere Turkiye’nin veya dunyanin farkli noktalarindan baglanabilirsiniz.
+              Derslere evden, ofisten ya da seyahatteyken baglanabilir; programinizi gunluk temponuza daha kolay uyarlayabilirsiniz.
             </p>
           </div>
           <div>
@@ -467,9 +467,6 @@ export default function Home() {
           <p className="text-[#5A5A5A] leading-relaxed mb-8">
             Online derslerimle artık dünyanın her yerinden öğrencilerimle buluşabiliyorum. Hedefim her seansta size gerçekten fayda sağlamak.
           </p>
-          <p className="text-[#5A5A5A] leading-relaxed mb-8">
-            Istanbul merkezli online Pilates derslerimde amacim, ekrandan da olsa her ogrencinin hareketini dikkatle takip etmek ve daha guvenli bir egzersiz deneyimi sunmak.
-          </p>
           <Link
             href="/hakkimda"
             className="text-sm text-[#7D9B76] font-medium underline underline-offset-4 hover:text-[#6A8B63]"
@@ -497,37 +494,6 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-relaxed text-[#5A5A5A]">{item.cevap}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 max-w-6xl mx-auto px-6">
-        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] items-center rounded-[2rem] border border-[#EDE0CF] bg-white p-8 md:p-10">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-[#7D9B76]">Ucretsiz ilk adim</p>
-            <h2
-              className="mt-4 text-4xl font-semibold text-[#1C1C1C]"
-              style={{ fontFamily: 'var(--font-playfair), serif' }}
-            >
-              Ucretsiz tanisma gorusmesi planlayin
-            </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#5A5A5A]">
-              Ders secimi, seviyeniz ve beklentiniz konusunda emin degilseniz once kisa bir tanisma talebi birakabilirsiniz. Boylece size grup ya da bireysel dersin hangisinin daha uygun oldugunu birlikte netlestirebiliriz.
-            </p>
-          </div>
-          <div className="flex flex-col gap-4">
-            <Link
-              href="/iletisim"
-              className="inline-flex justify-center rounded-full bg-[#7D9B76] px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#6A8B63]"
-            >
-              Ucretsiz gorusme talebi gonder
-            </Link>
-            <Link
-              href="/randevu"
-              className="inline-flex justify-center rounded-full border border-[#1C1C1C]/20 px-8 py-3.5 text-sm font-medium text-[#1C1C1C] transition-colors hover:bg-[#1C1C1C]/5"
-            >
-              Dogrudan derse kaydol
-            </Link>
           </div>
         </div>
       </section>

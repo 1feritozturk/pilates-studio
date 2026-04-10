@@ -8,8 +8,8 @@ export const siteConfig = {
   url: "https://www.elvinozturk.com",
   locale: "tr_TR",
   ogImage: "/opengraph-image",
-  email: "info@elvinozturk.com.tr",
-  phone: "+90 (212) 123 45 67",
+  email: "1elvinozturk@gmail.com",
+  phone: "05380188954",
 } as const;
 
 type MetadataInput = {

@@ -58,13 +58,13 @@ export default function Footer() {
             <p className="text-white text-sm font-medium tracking-wider uppercase mb-4">İletişim</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="mailto:info@elvinozturk.com.tr" className="hover:text-white transition-colors">
-                  info@elvinozturk.com.tr
+                <a href="mailto:1elvinozturk@gmail.com" className="hover:text-white transition-colors">
+                  1elvinozturk@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+905001234567" className="hover:text-white transition-colors">
-                  +90 (500) 123 45 67
+                <a href="tel:05380188954" className="hover:text-white transition-colors">
+                  05380188954
                 </a>
               </li>
               <li className="pt-2">
@@ -87,7 +87,7 @@ export default function Footer() {
             href="/randevu"
             className="px-5 py-2 bg-[#7D9B76] text-white text-sm font-medium rounded-full hover:bg-[#6A8B63] transition-colors"
           >
-            Ucretsiz tanisma talebi
+            Derse Kaydol
           </Link>
         </div>
       </div>
