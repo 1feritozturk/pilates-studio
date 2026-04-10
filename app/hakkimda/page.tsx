@@ -12,17 +12,17 @@ const degerler = [
   {
     baslik: 'Her beden farklıdır',
     aciklama: 'Standart programlar yerine her öğrenciye özel yaklaşım benimsiyorum. Bedeninizin ihtiyaçlarını dinleyerek ilerliyoruz.',
-    img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1616279969965-f7b53f8a726e?w=400&q=80&fit=crop',
   },
   {
     baslik: 'Kalite, niceliğin önünde',
     aciklama: 'Az ama doğru hareket, çok ama yanlış hareketten çok daha değerlidir. Her seansta buna odaklanıyorum.',
-    img: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=400&q=80&fit=crop',
   },
   {
     baslik: 'Süreklilik',
     aciklama: 'Pilates bir yaşam biçimidir. Sizi bir süreliğine değil, kalıcı olarak bu pratiğin içine çekmeyi hedefliyorum.',
-    img: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=400&q=80&fit=crop',
+    img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80&fit=crop',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function HakkimdaPage() {
       <section className="relative h-72 flex items-end">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1400&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1400&q=85&fit=crop"
             alt="Elvin Öztürk"
             fill
             className="object-cover object-top"
@@ -64,7 +64,7 @@ export default function HakkimdaPage() {
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
-            src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=85&fit=crop"
+            src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&q=85&fit=crop"
             alt="Elvin Öztürk"
             fill
             className="object-cover"
