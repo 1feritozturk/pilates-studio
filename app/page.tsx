@@ -143,7 +143,7 @@ export default function Home() {
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-bg.jpeg"
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1600&q=85&fit=crop"
             alt="Online Pilates"
             fill
             className="object-cover"
