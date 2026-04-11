@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 const iletisimBilgileri = [
-  { emoji: '📞', baslik: 'Telefon', icerik: '05380188954' },
+  { emoji: '📞', baslik: 'Telefon', icerik: '0538 018 89 54', href: 'tel:+905380188954' },
   { emoji: '✉️', baslik: 'E-posta', icerik: '1elvinozturk@gmail.com' },
 ];
 
@@ -85,7 +85,11 @@ export default function IletisimPage() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-[#1F1F1F] mb-1">{bilgi.baslik}</p>
-                  <p className="text-sm text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
+                  {bilgi.href ? (
+                    <a href={bilgi.href} className="text-sm text-[#505050] hover:text-[#52C77E] transition-colors">{bilgi.icerik}</a>
+                  ) : (
+                    <p className="text-sm text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
+                  )}
                 </div>
               </div>
             ))}
