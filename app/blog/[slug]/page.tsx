@@ -55,8 +55,27 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <article className="py-16 max-w-3xl mx-auto px-6">
         <div className="space-y-6 text-[#505050] leading-8">
-          {post.content.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {post.content.map((section, index) => (
+            <section key={`${post.slug}-${index}`} className="space-y-4">
+              {section.heading ? (
+                <h2
+                  className="text-2xl font-semibold text-[#1F1F1F] pt-4"
+                  style={{ fontFamily: "var(--font-playfair), serif" }}
+                >
+                  {section.heading}
+                </h2>
+              ) : null}
+
+              {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+
+              {section.bullets?.length ? (
+                <ul className="list-disc pl-6 space-y-2">
+                  {section.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </section>
           ))}
         </div>
       </article>
