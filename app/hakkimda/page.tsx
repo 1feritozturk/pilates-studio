@@ -64,10 +64,10 @@ export default function HakkimdaPage() {
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
-            src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=85&fit=crop"
+            src="/images/elvin-hakkimda.jpeg"
             alt="Elvin Öztürk"
             fill
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
         <div>
