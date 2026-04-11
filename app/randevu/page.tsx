@@ -72,39 +72,39 @@ export default function RandevuPage() {
     return (
       <div className="min-h-[80vh] flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
-          <div className="w-20 h-20 bg-[#E8F0E7] rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-[#7D9B76]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-20 h-20 bg-[#DCF5E5] rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-[#52C77E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <h2
-            className="text-3xl font-semibold text-[#1C1C1C] mb-3"
+            className="text-3xl font-semibold text-[#1F1F1F] mb-3"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Kaydınız alındı!
           </h2>
-          <p className="text-[#5A5A5A] mb-2">
-            Merhaba <span className="font-medium text-[#1C1C1C]">{form.ad}</span>, talebiniz başarıyla alındı.
+          <p className="text-[#505050] mb-2">
+            Merhaba <span className="font-medium text-[#1F1F1F]">{form.ad}</span>, talebiniz başarıyla alındı.
           </p>
-          <p className="text-[#5A5A5A] mb-6">
+          <p className="text-[#505050] mb-6">
             24 saat içinde <span className="font-medium">{form.email}</span> adresinize Zoom bağlantısı ve ders detayları gönderilecek.
           </p>
-          <div className="bg-[#F4F3F1] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
+          <div className="bg-[#F5F9F3] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
             <div className="flex justify-between">
               <span className="text-[#9E9E9E]">Ders</span>
-              <span className="font-medium text-[#1C1C1C]">{form.ders || 'Belirtilmedi'}</span>
+              <span className="font-medium text-[#1F1F1F]">{form.ders || 'Belirtilmedi'}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-[#9E9E9E]">Tarih</span>
-              <span className="font-medium text-[#1C1C1C]">{form.tarih || 'Belirtilmedi'}</span>
+              <span className="font-medium text-[#1F1F1F]">{form.tarih || 'Belirtilmedi'}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-[#9E9E9E]">Saat</span>
-              <span className="font-medium text-[#1C1C1C]">{form.saat || 'Belirtilmedi'}</span>
+              <span className="font-medium text-[#1F1F1F]">{form.saat || 'Belirtilmedi'}</span>
             </div>
           </div>
           <p className="text-xs text-[#9E9E9E]">
-            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#7D9B76]">1elvinozturk@gmail.com</a>
+            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#52C77E]">1elvinozturk@gmail.com</a>
           </p>
         </div>
       </div>
@@ -114,16 +114,16 @@ export default function RandevuPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#F4F3F1] py-16">
+      <section className="bg-[#F5F9F3] py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">Kayıt Formu</p>
+          <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Kayıt Formu</p>
           <h1
-            className="text-4xl font-semibold text-[#1C1C1C] mb-3"
+            className="text-4xl font-semibold text-[#1F1F1F] mb-3"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Online Derse Kaydol
           </h1>
-          <p className="text-[#5A5A5A] leading-relaxed">
+          <p className="text-[#505050] leading-relaxed">
             Formu doldurun, 24 saat içinde Zoom bağlantısı ve ders bilgileri e-posta adresinize gönderilsin.
           </p>
         </div>
@@ -133,15 +133,15 @@ export default function RandevuPage() {
       <section className="py-16 max-w-2xl mx-auto px-6">
 
         {/* Platform bilgisi */}
-        <div className="bg-[#E8F0E7] rounded-2xl p-5 mb-10 flex gap-4">
+        <div className="bg-[#DCF5E5] rounded-2xl p-5 mb-10 flex gap-4">
           <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-            <svg className="w-5 h-5 text-[#7D9B76]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-[#52C77E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
           </div>
           <div>
-            <p className="text-sm font-medium text-[#1C1C1C] mb-1">Zoom üzerinden canlı ders</p>
-            <p className="text-sm text-[#5A5A5A]">
+            <p className="text-sm font-medium text-[#1F1F1F] mb-1">Zoom üzerinden canlı ders</p>
+            <p className="text-sm text-[#505050]">
               Kayıt sonrası Zoom linki e-postanıza iletilir. Telefon, tablet veya bilgisayardan katılabilirsiniz.
             </p>
           </div>
@@ -157,24 +157,24 @@ export default function RandevuPage() {
           {/* Ad Soyad */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Ad *</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Ad *</label>
               <input
                 type="text"
                 required
                 value={form.ad}
                 onChange={(e) => setForm({ ...form, ad: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors"
+                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
                 placeholder="Adınız"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Soyad *</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Soyad *</label>
               <input
                 type="text"
                 required
                 value={form.soyad}
                 onChange={(e) => setForm({ ...form, soyad: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors"
+                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
                 placeholder="Soyadınız"
               />
             </div>
@@ -183,23 +183,23 @@ export default function RandevuPage() {
           {/* Email & Telefon */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">E-posta *</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">E-posta *</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors"
+                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
                 placeholder="ornek@email.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Telefon</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Telefon</label>
               <input
                 type="tel"
                 value={form.telefon}
                 onChange={(e) => setForm({ ...form, telefon: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors"
+                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
                 placeholder="5xx xxx xx xx"
               />
             </div>
@@ -207,7 +207,7 @@ export default function RandevuPage() {
 
           {/* Ders Seçimi */}
           <div>
-            <label className="block text-sm font-medium text-[#1C1C1C] mb-2">Katılmak istediğiniz ders *</label>
+            <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Katılmak istediğiniz ders *</label>
             <div className="flex flex-wrap gap-2">
               {dersSecenekleri.map((ders) => (
                 <button
@@ -216,8 +216,8 @@ export default function RandevuPage() {
                   onClick={() => setForm({ ...form, ders })}
                   className={`px-4 py-2 rounded-full text-sm border transition-colors ${
                     form.ders === ders
-                      ? 'bg-[#7D9B76] text-white border-[#7D9B76]'
-                      : 'bg-white text-[#5A5A5A] border-[#EDE0CF] hover:border-[#7D9B76]'
+                      ? 'bg-[#52C77E] text-white border-[#52C77E]'
+                      : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
                   }`}
                 >
                   {ders}
@@ -229,16 +229,16 @@ export default function RandevuPage() {
           {/* Tarih & Saat */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Tercih ettiğiniz tarih</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Tercih ettiğiniz tarih</label>
               <input
                 type="date"
                 value={form.tarih}
                 onChange={(e) => setForm({ ...form, tarih: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors"
+                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Tercih ettiğiniz saat</label>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Tercih ettiğiniz saat</label>
               <div className="flex flex-wrap gap-1.5">
                 {saatSecenekleri.map((saat) => (
                   <button
@@ -247,8 +247,8 @@ export default function RandevuPage() {
                     onClick={() => setForm({ ...form, saat })}
                     className={`px-3 py-1.5 rounded-lg text-xs border transition-colors ${
                       form.saat === saat
-                        ? 'bg-[#7D9B76] text-white border-[#7D9B76]'
-                        : 'bg-white text-[#5A5A5A] border-[#EDE0CF] hover:border-[#7D9B76]'
+                        ? 'bg-[#52C77E] text-white border-[#52C77E]'
+                        : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
                     }`}
                   >
                     {saat}
@@ -260,7 +260,7 @@ export default function RandevuPage() {
 
           {/* Deneyim */}
           <div>
-            <label className="block text-sm font-medium text-[#1C1C1C] mb-2">Pilates deneyiminiz</label>
+            <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Pilates deneyiminiz</label>
             <div className="flex gap-3">
               {['Hiç yapmadım', 'Biraz deneyimim var', 'Düzenli yapıyorum'].map((seviye) => (
                 <button
@@ -269,8 +269,8 @@ export default function RandevuPage() {
                   onClick={() => setForm({ ...form, deneyim: seviye })}
                   className={`flex-1 py-2.5 rounded-xl text-xs border transition-colors ${
                     form.deneyim === seviye
-                      ? 'bg-[#7D9B76] text-white border-[#7D9B76]'
-                      : 'bg-white text-[#5A5A5A] border-[#EDE0CF] hover:border-[#7D9B76]'
+                      ? 'bg-[#52C77E] text-white border-[#52C77E]'
+                      : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
                   }`}
                 >
                   {seviye}
@@ -281,12 +281,12 @@ export default function RandevuPage() {
 
           {/* Not */}
           <div>
-            <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">Eklemek istediğiniz bir şey var mı?</label>
+            <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Eklemek istediğiniz bir şey var mı?</label>
             <textarea
               rows={3}
               value={form.not}
               onChange={(e) => setForm({ ...form, not: e.target.value })}
-              className="w-full px-4 py-3 border border-[#EDE0CF] rounded-xl text-sm focus:outline-none focus:border-[#7D9B76] bg-white transition-colors resize-none"
+              className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors resize-none"
               placeholder="Sağlık durumu, özel istek veya sorularınız..."
             />
           </div>
@@ -294,7 +294,7 @@ export default function RandevuPage() {
           <button
             type="submit"
             disabled={gonderiliyor}
-            className="w-full py-4 bg-[#7D9B76] text-white font-medium rounded-xl hover:bg-[#6A8B63] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
+            className="w-full py-4 bg-[#FF6B5A] text-white font-medium rounded-xl hover:bg-[#E8564A] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
           >
             {gonderiliyor ? 'Kayit gonderiliyor...' : 'Kaydi Tamamla'}
           </button>

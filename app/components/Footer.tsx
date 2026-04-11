@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <p className="text-lg font-semibold tracking-widest uppercase text-white">Elvin Öztürk</p>
-              <p className="text-xs tracking-[0.2em] text-[#7D9B76] uppercase">Online Pilates</p>
+              <p className="text-xs tracking-[0.2em] text-[#52C77E] uppercase">Online Pilates</p>
             </div>
             <p className="text-sm leading-relaxed">
               Nerede olursanız olun, online grup ve bireysel derslerle Pilates&apos;in gucunu kesfedin.
@@ -23,7 +23,7 @@ export default function Footer() {
               {[
                 { href: '/dersler', label: 'Dersler' },
                 { href: '/blog', label: 'Blog' },
-                { href: '/galeri', label: 'Galeri' },
+
                 { href: '/hakkimda', label: 'Hakkımda' },
                 { href: '/iletisim', label: 'İletişim' },
               ].map((link) => (
@@ -85,7 +85,7 @@ export default function Footer() {
           <p>© 2025 Elvin Öztürk Online Pilates. Tüm hakları saklıdır.</p>
           <Link
             href="/randevu"
-            className="px-5 py-2 bg-[#7D9B76] text-white text-sm font-medium rounded-full hover:bg-[#6A8B63] transition-colors"
+            className="px-5 py-2 bg-[#FF6B5A] text-white text-sm font-medium rounded-full hover:bg-[#E8564A] transition-colors"
           >
             Derse Kaydol
           </Link>

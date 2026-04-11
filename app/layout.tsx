@@ -72,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${playfair.variable} ${inter.variable}`}>
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
-      <body className="min-h-screen flex flex-col bg-[#FAFAF8] text-[#1C1C1C]" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
+      <body className="min-h-screen flex flex-col bg-[#FDFEF9] text-[#1F1F1F]" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

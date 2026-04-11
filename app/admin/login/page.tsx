@@ -54,11 +54,11 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4F3F1] px-6 py-12">
+    <div className="min-h-screen bg-[#F5F9F3] px-6 py-12">
       <div className="mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl items-center justify-center">
-        <div className="grid w-full overflow-hidden rounded-[2rem] border border-[#EDE0CF] bg-white shadow-sm md:grid-cols-[1.05fr_0.95fr]">
-          <section className="bg-[#1C1C1C] px-8 py-10 text-white md:px-12 md:py-14">
-            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#A8C4A2]">Admin</p>
+        <div className="grid w-full overflow-hidden rounded-[2rem] border border-[#D5F2E5] bg-white shadow-sm md:grid-cols-[1.05fr_0.95fr]">
+          <section className="bg-[#1F1F1F] px-8 py-10 text-white md:px-12 md:py-14">
+            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#7DD89D]">Admin</p>
             <h1 className="mb-4 text-4xl font-semibold leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>
               Pilates sitesini
               <br />
@@ -82,15 +82,15 @@ export default function AdminLoginPage() {
 
           <section className="px-8 py-10 md:px-12 md:py-14">
             <div className="mb-10">
-              <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#7D9B76]">Hos geldiniz</p>
-              <h2 className="text-3xl font-semibold text-[#1C1C1C]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+              <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#52C77E]">Hos geldiniz</p>
+              <h2 className="text-3xl font-semibold text-[#1F1F1F]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                 Admin girisi
               </h2>
             </div>
 
             {!isConfigured ? (
-              <div className="rounded-3xl border border-[#EDE0CF] bg-[#FAFAF8] p-6 text-sm text-[#5A5A5A]">
-                <p className="font-medium text-[#1C1C1C]">Supabase ayarlari eksik.</p>
+              <div className="rounded-3xl border border-[#D5F2E5] bg-[#FDFEF9] p-6 text-sm text-[#505050]">
+                <p className="font-medium text-[#1F1F1F]">Supabase ayarlari eksik.</p>
                 <p className="mt-2 leading-relaxed">
                   Devam etmeden once <code className="rounded bg-white px-2 py-1 text-xs">.env.local</code> icine
                   {' '}<code className="rounded bg-white px-2 py-1 text-xs">NEXT_PUBLIC_SUPABASE_URL</code> ve
@@ -101,25 +101,25 @@ export default function AdminLoginPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-[#1C1C1C]">E-posta</label>
+                  <label className="mb-1.5 block text-sm font-medium text-[#1F1F1F]">E-posta</label>
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                     placeholder="admin@ornek.com"
-                    className="w-full rounded-2xl border border-[#EDE0CF] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#7D9B76]"
+                    className="w-full rounded-2xl border border-[#D5F2E5] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#52C77E]"
                   />
                 </div>
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-[#1C1C1C]">Sifre</label>
+                  <label className="mb-1.5 block text-sm font-medium text-[#1F1F1F]">Sifre</label>
                   <input
                     type="password"
                     required
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                     placeholder="********"
-                    className="w-full rounded-2xl border border-[#EDE0CF] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#7D9B76]"
+                    className="w-full rounded-2xl border border-[#D5F2E5] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#52C77E]"
                   />
                 </div>
 
@@ -132,7 +132,7 @@ export default function AdminLoginPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-2xl bg-[#7D9B76] px-5 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#6A8B63] disabled:cursor-not-allowed disabled:opacity-70"
+                  className="w-full rounded-2xl bg-[#52C77E] px-5 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#3FB86D] disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {loading ? 'Giris yapiliyor...' : 'Panele gir'}
                 </button>
@@ -140,7 +140,7 @@ export default function AdminLoginPage() {
             )}
 
             <div className="mt-6">
-              <Link href="/" className="text-sm text-[#7D9B76] underline underline-offset-4">
+              <Link href="/" className="text-sm text-[#52C77E] underline underline-offset-4">
                 Siteye geri don
               </Link>
             </div>

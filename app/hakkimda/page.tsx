@@ -47,10 +47,10 @@ export default function HakkimdaPage() {
             className="object-cover object-top"
             priority
           />
-          <div className="absolute inset-0 bg-[#1C1C1C]/55" />
+          <div className="absolute inset-0 bg-[#1F1F1F]/55" />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 pb-10 w-full">
-          <p className="text-[#A8C4A2] text-sm font-medium tracking-[0.2em] uppercase mb-2">Merhaba</p>
+          <p className="text-[#7DD89D] text-sm font-medium tracking-[0.2em] uppercase mb-2">Merhaba</p>
           <h1
             className="text-5xl font-semibold text-white"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -72,24 +72,24 @@ export default function HakkimdaPage() {
         </div>
         <div>
           <h2
-            className="text-3xl font-semibold text-[#1C1C1C] mb-6"
+            className="text-3xl font-semibold text-[#1F1F1F] mb-6"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Ben Elvin Öztürk.
           </h2>
-          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+          <p className="text-[#505050] leading-relaxed mb-4">
             Pilatesle 7 yil once, bir teknoloji sirketinde beyaz yaka olarak calistigim donemde tanistim. Spor, hayatimin her zaman onemli bir parcasiydi; ancak pilatesle birlikte bedenimi cok daha yakindan tanimaya, gucun ve dengenin yalnizca fiziksel degil, zihinsel bir karsiligi da oldugunu kesfetmeye basladim.
           </p>
-          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+          <p className="text-[#505050] leading-relaxed mb-4">
             Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BABS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
           </p>
-          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+          <p className="text-[#505050] leading-relaxed mb-4">
             Bir sure beyaz yaka kariyerimi surdururken part-time olarak pilates egitmenligi yaptim. Zamanla pilates, hayatimda bir ilgi alaninin otesine gecti; yasam kalitemi donusturen, beni besleyen ve baskalarina da katki sunmak istedigim guclu bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yone cevirerek, bugun tum odagimi pilatese ve ogrencilerime ayiriyorum.
           </p>
-          <p className="text-[#5A5A5A] leading-relaxed mb-4">
+          <p className="text-[#505050] leading-relaxed mb-4">
             Online bireysel ve grup derslerimde amacim; her seviyeden katilimcinin kendi bedenini daha iyi tanimasina, daha guclu, dengeli ve iyi hissetmesine destek olmak. Her dersi, kisinin ihtiyacini merkeze alan; guvenli, etkili ve surdurulebilir bir deneyim olarak planliyorum.
           </p>
-          <p className="text-[#5A5A5A] leading-relaxed mb-8">
+          <p className="text-[#505050] leading-relaxed mb-8">
             Pilates benim icin yalnizca bir egzersiz yontemi degil; bedenle daha bilincli, guclu ve dengeli bir bag kurmanin yolu.
           </p>
 
@@ -98,8 +98,8 @@ export default function HakkimdaPage() {
             <p className="text-xs text-[#9E9E9E] uppercase tracking-wider mb-3">Sertifika & Eğitimler</p>
             <ul className="space-y-2">
               {sertifikalar.map((s) => (
-                <li key={s} className="flex items-center gap-2 text-sm text-[#5A5A5A]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7D9B76] flex-shrink-0" />
+                <li key={s} className="flex items-center gap-2 text-sm text-[#505050]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52C77E] flex-shrink-0" />
                   {s}
                 </li>
               ))}
@@ -109,12 +109,12 @@ export default function HakkimdaPage() {
       </section>
 
       {/* Değerler */}
-      <section className="bg-[#F4F3F1] py-20">
+      <section className="bg-[#F5F9F3] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">Yaklaşımım</p>
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Yaklaşımım</p>
             <h2
-              className="text-3xl font-semibold text-[#1C1C1C]"
+              className="text-3xl font-semibold text-[#1F1F1F]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Nasıl çalışırım?
@@ -122,13 +122,13 @@ export default function HakkimdaPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {degerler.map((d) => (
-              <div key={d.baslik} className="bg-white rounded-2xl overflow-hidden border border-[#EDE0CF]">
+              <div key={d.baslik} className="bg-white rounded-2xl overflow-hidden border border-[#D5F2E5]">
                 <div className="relative h-44">
                   <Image src={d.img} alt={d.baslik} fill className="object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-[#1C1C1C] mb-2">{d.baslik}</h3>
-                  <p className="text-sm text-[#5A5A5A] leading-relaxed">{d.aciklama}</p>
+                  <h3 className="font-semibold text-[#1F1F1F] mb-2">{d.baslik}</h3>
+                  <p className="text-sm text-[#505050] leading-relaxed">{d.aciklama}</p>
                 </div>
               </div>
             ))}
@@ -139,24 +139,24 @@ export default function HakkimdaPage() {
       {/* CTA */}
       <section className="py-20 text-center px-6">
         <h2
-          className="text-3xl font-semibold text-[#1C1C1C] mb-3"
+          className="text-3xl font-semibold text-[#1F1F1F] mb-3"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
           Birlikte çalışalım.
         </h2>
-        <p className="text-[#5A5A5A] text-sm mb-8 max-w-md mx-auto">
+        <p className="text-[#505050] text-sm mb-8 max-w-md mx-auto">
           Online grup ya da bireysel ders — hangisi size uygunsa, hemen kaydolun.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/randevu"
-            className="px-8 py-3.5 bg-[#7D9B76] text-white text-sm font-medium rounded-full hover:bg-[#6A8B63] transition-colors"
+            className="px-8 py-3.5 bg-[#52C77E] text-white text-sm font-medium rounded-full hover:bg-[#3FB86D] transition-colors"
           >
             Derse Kaydol
           </Link>
           <Link
             href="/iletisim"
-            className="px-8 py-3.5 border border-[#1C1C1C]/20 text-[#1C1C1C] text-sm font-medium rounded-full hover:bg-[#1C1C1C]/5 transition-colors"
+            className="px-8 py-3.5 border border-[#1F1F1F]/20 text-[#1F1F1F] text-sm font-medium rounded-full hover:bg-[#1F1F1F]/5 transition-colors"
           >
             İletişime Geç
           </Link>

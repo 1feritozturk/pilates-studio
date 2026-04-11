@@ -320,8 +320,8 @@ export default function AdminDashboard() {
 
   if (!sessionChecked || loading) {
     return (
-      <div className="min-h-screen bg-[#F4F3F1] px-6 py-12">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#EDE0CF] bg-white p-10 text-sm text-[#5A5A5A]">
+      <div className="min-h-screen bg-[#F5F9F3] px-6 py-12">
+        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#D5F2E5] bg-white p-10 text-sm text-[#505050]">
           Panel hazirlaniyor...
         </div>
       </div>
@@ -330,17 +330,17 @@ export default function AdminDashboard() {
 
   if (!isConfigured) {
     return (
-      <div className="min-h-screen bg-[#F4F3F1] px-6 py-12">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#EDE0CF] bg-white p-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#7D9B76]">Admin paneli</p>
-          <h1 className="mt-3 text-3xl font-semibold text-[#1C1C1C]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+      <div className="min-h-screen bg-[#F5F9F3] px-6 py-12">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#D5F2E5] bg-white p-10">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#52C77E]">Admin paneli</p>
+          <h1 className="mt-3 text-3xl font-semibold text-[#1F1F1F]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
             Supabase ayarlari bekleniyor.
           </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#5A5A5A]">
-            Panelin calisabilmesi icin <code className="rounded bg-[#F4F3F1] px-2 py-1 text-xs">.env.local</code> icine
-            {' '}<code className="rounded bg-[#F4F3F1] px-2 py-1 text-xs">NEXT_PUBLIC_SUPABASE_URL</code>,
-            {' '}<code className="rounded bg-[#F4F3F1] px-2 py-1 text-xs">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> ve
-            {' '}<code className="rounded bg-[#F4F3F1] px-2 py-1 text-xs">SUPABASE_SERVICE_ROLE_KEY</code> eklenmeli.
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#505050]">
+            Panelin calisabilmesi icin <code className="rounded bg-[#F5F9F3] px-2 py-1 text-xs">.env.local</code> icine
+            {' '}<code className="rounded bg-[#F5F9F3] px-2 py-1 text-xs">NEXT_PUBLIC_SUPABASE_URL</code>,
+            {' '}<code className="rounded bg-[#F5F9F3] px-2 py-1 text-xs">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> ve
+            {' '}<code className="rounded bg-[#F5F9F3] px-2 py-1 text-xs">SUPABASE_SERVICE_ROLE_KEY</code> eklenmeli.
           </p>
         </div>
       </div>
@@ -348,20 +348,20 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4F3F1] px-4 py-6 md:px-6 md:py-8">
+    <div className="min-h-screen bg-[#F5F9F3] px-4 py-6 md:px-6 md:py-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-6 rounded-[2rem] border border-[#EDE0CF] bg-white px-6 py-5 shadow-sm">
+        <div className="mb-6 rounded-[2rem] border border-[#D5F2E5] bg-white px-6 py-5 shadow-sm">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#7D9B76]">Yonetim paneli</p>
-              <h1 className="mt-2 text-3xl font-semibold text-[#1C1C1C]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+              <p className="text-xs uppercase tracking-[0.35em] text-[#52C77E]">Yonetim paneli</p>
+              <h1 className="mt-2 text-3xl font-semibold text-[#1F1F1F]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                 Elvin Ozturk Online Pilates
               </h1>
             </div>
             <button
               type="button"
               onClick={handleSignOut}
-              className="rounded-full border border-[#EDE0CF] px-5 py-2.5 text-sm text-[#1C1C1C] transition-colors hover:bg-[#F4F3F1]"
+              className="rounded-full border border-[#D5F2E5] px-5 py-2.5 text-sm text-[#1F1F1F] transition-colors hover:bg-[#F5F9F3]"
             >
               Cikis yap
             </button>
@@ -375,7 +375,7 @@ export default function AdminDashboard() {
         ) : null}
 
         <div className="grid gap-6 lg:grid-cols-[240px_minmax(0,1fr)]">
-          <aside className="rounded-[2rem] border border-[#EDE0CF] bg-white p-4 shadow-sm">
+          <aside className="rounded-[2rem] border border-[#D5F2E5] bg-white p-4 shadow-sm">
             <nav className="space-y-2">
               {tabs.map((tab) => (
                 <button
@@ -383,7 +383,7 @@ export default function AdminDashboard() {
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
                   className={`w-full rounded-2xl px-4 py-3 text-left text-sm transition-colors ${
-                    activeTab === tab.id ? 'bg-[#1C1C1C] text-white' : 'text-[#5A5A5A] hover:bg-[#F4F3F1]'
+                    activeTab === tab.id ? 'bg-[#1F1F1F] text-white' : 'text-[#505050] hover:bg-[#F5F9F3]'
                   }`}
                 >
                   {tab.label}
@@ -406,9 +406,9 @@ export default function AdminDashboard() {
                   <PanelCard title="Son randevular">
                     <div className="space-y-3">
                       {bookings.slice(0, 5).map((item) => (
-                        <div key={item.id} className="rounded-2xl border border-[#EDE0CF] px-4 py-3">
-                          <p className="text-sm font-medium text-[#1C1C1C]">{item.first_name} {item.last_name}</p>
-                          <p className="mt-1 text-xs text-[#5A5A5A]">{item.lesson || 'Ders secilmedi'} · {item.preferred_time || 'Saat yok'}</p>
+                        <div key={item.id} className="rounded-2xl border border-[#D5F2E5] px-4 py-3">
+                          <p className="text-sm font-medium text-[#1F1F1F]">{item.first_name} {item.last_name}</p>
+                          <p className="mt-1 text-xs text-[#505050]">{item.lesson || 'Ders secilmedi'} · {item.preferred_time || 'Saat yok'}</p>
                         </div>
                       ))}
                     </div>
@@ -416,9 +416,9 @@ export default function AdminDashboard() {
                   <PanelCard title="Son mesajlar">
                     <div className="space-y-3">
                       {messages.slice(0, 5).map((item) => (
-                        <div key={item.id} className="rounded-2xl border border-[#EDE0CF] px-4 py-3">
-                          <p className="text-sm font-medium text-[#1C1C1C]">{item.full_name}</p>
-                          <p className="mt-1 text-xs text-[#5A5A5A] line-clamp-2">{item.message}</p>
+                        <div key={item.id} className="rounded-2xl border border-[#D5F2E5] px-4 py-3">
+                          <p className="text-sm font-medium text-[#1F1F1F]">{item.full_name}</p>
+                          <p className="mt-1 text-xs text-[#505050] line-clamp-2">{item.message}</p>
                         </div>
                       ))}
                     </div>
@@ -431,20 +431,20 @@ export default function AdminDashboard() {
               <PanelCard title="Randevu talepleri">
                 <div className="space-y-4">
                   {bookings.map((item) => (
-                    <div key={item.id} className="rounded-3xl border border-[#EDE0CF] p-5">
+                    <div key={item.id} className="rounded-3xl border border-[#D5F2E5] p-5">
                       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div>
-                          <p className="text-base font-semibold text-[#1C1C1C]">{item.first_name} {item.last_name}</p>
-                          <p className="mt-1 text-sm text-[#5A5A5A]">{item.email}{item.phone ? ` · ${item.phone}` : ''}</p>
-                          <p className="mt-3 text-sm text-[#5A5A5A]">Ders: <span className="font-medium text-[#1C1C1C]">{item.lesson || 'Belirtilmedi'}</span></p>
-                          <p className="mt-1 text-sm text-[#5A5A5A]">Tercih: <span className="font-medium text-[#1C1C1C]">{item.preferred_date || 'Tarih yok'} / {item.preferred_time || 'Saat yok'}</span></p>
-                          <p className="mt-1 text-sm text-[#5A5A5A]">Deneyim: <span className="font-medium text-[#1C1C1C]">{item.experience_level || 'Belirtilmedi'}</span></p>
-                          {item.note ? <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">{item.note}</p> : null}
+                          <p className="text-base font-semibold text-[#1F1F1F]">{item.first_name} {item.last_name}</p>
+                          <p className="mt-1 text-sm text-[#505050]">{item.email}{item.phone ? ` · ${item.phone}` : ''}</p>
+                          <p className="mt-3 text-sm text-[#505050]">Ders: <span className="font-medium text-[#1F1F1F]">{item.lesson || 'Belirtilmedi'}</span></p>
+                          <p className="mt-1 text-sm text-[#505050]">Tercih: <span className="font-medium text-[#1F1F1F]">{item.preferred_date || 'Tarih yok'} / {item.preferred_time || 'Saat yok'}</span></p>
+                          <p className="mt-1 text-sm text-[#505050]">Deneyim: <span className="font-medium text-[#1F1F1F]">{item.experience_level || 'Belirtilmedi'}</span></p>
+                          {item.note ? <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.note}</p> : null}
                         </div>
                         <select
                           value={item.status}
                           onChange={(event) => updateBookingStatus(item.id, event.target.value as BookingStatus)}
-                          className="rounded-xl border border-[#EDE0CF] bg-white px-4 py-2 text-sm outline-none focus:border-[#7D9B76]"
+                          className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
                         >
                           {bookingStatuses.map((status) => (
                             <option key={status.value} value={status.value}>{status.label}</option>
@@ -461,17 +461,17 @@ export default function AdminDashboard() {
               <PanelCard title="Iletisim mesajlari">
                 <div className="space-y-4">
                   {messages.map((item) => (
-                    <div key={item.id} className="rounded-3xl border border-[#EDE0CF] p-5">
+                    <div key={item.id} className="rounded-3xl border border-[#D5F2E5] p-5">
                       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div>
-                          <p className="text-base font-semibold text-[#1C1C1C]">{item.full_name}</p>
-                          <p className="mt-1 text-sm text-[#5A5A5A]">{item.email}{item.phone ? ` · ${item.phone}` : ''}</p>
-                          <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">{item.message}</p>
+                          <p className="text-base font-semibold text-[#1F1F1F]">{item.full_name}</p>
+                          <p className="mt-1 text-sm text-[#505050]">{item.email}{item.phone ? ` · ${item.phone}` : ''}</p>
+                          <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.message}</p>
                         </div>
                         <select
                           value={item.status}
                           onChange={(event) => updateMessageStatus(item.id, event.target.value as MessageStatus)}
-                          className="rounded-xl border border-[#EDE0CF] bg-white px-4 py-2 text-sm outline-none focus:border-[#7D9B76]"
+                          className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
                         >
                           {messageStatuses.map((status) => (
                             <option key={status.value} value={status.value}>{status.label}</option>
@@ -489,18 +489,18 @@ export default function AdminDashboard() {
                 <PanelCard title="Ders listesi">
                   <div className="space-y-4">
                     {lessons.map((item) => (
-                      <div key={item.id} className="rounded-3xl border border-[#EDE0CF] p-5">
+                      <div key={item.id} className="rounded-3xl border border-[#D5F2E5] p-5">
                         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                           <div>
-                            <p className="text-base font-semibold text-[#1C1C1C]">{item.title}</p>
-                            <p className="mt-1 text-sm text-[#5A5A5A]">{item.category === 'group' ? 'Grup dersi' : 'Bireysel ders'} · {item.level}</p>
-                            <p className="mt-3 text-sm leading-relaxed text-[#5A5A5A]">{item.description}</p>
-                            <p className="mt-3 text-xs text-[#5A5A5A]">{item.days} · {item.times} · {item.duration}</p>
+                            <p className="text-base font-semibold text-[#1F1F1F]">{item.title}</p>
+                            <p className="mt-1 text-sm text-[#505050]">{item.category === 'group' ? 'Grup dersi' : 'Bireysel ders'} · {item.level}</p>
+                            <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.description}</p>
+                            <p className="mt-3 text-xs text-[#505050]">{item.days} · {item.times} · {item.duration}</p>
                           </div>
                           <button
                             type="button"
                             onClick={() => toggleLesson(item.id, !item.is_active)}
-                            className={`rounded-full px-4 py-2 text-sm ${item.is_active ? 'bg-[#E8F0E7] text-[#486244]' : 'bg-[#F4F3F1] text-[#5A5A5A]'}`}
+                            className={`rounded-full px-4 py-2 text-sm ${item.is_active ? 'bg-[#DCF5E5] text-[#486244]' : 'bg-[#F5F9F3] text-[#505050]'}`}
                           >
                             {item.is_active ? 'Aktif' : 'Pasif'}
                           </button>
@@ -525,11 +525,11 @@ export default function AdminDashboard() {
                     <div className="grid grid-cols-2 gap-3">
                       <AdminInput label="Seviye" value={lessonForm.level} onChange={(value) => setLessonForm((current) => ({ ...current, level: value }))} />
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-[#1C1C1C]">Kategori</label>
+                        <label className="mb-1.5 block text-sm font-medium text-[#1F1F1F]">Kategori</label>
                         <select
                           value={lessonForm.category}
                           onChange={(event) => setLessonForm((current) => ({ ...current, category: event.target.value as LessonRow['category'] }))}
-                          className="w-full rounded-2xl border border-[#EDE0CF] bg-white px-4 py-3 text-sm outline-none focus:border-[#7D9B76]"
+                          className="w-full rounded-2xl border border-[#D5F2E5] bg-white px-4 py-3 text-sm outline-none focus:border-[#52C77E]"
                         >
                           {lessonCategories.map((option) => (
                             <option key={option.value} value={option.value}>{option.label}</option>
@@ -538,7 +538,7 @@ export default function AdminDashboard() {
                       </div>
                     </div>
                     <AdminInput label="Gorsel URL" value={lessonForm.image_url} onChange={(value) => setLessonForm((current) => ({ ...current, image_url: value }))} />
-                    <button type="submit" className="w-full rounded-2xl bg-[#7D9B76] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[#6A8B63]">
+                    <button type="submit" className="w-full rounded-2xl bg-[#52C77E] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[#3FB86D]">
                       Dersi kaydet
                     </button>
                   </form>
@@ -551,16 +551,16 @@ export default function AdminDashboard() {
                 <PanelCard title="Galeri ogeleri">
                   <div className="space-y-4">
                     {galleryItems.map((item) => (
-                      <div key={item.id} className="flex flex-col gap-4 rounded-3xl border border-[#EDE0CF] p-5 md:flex-row md:items-center md:justify-between">
+                      <div key={item.id} className="flex flex-col gap-4 rounded-3xl border border-[#D5F2E5] p-5 md:flex-row md:items-center md:justify-between">
                         <div>
-                          <p className="text-base font-semibold text-[#1C1C1C]">{item.title}</p>
-                          <p className="mt-1 text-sm text-[#5A5A5A]">Sira: {item.display_order}</p>
-                          <p className="mt-1 text-xs text-[#7D9B76]">{item.image_url}</p>
+                          <p className="text-base font-semibold text-[#1F1F1F]">{item.title}</p>
+                          <p className="mt-1 text-sm text-[#505050]">Sira: {item.display_order}</p>
+                          <p className="mt-1 text-xs text-[#52C77E]">{item.image_url}</p>
                         </div>
                         <button
                           type="button"
                           onClick={() => toggleGalleryItem(item.id, !item.is_active)}
-                          className={`rounded-full px-4 py-2 text-sm ${item.is_active ? 'bg-[#E8F0E7] text-[#486244]' : 'bg-[#F4F3F1] text-[#5A5A5A]'}`}
+                          className={`rounded-full px-4 py-2 text-sm ${item.is_active ? 'bg-[#DCF5E5] text-[#486244]' : 'bg-[#F5F9F3] text-[#505050]'}`}
                         >
                           {item.is_active ? 'Aktif' : 'Pasif'}
                         </button>
@@ -573,7 +573,7 @@ export default function AdminDashboard() {
                     <AdminInput label="Baslik" value={galleryForm.title} onChange={(value) => setGalleryForm((current) => ({ ...current, title: value }))} />
                     <AdminInput label="Gorsel URL" value={galleryForm.image_url} onChange={(value) => setGalleryForm((current) => ({ ...current, image_url: value }))} />
                     <AdminInput label="Sira no" value={galleryForm.display_order} onChange={(value) => setGalleryForm((current) => ({ ...current, display_order: value }))} />
-                    <button type="submit" className="w-full rounded-2xl bg-[#7D9B76] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[#6A8B63]">
+                    <button type="submit" className="w-full rounded-2xl bg-[#52C77E] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[#3FB86D]">
                       Galeri ogesini ekle
                     </button>
                   </form>
@@ -607,7 +607,7 @@ export default function AdminDashboard() {
                     <AdminTextarea label="Hero aciklamasi" value={settingsForm.hero_description} onChange={(value) => setSettingsForm((current) => ({ ...current, hero_description: value }))} />
                   </div>
                   <div className="xl:col-span-2">
-                    <button type="submit" className="rounded-2xl bg-[#1C1C1C] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#333]">
+                    <button type="submit" className="rounded-2xl bg-[#1F1F1F] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#333]">
                       Ayarlari kaydet
                     </button>
                   </div>
@@ -623,9 +623,9 @@ export default function AdminDashboard() {
 
 function SummaryCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-[1.75rem] border border-[#EDE0CF] bg-white p-5 shadow-sm">
-      <p className="text-sm text-[#5A5A5A]">{label}</p>
-      <p className="mt-3 text-3xl font-semibold text-[#1C1C1C]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+    <div className="rounded-[1.75rem] border border-[#D5F2E5] bg-white p-5 shadow-sm">
+      <p className="text-sm text-[#505050]">{label}</p>
+      <p className="mt-3 text-3xl font-semibold text-[#1F1F1F]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
         {value}
       </p>
     </div>
@@ -640,8 +640,8 @@ function PanelCard({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="rounded-[2rem] border border-[#EDE0CF] bg-white p-6 shadow-sm">
-      <h2 className="mb-5 text-2xl font-semibold text-[#1C1C1C]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+    <div className="rounded-[2rem] border border-[#D5F2E5] bg-white p-6 shadow-sm">
+      <h2 className="mb-5 text-2xl font-semibold text-[#1F1F1F]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
         {title}
       </h2>
       {children}
@@ -660,11 +660,11 @@ function AdminInput({
 }) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-[#1C1C1C]">{label}</label>
+      <label className="mb-1.5 block text-sm font-medium text-[#1F1F1F]">{label}</label>
       <input
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-2xl border border-[#EDE0CF] bg-white px-4 py-3 text-sm outline-none focus:border-[#7D9B76]"
+        className="w-full rounded-2xl border border-[#D5F2E5] bg-white px-4 py-3 text-sm outline-none focus:border-[#52C77E]"
       />
     </div>
   );
@@ -681,12 +681,12 @@ function AdminTextarea({
 }) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-[#1C1C1C]">{label}</label>
+      <label className="mb-1.5 block text-sm font-medium text-[#1F1F1F]">{label}</label>
       <textarea
         rows={4}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-2xl border border-[#EDE0CF] bg-white px-4 py-3 text-sm outline-none focus:border-[#7D9B76]"
+        className="w-full rounded-2xl border border-[#D5F2E5] bg-white px-4 py-3 text-sm outline-none focus:border-[#52C77E]"
       />
     </div>
   );

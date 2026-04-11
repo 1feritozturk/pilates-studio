@@ -37,11 +37,11 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
-      <section className="bg-[#F4F3F1] py-20">
+      <section className="bg-[#F5F9F3] py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">{post.category}</p>
+          <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">{post.category}</p>
           <h1
-            className="text-5xl font-semibold text-[#1C1C1C] mb-4"
+            className="text-5xl font-semibold text-[#1F1F1F] mb-4"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             {post.title}
@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       </section>
 
       <article className="py-16 max-w-3xl mx-auto px-6">
-        <div className="space-y-6 text-[#5A5A5A] leading-8">
+        <div className="space-y-6 text-[#505050] leading-8">
           {post.content.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
