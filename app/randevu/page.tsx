@@ -282,10 +282,6 @@ export default function RandevuPage() {
           >
             {gonderiliyor ? 'Kayit gonderiliyor...' : 'Kaydi Tamamla'}
           </button>
-
-          <p className="text-center text-xs text-[#9E9E9E]">
-            Zoom baglantisi 24 saat icinde e-posta adresinize iletilecektir.
-          </p>
         </form>
       </section>
     </>
