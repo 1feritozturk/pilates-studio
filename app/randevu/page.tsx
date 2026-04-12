@@ -131,22 +131,6 @@ export default function RandevuPage() {
 
       {/* Form */}
       <section className="py-16 max-w-2xl mx-auto px-6">
-
-        {/* Platform bilgisi */}
-        <div className="bg-[#DCF5E5] rounded-2xl p-5 mb-10 flex gap-4">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-            <svg className="w-5 h-5 text-[#52C77E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-[#1F1F1F] mb-1">Zoom üzerinden canlı ders</p>
-            <p className="text-sm text-[#505050]">
-              Kayıt sonrası Zoom linki e-postanıza iletilir. Telefon, tablet veya bilgisayardan katılabilirsiniz.
-            </p>
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           {hata ? (
             <div className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">
