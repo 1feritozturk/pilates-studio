@@ -40,6 +40,14 @@ export default function IletisimPage() {
       }
 
       setGonderildi(true);
+
+      // GA4 Event: İletişim formu gönderildi
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'contact_form_submit',
+        });
+      }
     } catch {
       setHata('Mesaj gonderilirken baglanti hatasi olustu.');
     } finally {
@@ -86,7 +94,19 @@ export default function IletisimPage() {
                 <div>
                   <p className="text-sm font-medium text-[#1F1F1F] mb-1">{bilgi.baslik}</p>
                   {bilgi.href ? (
-                    <a href={bilgi.href} className="text-sm text-[#505050] hover:text-[#52C77E] transition-colors">{bilgi.icerik}</a>
+                    <a
+                      href={bilgi.href}
+                      className="text-sm text-[#505050] hover:text-[#52C77E] transition-colors"
+                      onClick={() => {
+                        if (typeof window !== 'undefined') {
+                          window.dataLayer = window.dataLayer || [];
+                          window.dataLayer.push({
+                            event: 'phone_click',
+                            phone_number: bilgi.icerik,
+                          });
+                        }
+                      }}
+                    >{bilgi.icerik}</a>
                   ) : (
                     <p className="text-sm text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
                   )}

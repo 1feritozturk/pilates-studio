@@ -61,6 +61,16 @@ export default function RandevuPage() {
       }
 
       setGonderildi(true);
+
+      // GA4 Event: Lead form gönderildi
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          lesson_type: form.ders,
+          experience_level: form.deneyim,
+        });
+      }
     } catch {
       setHata('Kayit gonderilirken baglanti hatasi olustu.');
     } finally {

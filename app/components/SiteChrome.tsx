@@ -16,7 +16,8 @@ export default function SiteChrome({
   // GA4 Event: 30 saniyeden uzun kalanlar
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (typeof window !== 'undefined' && window.dataLayer) {
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'engaged_user_30s',
         });
