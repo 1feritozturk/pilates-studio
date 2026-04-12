@@ -50,25 +50,33 @@ export default function DerslerPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative h-64 flex items-end">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1573384667915-e3b9b96c55d1?w=1400&q=85&fit=crop"
-            alt="Online Dersler"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-[#1F1F1F]/60" />
-        </div>
-        <div className="relative max-w-6xl mx-auto px-6 pb-10 w-full">
-          <p className="text-[#7DD89D] text-sm font-medium tracking-[0.2em] uppercase mb-2">Programlar</p>
-          <h1
-            className="text-5xl font-semibold text-white"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            Online Dersler
-          </h1>
+      <section className="relative overflow-hidden border-b border-[#D5F2E5] bg-[radial-gradient(circle_at_top_left,_rgba(220,245,229,0.95),_rgba(253,254,249,1)_45%,_rgba(245,249,243,1)_100%)]">
+        <div className="absolute -top-24 right-[-4rem] h-64 w-64 rounded-full bg-[#DCF5E5]/70 blur-3xl" />
+        <div className="absolute bottom-[-6rem] left-[-2rem] h-52 w-52 rounded-full bg-[#F3EBDD]/70 blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(82,199,126,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(82,199,126,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <div className="max-w-3xl">
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Programlar</p>
+            <h1
+              className="text-5xl md:text-6xl font-semibold text-[#1F1F1F] mb-6"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Online Dersler
+            </h1>
+            <p className="text-[#505050] text-base md:text-lg leading-relaxed max-w-2xl">
+              Canlı grup dersleri ve bireysel seanslarla, size uygun tempoda sürdürülebilir bir Pilates rutini oluşturun.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {['Canlı Zoom dersleri', '50 dk seanslar', 'Grup ve bireysel format'].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-[#D5F2E5] bg-white/80 px-4 py-2 text-sm text-[#1F1F1F] backdrop-blur-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

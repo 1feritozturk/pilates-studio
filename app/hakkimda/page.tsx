@@ -38,25 +38,33 @@ export default function HakkimdaPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative h-72 flex items-end">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&fit=crop"
-            alt="Elvin Öztürk"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-          <div className="absolute inset-0 bg-[#1F1F1F]/55" />
-        </div>
-        <div className="relative max-w-6xl mx-auto px-6 pb-10 w-full">
-          <p className="text-[#7DD89D] text-sm font-medium tracking-[0.2em] uppercase mb-2">Merhaba</p>
-          <h1
-            className="text-5xl font-semibold text-white"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            Hakkımda
-          </h1>
+      <section className="relative overflow-hidden border-b border-[#D5F2E5] bg-[radial-gradient(circle_at_top_right,_rgba(220,245,229,0.9),_rgba(253,254,249,1)_42%,_rgba(245,249,243,1)_100%)]">
+        <div className="absolute top-[-4rem] left-[-3rem] h-56 w-56 rounded-full bg-[#DCF5E5]/75 blur-3xl" />
+        <div className="absolute bottom-[-5rem] right-[-2rem] h-48 w-48 rounded-full bg-[#F3EBDD]/80 blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(31,31,31,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(31,31,31,0.08)_1px,transparent_1px)] [background-size:40px_40px]" />
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <div className="max-w-3xl">
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Merhaba</p>
+            <h1
+              className="text-5xl md:text-6xl font-semibold text-[#1F1F1F] mb-6"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Hakkımda
+            </h1>
+            <p className="text-[#505050] text-base md:text-lg leading-relaxed max-w-2xl">
+              Pilatesle kurduğum bağı, eğitim yolculuğumu ve derslerde nasıl bir çalışma yaklaşımı benimsediğimi bu sayfada bulabilirsiniz.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {['2. Seviye TCF onaylı', 'Online grup ve bireysel', 'Güvenli ve sürdürülebilir yaklaşım'].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-[#D5F2E5] bg-white/80 px-4 py-2 text-sm text-[#1F1F1F] backdrop-blur-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
