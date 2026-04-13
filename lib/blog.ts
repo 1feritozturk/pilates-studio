@@ -27,6 +27,11 @@ export type BlogInlineLink = {
   tail?: string;
 };
 
+export type BlogFaqItem = {
+  question: string;
+  answer: string;
+};
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "online-pilates-nedir-rehber",
@@ -2036,4 +2041,22 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
 
 export function getInContentLinks(slug: string): BlogInlineLink[] {
   return inContentLinksMap[slug] ?? [];
+}
+
+export function getFaqsForPost(post: BlogPost): BlogFaqItem[] {
+  return post.content
+    .filter((section) => section.heading?.trim().endsWith("?"))
+    .map((section) => {
+      const question = section.heading!.trim();
+      const answerParts = [
+        ...(section.paragraphs ?? []),
+        ...(section.bullets?.length ? [section.bullets.join(" ")] : []),
+      ].filter(Boolean);
+
+      return {
+        question,
+        answer: answerParts.join(" ").replace(/\s+/g, " ").trim(),
+      };
+    })
+    .filter((item) => item.answer.length > 0);
 }
