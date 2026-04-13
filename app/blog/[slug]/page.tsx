@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts, getPostBySlug } from "@/lib/blog";
+import { blogPosts, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { createMetadata, defaultKeywords } from "@/lib/seo";
 
 type PageProps = {
@@ -34,6 +35,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     notFound();
   }
+
+  const hubPosts = getHubPosts(post.slug);
+  const inContentLinks = getInContentLinks(post.slug);
+  const relatedPosts = getRelatedPosts(post.slug);
 
   return (
     <>
@@ -78,7 +83,87 @@ export default async function BlogPostPage({ params }: PageProps) {
             </section>
           ))}
         </div>
+
+        {inContentLinks.length ? (
+          <div className="mt-12 rounded-[1.75rem] border border-[#D5F2E5] bg-[#FCFEFA] p-6 md:p-8">
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-4">Okuma Rotası</p>
+            <div className="space-y-4 text-[#505050] leading-8">
+              {inContentLinks.map((item) => (
+                <p key={`${post.slug}-${item.slug}-${item.anchor}`}>
+                  {item.lead}
+                  <Link
+                    href={`/blog/${item.slug}`}
+                    className="text-[#1F1F1F] underline decoration-[#52C77E]/55 underline-offset-4 hover:text-[#52C77E] transition-colors"
+                  >
+                    {item.anchor}
+                  </Link>
+                  {item.tail ?? ""}
+                </p>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </article>
+
+      {hubPosts.length ? (
+        <section className="pb-8 max-w-5xl mx-auto px-6">
+          <div className="rounded-[2rem] border border-[#D5F2E5] bg-[#F5F9F3] p-8 md:p-10">
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Merkez Rehber</p>
+            <h2
+              className="text-3xl font-semibold text-[#1F1F1F] mb-4"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
+              Bu rehberde devam edebileceğiniz yazılar
+            </h2>
+            <p className="text-[#505050] leading-7 mb-8 max-w-2xl">
+              Online Pilates konusunda daha derin okumak isterseniz, aşağıdaki başlıklardan ilgili içeriğe doğrudan geçebilirsiniz.
+            </p>
+            <div className="grid gap-3 md:grid-cols-2">
+              {hubPosts.map((relatedPost) => (
+                <Link
+                  key={relatedPost.slug}
+                  href={`/blog/${relatedPost.slug}`}
+                  className="rounded-2xl border border-[#D5F2E5] bg-white px-5 py-4 text-[#1F1F1F] hover:border-[#52C77E] hover:text-[#52C77E] transition-colors"
+                >
+                  {relatedPost.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {relatedPosts.length ? (
+        <section className="pb-20 max-w-5xl mx-auto px-6">
+          <div className="border-t border-[#D5F2E5] pt-10">
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">İlgili Yazılar</p>
+            <h2
+              className="text-3xl font-semibold text-[#1F1F1F] mb-8"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
+              Okumaya buradan devam edin
+            </h2>
+            <div className="grid gap-5 md:grid-cols-2">
+              {relatedPosts.map((relatedPost) => (
+                <Link
+                  key={relatedPost.slug}
+                  href={`/blog/${relatedPost.slug}`}
+                  className="group rounded-[1.5rem] border border-[#D5F2E5] bg-white p-6 hover:border-[#52C77E] hover:shadow-sm transition-all"
+                >
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#52C77E] mb-3">{relatedPost.category}</p>
+                  <h3
+                    className="text-2xl font-semibold text-[#1F1F1F] mb-3 group-hover:text-[#52C77E] transition-colors"
+                    style={{ fontFamily: "var(--font-playfair), serif" }}
+                  >
+                    {relatedPost.title}
+                  </h3>
+                  <p className="text-[#505050] leading-7">{relatedPost.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }
