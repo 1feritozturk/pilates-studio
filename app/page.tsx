@@ -94,7 +94,7 @@ const istatistikler = [
 export const metadata: Metadata = createMetadata({
   title: 'Online Pilates Dersleri',
   description:
-    'Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Evden canli derslerle esneklik, guc ve durus calismalari yapin.',
+    'Elvin Öztürk ile online grup ve bireysel Pilates derslerine katılın. Evden canlı derslerle esneklik, güç ve duruş çalışmaları yapın.',
   path: '/',
   keywords: [...defaultKeywords, 'evde pilates', 'zoom pilates dersi'],
 });
@@ -103,8 +103,8 @@ export default function Home() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Elvin Ozturk',
-    jobTitle: 'Pilates Egitmeni',
+    name: 'Elvin Öztürk',
+    jobTitle: 'Pilates Eğitmeni',
     description: siteConfig.description,
     url: siteConfig.url,
     email: siteConfig.email,
@@ -114,7 +114,7 @@ export default function Home() {
       name: siteConfig.name,
     },
     sameAs: ['https://www.instagram.com/elvinozturk.pilates'],
-    knowsAbout: ['Pilates', 'Online Pilates', 'Beden Farkindaligi'],
+    knowsAbout: ['Pilates', 'Online Pilates', 'Beden Farkındalığı'],
   };
 
   const faqStructuredData = {
@@ -162,14 +162,14 @@ export default function Home() {
               className="text-5xl md:text-6xl font-semibold leading-tight mb-6 text-[#1F1F1F]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
-              Bedeninizle
+              Online Pilates ile
               <br />
-              <span className="text-[#52C77E]">yeniden</span>
+              <span className="text-[#52C77E]">bedeninizle</span>
               <br />
-              bağlantı kurun.
+              yeniden bağlantı kurun.
             </h1>
             <p className="text-[#505050] text-lg leading-relaxed mb-10 max-w-md">
-              Elvin Ozturk ile online grup ve bireysel Pilates derslerine katilin. Canli derslerle durus, esneklik ve beden farkindaligi uzerine duzenli calisin.
+              Elvin Öztürk ile online grup ve bireysel Pilates derslerine katılın. Canlı derslerle duruş, esneklik ve beden farkındalığı üzerine düzenli çalışın.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -186,7 +186,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-[#505050]">
-              Online Pilates dersi ariyorsaniz; evden, ofisten ya da seyahatteyken programa baglanabilirsiniz. Kucuk grup dersleri ve bireysel Pilates seanslari sayesinde daha kontrollu ve duzenli bir egzersiz rutini kurabilirsiniz.
+              Online Pilates dersi arıyorsanız; evden, ofisten ya da seyahatteyken programa bağlanabilirsiniz. Küçük grup dersleri ve bireysel Pilates seansları sayesinde daha kontrollü ve düzenli bir egzersiz rutini kurabilirsiniz.
             </p>
           </div>
 

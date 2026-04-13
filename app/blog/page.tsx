@@ -6,7 +6,7 @@ import { createMetadata, defaultKeywords } from "@/lib/seo";
 export const metadata: Metadata = createMetadata({
   title: "Blog",
   description:
-    "Online Pilates, durus, esneklik ve egzersiz rutini uzerine hazirlanan rehber yazilari inceleyin.",
+    "Online Pilates, duruş, esneklik ve egzersiz rutini üzerine hazırlanan rehber yazıları inceleyin.",
   path: "/blog",
   keywords: [...defaultKeywords, "pilates blog", "pilates rehberi", "evde pilates"],
 });
@@ -23,11 +23,11 @@ export default function BlogPage() {
             className="text-5xl font-semibold text-[#1F1F1F] mb-4"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
-            Pilates rehberleri ve faydali icerikler
+            Pilates rehberleri ve faydalı içerikler
           </h1>
           <p className="max-w-3xl text-[#505050] leading-relaxed">
-            Online Pilates dersi, evde egzersiz rutini, durus ve beden farkindaligi ile ilgili yazilar burada.
-            Google’da aranan sorulara daha net cevap veren rehber iceriklerle karar vermenizi kolaylastirmayi hedefliyoruz.
+            Online Pilates dersi, evde egzersiz rutini, duruş ve beden farkındalığı ile ilgili yazılar burada.
+            Google’da aranan sorulara daha net cevap veren rehber içeriklerle karar vermenizi kolaylaştırmayı hedefliyoruz.
           </p>
         </div>
       </section>
@@ -55,7 +55,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="mt-6 inline-flex text-sm font-medium text-[#52C77E] underline underline-offset-4"
               >
-                Yaziyi oku
+                Yazıyı oku
               </Link>
             </article>
           ))}

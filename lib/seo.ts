@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Elvin Ozturk Online Pilates",
-  shortName: "Elvin Ozturk Pilates",
+  name: "Elvin Öztürk Online Pilates",
+  shortName: "Elvin Öztürk Pilates",
   description:
-    "Online grup ve bireysel Pilates dersleri ile esneklik, durus ve beden farkindaligi kazanin.",
+    "Online grup ve bireysel Pilates dersleri ile esneklik, duruş ve beden farkındalığı kazanın.",
   url: "https://www.elvinozturk.com",
   locale: "tr_TR",
   ogImage: "/opengraph-image",
@@ -64,6 +64,6 @@ export const defaultKeywords = [
   "pilates dersleri",
   "online grup pilates",
   "bireysel pilates dersi",
-  "elvin ozturk pilates",
+  "elvin öztürk pilates",
   "istanbul pilates",
 ];
