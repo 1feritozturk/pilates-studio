@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog";
+import { getBlogPostsForListing } from "@/lib/blog";
 import { createMetadata, defaultKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -12,6 +12,8 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function BlogPage() {
+  const posts = getBlogPostsForListing();
+
   return (
     <>
       <section className="bg-[#F5F9F3] py-20">
@@ -32,7 +34,7 @@ export default function BlogPage() {
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <article
               key={post.slug}
               className="rounded-[2rem] border border-[#D5F2E5] bg-white p-7 shadow-sm"

@@ -13,6 +13,7 @@ export type BlogPost = {
   readingTime: string;
   category: string;
   content: BlogSection[];
+  faqs?: BlogFaqItem[];
 };
 
 export type BlogPostLink = {
@@ -42,7 +43,29 @@ export const blogPosts: BlogPost[] = [
       "Online pilates nedir, kimler için uygundur ve evde nasıl başlanır? Başlayanlar için online pilates rehberi ile dersler, faydalar ve sık sorulanları keşfedin.",
     publishedAt: "2026-04-13",
     readingTime: "10 dk",
-    category: "Pillar Rehber",
+    category: "Baslangic Rehberi",
+    faqs: [
+      {
+        question: "Online pilates nedir?",
+        answer:
+          "Online pilates, pilates egzersizlerinin internet üzerinden canlı veya kayıtlı içeriklerle yapılmasını sağlayan modern bir egzersiz modelidir.",
+      },
+      {
+        question: "Online pilates için evde neler gerekir?",
+        answer:
+          "Kaymayan bir mat, rahat kıyafet, telefon veya bilgisayar ve hareket edebileceğiniz küçük bir alan genellikle yeterlidir.",
+      },
+      {
+        question: "Online pilates kimler için uygundur?",
+        answer:
+          "Zamanı kısıtlı olanlar, masa başı çalışanlar, evden spor yapmayı tercih edenler ve pilatese yeni başlamak isteyenler için uygundur.",
+      },
+      {
+        question: "Haftada kaç gün online pilates yapılmalı?",
+        answer:
+          "Yeni başlayanlar için haftada 2-3 gün düzenli pratik, sürdürülebilir ve verimli bir başlangıç noktası sunar.",
+      },
+    ],
     content: [
       {
         paragraphs: [
@@ -1529,6 +1552,14 @@ export function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
+export function getBlogPostsForListing(): BlogPost[] {
+  const pillarSlug = "online-pilates-nedir-rehber";
+  const pillarPost = getPostBySlug(pillarSlug);
+  const remainingPosts = blogPosts.filter((post) => post.slug !== pillarSlug);
+
+  return pillarPost ? [pillarPost, ...remainingPosts] : blogPosts;
+}
+
 const relatedPostsMap: Record<string, string[]> = {
   "online-pilates-nedir-rehber": [
     "online-pilates-kimler-icin-uygundur",
@@ -2044,6 +2075,10 @@ export function getInContentLinks(slug: string): BlogInlineLink[] {
 }
 
 export function getFaqsForPost(post: BlogPost): BlogFaqItem[] {
+  if (post.faqs?.length) {
+    return post.faqs;
+  }
+
   return post.content
     .filter((section) => section.heading?.trim().endsWith("?"))
     .map((section) => {

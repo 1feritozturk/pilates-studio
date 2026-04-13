@@ -114,6 +114,7 @@ export default function Home() {
       name: siteConfig.name,
     },
     sameAs: ['https://www.instagram.com/elvinozturk.pilates'],
+    knowsAbout: ['Pilates', 'Online Pilates', 'Beden Farkindaligi'],
   };
 
   const faqStructuredData = {

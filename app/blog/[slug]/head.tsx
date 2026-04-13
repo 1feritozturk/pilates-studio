@@ -25,6 +25,7 @@ export default async function Head({ params }: HeadProps) {
         author: {
           "@type": "Person",
           name: "Elvin Öztürk",
+          url: `${siteConfig.url}/hakkimda`,
         },
         publisher: {
           "@type": "Organization",
