@@ -12,17 +12,17 @@ const degerler = [
   {
     baslik: 'Her beden farklıdır',
     aciklama: 'Standart programlar yerine her öğrenciye özel yaklaşım benimsiyorum. Bedeninizin ihtiyaçlarını dinleyerek ilerliyoruz.',
-    img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80&fit=crop',
+    img: '/images/her-beden-farklidir.png',
   },
   {
     baslik: 'Kalite, niceliğin önünde',
     aciklama: 'Az ama doğru hareket, çok ama yanlış hareketten çok daha değerlidir. Her seansta buna odaklanıyorum.',
-    img: '/images/kalite.jpg',
+    img: '/images/kalite.png',
   },
   {
     baslik: 'Süreklilik',
     aciklama: 'Pilates bir yaşam biçimidir. Sizi bir süreliğine değil, kalıcı olarak bu pratiğin içine çekmeyi hedefliyorum.',
-    img: '/images/sureklilik.jpg',
+    img: '/images/sureklilik.png',
   },
 ];
 
