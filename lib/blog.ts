@@ -1022,6 +1022,65 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: "pilates-nedir",
+    title: "Pilates Nedir? Başlayanlar İçin Temel Rehber",
+    excerpt:
+      "Pilatesin ne olduğunu, nasıl uygulandığını, kimler için uygun olduğunu ve bedene sağladığı temel katkıları keşfedin.",
+    description:
+      "Pilates nedir? Pilatesin ne işe yaradığını, nasıl uygulandığını, kimler için uygun olduğunu ve vücuda sağladığı temel faydaları keşfedin.",
+    publishedAt: "2026-04-17",
+    readingTime: "5 dk",
+    category: "Temel Bilgiler",
+    content: [
+      {
+        paragraphs: [
+          "Pilates, bedeni daha kontrollü, dengeli ve bilinçli kullanmayı hedefleyen bir egzersiz sistemidir. Nefes, merkez bölge aktivasyonu, denge, kontrol ve akış prensipleriyle çalışan pilates; yalnızca kasları çalıştırmayı değil, hareket kalitesini geliştirmeyi de amaçlar. Bu nedenle pilates, hem egzersize yeni başlayanlar hem de daha bilinçli bir hareket pratiği oluşturmak isteyenler için güçlü bir seçenek olarak öne çıkar.",
+          "Günümüzde pilates, sadece spor salonlarında yapılan bir egzersiz türü olarak değil; günlük yaşam kalitesini destekleyen bir hareket sistemi olarak da görülür. Çünkü pilatesin odağında yalnızca bedeni zorlamak değil, onu daha doğru kullanmayı öğrenmek vardır. Bu da pilatesi diğer birçok egzersiz yaklaşımından ayıran temel özelliklerden biridir.",
+        ],
+      },
+      {
+        heading: "Pilates Nasıl Bir Egzersiz Sistemidir?",
+        paragraphs: [
+          "Pilates, hızlı tekrarlar ya da yalnızca yoğun kuvvet antrenmanına dayalı bir sistem değildir. Hareketler kontrollü şekilde uygulanır ve her egzersizde bedenin doğru hizalanmasına dikkat edilir. Pilates sırasında nefesin nasıl kullanıldığı, merkez bölgenin nasıl aktive edildiği ve omurganın nasıl konumlandığı büyük önem taşır.",
+          "Bu yaklaşım sayesinde pilates, sadece fiziksel olarak değil zihinsel olarak da odak gerektiren bir çalışma haline gelir. Kişi hareketi yalnızca yapmakla kalmaz, onu nasıl yaptığını da fark etmeye başlar. Bu da zamanla beden farkındalığını artırabilir.",
+        ],
+      },
+      {
+        heading: "Pilates Ne İşe Yarar?",
+        paragraphs: [
+          "Pilatesin en temel amacı, bedeni daha dengeli ve kontrollü kullanmayı desteklemektir. Düzenli pilates pratiği; duruş farkındalığını artırabilir, hareket kalitesini geliştirebilir, merkez bölgeyi daha bilinçli kullanmayı öğretebilir ve günlük yaşam içinde daha rahat hareket etmeye katkı sağlayabilir.",
+          "Özellikle uzun süre oturanlar, masa başında çalışanlar ve gün içinde hareketsiz kalan kişiler için pilates önemli bir destek olabilir. Çünkü pilates, bedeni yalnızca çalıştırmakla kalmaz, aynı zamanda günlük kullanım kalitesini de etkileyebilir.",
+        ],
+      },
+      {
+        heading: "Pilatesin Temel Prensipleri Nelerdir?",
+        paragraphs: [
+          "Pilates denildiğinde en çok öne çıkan unsurlar nefes, kontrol, merkez bölge, akış ve dengedir. Bu prensipler pilatesin temelini oluşturur. Hareketin sadece tamamlanması değil, doğru ritimde ve doğru kaslarla yapılması önemlidir.",
+          "Bu yüzden pilates yaparken “daha hızlı” ya da “daha zor” olmak her zaman daha iyi anlamına gelmez. Asıl fark yaratan şey, hareketin kontrollü şekilde uygulanmasıdır. Pilatesin etkisi de çoğu zaman bu bilinçli uygulama sayesinde hissedilir.",
+        ],
+      },
+      {
+        heading: "Pilates Kimler İçin Uygundur?",
+        paragraphs: [
+          "Pilates, farklı seviyelere uyarlanabilen yapısı sayesinde geniş bir kullanıcı kitlesine hitap eder. Egzersize yeni başlayanlar, düzenli hareket alışkanlığı oluşturmak isteyenler, gün içinde uzun süre oturanlar ve bedenini daha bilinçli kullanmak isteyenler için pilates uygun bir seçenek olabilir.",
+          "Burada önemli olan, kişinin kendi seviyesine uygun şekilde başlamasıdır. Pilates doğru tempoda ve uygun içerikle uygulandığında sürdürülebilir bir egzersiz sistemine dönüşebilir.",
+        ],
+      },
+      {
+        heading: "Pilatesin En Büyük Avantajı Nedir?",
+        paragraphs: [
+          "Pilatesin en büyük avantajı, bedeni yalnızca çalıştırmakla kalmayıp ona daha bilinçli bir hareket alışkanlığı kazandırmasıdır. Nefes, denge ve kontrol gibi unsurların birlikte çalışması, pilatesi yalnızca estetik hedeflere odaklı bir egzersiz olmaktan çıkarır. Böylece pilates, uzun vadeli bir rutin olarak daha değerli hale gelir.",
+        ],
+      },
+      {
+        heading: "Sonuç: Pilates Nedir?",
+        paragraphs: [
+          "Pilates; bedeni daha kontrollü, dengeli ve farkındalıkla kullanmayı destekleyen bir egzersiz sistemidir. Hareket kalitesini geliştirmeyi, duruşu desteklemeyi, merkez bölgeyi bilinçli kullanmayı ve günlük yaşamda daha rahat hareket etmeyi amaçlar. Bu nedenle pilates, yalnızca spor yapmak isteyenler için değil, bedeniyle daha güçlü bir ilişki kurmak isteyen herkes için değerli bir başlangıç sunar.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "pilatese-baslamak-icin-en-dogru-zaman-ne-zaman",
     title: "Pilatese Başlamak İçin En Doğru Zaman Ne Zaman?",
     excerpt:
@@ -1621,7 +1680,14 @@ const relatedPostsMap: Record<string, string[]> = {
     "evde-pilates-icin-neler-gerekir",
     "haftada-kac-gun-pilates-yapilmali",
   ],
+  "pilates-nedir": [
+    "pilates-nedir-ne-ise-yarar",
+    "pilatesin-vucuda-faydalari-nelerdir",
+    "pilatese-yeni-baslayanlar-icin-bilinmesi-gerekenler",
+    "pilates-durusu-duzeltir-mi",
+  ],
   "pilates-nedir-ne-ise-yarar": [
+    "pilates-nedir",
     "pilatesin-vucuda-faydalari-nelerdir",
     "pilatese-yeni-baslayanlar-icin-bilinmesi-gerekenler",
     "pilates-durusu-duzeltir-mi",
@@ -1906,6 +1972,32 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       anchor: "haftada kaç gün pilates yapılmalı",
       slug: "haftada-kac-gun-pilates-yapilmali",
       tail: " sorusunu netleştirmek daha sağlıklıdır.",
+    },
+  ],
+  "pilates-nedir": [
+    {
+      lead: "Pilatesin ne işe yaradığını daha detaylı görmek için ",
+      anchor: "Pilates Nedir, Ne İşe Yarar?",
+      slug: "pilates-nedir-ne-ise-yarar",
+      tail: " yazısını inceleyebilirsiniz.",
+    },
+    {
+      lead: "Pilatesin bedene katkıları için ",
+      anchor: "Pilatesin Vücuda Faydaları Nelerdir?",
+      slug: "pilatesin-vucuda-faydalari-nelerdir",
+      tail: " içeriğine geçiş verebilirsiniz.",
+    },
+    {
+      lead: "Yeni başlayan kullanıcılar için ",
+      anchor: "Pilatese Yeni Başlayanlar İçin Bilinmesi Gerekenler",
+      slug: "pilatese-yeni-baslayanlar-icin-bilinmesi-gerekenler",
+      tail: " yazısı güçlü bir devam noktasıdır.",
+    },
+    {
+      lead: "Duruş niyetiyle okuyanlar için ",
+      anchor: "Pilates Duruşu Düzeltir mi?",
+      slug: "pilates-durusu-duzeltir-mi",
+      tail: " bağlantısı da oldukça ilgilidir.",
     },
   ],
   "pilates-nedir-ne-ise-yarar": [
