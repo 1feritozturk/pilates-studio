@@ -69,12 +69,12 @@ export default function Footer() {
               </li>
               <li className="pt-2">
                 <a
-                  href="https://instagram.com/elvinozturk.pilates"
+                  href="https://www.instagram.com/elvinozturrk/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  @elvinozturk.pilates
+                  @elvinozturrk
                 </a>
               </li>
             </ul>

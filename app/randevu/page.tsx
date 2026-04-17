@@ -27,6 +27,7 @@ export default function RandevuPage() {
   const [gonderildi, setGonderildi] = useState(false);
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState('');
+  const deneyimGoster = form.dersTipi === 'Grup Dersi' && form.grupSeviyesi === 'Başlangıç';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -223,6 +224,7 @@ export default function RandevuPage() {
                       ...prev,
                       dersTipi,
                       grupSeviyesi: dersTipi === 'Grup Dersi' ? prev.grupSeviyesi : '',
+                      deneyim: dersTipi === 'Grup Dersi' && prev.grupSeviyesi === 'Başlangıç' ? prev.deneyim : '',
                     }))
                   }
                   className={`px-4 py-2 rounded-full text-sm border transition-colors ${
@@ -245,7 +247,13 @@ export default function RandevuPage() {
                   <button
                     key={seviye}
                     type="button"
-                    onClick={() => setForm({ ...form, grupSeviyesi: seviye })}
+                    onClick={() =>
+                      setForm((prev) => ({
+                        ...prev,
+                        grupSeviyesi: seviye,
+                        deneyim: seviye === 'Başlangıç' ? prev.deneyim : '',
+                      }))
+                    }
                     className={`px-4 py-2 rounded-full text-sm border transition-colors ${
                       form.grupSeviyesi === seviye
                         ? 'bg-[#52C77E] text-white border-[#52C77E]'
@@ -260,25 +268,27 @@ export default function RandevuPage() {
           ) : null}
 
           {/* Deneyim */}
-          <div>
-            <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Pilates deneyiminiz</label>
-            <div className="flex gap-3">
-              {['Hiç yapmadım', 'Biraz deneyimim var', 'Düzenli yapıyorum'].map((seviye) => (
-                <button
-                  key={seviye}
-                  type="button"
-                  onClick={() => setForm({ ...form, deneyim: seviye })}
-                  className={`flex-1 py-2.5 rounded-xl text-xs border transition-colors ${
-                    form.deneyim === seviye
-                      ? 'bg-[#52C77E] text-white border-[#52C77E]'
-                      : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
-                  }`}
-                >
-                  {seviye}
-                </button>
-              ))}
+          {deneyimGoster ? (
+            <div>
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Pilates deneyiminiz</label>
+              <div className="flex gap-3">
+                {['Hiç yapmadım', 'Biraz deneyimim var', 'Düzenli yapıyorum'].map((seviye) => (
+                  <button
+                    key={seviye}
+                    type="button"
+                    onClick={() => setForm({ ...form, deneyim: seviye })}
+                    className={`flex-1 py-2.5 rounded-xl text-xs border transition-colors ${
+                      form.deneyim === seviye
+                        ? 'bg-[#52C77E] text-white border-[#52C77E]'
+                        : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
+                    }`}
+                  >
+                    {seviye}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
 
           {/* Not */}
           <div>
