@@ -44,7 +44,7 @@ export default function HakkimdaPage() {
         <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(31,31,31,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(31,31,31,0.08)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Merhaba</p>
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merhaba</p>
             <h1
               className="text-5xl md:text-6xl font-semibold text-[#1F1F1F] mb-6"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -85,19 +85,19 @@ export default function HakkimdaPage() {
           >
             Ben Elvin Öztürk.
           </h2>
-          <p className="text-[#505050] leading-relaxed mb-4">
+          <p className="text-base text-[#505050] leading-relaxed mb-4">
             Pilatesle 7 yil once, bir teknoloji sirketinde beyaz yaka olarak calistigim donemde tanistim. Spor, hayatimin her zaman onemli bir parcasiydi; ancak pilatesle birlikte bedenimi cok daha yakindan tanimaya, gucun ve dengenin yalnizca fiziksel degil, zihinsel bir karsiligi da oldugunu kesfetmeye basladim.
           </p>
-          <p className="text-[#505050] leading-relaxed mb-4">
+          <p className="text-base text-[#505050] leading-relaxed mb-4">
             Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BABS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
           </p>
-          <p className="text-[#505050] leading-relaxed mb-4">
+          <p className="text-base text-[#505050] leading-relaxed mb-4">
             Bir sure beyaz yaka kariyerimi surdururken part-time olarak pilates egitmenligi yaptim. Zamanla pilates, hayatimda bir ilgi alaninin otesine gecti; yasam kalitemi donusturen, beni besleyen ve baskalarina da katki sunmak istedigim guclu bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yone cevirerek, bugun tum odagimi pilatese ve ogrencilerime ayiriyorum.
           </p>
-          <p className="text-[#505050] leading-relaxed mb-4">
+          <p className="text-base text-[#505050] leading-relaxed mb-4">
             Online bireysel ve grup derslerimde amacim; her seviyeden katilimcinin kendi bedenini daha iyi tanimasina, daha guclu, dengeli ve iyi hissetmesine destek olmak. Her dersi, kisinin ihtiyacini merkeze alan; guvenli, etkili ve surdurulebilir bir deneyim olarak planliyorum.
           </p>
-          <p className="text-[#505050] leading-relaxed mb-8">
+          <p className="text-base text-[#505050] leading-relaxed mb-8">
             Pilates benim icin yalnizca bir egzersiz yontemi degil; bedenle daha bilincli, guclu ve dengeli bir bag kurmanin yolu.
           </p>
 
@@ -120,7 +120,7 @@ export default function HakkimdaPage() {
       <section className="bg-[#F5F9F3] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Yaklaşımım</p>
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Yaklaşımım</p>
             <h2
               className="text-3xl font-semibold text-[#1F1F1F]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -136,7 +136,7 @@ export default function HakkimdaPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-[#1F1F1F] mb-2">{d.baslik}</h3>
-                  <p className="text-sm text-[#505050] leading-relaxed">{d.aciklama}</p>
+                  <p className="text-base text-[#505050] leading-relaxed">{d.aciklama}</p>
                 </div>
               </div>
             ))}
@@ -152,7 +152,7 @@ export default function HakkimdaPage() {
         >
           Birlikte çalışalım.
         </h2>
-        <p className="text-[#505050] text-sm mb-8 max-w-md mx-auto">
+        <p className="text-[#505050] text-base mb-8 max-w-md mx-auto">
           Online grup ya da bireysel ders — hangisi size uygunsa, hemen kaydolun.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">

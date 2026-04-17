@@ -138,14 +138,14 @@ export default function RandevuPage() {
       {/* Header */}
       <section className="bg-[#F5F9F3] py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Kayıt Formu</p>
+          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kayıt Formu</p>
           <h1
             className="text-4xl font-semibold text-[#1F1F1F] mb-3"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Online Derse Kaydol
           </h1>
-          <p className="text-[#505050] leading-relaxed">
+          <p className="text-base text-[#505050] leading-relaxed">
             Formu doldurun, 24 saat içinde Zoom bağlantısı ve ders bilgileri e-posta adresinize gönderilsin.
           </p>
         </div>

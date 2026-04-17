@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight">
           <span className="text-base font-semibold tracking-widest uppercase text-[#1F1F1F]">Elvin Öztürk</span>
-          <span className="text-[10px] tracking-[0.2em] text-[#52C77E] uppercase">Online Pilates</span>
+          <span className="text-[10px] tracking-[0.12em] text-[#52C77E] uppercase">Online Pilates</span>
         </Link>
 
         {/* Desktop Nav */}

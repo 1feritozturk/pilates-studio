@@ -60,17 +60,17 @@ export default function IletisimPage() {
       {/* Header */}
       <section className="bg-[#F5F9F3] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Bize ulaşın</p>
+          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
           <h1
             className="text-5xl font-semibold text-[#1F1F1F] mb-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             İletişim
           </h1>
-          <p className="text-[#505050] max-w-xl leading-relaxed">
+          <p className="text-base text-[#505050] max-w-xl leading-relaxed">
             Sorularınız için bize yazın ya da arayın. En kısa sürede dönüş yapacağız.
           </p>
-          <p className="text-[#505050] max-w-2xl leading-relaxed mt-4">
+          <p className="text-base text-[#505050] max-w-2xl leading-relaxed mt-4">
             Online Pilates dersi, bireysel seanslar veya grup dersleri hakkinda bilgi almak icin formu doldurabilirsiniz.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function IletisimPage() {
                   {bilgi.href ? (
                     <a
                       href={bilgi.href}
-                      className="text-sm text-[#505050] hover:text-[#52C77E] transition-colors"
+                      className="text-base text-[#505050] hover:text-[#52C77E] transition-colors"
                       onClick={() => {
                         if (typeof window !== 'undefined') {
                           window.dataLayer = window.dataLayer || [];
@@ -108,7 +108,7 @@ export default function IletisimPage() {
                       }}
                     >{bilgi.icerik}</a>
                   ) : (
-                    <p className="text-sm text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
+                    <p className="text-base text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
                   )}
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function IletisimPage() {
             <div className="bg-[#DCF5E5] rounded-2xl p-8 text-center">
               <p className="text-4xl mb-3">✅</p>
               <p className="font-semibold text-[#1F1F1F] mb-2">Mesajınız alındı!</p>
-              <p className="text-sm text-[#505050]">En kısa sürede size dönüş yapacağız.</p>
+              <p className="text-base text-[#505050]">En kısa sürede size dönüş yapacağız.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">

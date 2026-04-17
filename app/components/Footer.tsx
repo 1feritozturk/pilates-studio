@@ -9,9 +9,9 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <p className="text-lg font-semibold tracking-widest uppercase text-white">Elvin Öztürk</p>
-              <p className="text-xs tracking-[0.2em] text-[#52C77E] uppercase">Online Pilates</p>
+              <p className="text-xs tracking-[0.12em] text-[#52C77E] uppercase">Online Pilates</p>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="text-base leading-relaxed">
               Nerede olursanız olun, online grup ve bireysel derslerle Pilates&apos;in gucunu kesfedin.
             </p>
           </div>

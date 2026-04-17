@@ -56,9 +56,9 @@ export default function DerslerPage() {
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(82,199,126,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(82,199,126,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-3">Programlar</p>
+            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
             <h1
-              className="text-5xl md:text-6xl font-semibold text-[#1F1F1F] mb-6"
+              className="text-5xl md:text-6xl font-semibold leading-tight text-[#1F1F1F] mb-6"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Online Dersler
@@ -82,7 +82,7 @@ export default function DerslerPage() {
 
       {/* Giriş */}
       <section className="py-12 max-w-6xl mx-auto px-6 border-b border-[#D5F2E5]">
-        <p className="text-[#505050] max-w-2xl leading-relaxed">
+        <p className="text-base text-[#505050] max-w-2xl leading-relaxed">
           İki farklı ders formatı sunuyorum: küçük gruplarla yapılan canlı online grup dersleri ve tamamen size özel bireysel seanslar. İkisi de Zoom üzerinden gerçekleşiyor, kayıt opsiyonu mevcut.
         </p>
       </section>
@@ -112,7 +112,7 @@ export default function DerslerPage() {
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-lg font-semibold text-[#1F1F1F] mb-2">{ders.ad}</h3>
-                <p className="text-sm text-[#505050] leading-relaxed mb-5 flex-1">{ders.aciklama}</p>
+                <p className="text-base text-[#505050] leading-relaxed mb-5 flex-1">{ders.aciklama}</p>
                 <div className="space-y-1.5 text-xs text-[#505050] border-t border-[#F5F9F3] pt-4 mb-5">
                   <div className="flex justify-between">
                     <span>Süre</span>
@@ -154,19 +154,19 @@ export default function DerslerPage() {
           <div className="grid gap-6 md:grid-cols-3">
             <div>
               <h3 className="font-semibold text-[#1F1F1F] mb-2">Baslangic seviyesindeyseniz</h3>
-              <p className="text-sm leading-relaxed text-[#505050]">
+              <p className="text-base leading-relaxed text-[#505050]">
                 Grup dersleri ile temel nefes, durus ve hareket kaliplari uzerinde duzenli bir baslangic yapabilirsiniz.
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-[#1F1F1F] mb-2">Kisiye ozel destek istiyorsaniz</h3>
-              <p className="text-sm leading-relaxed text-[#505050]">
+              <p className="text-base leading-relaxed text-[#505050]">
                 Bireysel Pilates dersi; hedefe yonelik plan, tempo kontrolu ve daha yakindan takip imkani sunar.
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-[#1F1F1F] mb-2">Duzenli rutine ihtiyaciniz varsa</h3>
-              <p className="text-sm leading-relaxed text-[#505050]">
+              <p className="text-base leading-relaxed text-[#505050]">
                 Haftalik programli ders saatleri sayesinde egzersizi gunluk yasaminiza daha kolay yerlestirebilirsiniz.
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function DerslerPage() {
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <h3 className="text-2xl font-semibold text-[#1F1F1F] mb-3">{ders.ad}</h3>
-                <p className="text-sm text-[#505050] leading-relaxed mb-6">{ders.aciklama}</p>
+                <p className="text-base text-[#505050] leading-relaxed mb-6">{ders.aciklama}</p>
                 <div className="grid grid-cols-2 gap-2 mb-6">
                   {ders.ozellikler.map((o) => (
                     <div key={o} className="flex items-center gap-2 text-sm text-[#505050]">
@@ -228,9 +228,9 @@ export default function DerslerPage() {
 
       {/* Platform bilgisi */}
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">
-        <p className="text-[#52C77E] text-sm font-medium tracking-[0.2em] uppercase mb-4">Nasıl çalışır?</p>
+        <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-4">Nasıl çalışır?</p>
         <h2
-          className="text-3xl font-semibold text-[#1F1F1F] mb-10"
+          className="text-3xl font-semibold leading-snug text-[#1F1F1F] mb-10"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
           Dört adımda online derse başlayın
@@ -263,7 +263,7 @@ export default function DerslerPage() {
                 <span className="text-[#52C77E] font-bold text-sm">{a.adim}</span>
               </div>
               <h3 className="font-semibold text-[#1F1F1F] mb-2">{a.baslik}</h3>
-              <p className="text-sm text-[#505050]">{a.aciklama}</p>
+              <p className="text-base text-[#505050]">{a.aciklama}</p>
             </div>
           ))}
         </div>
