@@ -81,6 +81,7 @@ export default function AdminDashboard() {
   const [settings, setSettings] = useState<SiteSettingsRow | null>(null);
   const [feedback, setFeedback] = useState('');
   const [error, setError] = useState('');
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [lessonForm, setLessonForm] = useState<LessonFormState>(initialLessonForm);
   const [galleryForm, setGalleryForm] = useState(initialGalleryForm);
   const [settingsForm, setSettingsForm] = useState(initialSettingsForm);
@@ -196,6 +197,31 @@ export default function AdminDashboard() {
     setFeedback('Randevu durumu guncellendi.');
   }
 
+  async function deleteBooking(id: string) {
+    const confirmed = window.confirm('Bu randevu talebini silmek istediginize emin misiniz?');
+
+    if (!confirmed) {
+      return;
+    }
+
+    setError('');
+    setFeedback('');
+    setDeletingId(id);
+
+    const client = getSupabaseBrowserClient();
+    const { error: deleteError } = await client.from('bookings').delete().eq('id', id);
+
+    setDeletingId(null);
+
+    if (deleteError) {
+      setError(deleteError.message);
+      return;
+    }
+
+    setBookings((current) => current.filter((item) => item.id !== id));
+    setFeedback('Randevu silindi.');
+  }
+
   async function updateMessageStatus(id: string, status: MessageStatus) {
     const client = getSupabaseBrowserClient();
     const { error: updateError } = await client.from('contact_messages').update({ status }).eq('id', id);
@@ -207,6 +233,31 @@ export default function AdminDashboard() {
 
     setMessages((current) => current.map((item) => (item.id === id ? { ...item, status } : item)));
     setFeedback('Mesaj durumu guncellendi.');
+  }
+
+  async function deleteMessage(id: string) {
+    const confirmed = window.confirm('Bu iletisim mesajini silmek istediginize emin misiniz?');
+
+    if (!confirmed) {
+      return;
+    }
+
+    setError('');
+    setFeedback('');
+    setDeletingId(id);
+
+    const client = getSupabaseBrowserClient();
+    const { error: deleteError } = await client.from('contact_messages').delete().eq('id', id);
+
+    setDeletingId(null);
+
+    if (deleteError) {
+      setError(deleteError.message);
+      return;
+    }
+
+    setMessages((current) => current.filter((item) => item.id !== id));
+    setFeedback('Mesaj silindi.');
   }
 
   async function toggleLesson(id: string, isActive: boolean) {
@@ -441,15 +492,25 @@ export default function AdminDashboard() {
                           <p className="mt-1 text-sm text-[#505050]">Deneyim: <span className="font-medium text-[#1F1F1F]">{item.experience_level || 'Belirtilmedi'}</span></p>
                           {item.note ? <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.note}</p> : null}
                         </div>
-                        <select
-                          value={item.status}
-                          onChange={(event) => updateBookingStatus(item.id, event.target.value as BookingStatus)}
-                          className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
-                        >
-                          {bookingStatuses.map((status) => (
-                            <option key={status.value} value={status.value}>{status.label}</option>
-                          ))}
-                        </select>
+                        <div className="flex flex-col gap-3 lg:min-w-[180px]">
+                          <select
+                            value={item.status}
+                            onChange={(event) => updateBookingStatus(item.id, event.target.value as BookingStatus)}
+                            className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
+                          >
+                            {bookingStatuses.map((status) => (
+                              <option key={status.value} value={status.value}>{status.label}</option>
+                            ))}
+                          </select>
+                          <button
+                            type="button"
+                            onClick={() => deleteBooking(item.id)}
+                            disabled={deletingId === item.id}
+                            className="rounded-xl border border-[#F0C6C3] bg-[#FFF5F4] px-4 py-2 text-sm text-[#B04B43] transition-colors hover:bg-[#FDEBE8] disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            {deletingId === item.id ? 'Siliniyor...' : 'Sil'}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -468,15 +529,25 @@ export default function AdminDashboard() {
                           <p className="mt-1 text-sm text-[#505050]">{item.email}{item.phone ? ` · ${item.phone}` : ''}</p>
                           <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.message}</p>
                         </div>
-                        <select
-                          value={item.status}
-                          onChange={(event) => updateMessageStatus(item.id, event.target.value as MessageStatus)}
-                          className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
-                        >
-                          {messageStatuses.map((status) => (
-                            <option key={status.value} value={status.value}>{status.label}</option>
-                          ))}
-                        </select>
+                        <div className="flex flex-col gap-3 lg:min-w-[180px]">
+                          <select
+                            value={item.status}
+                            onChange={(event) => updateMessageStatus(item.id, event.target.value as MessageStatus)}
+                            className="rounded-xl border border-[#D5F2E5] bg-white px-4 py-2 text-sm outline-none focus:border-[#52C77E]"
+                          >
+                            {messageStatuses.map((status) => (
+                              <option key={status.value} value={status.value}>{status.label}</option>
+                            ))}
+                          </select>
+                          <button
+                            type="button"
+                            onClick={() => deleteMessage(item.id)}
+                            disabled={deletingId === item.id}
+                            className="rounded-xl border border-[#F0C6C3] bg-[#FFF5F4] px-4 py-2 text-sm text-[#B04B43] transition-colors hover:bg-[#FDEBE8] disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            {deletingId === item.id ? 'Siliniyor...' : 'Sil'}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
