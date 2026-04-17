@@ -193,7 +193,7 @@ export default function Home() {
           {/* Sağ: Online ders kartları */}
           <div className="hidden md:flex flex-col gap-4">
             <Link
-              href="/dersler"
+              href="/dersler#grup-dersleri"
               className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-[#D5F2E5] hover:shadow-md transition-shadow group"
             >
               <p className="text-xs text-[#52C77E] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
@@ -202,7 +202,7 @@ export default function Home() {
               <p className="text-xs text-[#52C77E] mt-3 group-hover:underline">Programa bak →</p>
             </Link>
             <Link
-              href="/dersler"
+              href="/dersler#bireysel-ders"
               className="bg-[#52C77E] rounded-2xl p-6 text-white hover:bg-[#3FB86D] transition-colors group"
             >
               <p className="text-xs text-white/70 font-medium tracking-wider uppercase mb-2">Bireysel Ders</p>

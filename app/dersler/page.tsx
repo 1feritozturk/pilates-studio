@@ -28,7 +28,7 @@ const grupDersleri = [
 
 const bireyselDersler = [
   {
-    ad: '1\'e 1 Bireysel Ders',
+    ad: 'Bireysel Ders',
     aciklama: 'Tamamen size özel hazırlanmış program. Hedeflerinize, bedeninize ve seviyenize göre kişiselleştirilmiş içerik.',
     sure: '50 dk',
     gunler: 'Her gün',
@@ -88,7 +88,7 @@ export default function DerslerPage() {
       </section>
 
       {/* GRUP DERSLERİ */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
+      <section id="grup-dersleri" className="scroll-mt-28 py-16 max-w-6xl mx-auto px-6">
         <div className="flex items-baseline gap-4 mb-10">
           <h2
             className="text-3xl font-semibold text-[#1F1F1F]"
@@ -175,16 +175,15 @@ export default function DerslerPage() {
       </section>
 
       {/* BİREYSEL DERS */}
-      <section className="bg-[#F5F9F3] py-16">
+      <section id="bireysel-ders" className="scroll-mt-28 bg-[#F5F9F3] py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-baseline gap-4 mb-10">
+          <div className="mb-10">
             <h2
               className="text-3xl font-semibold text-[#1F1F1F]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Online Bireysel Ders
             </h2>
-            <span className="text-sm text-white bg-[#52C77E] px-3 py-1 rounded-full">1&apos;e 1</span>
           </div>
           {bireyselDersler.map((ders) => (
             <div
@@ -234,13 +233,30 @@ export default function DerslerPage() {
           className="text-3xl font-semibold text-[#1F1F1F] mb-10"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
-          3 adımda online derse başlayın
+          4 adımda online derse başlayın
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {[
-            { adim: '01', baslik: 'Kaydolun', aciklama: 'Formu doldurun, ders ve saati seçin.' },
-            { adim: '02', baslik: 'Zoom linkini alın', aciklama: 'E-posta ile Zoom bağlantınız gelir.' },
-            { adim: '03', baslik: 'Derse katılın', aciklama: 'Telefon, tablet veya bilgisayardan bağlanın.' },
+            {
+              adim: '01',
+              baslik: 'Formu doldurun',
+              aciklama: 'Bilgilerinizi paylaşın ve size en uygun ders türünü belirtin.',
+            },
+            {
+              adim: '02',
+              baslik: 'Sizinle iletişime geçelim',
+              aciklama: 'Talebinizi değerlendirip kaydınızı birlikte netleştirelim.',
+            },
+            {
+              adim: '03',
+              baslik: 'Zoom bilgilerinizi alın',
+              aciklama: 'Ders bağlantınız ve giriş bilgileriniz e-posta ile size gönderilir.',
+            },
+            {
+              adim: '04',
+              baslik: 'Derse katılın',
+              aciklama: 'Telefon, tablet veya bilgisayarınızdan kolayca bağlanın.',
+            },
           ].map((a) => (
             <div key={a.adim} className="text-center">
               <div className="w-14 h-14 bg-[#DCF5E5] rounded-full flex items-center justify-center mx-auto mb-4">
