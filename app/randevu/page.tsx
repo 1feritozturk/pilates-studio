@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 
-const dersSecenekleri = [
-  'Online Grup — Başlangıç',
-  'Online Grup — Orta Seviye',
-  'Online Bireysel Ders',
-];
+const dersTipiSecenekleri = ['Grup Dersi', 'Bireysel Ders'] as const;
+const grupSeviyeSecenekleri = ['Başlangıç', 'Orta Seviye'] as const;
 
-const saatSecenekleri = [
-  '07:30', '08:00', '09:00', '10:00', '11:00',
-  '14:00', '16:00', '18:30', '19:00',
-];
+function getSecilenDersLabel(dersTipi: string, grupSeviyesi: string) {
+  if (dersTipi === 'Grup Dersi' && grupSeviyesi) {
+    return `Grup Dersi — ${grupSeviyesi}`;
+  }
+
+  return dersTipi;
+}
 
 export default function RandevuPage() {
   const [form, setForm] = useState({
@@ -19,9 +19,8 @@ export default function RandevuPage() {
     soyad: '',
     email: '',
     telefon: '',
-    ders: '',
-    tarih: '',
-    saat: '',
+    dersTipi: '',
+    grupSeviyesi: '',
     deneyim: '',
     not: '',
   });
@@ -34,6 +33,20 @@ export default function RandevuPage() {
     setGonderiliyor(true);
     setHata('');
 
+    if (!form.dersTipi) {
+      setHata('Lütfen katılmak istediğiniz ders tipini seçin.');
+      setGonderiliyor(false);
+      return;
+    }
+
+    if (form.dersTipi === 'Grup Dersi' && !form.grupSeviyesi) {
+      setHata('Lütfen grup dersi için seviyenizi seçin.');
+      setGonderiliyor(false);
+      return;
+    }
+
+    const secilenDers = getSecilenDersLabel(form.dersTipi, form.grupSeviyesi);
+
     try {
       const response = await fetch('/api/bookings', {
         method: 'POST',
@@ -45,9 +58,7 @@ export default function RandevuPage() {
           last_name: form.soyad,
           email: form.email,
           phone: form.telefon,
-          lesson: form.ders,
-          preferred_date: form.tarih,
-          preferred_time: form.saat,
+          lesson: secilenDers,
           experience_level: form.deneyim,
           note: form.not,
         }),
@@ -67,7 +78,9 @@ export default function RandevuPage() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'generate_lead',
-          lesson_type: form.ders,
+          lesson_type: secilenDers,
+          lesson_category: form.dersTipi,
+          lesson_level: form.grupSeviyesi || null,
           experience_level: form.deneyim,
         });
       }
@@ -101,17 +114,15 @@ export default function RandevuPage() {
           </p>
           <div className="bg-[#F5F9F3] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
             <div className="flex justify-between">
-              <span className="text-[#9E9E9E]">Ders</span>
-              <span className="font-medium text-[#1F1F1F]">{form.ders || 'Belirtilmedi'}</span>
+              <span className="text-[#9E9E9E]">Ders tipi</span>
+              <span className="font-medium text-[#1F1F1F]">{form.dersTipi || 'Belirtilmedi'}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-[#9E9E9E]">Tarih</span>
-              <span className="font-medium text-[#1F1F1F]">{form.tarih || 'Belirtilmedi'}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-[#9E9E9E]">Saat</span>
-              <span className="font-medium text-[#1F1F1F]">{form.saat || 'Belirtilmedi'}</span>
-            </div>
+            {form.dersTipi === 'Grup Dersi' ? (
+              <div className="flex justify-between">
+                <span className="text-[#9E9E9E]">Seviye</span>
+                <span className="font-medium text-[#1F1F1F]">{form.grupSeviyesi || 'Belirtilmedi'}</span>
+              </div>
+            ) : null}
           </div>
           <p className="text-xs text-[#9E9E9E]">
             Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#52C77E]">1elvinozturk@gmail.com</a>
@@ -203,54 +214,50 @@ export default function RandevuPage() {
           <div>
             <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Katılmak istediğiniz ders *</label>
             <div className="flex flex-wrap gap-2">
-              {dersSecenekleri.map((ders) => (
+              {dersTipiSecenekleri.map((dersTipi) => (
                 <button
-                  key={ders}
+                  key={dersTipi}
                   type="button"
-                  onClick={() => setForm({ ...form, ders })}
+                  onClick={() =>
+                    setForm((prev) => ({
+                      ...prev,
+                      dersTipi,
+                      grupSeviyesi: dersTipi === 'Grup Dersi' ? prev.grupSeviyesi : '',
+                    }))
+                  }
                   className={`px-4 py-2 rounded-full text-sm border transition-colors ${
-                    form.ders === ders
+                    form.dersTipi === dersTipi
                       ? 'bg-[#52C77E] text-white border-[#52C77E]'
                       : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
                   }`}
                 >
-                  {ders}
+                  {dersTipi}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Tarih & Saat */}
-          <div className="grid grid-cols-2 gap-4">
+          {form.dersTipi === 'Grup Dersi' ? (
             <div>
-              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Tercih ettiğiniz tarih</label>
-              <input
-                type="date"
-                value={form.tarih}
-                onChange={(e) => setForm({ ...form, tarih: e.target.value })}
-                className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Tercih ettiğiniz saat</label>
-              <div className="flex flex-wrap gap-1.5">
-                {saatSecenekleri.map((saat) => (
+              <label className="block text-sm font-medium text-[#1F1F1F] mb-2">Seviyeniz *</label>
+              <div className="flex flex-wrap gap-2">
+                {grupSeviyeSecenekleri.map((seviye) => (
                   <button
-                    key={saat}
+                    key={seviye}
                     type="button"
-                    onClick={() => setForm({ ...form, saat })}
-                    className={`px-3 py-1.5 rounded-lg text-xs border transition-colors ${
-                      form.saat === saat
+                    onClick={() => setForm({ ...form, grupSeviyesi: seviye })}
+                    className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                      form.grupSeviyesi === seviye
                         ? 'bg-[#52C77E] text-white border-[#52C77E]'
                         : 'bg-white text-[#505050] border-[#D5F2E5] hover:border-[#52C77E]'
                     }`}
                   >
-                    {saat}
+                    {seviye}
                   </button>
                 ))}
               </div>
             </div>
-          </div>
+          ) : null}
 
           {/* Deneyim */}
           <div>
