@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import SiteChrome from "./components/SiteChrome";
@@ -7,9 +7,10 @@ import { defaultKeywords, siteConfig } from "@/lib/seo";
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
-const playfair = Playfair_Display({
+const playfair = Cormorant_Garamond({
   variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({

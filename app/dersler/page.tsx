@@ -233,7 +233,7 @@ export default function DerslerPage() {
           className="text-3xl font-semibold text-[#1F1F1F] mb-10"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
-          4 adımda online derse başlayın
+          Dört adımda online derse başlayın
         </h2>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {[

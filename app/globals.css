@@ -19,6 +19,13 @@ body {
   color: var(--foreground);
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 html {
   scroll-behavior: smooth;
 }
