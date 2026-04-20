@@ -111,7 +111,7 @@ export default function RandevuPage() {
             Merhaba <span className="font-medium text-[#1F1F1F]">{form.ad}</span>, talebiniz başarıyla alındı.
           </p>
           <p className="text-[#505050] mb-6">
-            24 saat içinde <span className="font-medium">{form.email}</span> adresinize Zoom bağlantısı ve ders detayları gönderilecek.
+            Kaydınız netleştirildikten sonra <span className="font-medium">{form.email}</span> adresinize Zoom bağlantısı ve ders bilgileriniz gönderilecek.
           </p>
           <div className="bg-[#F5F9F3] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
             <div className="flex justify-between">
@@ -146,7 +146,7 @@ export default function RandevuPage() {
             Online Derse Kaydol
           </h1>
           <p className="text-base text-[#505050] leading-relaxed">
-            Formu doldurun, 24 saat içinde Zoom bağlantısı ve ders bilgileri e-posta adresinize gönderilsin.
+            Formu doldurun, kaydınızı tamamlayın; Zoom bağlantısı ve ders bilgileriniz e-posta adresinize gönderilsin.
           </p>
         </div>
       </section>
