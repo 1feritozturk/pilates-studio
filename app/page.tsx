@@ -92,9 +92,9 @@ const istatistikler = [
 ];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Online Pilates Dersleri',
+  title: 'Online Pilates Dersleri | Evden Canlı Dersler – Elvin Öztürk',
   description:
-    'Elvin Öztürk ile online grup ve bireysel Pilates derslerine katılın. Evden canlı derslerle esneklik, güç ve duruş çalışmaları yapın.',
+    'Evden profesyonel Pilates dersleri! Elvin Öztürk ile esneklik, güç ve duruş kazan. Grup & bireysel seçenekler, hemen başla.',
   path: '/',
   keywords: [...defaultKeywords, 'evde pilates', 'zoom pilates dersi'],
 });
