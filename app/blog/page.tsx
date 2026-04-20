@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { getBlogPostsForListing } from "@/lib/blog";
+import { getBlogImage, getBlogPostsForListing } from "@/lib/blog";
 import { createMetadata, defaultKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -37,23 +38,38 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="rounded-[2rem] border border-[#D5F2E5] bg-white p-7 shadow-sm"
+              className="overflow-hidden rounded-[2rem] border border-[#D5F2E5] bg-white shadow-sm transition-shadow hover:shadow-md"
             >
-              <p className="text-xs uppercase tracking-[0.12em] text-[#52C77E]">{post.category}</p>
-              <h2 className="mt-4 text-2xl font-semibold text-[#1F1F1F]">
-                {post.title}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-[#505050]">{post.excerpt}</p>
-              <div className="mt-6 flex items-center justify-between text-xs text-[#9E9E9E]">
-                <span>{post.publishedAt}</span>
-                <span>{post.readingTime}</span>
-              </div>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-6 inline-flex text-sm font-medium text-[#52C77E] underline underline-offset-4"
-              >
-                Yazıyı oku
+              <Link href={`/blog/${post.slug}`} className="group block">
+                <div className="relative h-52 overflow-hidden bg-[#F5F9F3]">
+                  <Image
+                    src={getBlogImage(post.slug).src}
+                    alt={getBlogImage(post.slug).alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
               </Link>
+              <div className="p-7">
+                <p className="text-xs uppercase tracking-[0.12em] text-[#52C77E]">{post.category}</p>
+                <h2 className="mt-4 text-2xl font-semibold text-[#1F1F1F]">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[#52C77E] transition-colors">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-[#505050]">{post.excerpt}</p>
+                <div className="mt-6 flex items-center justify-between text-xs text-[#9E9E9E]">
+                  <span>{post.publishedAt}</span>
+                  <span>{post.readingTime}</span>
+                </div>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="mt-6 inline-flex text-sm font-medium text-[#52C77E] underline underline-offset-4"
+                >
+                  Yazıyı oku
+                </Link>
+              </div>
             </article>
           ))}
         </div>
