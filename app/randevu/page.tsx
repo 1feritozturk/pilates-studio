@@ -146,7 +146,7 @@ export default function RandevuPage() {
             Online Derse Kaydol
           </h1>
           <p className="text-base text-[#505050] leading-relaxed">
-            Formu doldurun, kaydınızı tamamlayın; Zoom bağlantısı ve ders bilgileriniz e-posta adresinize gönderilsin.
+            Formu doldurun, kaydınızı tamamlayın, Zoom bağlantısı ve ders bilgileriniz e-posta adresinize gönderilsin.
           </p>
         </div>
       </section>
