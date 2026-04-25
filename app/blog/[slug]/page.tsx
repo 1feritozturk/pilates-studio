@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
+import { blogPosts, getBlogImage, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { createMetadata, defaultKeywords } from "@/lib/seo";
 
 type PageProps = {
@@ -39,6 +40,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const hubPosts = getHubPosts(post.slug);
   const inContentLinks = getInContentLinks(post.slug);
   const relatedPosts = getRelatedPosts(post.slug);
+  const postImage = getBlogImage(post.slug);
 
   return (
     <>
@@ -59,6 +61,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       </section>
 
       <article className="py-16 max-w-3xl mx-auto px-6">
+        <div className="mb-10 overflow-hidden rounded-[2rem] border border-[#D5F2E5] bg-white">
+          <div className="relative aspect-[4/3] w-full">
+            <Image src={postImage.src} alt={postImage.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+          </div>
+        </div>
+
         <div className="space-y-6 text-[#505050] leading-8">
           {post.content.map((section, index) => (
             <section key={`${post.slug}-${index}`} className="space-y-4">

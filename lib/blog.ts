@@ -107,6 +107,10 @@ const blogImageMap: Record<string, BlogImage> = {
     src: "/images/blog/blog-haftada-kac-gun-pilates.png",
     alt: "Haftalık pilates rutini",
   },
+  "mat-pilates-nedir": {
+    src: "/images/blog/blog-mat-pilates-nedir.png",
+    alt: "Mat pilates başlangıcı",
+  },
   "pilates-durusu-duzeltir-mi": {
     src: "/images/blog/blog-durus.png",
     alt: "Pilates ve duruş farkındalığı",
@@ -114,6 +118,14 @@ const blogImageMap: Record<string, BlogImage> = {
   "pilates-esnekligi-artirir-mi": {
     src: "/images/blog/blog-esneklik.png",
     alt: "Pilates ile esneklik çalışması",
+  },
+  "reformer-pilates-nedir": {
+    src: "/images/blog/blog-reformer-pilates-nedir.png",
+    alt: "Reformer pilates çalışması",
+  },
+  "reformer-pilates-mi-mat-pilates-mi": {
+    src: "/images/blog/blog-reformer-pilates-mi-mat-pilates-mi.png",
+    alt: "Reformer pilates ve mat pilates karşılaştırması",
   },
   "masa-basi-calisanlar-icin-pilates-rutini": {
     src: "/images/blog/blog-masa-basi.png",
@@ -1762,6 +1774,175 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "reformer-pilates-nedir",
+    title: "Reformer Pilates Nedir? Nasıl Yapılır?",
+    excerpt:
+      "Reformer pilatesin ne olduğunu, nasıl yapıldığını, kimler için uygun olduğunu ve mat pilatesten farklarını keşfedin.",
+    description:
+      "Reformer pilates nedir? Reformer pilatesin nasıl yapıldığını, kimler için uygun olduğunu ve mat pilatesten farklarını keşfedin.",
+    publishedAt: "2026-04-25",
+    readingTime: "4 dk",
+    category: "Reformer Pilates",
+    content: [
+      {
+        paragraphs: [
+          "Reformer pilates, özel bir ekipman üzerinde uygulanan pilates türüdür. Reformer cihazı; yaylar, hareketli platform ve farklı destek noktaları sayesinde pilates hareketlerinin kontrollü biçimde yapılmasına yardımcı olur. Bu sistem, pilatesin temel prensiplerini korurken egzersizlere farklı bir direnç ve destek yapısı ekler.",
+          "Reformer pilates son yıllarda çok daha görünür hale gelmiş olsa da, özünde yine pilatesin temel mantığı vardır: nefes, kontrol, denge, merkez bölge aktivasyonu ve hareket farkındalığı. Yani reformer pilates yalnızca bir cihaz deneyimi değil, pilatesin ekipman destekli bir versiyonudur.",
+        ],
+      },
+      {
+        heading: "Reformer Pilates Nedir?",
+        paragraphs: [
+          "Reformer pilates, reformer adı verilen ekipman üzerinde yapılan pilates çalışmasıdır. Bu ekipman, hareketli bir platform ve direnç yaratan yay sistemi içerir. Hareketler bu sistem üzerinde kontrollü şekilde uygulanır ve farklı seviyelere göre uyarlanabilir.",
+          "Reformer pilatesin temel farkı, cihazın sağladığı destek ve dirençtir. Bu sayede bazı hareketler daha kontrollü öğrenilebilir, bazıları ise daha fazla farkındalık gerektirir. Ancak burada belirleyici olan yine hareket kalitesidir.",
+        ],
+      },
+      {
+        heading: "Reformer Pilates Nasıl Yapılır?",
+        paragraphs: [
+          "Reformer pilates seanslarında hareketler cihaz üzerinde belirli akışlarla uygulanır. Eğitmen yönlendirmesiyle çalışıldığında, kişinin seviyesi ve ihtiyacı dikkate alınarak bir plan oluşturulur. Hareketler sırasında merkez bölgenin aktif tutulması, omurganın hizalanması ve nefesin doğru kullanılması önemlidir.",
+          "Reformer cihazı hareketi otomatik olarak kolaylaştıran bir araç değildir. Tam tersine, kişiye hareketi daha bilinçli uygulama fırsatı sunar. Bu nedenle reformer pilates de pilates prensiplerine dikkat edilerek yapılmalıdır.",
+        ],
+      },
+      {
+        heading: "Reformer Pilates ile Mat Pilates Arasındaki Fark Nedir?",
+        paragraphs: [
+          "Reformer pilates ekipman üzerinde yapılırken, mat pilates genellikle yerde mat üzerinde uygulanır. Reformer cihazı direnç ve destek sağlarken, mat pilates daha sade bir yapıya sahiptir. Ancak iki sistem de pilatesin temel prensiplerine dayanır.",
+          "Burada hangisinin daha iyi olduğu değil, hangisinin kişiye ve hedefe daha uygun olduğu önemlidir. Reformer pilates bazı kişiler için daha motive edici olabilirken, mat pilates daha erişilebilir ve pratik bir seçenek olabilir.",
+        ],
+      },
+      {
+        heading: "Reformer Pilates Kimler İçin Uygundur?",
+        paragraphs: [
+          "Reformer pilates, pilatese ilgi duyan ve ekipman destekli bir çalışma deneyimi yaşamak isteyen kişiler için uygundur. Başlangıç seviyesinde de uygulanabilir; ancak doğru yönlendirme önemlidir. Kişinin seviyesine göre planlandığında reformer pilates oldukça verimli olabilir.",
+        ],
+      },
+      {
+        heading: "Reformer Pilatesin Avantajları Nelerdir?",
+        paragraphs: [
+          "Reformer pilatesin en önemli avantajı, hareketlere farklı bir direnç ve destek sunmasıdır. Bu, bazı kullanıcılar için hareket farkındalığını daha güçlü hissettirebilir. Ayrıca stüdyo ortamında düzenli seans sistemi, bazı kişiler için disiplin ve motivasyon sağlayabilir.",
+        ],
+      },
+      {
+        heading: "Sonuç: Reformer Pilates Nedir?",
+        paragraphs: [
+          "Reformer pilates, ekipman destekli pilates çalışmasıdır. Pilatesin temel prensiplerini korurken, direnç ve destek sistemiyle farklı bir egzersiz deneyimi sunar. Doğru yönlendirme ile uygulandığında, reformer pilates pilates pratiğini daha kontrollü ve daha çeşitli hale getirebilir.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mat-pilates-nedir",
+    title: "Mat Pilates Nedir? Nasıl Yapılır?",
+    excerpt:
+      "Mat pilatesin ne olduğunu, nasıl yapıldığını, kimler için uygun olduğunu ve reformer pilatesten farklarını keşfedin.",
+    description:
+      "Mat pilates nedir? Mat pilatesin nasıl yapıldığını, kimler için uygun olduğunu ve reformer pilatesten farklarını keşfedin.",
+    publishedAt: "2026-04-25",
+    readingTime: "4 dk",
+    category: "Mat Pilates",
+    content: [
+      {
+        paragraphs: [
+          "Mat pilates, pilates egzersizlerinin yerde mat üzerinde uygulanan türüdür. En sade ve en erişilebilir pilates sistemlerinden biri olarak öne çıkar. Mat pilates sırasında kişi çoğunlukla kendi vücut ağırlığıyla çalışır ve nefes, kontrol, denge, merkez bölge aktivasyonu gibi pilates prensiplerine odaklanır.",
+          "Mat pilatesin güçlü tarafı, sade olmasıdır. Büyük ekipmanlar gerektirmeden uygulanabilir. Bu nedenle hem evde pilates yapmak isteyenler hem de pilatese temel düzeyde başlamak isteyenler için oldukça uygun bir sistem olabilir.",
+        ],
+      },
+      {
+        heading: "Mat Pilates Nedir?",
+        paragraphs: [
+          "Mat pilates, reformer gibi büyük ekipmanlar olmadan, mat üzerinde yapılan pilates egzersizlerini ifade eder. Hareketlerin ana amacı; bedeni kontrollü, dengeli ve farkındalıkla çalıştırmaktır. Bu sistemde merkez bölge, omurga farkındalığı ve akış hissi öne çıkar.",
+        ],
+      },
+      {
+        heading: "Mat Pilates Nasıl Yapılır?",
+        paragraphs: [
+          "Mat pilates, genellikle yerde uygulanan akışlarla ilerler. Egzersizler sırasında karın, sırt, kalça, bacak ve omuz çevresindeki kaslar dengeli biçimde çalıştırılır. Nefes kontrolü büyük önem taşır ve hareketler acele edilmeden yapılır.",
+          "Yeni başlayanlar için mat pilates iyi bir temel oluşturabilir. Çünkü pilatesin ana mantığını daha yalın biçimde öğrenme fırsatı sunar.",
+        ],
+      },
+      {
+        heading: "Mat Pilatesin Avantajları Nelerdir?",
+        paragraphs: [
+          "Mat pilatesin en önemli avantajı erişilebilir olmasıdır. Başlangıç için yalnızca bir mat yeterli olabilir. Bu nedenle evde pilates yapmak isteyenler için güçlü bir seçenektir. Ayrıca ekipman bağımlılığı olmadan pilates pratiği kurulabilir.",
+        ],
+      },
+      {
+        heading: "Mat Pilates Kimler İçin Uygundur?",
+        paragraphs: [
+          "Mat pilates, pilatese yeni başlayanlar, evde egzersiz yapmak isteyenler, düzenli hareket alışkanlığı kazanmak isteyenler ve sade bir sistemle ilerlemek isteyenler için uygundur. Doğru yönlendirme ile farklı seviyelere de uyarlanabilir.",
+        ],
+      },
+      {
+        heading: "Mat Pilates ile Reformer Pilates Arasındaki Fark Nedir?",
+        paragraphs: [
+          "Mat pilates sade ve ekipmansız bir yapı sunarken, reformer pilates ekipman desteğiyle uygulanır. İki sistemin de temelinde pilates vardır. Fark, sunum biçiminde ve kullanılan araçlardadır. Hangisinin daha uygun olduğu kişinin hedeflerine ve yaşam tarzına göre değişir.",
+        ],
+      },
+      {
+        heading: "Sonuç: Mat Pilates Nedir?",
+        paragraphs: [
+          "Mat pilates, pilatesin sade, erişilebilir ve güçlü bir uygulama biçimidir. Mat üzerinde yapılan bu çalışma, pilatesin temel prensiplerini öğrenmek ve günlük hayata entegre etmek için iyi bir başlangıç sunabilir. Özellikle evde pilates yapmak isteyenler için mat pilates oldukça uygun bir seçenektir.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "reformer-pilates-mi-mat-pilates-mi",
+    title: "Reformer Pilates mi Mat Pilates mi? Hangisi Daha Uygun?",
+    excerpt:
+      "Reformer pilates ile mat pilates arasındaki farkları, avantajları ve hangi seçeneğin sana daha uygun olabileceğini keşfedin.",
+    description:
+      "Reformer pilates mi mat pilates mi daha uygun? İki sistemin farklarını, avantajlarını ve hangi seçeneğin size daha uygun olabileceğini keşfedin.",
+    publishedAt: "2026-04-25",
+    readingTime: "4 dk",
+    category: "Pilates Karşılaştırma",
+    content: [
+      {
+        paragraphs: [
+          "Pilates yapmaya başlamak isteyen birçok kişinin aklındaki temel sorulardan biri şudur: Reformer pilates mi mat pilates mi daha uygun? Bu sorunun tek bir doğru cevabı yoktur. Çünkü en uygun seçenek, kişinin hedeflerine, yaşam tarzına, konfor alanına ve egzersizi nasıl sürdürebildiğine göre değişir.",
+          "Reformer pilates ve mat pilates arasında yöntem farkı vardır; ancak ikisinin temelinde de aynı pilates prensipleri yer alır. Yani burada seçim yaparken “hangisi daha iyi” sorusundan çok “hangisi bana daha uygun” sorusuna odaklanmak gerekir.",
+        ],
+      },
+      {
+        heading: "Reformer Pilates Nedir, Mat Pilates Nedir?",
+        paragraphs: [
+          "Reformer pilates, ekipman üzerinde yapılan pilates çalışmasıdır. Mat pilates ise yerde mat üzerinde uygulanır. Reformer cihazı ek direnç ve destek sunarken, mat pilates daha yalın ve erişilebilir bir yapıya sahiptir.",
+        ],
+      },
+      {
+        heading: "Reformer Pilatesin Avantajları Nelerdir?",
+        paragraphs: [
+          "Reformer pilates, ekipman desteği sayesinde hareketlere farklı bir deneyim katabilir. Bazı kullanıcılar için bu yapı daha motive edici olabilir. Stüdyo disiplini de ayrıca avantaj sağlayabilir.",
+        ],
+      },
+      {
+        heading: "Mat Pilatesin Avantajları Nelerdir?",
+        paragraphs: [
+          "Mat pilates daha erişilebilir, daha sade ve çoğu zaman daha esnek bir sistemdir. Evde uygulanabilmesi, mat pilatesi özellikle başlangıç için güçlü bir seçenek haline getirir.",
+        ],
+      },
+      {
+        heading: "Hangisi Yeni Başlayanlar İçin Daha Uygun?",
+        paragraphs: [
+          "Her ikisi de yeni başlayanlar için uygun olabilir. Ancak mat pilates, özellikle evde başlamak isteyenler için daha kolay erişilebilir bir yapı sunar. Reformer pilates ise eğitmen eşliğinde ekipmanlı deneyim yaşamak isteyenler için cazip olabilir.",
+        ],
+      },
+      {
+        heading: "Hangisi Daha Sürdürülebilir?",
+        paragraphs: [
+          "Uzun vadede en iyi seçenek, en düzenli devam edebildiğin seçenektir. Eğer stüdyoya gitmek ve ekipmanlı çalışmak seni motive ediyorsa reformer pilates; evde düzenli ilerlemek daha gerçekçiyse mat pilates daha sürdürülebilir olabilir.",
+        ],
+      },
+      {
+        heading: "Sonuç: Reformer Pilates mi Mat Pilates mi?",
+        paragraphs: [
+          "Reformer pilates mi mat pilates mi sorusunun cevabı kişiye göre değişir. Reformer pilates ekipmanlı ve stüdyo temelli bir deneyim sunarken, mat pilates daha sade ve erişilebilir bir yapı sağlar. En doğru seçim, senin yaşam biçimine, hedeflerine ve devamlılık kurabildiğin düzene göre belirlenmelidir.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string) {
@@ -1879,6 +2060,26 @@ const relatedPostsMap: Record<string, string[]> = {
     "pilatese-baslamak-icin-en-dogru-zaman-ne-zaman",
     "masa-basi-calisanlar-icin-pilates-rutini",
     "online-pilates-nedir-rehber",
+  ],
+  "reformer-pilates-nedir": [
+    "mat-pilates-nedir",
+    "reformer-pilates-mi-mat-pilates-mi",
+    "pilates-nedir-ne-ise-yarar",
+    "pilates-nedir",
+    "online-pilates-mi-yuz-yuze-pilates-mi",
+  ],
+  "mat-pilates-nedir": [
+    "evde-pilates-nedir-nasil-baslanir",
+    "reformer-pilates-nedir",
+    "reformer-pilates-mi-mat-pilates-mi",
+    "evde-pilates-icin-neler-gerekir",
+    "pilates-nedir-ne-ise-yarar",
+  ],
+  "reformer-pilates-mi-mat-pilates-mi": [
+    "reformer-pilates-nedir",
+    "mat-pilates-nedir",
+    "evde-pilates-nedir-nasil-baslanir",
+    "pilates-nedir",
   ],
   "masa-basi-calisanlar-icin-pilates-rutini": [
     "pilates-durusu-duzeltir-mi",
@@ -2354,6 +2555,96 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       anchor: "pilates duruşu düzeltir mi",
       slug: "pilates-durusu-duzeltir-mi",
       tail: " yazısı da ilgini çekebilir.",
+    },
+  ],
+  "reformer-pilates-nedir": [
+    {
+      lead: "Genel pilates zemini için ",
+      anchor: "Pilates Nedir?",
+      slug: "pilates-nedir",
+      tail: " içeriğine göz atabilirsiniz.",
+    },
+    {
+      lead: "Daha geniş çerçeve için ",
+      anchor: "Pilates Nedir, Ne İşe Yarar?",
+      slug: "pilates-nedir-ne-ise-yarar",
+      tail: " yazısı da iyi bir devam noktasıdır.",
+    },
+    {
+      lead: "Mat taraftaki sade alternatifi görmek için ",
+      anchor: "Mat Pilates Nedir?",
+      slug: "mat-pilates-nedir",
+      tail: " bağlantısını inceleyebilirsiniz.",
+    },
+    {
+      lead: "İki sistem arasında karar vermeye çalışıyorsanız ",
+      anchor: "Reformer Pilates mi Mat Pilates mi?",
+      slug: "reformer-pilates-mi-mat-pilates-mi",
+      tail: " yazısı daha net bir karşılaştırma sunar.",
+    },
+    {
+      lead: "Karar aşamasındaysanız ",
+      anchor: "Online Pilates mi Yüz Yüze Pilates mi?",
+      slug: "online-pilates-mi-yuz-yuze-pilates-mi",
+      tail: " yazısı da farklı formatları düşünmenize yardımcı olabilir.",
+    },
+  ],
+  "mat-pilates-nedir": [
+    {
+      lead: "Evde uygulanabilirlik tarafını derinleştirmek için ",
+      anchor: "Evde Pilates Nedir? Nasıl Başlanır?",
+      slug: "evde-pilates-nedir-nasil-baslanir",
+      tail: " yazısına geçebilirsiniz.",
+    },
+    {
+      lead: "Ekipmanlı sistemle farklarını görmek için ",
+      anchor: "Reformer Pilates Nedir?",
+      slug: "reformer-pilates-nedir",
+      tail: " içeriği iyi bir karşılaştırma zemini sunar.",
+    },
+    {
+      lead: "İki yaklaşımı doğrudan karşılaştırmak için ",
+      anchor: "Reformer Pilates mi Mat Pilates mi?",
+      slug: "reformer-pilates-mi-mat-pilates-mi",
+      tail: " içeriğini de okuyabilirsiniz.",
+    },
+    {
+      lead: "Genel pilates mantığını güçlendirmek için ",
+      anchor: "Pilates Nedir, Ne İşe Yarar?",
+      slug: "pilates-nedir-ne-ise-yarar",
+      tail: " yazısını da okuyabilirsiniz.",
+    },
+    {
+      lead: "Pratik hazırlık tarafında ",
+      anchor: "Evde Pilates İçin Neler Gerekir? Başlangıç Rehberi",
+      slug: "evde-pilates-icin-neler-gerekir",
+      tail: " bağlantısı faydalı olur.",
+    },
+  ],
+  "reformer-pilates-mi-mat-pilates-mi": [
+    {
+      lead: "Tanım tarafını netleştirmek için önce ",
+      anchor: "Reformer Pilates Nedir?",
+      slug: "reformer-pilates-nedir",
+      tail: " yazısını inceleyebilirsiniz.",
+    },
+    {
+      lead: "Daha sade ve erişilebilir sistem için ",
+      anchor: "Mat Pilates Nedir?",
+      slug: "mat-pilates-nedir",
+      tail: " bağlantısı iyi bir başlangıç sunar.",
+    },
+    {
+      lead: "Evde başlangıç niyetiyle okuyorsanız ",
+      anchor: "Evde Pilates Nedir? Nasıl Başlanır?",
+      slug: "evde-pilates-nedir-nasil-baslanir",
+      tail: " yazısı da karar vermenizi kolaylaştırabilir.",
+    },
+    {
+      lead: "Genel pilates mantığını güçlendirmek için ",
+      anchor: "Pilates Nedir?",
+      slug: "pilates-nedir",
+      tail: " içeriğine de göz atabilirsiniz.",
     },
   ],
 };
