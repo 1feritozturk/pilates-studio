@@ -108,8 +108,8 @@ const blogImageMap: Record<string, BlogImage> = {
     alt: "Haftalık pilates rutini",
   },
   "pilates-ne-zaman-etki-eder": {
-    src: "/images/blog/blog-haftada-kac-gun-pilates.png",
-    alt: "Pilatesin etkisini düzenli pratikle hissetmek",
+    src: "/images/blog/blog-pilates-ne-zaman-etki-eder.png",
+    alt: "Pilatesin etkisini zaman içinde hissetmek",
   },
   "mat-pilates-nedir": {
     src: "/images/blog/blog-mat-pilates-nedir.png",
