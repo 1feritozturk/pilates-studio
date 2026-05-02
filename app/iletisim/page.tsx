@@ -58,19 +58,19 @@ export default function IletisimPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#F5F9F3] py-20">
+      <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
+          <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
           <h1
-            className="text-5xl font-semibold text-[#1F1F1F] mb-4"
+            className="text-5xl font-semibold text-[#1A1218] mb-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             İletişim
           </h1>
-          <p className="text-base text-[#505050] max-w-xl leading-relaxed">
+          <p className="text-base text-[#6B5E68] max-w-xl leading-relaxed">
             Sorularınız için bize yazın ya da arayın. En kısa sürede dönüş yapacağız.
           </p>
-          <p className="text-base text-[#505050] max-w-2xl leading-relaxed mt-4">
+          <p className="text-base text-[#6B5E68] max-w-2xl leading-relaxed mt-4">
             Online Pilates dersi, bireysel seanslar veya grup dersleri hakkinda bilgi almak icin formu doldurabilirsiniz.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function IletisimPage() {
         {/* Sol: İletişim Bilgileri */}
         <div>
           <h2
-            className="text-2xl font-semibold text-[#1F1F1F] mb-8"
+            className="text-2xl font-semibold text-[#1A1218] mb-8"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Bize ulaşın
@@ -88,15 +88,15 @@ export default function IletisimPage() {
           <div className="space-y-6">
             {iletisimBilgileri.map((bilgi) => (
               <div key={bilgi.baslik} className="flex gap-4">
-                <div className="w-12 h-12 bg-[#DCF5E5] rounded-full flex items-center justify-center text-xl flex-shrink-0">
+                <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center text-xl flex-shrink-0">
                   {bilgi.emoji}
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[#1F1F1F] mb-1">{bilgi.baslik}</p>
+                  <p className="text-sm font-medium text-[#1A1218] mb-1">{bilgi.baslik}</p>
                   {bilgi.href ? (
                     <a
                       href={bilgi.href}
-                      className="text-base text-[#505050] hover:text-[#52C77E] transition-colors"
+                      className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
                       onClick={() => {
                         if (typeof window !== 'undefined') {
                           window.dataLayer = window.dataLayer || [];
@@ -108,7 +108,7 @@ export default function IletisimPage() {
                       }}
                     >{bilgi.icerik}</a>
                   ) : (
-                    <p className="text-base text-[#505050] whitespace-pre-line">{bilgi.icerik}</p>
+                    <p className="text-base text-[#6B5E68] whitespace-pre-line">{bilgi.icerik}</p>
                   )}
                 </div>
               </div>
@@ -120,63 +120,63 @@ export default function IletisimPage() {
         {/* Sağ: Form */}
         <div>
           <h2
-            className="text-2xl font-semibold text-[#1F1F1F] mb-8"
+            className="text-2xl font-semibold text-[#1A1218] mb-8"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Mesaj gönderin
           </h2>
 
           {gonderildi ? (
-            <div className="bg-[#DCF5E5] rounded-2xl p-8 text-center">
+            <div className="bg-[#EDE0F5] rounded-2xl p-8 text-center">
               <p className="text-4xl mb-3">✅</p>
-              <p className="font-semibold text-[#1F1F1F] mb-2">Mesajınız alındı!</p>
-              <p className="text-base text-[#505050]">En kısa sürede size dönüş yapacağız.</p>
+              <p className="font-semibold text-[#1A1218] mb-2">Mesajınız alındı!</p>
+              <p className="text-base text-[#6B5E68]">En kısa sürede size dönüş yapacağız.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Ad Soyad *</label>
+                <label className="block text-sm font-medium text-[#1A1218] mb-1.5">Ad Soyad *</label>
                 <input
                   type="text"
                   required
                   value={form.ad}
                   onChange={(e) => setForm({ ...form, ad: e.target.value })}
-                  className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
+                  className="w-full px-4 py-3 border border-[#EDE0F5] rounded-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors"
                   placeholder="Adınızı girin"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">E-posta *</label>
+                <label className="block text-sm font-medium text-[#1A1218] mb-1.5">E-posta *</label>
                 <input
                   type="email"
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
+                  className="w-full px-4 py-3 border border-[#EDE0F5] rounded-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors"
                   placeholder="ornek@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Telefon</label>
+                <label className="block text-sm font-medium text-[#1A1218] mb-1.5">Telefon</label>
                 <input
                   type="tel"
                   value={form.telefon}
                   onChange={(e) => setForm({ ...form, telefon: e.target.value })}
-                  className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors"
+                  className="w-full px-4 py-3 border border-[#EDE0F5] rounded-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors"
                   placeholder="+90 5xx xxx xx xx"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-[#1F1F1F] mb-1.5">Mesajınız *</label>
+                <label className="block text-sm font-medium text-[#1A1218] mb-1.5">Mesajınız *</label>
                 <textarea
                   required
                   rows={5}
                   value={form.mesaj}
                   onChange={(e) => setForm({ ...form, mesaj: e.target.value })}
-                  className="w-full px-4 py-3 border border-[#D5F2E5] rounded-xl text-sm focus:outline-none focus:border-[#52C77E] bg-white transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-[#EDE0F5] rounded-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors resize-none"
                   placeholder="Nasıl yardımcı olabiliriz?"
                 />
               </div>
@@ -190,7 +190,7 @@ export default function IletisimPage() {
               <button
                 type="submit"
                 disabled={gonderiliyor}
-                className="w-full py-3.5 bg-[#FF6B5A] text-white text-sm font-medium rounded-xl hover:bg-[#E8564A] transition-colors disabled:cursor-not-allowed disabled:opacity-70"
+                className="w-full py-3.5 bg-[#C9A87A] text-white text-sm font-medium rounded-xl hover:bg-[#B8976A] transition-colors disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {gonderiliyor ? 'Gonderiliyor...' : 'Gonder'}
               </button>

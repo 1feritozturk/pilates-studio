@@ -54,7 +54,7 @@ const sikSorulanlar = [
   {
     soru: 'Farkli sehirlerden de katilabilir miyim?',
     cevap:
-      'Evet. Dersler online oldugu icin Turkiye’nin farkli sehirlerinden veya yurt disindan da katilim saglayabilirsiniz.',
+      'Evet. Dersler online oldugu icin Turkiye\u2019nin farkli sehirlerinden veya yurt disindan da katilim saglayabilirsiniz.',
   },
   {
     soru: 'Bireysel Pilates dersi ile grup dersi arasindaki fark nedir?',
@@ -140,52 +140,54 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
+
       {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1600&q=85&fit=crop"
+            src="/images/grup-ders-2.jpg"
             alt="Online Pilates"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-[#FDFEF9]/85" />
+          <div className="absolute inset-0 bg-[#FAF8F4]/87" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-4">
+            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
+              <span className="inline-block w-8 h-px bg-[#C9A87A]" />
               Online Pilates
             </p>
             <h1
-              className="text-5xl md:text-6xl font-semibold leading-tight mb-6 text-[#1F1F1F]"
+              className="text-5xl md:text-6xl font-semibold leading-tight mb-6 text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Online Pilates ile
               <br />
-              <span className="text-[#52C77E]">bedeninizle</span>
+              <em className="italic text-[#6B3D7A]">bedeninizle</em>
               <br />
               yeniden bağlantı kurun.
             </h1>
-            <p className="text-[#505050] text-lg leading-relaxed mb-10 max-w-md">
+            <p className="text-[#6B5E68] text-lg leading-relaxed mb-10 max-w-md">
               Elvin Öztürk ile online grup ve bireysel Pilates derslerine katılın. Canlı derslerle duruş, esneklik ve beden farkındalığı üzerine düzenli çalışın.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/randevu"
-                className="px-8 py-3.5 bg-[#FF6B5A] text-white font-medium rounded-full hover:bg-[#E8564A] transition-colors text-sm tracking-wide"
+                className="px-8 py-3.5 bg-[#6B3D7A] text-white font-medium rounded-full hover:bg-[#5a3268] transition-colors text-sm tracking-wide"
               >
                 Derse Kaydol
               </Link>
               <Link
                 href="/dersler"
-                className="px-8 py-3.5 border border-[#1F1F1F]/20 text-[#1F1F1F] font-medium rounded-full hover:bg-[#1F1F1F]/5 transition-colors text-sm tracking-wide"
+                className="px-8 py-3.5 border border-[#C9A87A]/60 text-[#1A1218] font-medium rounded-full hover:bg-[#C9A87A]/10 transition-colors text-sm tracking-wide"
               >
                 Dersleri Keşfet
               </Link>
             </div>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#505050]">
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#6B5E68]">
               Online Pilates dersi arıyorsanız; evden, ofisten ya da seyahatteyken programa bağlanabilirsiniz. Küçük grup dersleri ve bireysel Pilates seansları sayesinde daha kontrollü ve düzenli bir egzersiz rutini kurabilirsiniz.
             </p>
           </div>
@@ -194,60 +196,62 @@ export default function Home() {
           <div className="hidden md:flex flex-col gap-4">
             <Link
               href="/dersler#grup-dersleri"
-              className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-[#D5F2E5] hover:shadow-md transition-shadow group"
+              className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-[#E8D8F0] hover:shadow-md transition-shadow group"
             >
-              <p className="text-xs text-[#52C77E] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
-              <h3 className="text-lg font-semibold text-[#1F1F1F] mb-1">Online Grup Pilates</h3>
-              <p className="text-sm text-[#505050]">Maks. 8 kişi · 50 dk · Canlı yayın</p>
-              <p className="text-xs text-[#52C77E] mt-3 group-hover:underline">Programa bak →</p>
+              <p className="text-xs text-[#9B7FAD] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
+              <h3 className="text-lg font-semibold text-[#1A1218] mb-1" style={{ fontFamily: 'var(--font-playfair), serif' }}>Online Grup Pilates</h3>
+              <p className="text-sm text-[#6B5E68]">Maks. 8 kişi · 50 dk · Canlı yayın</p>
+              <p className="text-xs text-[#C9A87A] mt-3 group-hover:underline">Programa bak →</p>
             </Link>
             <Link
               href="/dersler#bireysel-ders"
-              className="bg-[#52C77E] rounded-2xl p-6 text-white hover:bg-[#3FB86D] transition-colors group"
+              className="bg-[#6B3D7A] rounded-2xl p-6 text-white hover:bg-[#5a3268] transition-colors group"
             >
               <p className="text-xs text-white/70 font-medium tracking-wider uppercase mb-2">Bireysel Ders</p>
-              <h3 className="text-lg font-semibold mb-1">Online Özel Pilates</h3>
+              <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: 'var(--font-playfair), serif' }}>Online Özel Pilates</h3>
               <p className="text-sm text-white/80">Birebir · 50 dk · Size özel program</p>
-              <p className="text-xs text-white mt-3 group-hover:underline">Randevu al →</p>
+              <p className="text-xs text-[#C9A87A] mt-3 group-hover:underline">Randevu al →</p>
             </Link>
           </div>
         </div>
       </section>
 
+      {/* 3-SÜTUN TANITIM */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid gap-8 rounded-[2rem] border border-[#D5F2E5] bg-white p-8 md:grid-cols-3">
+        <div className="grid gap-8 rounded-[2rem] border border-[#E8D8F0] bg-white p-8 md:grid-cols-3">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#52C77E]">Online Pilates Dersi</p>
-            <p className="mt-3 text-base leading-relaxed text-[#505050]">
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Online Pilates Dersi</p>
+            <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Duzenli online Pilates dersleri ile omurga destegi, core guclenmesi ve hareket kalitesi uzerinde calisabilirsiniz.
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#52C77E]">Online ve Esnek</p>
-            <p className="mt-3 text-base leading-relaxed text-[#505050]">
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Online ve Esnek</p>
+            <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Derslere evden, ofisten ya da seyahatteyken baglanabilir; programinizi gunluk temponuza daha kolay uyarlayabilirsiniz.
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#52C77E]">Bireysel ve Grup</p>
-            <p className="mt-3 text-base leading-relaxed text-[#505050]">
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Bireysel ve Grup</p>
+            <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Hedefiniz toparlanmak, guclenmek veya daha duzenli hareket etmekse size uygun ders formatini secerek ilerleyebilirsiniz.
             </p>
           </div>
         </div>
       </section>
 
+      {/* İSTATİSTİKLER */}
       <section className="py-12 max-w-6xl mx-auto px-6">
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {istatistikler.map((item) => (
-            <div key={item.etiket} className="rounded-[1.75rem] border border-[#D5F2E5] bg-white p-6 text-center">
+            <div key={item.etiket} className="rounded-[1.75rem] border border-[#E8D8F0] bg-[#FAF8F4] p-6 text-center">
               <p
-                className="text-4xl font-semibold text-[#1F1F1F]"
+                className="text-4xl font-semibold text-[#6B3D7A]"
                 style={{ fontFamily: 'var(--font-playfair), serif' }}
               >
                 {item.deger}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-[#505050]">{item.etiket}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[#6B5E68]">{item.etiket}</p>
             </div>
           ))}
         </div>
@@ -256,14 +260,18 @@ export default function Home() {
       {/* ONLINE DERSLER */}
       <section className="py-24 max-w-6xl mx-auto px-6">
         <div className="mb-14 text-center">
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
+          <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+            <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+            Programlar
+            <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+          </p>
           <h2
-            className="text-4xl font-semibold text-[#1F1F1F]"
+            className="text-4xl font-semibold text-[#1A1218]"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Online dersler
           </h2>
-          <p className="text-[#505050] mt-3 max-w-md mx-auto">
+          <p className="text-[#6B5E68] mt-3 max-w-md mx-auto">
             İki farklı format, aynı kalite. Hangisi size uygunsa seçin.
           </p>
         </div>
@@ -271,22 +279,22 @@ export default function Home() {
           {dersler.map((ders) => (
             <div
               key={ders.ad}
-              className="bg-white border border-[#D5F2E5] rounded-2xl overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-white border border-[#E8D8F0] rounded-2xl overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="relative h-56">
                 <Image src={ders.img} alt={ders.ad} fill className="object-cover" />
               </div>
               <div className="p-7">
-                <h3 className="text-xl font-semibold text-[#1F1F1F] mb-2">{ders.ad}</h3>
-                <p className="text-base text-[#505050] leading-relaxed mb-5">{ders.aciklama}</p>
-                <div className="flex gap-3 text-xs text-[#52C77E] mb-6">
-                  <span className="bg-[#F5F9F3] px-3 py-1 rounded-full">{ders.sure}</span>
-                  <span className="bg-[#F5F9F3] px-3 py-1 rounded-full">{ders.kapasite}</span>
-                  <span className="bg-[#F5F9F3] px-3 py-1 rounded-full">Canlı</span>
+                <h3 className="text-xl font-semibold text-[#1A1218] mb-2" style={{ fontFamily: 'var(--font-playfair), serif' }}>{ders.ad}</h3>
+                <p className="text-base text-[#6B5E68] leading-relaxed mb-5">{ders.aciklama}</p>
+                <div className="flex gap-3 text-xs text-[#9B7FAD] mb-6">
+                  <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">{ders.sure}</span>
+                  <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">{ders.kapasite}</span>
+                  <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">Canlı</span>
                 </div>
                 <Link
                   href="/randevu"
-                  className="w-full block text-center py-3 bg-[#1F1F1F] text-white text-sm font-medium rounded-full hover:bg-[#333] transition-colors"
+                  className="w-full block text-center py-3 bg-[#6B3D7A] text-white text-sm font-medium rounded-full hover:bg-[#5a3268] transition-colors"
                 >
                   Kaydol
                 </Link>
@@ -296,17 +304,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* KİMLER İÇİN */}
       <section className="py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-10 md:grid-cols-2 items-start">
           <div>
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kimler Icin?</p>
+            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
+              <span className="inline-block w-8 h-px bg-[#C9A87A]" />
+              Kimler Icin?
+            </p>
             <h2
-              className="text-4xl font-semibold leading-snug text-[#1F1F1F]"
+              className="text-4xl font-semibold leading-snug text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Online Pilates ile daha dengeli bir rutin kurun
             </h2>
-            <p className="mt-4 text-base text-[#505050] leading-relaxed">
+            <p className="mt-4 text-base text-[#6B5E68] leading-relaxed">
               Online Pilates dersleri; masa basi calisanlar, evden spor yapmak isteyenler, esneklik ve durus uzerine calismak isteyenler icin guclu bir secenektir. Baslangic seviyesinde olsaniz da daha once deneyiminiz olsa da programa uygun bir ders yapisi bulunabilir.
             </p>
           </div>
@@ -317,7 +329,8 @@ export default function Home() {
               'Birebir egitmen destegi arayanlar',
               'Kucuk grup enerjisi ile motive olmak isteyenler',
             ].map((item) => (
-              <div key={item} className="rounded-2xl border border-[#D5F2E5] bg-[#FDFEF9] px-5 py-4 text-base text-[#505050]">
+              <div key={item} className="rounded-2xl border border-[#E8D8F0] bg-[#FAF8F4] px-5 py-4 text-base text-[#6B5E68] flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-[#C9A87A] flex-shrink-0" />
                 {item}
               </div>
             ))}
@@ -325,12 +338,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#F5F9F3] py-20">
+      {/* YORUMLAR */}
+      <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Yorumlar</p>
+            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+              Yorumlar
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+            </p>
             <h2
-              className="text-4xl font-semibold text-[#1F1F1F]"
+              className="text-4xl font-semibold text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Ogrenci deneyimleri
@@ -338,10 +356,15 @@ export default function Home() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {yorumlar.map((item) => (
-              <div key={item.isim} className="rounded-[2rem] border border-[#D5F2E5] bg-white p-7">
-                <p className="text-sm uppercase tracking-[0.12em] text-[#52C77E]">{item.hedef}</p>
-                <p className="mt-4 text-base leading-7 text-[#505050]">{item.yorum}</p>
-                <p className="mt-5 font-medium text-[#1F1F1F]">{item.isim}</p>
+              <div key={item.isim} className="rounded-[2rem] border border-[#E8D8F0] bg-white p-7">
+                <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">{item.hedef}</p>
+                <p className="mt-4 text-base leading-7 text-[#6B5E68] italic" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                  &ldquo;{item.yorum}&rdquo;
+                </p>
+                <div className="mt-5 flex items-center gap-2">
+                  <span className="w-5 h-px bg-[#C9A87A]" />
+                  <p className="font-medium text-[#1A1218]">{item.isim}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -349,12 +372,16 @@ export default function Home() {
       </section>
 
       {/* AVANTAJLAR */}
-      <section className="bg-[#F5F9F3] py-20">
+      <section className="bg-[#FAF8F4] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Neden online?</p>
+            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+              Neden online?
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+            </p>
             <h2
-              className="text-4xl font-semibold text-[#1F1F1F]"
+              className="text-4xl font-semibold text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Pilates artık her yerde
@@ -362,12 +389,12 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {avantajlar.map((a) => (
-              <div key={a.baslik} className="bg-white rounded-2xl p-6 border border-[#D5F2E5]">
-                <div className="w-10 h-10 bg-[#DCF5E5] rounded-full mb-4 flex items-center justify-center">
-                  <div className="w-3 h-3 bg-[#52C77E] rounded-full" />
+              <div key={a.baslik} className="bg-white rounded-2xl p-6 border border-[#E8D8F0]">
+                <div className="w-10 h-10 bg-[#F5F0F8] rounded-full mb-4 flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#C9A87A] rounded-full" />
                 </div>
-                <h3 className="font-semibold text-[#1F1F1F] mb-2">{a.baslik}</h3>
-                <p className="text-base text-[#505050] leading-relaxed">{a.aciklama}</p>
+                <h3 className="font-semibold text-[#1A1218] mb-2" style={{ fontFamily: 'var(--font-playfair), serif' }}>{a.baslik}</h3>
+                <p className="text-base text-[#6B5E68] leading-relaxed">{a.aciklama}</p>
               </div>
             ))}
           </div>
@@ -375,37 +402,35 @@ export default function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&fit=crop"
-            alt="Pilates"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-[#1F1F1F]/70" />
-        </div>
+      <section className="relative py-24 overflow-hidden bg-[#1A1218]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#6B3D7A]/70 via-[#1A1218]/90 to-[#1A1218]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#9B7FAD]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A87A]/10 rounded-full blur-3xl" />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
-          <p className="text-[#7DD89D] text-sm font-medium tracking-[0.12em] uppercase mb-4">Başlamaya hazır mısınız?</p>
+          <p className="text-[#C9A87A] text-xs font-medium tracking-[0.18em] uppercase mb-4 flex items-center justify-center gap-3">
+            <span className="inline-block w-6 h-px bg-[#C9A87A]/50" />
+            Başlamaya hazır mısınız?
+            <span className="inline-block w-6 h-px bg-[#C9A87A]/50" />
+          </p>
           <h2
             className="text-4xl font-semibold text-white mb-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Online derse katılın.
           </h2>
-          <p className="text-base text-white/70 mb-8 leading-relaxed">
+          <p className="text-base text-white/60 mb-8 leading-relaxed">
             Grup ya da bireysel ders — hangi formata uygunsa, hemen kaydolun ve ilk dersinize başlayın.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/randevu"
-              className="inline-flex px-8 py-3.5 bg-[#FF6B5A] text-white text-sm font-medium rounded-full hover:bg-[#E8564A] transition-colors"
+              className="inline-flex px-8 py-3.5 bg-[#C9A87A] text-[#1A1218] text-sm font-medium rounded-full hover:bg-[#b8976a] transition-colors"
             >
               Online Derse Kaydol
             </Link>
             <Link
               href="/dersler"
-              className="inline-flex px-8 py-3.5 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
+              className="inline-flex px-8 py-3.5 border border-white/30 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
             >
               Programı İncele
             </Link>
@@ -413,30 +438,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* KARŞILAŞTIRMA */}
       <section className="py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-[2rem] border border-[#D5F2E5] bg-white p-8">
-            <p className="text-sm uppercase tracking-[0.12em] text-[#52C77E]">Karsilastirma</p>
+          <div className="rounded-[2rem] border border-[#E8D8F0] bg-white p-8">
+            <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">Karsilastirma</p>
             <h2
-              className="mt-4 text-3xl font-semibold leading-snug text-[#1F1F1F]"
+              className="mt-4 text-3xl font-semibold leading-snug text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Grup dersi mi bireysel ders mi?
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#505050]">
+            <p className="mt-4 text-base leading-relaxed text-[#6B5E68]">
               Hedefinize, egzersiz aliskanliginiza ve takip ihtiyaciniza gore sizin icin daha uygun format degisebilir.
             </p>
           </div>
           <div className="grid gap-6">
-            <div className="rounded-[2rem] border border-[#D5F2E5] bg-[#FDFEF9] p-6">
-              <h3 className="text-lg font-semibold text-[#1F1F1F]">Online grup dersi</h3>
-              <p className="mt-3 text-base leading-relaxed text-[#505050]">
+            <div className="rounded-[2rem] border border-[#E8D8F0] bg-[#FAF8F4] p-6">
+              <h3 className="text-lg font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>Online grup dersi</h3>
+              <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
                 Duzenli program isteyen, kucuk grup enerjisi ile motive olan ve butcesini daha dengeli kullanmak isteyenler icin uygundur.
               </p>
             </div>
-            <div className="rounded-[2rem] border border-[#D5F2E5] bg-[#FDFEF9] p-6">
-              <h3 className="text-lg font-semibold text-[#1F1F1F]">Bireysel ders</h3>
-              <p className="mt-3 text-base leading-relaxed text-[#505050]">
+            <div className="rounded-[2rem] border border-[#E8D8F0] bg-[#FAF8F4] p-6">
+              <h3 className="text-lg font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>Bireysel ders</h3>
+              <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
                 Tamamen kisisel program, daha yakin takip ve hedefe yonelik plan isteyenler icin daha ideal bir secenektir.
               </p>
             </div>
@@ -453,36 +479,45 @@ export default function Home() {
             fill
             className="object-cover object-center"
           />
+          <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-[#C9A87A] rounded-br-3xl pointer-events-none" />
         </div>
         <div>
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-4">Hakkımda</p>
+          <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-4 flex items-center gap-3">
+            <span className="inline-block w-8 h-px bg-[#C9A87A]" />
+            Hakkımda
+          </p>
           <h2
-            className="text-4xl font-semibold text-[#1F1F1F] mb-5"
+            className="text-4xl font-semibold text-[#1A1218] mb-5"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
-            Ben Elvin Öztürk.
+            Ben <em className="italic text-[#6B3D7A]">Elvin Öztürk.</em>
           </h2>
-          <p className="text-[#505050] leading-relaxed mb-5">
+          <p className="text-[#6B5E68] leading-relaxed mb-5">
             Pilates&apos;i yalnizca bir egzersiz olarak degil, yasam kalitesini artiran bir pratik olarak goruyorum. Yillardir ogrencilerimle birebir calisarak her bedene uygun programlar hazirliyorum.
           </p>
-          <p className="text-[#505050] leading-relaxed mb-8">
+          <p className="text-[#6B5E68] leading-relaxed mb-8">
             Online derslerimle artık dünyanın her yerinden öğrencilerimle buluşabiliyorum. Hedefim her seansta size gerçekten fayda sağlamak.
           </p>
           <Link
             href="/hakkimda"
-            className="text-sm text-[#52C77E] font-medium underline underline-offset-4 hover:text-[#3FB86D]"
+            className="text-sm text-[#C9A87A] font-medium underline underline-offset-4 hover:text-[#b8976a]"
           >
             Daha fazlası →
           </Link>
         </div>
       </section>
 
-      <section className="bg-[#F5F9F3] py-20">
+      {/* SSS */}
+      <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Sik Sorulan Sorular</p>
+            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+              Sik Sorulan Sorular
+              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
+            </p>
             <h2
-              className="text-4xl font-semibold text-[#1F1F1F]"
+              className="text-4xl font-semibold text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Online Pilates hakkinda merak edilenler
@@ -490,42 +525,46 @@ export default function Home() {
           </div>
           <div className="space-y-4">
             {sikSorulanlar.map((item) => (
-              <div key={item.soru} className="rounded-2xl border border-[#D5F2E5] bg-white p-6">
-                <h3 className="text-lg font-semibold text-[#1F1F1F]">{item.soru}</h3>
-                <p className="mt-2 text-base leading-relaxed text-[#505050]">{item.cevap}</p>
+              <div key={item.soru} className="rounded-2xl border border-[#E8D8F0] bg-white p-6">
+                <h3 className="text-lg font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>{item.soru}</h3>
+                <p className="mt-2 text-base leading-relaxed text-[#6B5E68]">{item.cevap}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F5F9F3] py-20">
+      {/* BLOG */}
+      <section className="bg-[#FAF8F4] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
             <div>
-              <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Blog</p>
+              <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
+                <span className="inline-block w-8 h-px bg-[#C9A87A]" />
+                Blog
+              </p>
               <h2
-                className="text-4xl font-semibold text-[#1F1F1F]"
+                className="text-4xl font-semibold text-[#1A1218]"
                 style={{ fontFamily: 'var(--font-playfair), serif' }}
               >
                 Pilates hakkinda yeni yazilar
               </h2>
             </div>
-            <Link href="/blog" className="text-sm font-medium text-[#52C77E] underline underline-offset-4">
+            <Link href="/blog" className="text-sm font-medium text-[#C9A87A] underline underline-offset-4 hover:text-[#b8976a]">
               Tum yazilari gor
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {blogPosts.slice(0, 3).map((post) => (
-              <article key={post.slug} className="rounded-[2rem] border border-[#D5F2E5] bg-white p-7">
-                <p className="text-xs uppercase tracking-[0.12em] text-[#52C77E]">{post.category}</p>
-                <h3 className="mt-4 text-2xl font-semibold text-[#1F1F1F]">
+              <article key={post.slug} className="rounded-[2rem] border border-[#E8D8F0] bg-white p-7">
+                <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">{post.category}</p>
+                <h3 className="mt-4 text-2xl font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                   {post.title}
                 </h3>
-                <p className="mt-4 text-base leading-relaxed text-[#505050]">{post.excerpt}</p>
+                <p className="mt-4 text-base leading-relaxed text-[#6B5E68]">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="mt-5 inline-flex text-sm font-medium text-[#52C77E] underline underline-offset-4"
+                  className="mt-5 inline-flex text-sm font-medium text-[#C9A87A] underline underline-offset-4 hover:text-[#b8976a]"
                 >
                   Devamini oku
                 </Link>

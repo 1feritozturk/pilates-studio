@@ -17,16 +17,16 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="bg-[#F5F9F3] py-20">
+      <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[#52C77E] text-sm font-medium tracking-[0.12em] uppercase mb-3">Blog</p>
+          <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Blog</p>
           <h1
-            className="text-5xl font-semibold text-[#1F1F1F] mb-4"
+            className="text-5xl font-semibold text-[#1A1218] mb-4"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             Pilates rehberleri ve faydalı içerikler
           </h1>
-          <p className="max-w-3xl text-[#505050] leading-relaxed">
+          <p className="max-w-3xl text-[#6B5E68] leading-relaxed">
             Online Pilates dersi, evde egzersiz rutini, duruş ve beden farkındalığı ile ilgili yazılar burada.
             Google’da aranan sorulara daha net cevap veren rehber içeriklerle karar vermenizi kolaylaştırmayı hedefliyoruz.
           </p>
@@ -38,10 +38,10 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="overflow-hidden rounded-[2rem] border border-[#D5F2E5] bg-white shadow-sm transition-shadow hover:shadow-md"
+              className="overflow-hidden rounded-[2rem] border border-[#EDE0F5] bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               <Link href={`/blog/${post.slug}`} className="group block">
-                <div className="relative h-52 overflow-hidden bg-[#F5F9F3]">
+                <div className="relative h-52 overflow-hidden bg-[#F5F0F8]">
                   <Image
                     src={getBlogImage(post.slug).src}
                     alt={getBlogImage(post.slug).alt}
@@ -52,20 +52,20 @@ export default function BlogPage() {
                 </div>
               </Link>
               <div className="p-7">
-                <p className="text-xs uppercase tracking-[0.12em] text-[#52C77E]">{post.category}</p>
-                <h2 className="mt-4 text-2xl font-semibold text-[#1F1F1F]">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#52C77E] transition-colors">
+                <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">{post.category}</p>
+                <h2 className="mt-4 text-2xl font-semibold text-[#1A1218]">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[#9B7FAD] transition-colors">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-[#505050]">{post.excerpt}</p>
+                <p className="mt-4 text-base leading-relaxed text-[#6B5E68]">{post.excerpt}</p>
                 <div className="mt-6 flex items-center justify-between text-xs text-[#9E9E9E]">
                   <span>{post.publishedAt}</span>
                   <span>{post.readingTime}</span>
                 </div>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="mt-6 inline-flex text-sm font-medium text-[#52C77E] underline underline-offset-4"
+                  className="mt-6 inline-flex text-sm font-medium text-[#9B7FAD] underline underline-offset-4"
                 >
                   Yazıyı oku
                 </Link>
