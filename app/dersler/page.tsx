@@ -9,8 +9,6 @@ const grupDersleri = [
     aciklama: 'Pilates\'e yeni başlayanlar için temel hareketler, doğru nefes teknikleri ve postür farkındalığı.',
     sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
-    gunler: 'Pzt & Çrş',
-    saat: '08:00 / 19:00',
     seviye: 'Başlangıç',
     img: '/images/grup-ders-1.jpg.webp',
   },
@@ -19,10 +17,8 @@ const grupDersleri = [
     aciklama: 'Temel bilgiye sahip olanlar için ileri teknikler, core güçlendirme ve esneklik çalışmaları.',
     sure: '50 dk',
     kapasite: 'Maks. 8 kişi',
-    gunler: 'Salı & Perşembe',
-    saat: '07:30 / 18:30',
     seviye: 'Orta',
-    img: '/images/grup-ders-2.jpg',
+    img: '/images/grup-ders-2.webp',
   },
 ];
 
@@ -34,7 +30,7 @@ const bireyselDersler = [
     gunler: 'Her gün',
     saat: 'Randevuya göre',
     ozellikler: ['Kişisel program', 'Anlık geri bildirim', 'Hızlı ilerleme', 'Esnek saat'],
-    img: '/images/bireysel-ders.png',
+    img: '/images/bireysel-ders.webp',
   },
 ];
 
@@ -121,14 +117,6 @@ export default function DerslerPage() {
                   <div className="flex justify-between">
                     <span>Kontenjan</span>
                     <span className="font-medium text-[#1A1218]">{ders.kapasite}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Günler</span>
-                    <span className="font-medium text-[#1A1218]">{ders.gunler}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saatler</span>
-                    <span className="font-medium text-[#1A1218]">{ders.saat}</span>
                   </div>
                 </div>
                 <Link

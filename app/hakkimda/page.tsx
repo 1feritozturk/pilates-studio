@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { createMetadata, defaultKeywords } from '@/lib/seo';
 
 const sertifikalar = [
-  '2. Seviye TCF Onayli Pilates Egitmenligi',
+  '2. Seviye Türkiye Cimnastik Federasyonu Onaylı Pilates Eğitmenliği',
+  'Türkiye Cimnastik Federasyonu Pilates Gelişim Semineri',
   'Hamile Pilatesi Egitimi',
 ];
 
@@ -12,17 +13,17 @@ const degerler = [
   {
     baslik: 'Her beden farklıdır',
     aciklama: 'Standart programlar yerine her öğrenciye özel yaklaşım benimsiyorum. Bedeninizin ihtiyaçlarını dinleyerek ilerliyoruz.',
-    img: '/images/her-beden-farklidir.png',
+    img: '/images/her-beden-farklidir.webp',
   },
   {
     baslik: 'Kalite, niceliğin önünde',
     aciklama: 'Az ama doğru hareket, çok ama yanlış hareketten çok daha değerlidir. Her seansta buna odaklanıyorum.',
-    img: '/images/kalite.png',
+    img: '/images/kalite.webp',
   },
   {
     baslik: 'Süreklilik',
     aciklama: 'Pilates bir yaşam biçimidir. Sizi bir süreliğine değil, kalıcı olarak bu pratiğin içine çekmeyi hedefliyorum.',
-    img: '/images/sureklilik.png',
+    img: '/images/sureklilik.webp',
   },
 ];
 
@@ -72,7 +73,7 @@ export default function HakkimdaPage() {
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
-            src="/images/elvin-hakkimda.jpeg"
+            src="/images/elvin-hakkimda.webp"
             alt="Elvin Öztürk"
             fill
             className="object-cover object-center"
@@ -89,7 +90,7 @@ export default function HakkimdaPage() {
             Pilatesle 7 yil once, bir teknoloji sirketinde beyaz yaka olarak calistigim donemde tanistim. Spor, hayatimin her zaman onemli bir parcasiydi; ancak pilatesle birlikte bedenimi cok daha yakindan tanimaya, gucun ve dengenin yalnizca fiziksel degil, zihinsel bir karsiligi da oldugunu kesfetmeye basladim.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
-            Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BABS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
+            Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BAPS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
             Bir sure beyaz yaka kariyerimi surdururken part-time olarak pilates egitmenligi yaptim. Zamanla pilates, hayatimda bir ilgi alaninin otesine gecti; yasam kalitemi donusturen, beni besleyen ve baskalarina da katki sunmak istedigim guclu bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yone cevirerek, bugun tum odagimi pilatese ve ogrencilerime ayiriyorum.

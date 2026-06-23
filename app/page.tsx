@@ -17,7 +17,7 @@ const dersler = [
     aciklama: 'Birebir, tamamen size özel hazırlanmış program. Kendi hızınızda, kendi alanınızda ilerleyin.',
     sure: '50 dk',
     kapasite: '1 kişi',
-    img: '/images/bireysel-ders.png',
+    img: '/images/bireysel-ders.webp',
   },
 ];
 
@@ -145,7 +145,7 @@ export default function Home() {
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/grup-ders-2.jpg"
+            src="/images/grup-ders-2.webp"
             alt="Online Pilates"
             fill
             className="object-cover object-center"
@@ -338,39 +338,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YORUMLAR */}
-      <section className="bg-[#F5F0F8] py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
-              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
-              Yorumlar
-              <span className="inline-block w-6 h-px bg-[#C9A87A]" />
-            </p>
-            <h2
-              className="text-4xl font-semibold text-[#1A1218]"
-              style={{ fontFamily: 'var(--font-playfair), serif' }}
-            >
-              Ogrenci deneyimleri
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {yorumlar.map((item) => (
-              <div key={item.isim} className="rounded-[2rem] border border-[#E8D8F0] bg-white p-7">
-                <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">{item.hedef}</p>
-                <p className="mt-4 text-base leading-7 text-[#6B5E68] italic" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-                  &ldquo;{item.yorum}&rdquo;
-                </p>
-                <div className="mt-5 flex items-center gap-2">
-                  <span className="w-5 h-px bg-[#C9A87A]" />
-                  <p className="font-medium text-[#1A1218]">{item.isim}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* AVANTAJLAR */}
       <section className="bg-[#FAF8F4] py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -474,7 +441,7 @@ export default function Home() {
       <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
-            src="/images/elvin-hakkimda.jpeg"
+            src="/images/elvin-hakkimda.webp"
             alt="Elvin Öztürk"
             fill
             className="object-cover object-center"
