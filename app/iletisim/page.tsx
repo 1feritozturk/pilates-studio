@@ -1,6 +1,4 @@
 'use client';
-
-import Image from 'next/image';
 import { useState } from 'react';
 
 const iletisimBilgileri = [
@@ -115,14 +113,12 @@ export default function IletisimPage() {
               </div>
             ))}
             <div className="flex gap-4">
-              <div className="w-12 h-12 overflow-hidden rounded-full flex-shrink-0">
-                <Image
-                  src="/images/pilates-instagram-icon.png"
-                  alt="Pilates illüstrasyonu"
-                  width={48}
-                  height={48}
-                  className="h-full w-full object-cover"
-                />
+              <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-[#6B5E68]" strokeWidth="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.3" cy="6.8" r="0.8" className="fill-[#6B5E68] stroke-none" />
+                </svg>
               </div>
               <div>
                 <p className="text-sm font-medium text-[#1A1218] mb-1">Instagram</p>
