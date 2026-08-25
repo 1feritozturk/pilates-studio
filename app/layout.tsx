@@ -23,8 +23,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Elvin Ozturk Online Pilates",
-    template: "%s | Elvin Ozturk Online Pilates",
+    default: "Online Pilates Dersleri | Evden Canlı Dersler – Elvin Öztürk",
+    template: "%s | Elvin Öztürk",
   },
   description: siteConfig.description,
   applicationName: siteConfig.shortName,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Elvin Ozturk Online Pilates",
+    title: "Online Pilates Dersleri | Evden Canlı Dersler – Elvin Öztürk",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elvin Ozturk Online Pilates",
+    title: "Online Pilates Dersleri | Evden Canlı Dersler – Elvin Öztürk",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
