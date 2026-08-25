@@ -40,109 +40,109 @@ export type BlogImage = {
 
 const blogImageMap: Record<string, BlogImage> = {
   "online-pilates-nedir-rehber": {
-    src: "/images/blog/blog-online-pilates-rehber.png",
+    src: "/images/blog/blog-online-pilates-rehber.webp",
     alt: "Evde online pilates rehberi",
   },
   "online-pilates-kimler-icin-uygundur": {
-    src: "/images/blog/blog-online-pilates-kimler-icin-uygundur.png",
+    src: "/images/blog/blog-online-pilates-kimler-icin-uygundur.webp",
     alt: "Online pilates dersi için evde hazırlık",
   },
   "online-pilatesin-faydalari-nelerdir": {
-    src: "/images/blog/blog-online-pilatesin-faydalari-nelerdir.png",
+    src: "/images/blog/blog-online-pilatesin-faydalari-nelerdir.webp",
     alt: "Online pilatesin bedene faydaları",
   },
   "online-pilatese-yeni-baslayanlar-icin-rehber": {
-    src: "/images/blog/blog-online-pilates-baslangic.png",
+    src: "/images/blog/blog-online-pilates-baslangic.webp",
     alt: "Online pilatese yeni başlayanlar için başlangıç",
   },
   "online-pilates-nasil-yapilir": {
-    src: "/images/blog/blog-online-pilates-nasil-yapilir.png",
+    src: "/images/blog/blog-online-pilates-nasil-yapilir.webp",
     alt: "Evde online pilates başlangıcı",
   },
   "online-pilates-dersleri-nasil-gecer": {
-    src: "/images/blog/blog-online-pilates-dersleri-nasil-gecer.png",
+    src: "/images/blog/blog-online-pilates-dersleri-nasil-gecer.webp",
     alt: "Canlı online pilates dersi deneyimi",
   },
   "canli-online-pilates-derslerinin-avantajlari": {
-    src: "/images/blog/blog-canli-online-pilates.png",
+    src: "/images/blog/blog-canli-online-pilates.webp",
     alt: "Canlı online pilates derslerinin avantajları",
   },
   "online-pilates-mi-yuz-yuze-pilates-mi": {
-    src: "/images/blog/blog-online-pilates-mi-yuz-yuze-pilates-mi.png",
+    src: "/images/blog/blog-online-pilates-mi-yuz-yuze-pilates-mi.webp",
     alt: "Online pilates ve yüz yüze pilates karşılaştırması",
   },
   "evde-pilates-icin-neler-gerekir": {
-    src: "/images/blog/blog-evde-pilates-icin-neler-gerekir.png",
+    src: "/images/blog/blog-evde-pilates-icin-neler-gerekir.webp",
     alt: "Evde pilates için gerekli temel hazırlıklar",
   },
   "evde-pilates-nedir-nasil-baslanir": {
-    src: "/images/blog/blog-evde-pilates-nedir-nasil-baslanir.png",
+    src: "/images/blog/blog-evde-pilates-nedir-nasil-baslanir.webp",
     alt: "Evde pilatese başlamak için hazırlık",
   },
   "evde-pilates-yaparken-en-sik-yapilan-hatalar": {
-    src: "/images/blog/blog-evde-pilates-hatalar.png",
+    src: "/images/blog/blog-evde-pilates-hatalar.webp",
     alt: "Evde pilates yaparken dikkat edilmesi gerekenler",
   },
   "pilates-nedir": {
-    src: "/images/blog/blog-pilates-nedir.png",
+    src: "/images/blog/blog-pilates-nedir.webp",
     alt: "Pilates nedir başlangıç rehberi",
   },
   "pilates-nedir-ne-ise-yarar": {
-    src: "/images/blog/blog-pilates-nedir-ne-ise-yarar.png",
+    src: "/images/blog/blog-pilates-nedir-ne-ise-yarar.webp",
     alt: "Pilates nedir ve ne işe yarar",
   },
   "pilatesin-vucuda-faydalari-nelerdir": {
-    src: "/images/blog/blog-pilates-faydalari.png",
+    src: "/images/blog/blog-pilates-faydalari.webp",
     alt: "Pilatesin vücuda faydaları",
   },
   "pilatese-yeni-baslayanlar-icin-bilinmesi-gerekenler": {
-    src: "/images/blog/blog-online-pilates-baslangic.png",
+    src: "/images/blog/blog-online-pilates-baslangic.webp",
     alt: "Pilatese yeni başlayanlar için rehber",
   },
   "pilatese-baslamak-icin-en-dogru-zaman-ne-zaman": {
-    src: "/images/blog/blog-pilatese-baslamak-icin-dogru-zaman.png",
+    src: "/images/blog/blog-pilatese-baslamak-icin-dogru-zaman.webp",
     alt: "Pilatese başlamak için doğru zaman",
   },
   "haftada-kac-gun-pilates-yapilmali": {
-    src: "/images/blog/blog-haftada-kac-gun-pilates.png",
+    src: "/images/blog/blog-haftada-kac-gun-pilates.webp",
     alt: "Haftalık pilates rutini",
   },
   "pilates-ne-zaman-etki-eder": {
-    src: "/images/blog/blog-pilates-ne-zaman-etki-eder.png",
+    src: "/images/blog/blog-pilates-ne-zaman-etki-eder.webp",
     alt: "Pilatesin etkisini zaman içinde hissetmek",
   },
   "pilates-haftada-2-gun-yeterli-mi": {
-    src: "/images/blog/blog-pilates-haftada-2-gun-yeterli-mi.png",
+    src: "/images/blog/blog-pilates-haftada-2-gun-yeterli-mi.webp",
     alt: "Haftada iki gün pilates rutini",
   },
   "mat-pilates-nedir": {
-    src: "/images/blog/blog-mat-pilates-nedir.png",
+    src: "/images/blog/blog-mat-pilates-nedir.webp",
     alt: "Mat pilates başlangıcı",
   },
   "pilates-durusu-duzeltir-mi": {
-    src: "/images/blog/blog-durus.png",
+    src: "/images/blog/blog-durus.webp",
     alt: "Pilates ve duruş farkındalığı",
   },
   "pilates-esnekligi-artirir-mi": {
-    src: "/images/blog/blog-esneklik.png",
+    src: "/images/blog/blog-esneklik.webp",
     alt: "Pilates ile esneklik çalışması",
   },
   "reformer-pilates-nedir": {
-    src: "/images/blog/blog-reformer-pilates-nedir.png",
+    src: "/images/blog/blog-reformer-pilates-nedir.webp",
     alt: "Reformer pilates çalışması",
   },
   "reformer-pilates-mi-mat-pilates-mi": {
-    src: "/images/blog/blog-reformer-pilates-mi-mat-pilates-mi.png",
+    src: "/images/blog/blog-reformer-pilates-mi-mat-pilates-mi.webp",
     alt: "Reformer pilates ve mat pilates karşılaştırması",
   },
   "masa-basi-calisanlar-icin-pilates-rutini": {
-    src: "/images/blog/blog-masa-basi.png",
+    src: "/images/blog/blog-masa-basi.webp",
     alt: "Masa başı çalışanlar için pilates rutini",
   },
 };
 
 const defaultBlogImage: BlogImage = {
-  src: "/images/blog/blog-online-pilates-rehber.png",
+  src: "/images/blog/blog-online-pilates-rehber.webp",
   alt: "Online pilates blog yazısı",
 };
 

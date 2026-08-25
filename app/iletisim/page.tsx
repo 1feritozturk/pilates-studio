@@ -113,6 +113,22 @@ export default function IletisimPage() {
                 </div>
               </div>
             ))}
+            <div className="flex gap-4">
+              <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center text-xl flex-shrink-0">
+                ◎
+              </div>
+              <div>
+                <p className="text-sm font-medium text-[#1A1218] mb-1">Instagram</p>
+                <a
+                  href="https://www.instagram.com/elvinozturkpilates/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
+                >
+                  @elvinozturkpilates
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
