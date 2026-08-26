@@ -52,7 +52,7 @@ export default function DerslerPage() {
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(155,127,173,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(155,127,173,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
             <h1
               className="text-5xl md:text-6xl font-semibold leading-tight text-[#1A1218] mb-6"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -92,7 +92,7 @@ export default function DerslerPage() {
           >
             Online Grup Dersler
           </h2>
-          <span className="text-sm text-[#9B7FAD] bg-[#EDE0F5] px-3 py-1 rounded-full">Maks. 8 kişi</span>
+          <span className="text-sm text-[#6B3D7A] bg-[#EDE0F5] px-3 py-1 rounded-full">Maks. 8 kişi</span>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {grupDersleri.map((ders) => (
@@ -102,7 +102,7 @@ export default function DerslerPage() {
             >
               <div className="relative h-44">
                 <Image src={ders.img} alt={ders.ad} fill className="object-cover" />
-                <span className="absolute top-3 left-3 bg-white/90 text-[#9B7FAD] text-xs font-medium px-3 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-white/90 text-[#6B3D7A] text-xs font-medium px-3 py-1 rounded-full">
                   {ders.seviye}
                 </span>
               </div>
@@ -216,7 +216,7 @@ export default function DerslerPage() {
 
       {/* Platform bilgisi */}
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">
-        <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-4">Nasıl çalışır?</p>
+        <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-4">Nasıl çalışır?</p>
         <h2
           className="text-3xl font-semibold leading-snug text-[#1A1218] mb-10"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -248,7 +248,7 @@ export default function DerslerPage() {
           ].map((a) => (
             <div key={a.adim} className="text-center">
               <div className="w-14 h-14 bg-[#EDE0F5] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-[#9B7FAD] font-bold text-sm">{a.adim}</span>
+                <span className="text-[#6B3D7A] font-bold text-sm">{a.adim}</span>
               </div>
               <h3 className="font-semibold text-[#1A1218] mb-2">{a.baslik}</h3>
               <p className="text-base text-[#6B5E68]">{a.aciklama}</p>

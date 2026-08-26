@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
 export default function KullanimKosullariPage() {
   return (
     <section className="py-20 max-w-4xl mx-auto px-6">
-      <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.2em] uppercase mb-3">Yasal</p>
+      <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.2em] uppercase mb-3">Yasal</p>
       <h1 className="text-4xl font-semibold text-[#1A1218] mb-8" style={{ fontFamily: "var(--font-playfair), serif" }}>
         Kullanim Kosullari
       </h1>

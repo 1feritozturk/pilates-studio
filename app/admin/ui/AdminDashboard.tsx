@@ -383,7 +383,7 @@ export default function AdminDashboard() {
     return (
       <div className="min-h-screen bg-[#F5F0F8] px-6 py-12">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#EDE0F5] bg-white p-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#9B7FAD]">Admin paneli</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-[#6B3D7A]">Admin paneli</p>
           <h1 className="mt-3 text-3xl font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
             Supabase ayarlari bekleniyor.
           </h1>
@@ -404,7 +404,7 @@ export default function AdminDashboard() {
         <div className="mb-6 rounded-[2rem] border border-[#EDE0F5] bg-white px-6 py-5 shadow-sm">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#9B7FAD]">Yonetim paneli</p>
+              <p className="text-xs uppercase tracking-[0.35em] text-[#6B3D7A]">Yonetim paneli</p>
               <h1 className="mt-2 text-3xl font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                 Elvin Ozturk Online Pilates
               </h1>
@@ -626,7 +626,7 @@ export default function AdminDashboard() {
                         <div>
                           <p className="text-base font-semibold text-[#1A1218]">{item.title}</p>
                           <p className="mt-1 text-sm text-[#6B5E68]">Sira: {item.display_order}</p>
-                          <p className="mt-1 text-xs text-[#9B7FAD]">{item.image_url}</p>
+                          <p className="mt-1 text-xs text-[#6B3D7A]">{item.image_url}</p>
                         </div>
                         <button
                           type="button"

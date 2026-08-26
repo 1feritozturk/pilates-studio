@@ -59,7 +59,7 @@ export default function IletisimPage() {
       {/* Header */}
       <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
+          <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
           <h1
             className="text-5xl font-semibold text-[#1A1218] mb-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -209,7 +209,7 @@ export default function IletisimPage() {
               <button
                 type="submit"
                 disabled={gonderiliyor}
-                className="w-full py-3.5 bg-[#C9A87A] text-white text-sm font-medium rounded-xl hover:bg-[#B8976A] transition-colors disabled:cursor-not-allowed disabled:opacity-70"
+                className="w-full py-3.5 bg-[#C9A87A] text-[#1A1218] text-sm font-medium rounded-xl hover:bg-[#B8976A] transition-colors disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {gonderiliyor ? 'Gonderiliyor...' : 'Gonder'}
               </button>

@@ -168,7 +168,7 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
+            <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
               <span className="inline-block w-8 h-px bg-[#C9A87A]" />
               Online Pilates
             </p>
@@ -210,7 +210,7 @@ export default function Home() {
               href="/dersler#grup-dersleri"
               className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-[#E8D8F0] hover:shadow-md transition-shadow group"
             >
-              <p className="text-xs text-[#9B7FAD] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
+              <p className="text-xs text-[#6B3D7A] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
               <h3 className="text-lg font-semibold text-[#1A1218] mb-1" style={{ fontFamily: 'var(--font-playfair), serif' }}>Online Grup Pilates</h3>
               <p className="text-sm text-[#6B5E68]">Maks. 8 kişi · 50 dk · Canlı yayın</p>
               <p className="text-xs text-[#C9A87A] mt-3 group-hover:underline">Programa bak →</p>
@@ -232,19 +232,19 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid gap-8 rounded-[2rem] border border-[#E8D8F0] bg-white p-8 md:grid-cols-3">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Online Pilates Dersi</p>
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#6B3D7A]">Online Pilates Dersi</p>
             <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Duzenli online Pilates dersleri ile omurga destegi, core guclenmesi ve hareket kalitesi uzerinde calisabilirsiniz.
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Online ve Esnek</p>
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#6B3D7A]">Online ve Esnek</p>
             <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Derslere evden, ofisten ya da seyahatteyken baglanabilir; programinizi gunluk temponuza daha kolay uyarlayabilirsiniz.
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#9B7FAD]">Bireysel ve Grup</p>
+            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#6B3D7A]">Bireysel ve Grup</p>
             <p className="mt-3 text-base leading-relaxed text-[#6B5E68]">
               Hedefiniz toparlanmak, guclenmek veya daha duzenli hareket etmekse size uygun ders formatini secerek ilerleyebilirsiniz.
             </p>
@@ -272,7 +272,7 @@ export default function Home() {
       {/* ONLINE DERSLER */}
       <section className="py-24 max-w-6xl mx-auto px-6">
         <div className="mb-14 text-center">
-          <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+          <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
             <span className="inline-block w-6 h-px bg-[#C9A87A]" />
             Programlar
             <span className="inline-block w-6 h-px bg-[#C9A87A]" />
@@ -299,7 +299,7 @@ export default function Home() {
               <div className="p-7">
                 <h3 className="text-xl font-semibold text-[#1A1218] mb-2" style={{ fontFamily: 'var(--font-playfair), serif' }}>{ders.ad}</h3>
                 <p className="text-base text-[#6B5E68] leading-relaxed mb-5">{ders.aciklama}</p>
-                <div className="flex gap-3 text-xs text-[#9B7FAD] mb-6">
+                <div className="flex gap-3 text-xs text-[#6B3D7A] mb-6">
                   <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">{ders.sure}</span>
                   <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">{ders.kapasite}</span>
                   <span className="bg-[#F5F0F8] px-3 py-1 rounded-full">Canlı</span>
@@ -320,7 +320,7 @@ export default function Home() {
       <section className="py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-10 md:grid-cols-2 items-start">
           <div>
-            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
+            <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
               <span className="inline-block w-8 h-px bg-[#C9A87A]" />
               Kimler Icin?
             </p>
@@ -354,7 +354,7 @@ export default function Home() {
       <section className="bg-[#FAF8F4] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+            <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
               Neden online?
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
@@ -421,7 +421,7 @@ export default function Home() {
       <section className="py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-[2rem] border border-[#E8D8F0] bg-white p-8">
-            <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">Karsilastirma</p>
+            <p className="text-xs uppercase tracking-[0.12em] text-[#6B3D7A]">Karsilastirma</p>
             <h2
               className="mt-4 text-3xl font-semibold leading-snug text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -461,7 +461,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-[#C9A87A] rounded-br-3xl pointer-events-none" />
         </div>
         <div>
-          <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-4 flex items-center gap-3">
+          <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-4 flex items-center gap-3">
             <span className="inline-block w-8 h-px bg-[#C9A87A]" />
             Hakkımda
           </p>
@@ -490,7 +490,7 @@ export default function Home() {
       <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
+            <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
               Sik Sorulan Sorular
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
@@ -518,7 +518,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
             <div>
-              <p className="text-[#9B7FAD] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
+              <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
                 <span className="inline-block w-8 h-px bg-[#C9A87A]" />
                 Blog
               </p>
@@ -536,7 +536,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {blogPosts.slice(0, 3).map((post) => (
               <article key={post.slug} className="rounded-[2rem] border border-[#E8D8F0] bg-white p-7">
-                <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD]">{post.category}</p>
+                <p className="text-xs uppercase tracking-[0.12em] text-[#6B3D7A]">{post.category}</p>
                 <h3 className="mt-4 text-2xl font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                   {post.title}
                 </h3>

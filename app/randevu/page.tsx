@@ -97,7 +97,7 @@ export default function RandevuPage() {
       <div className="min-h-[80vh] flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
           <div className="w-20 h-20 bg-[#EDE0F5] rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-[#9B7FAD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 text-[#6B3D7A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -115,18 +115,18 @@ export default function RandevuPage() {
           </p>
           <div className="bg-[#F5F0F8] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
             <div className="flex justify-between">
-              <span className="text-[#9E9E9E]">Ders tipi</span>
+              <span className="text-[#6B5E68]">Ders tipi</span>
               <span className="font-medium text-[#1A1218]">{form.dersTipi || 'Belirtilmedi'}</span>
             </div>
             {form.dersTipi === 'Grup Dersi' ? (
               <div className="flex justify-between">
-                <span className="text-[#9E9E9E]">Seviye</span>
+                <span className="text-[#6B5E68]">Seviye</span>
                 <span className="font-medium text-[#1A1218]">{form.grupSeviyesi || 'Belirtilmedi'}</span>
               </div>
             ) : null}
           </div>
-          <p className="text-xs text-[#9E9E9E]">
-            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#9B7FAD]">1elvinozturk@gmail.com</a>
+          <p className="text-xs text-[#6B5E68]">
+            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#6B3D7A]">1elvinozturk@gmail.com</a>
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function RandevuPage() {
       {/* Header */}
       <section className="bg-[#F5F0F8] py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kayıt Formu</p>
+          <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kayıt Formu</p>
           <h1
             className="text-4xl font-semibold text-[#1A1218] mb-3"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -305,7 +305,7 @@ export default function RandevuPage() {
           <button
             type="submit"
             disabled={gonderiliyor}
-            className="w-full py-4 bg-[#C9A87A] text-white font-medium rounded-xl hover:bg-[#B8976A] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
+            className="w-full py-4 bg-[#C9A87A] text-[#1A1218] font-medium rounded-xl hover:bg-[#B8976A] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
           >
             {gonderiliyor ? 'Kayit gonderiliyor...' : 'Kaydi Tamamla'}
           </button>

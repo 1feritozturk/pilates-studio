@@ -82,7 +82,7 @@ export default function AdminLoginPage() {
 
           <section className="px-8 py-10 md:px-12 md:py-14">
             <div className="mb-10">
-              <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#9B7FAD]">Hos geldiniz</p>
+              <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#6B3D7A]">Hos geldiniz</p>
               <h2 className="text-3xl font-semibold text-[#1A1218]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                 Admin girisi
               </h2>
@@ -140,7 +140,7 @@ export default function AdminLoginPage() {
             )}
 
             <div className="mt-6">
-              <Link href="/" className="text-sm text-[#9B7FAD] underline underline-offset-4">
+              <Link href="/" className="text-sm text-[#6B3D7A] underline underline-offset-4">
                 Siteye geri don
               </Link>
             </div>

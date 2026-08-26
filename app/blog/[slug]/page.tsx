@@ -94,14 +94,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">{post.category}</p>
+          <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">{post.category}</p>
           <h1
             className="text-5xl font-semibold text-[#1A1218] mb-4"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             {post.title}
           </h1>
-          <div className="flex gap-4 text-sm text-[#9E9E9E]">
+          <div className="flex gap-4 text-sm text-[#6B5E68]">
             <span>{post.publishedAt}</span>
             <span>{post.readingTime}</span>
           </div>
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {inContentLinks.length ? (
           <div className="mt-12 rounded-[1.75rem] border border-[#EDE0F5] bg-[#FCFEFA] p-6 md:p-8">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-4">Okuma Rotası</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-4">Okuma Rotası</p>
             <div className="space-y-4 text-[#6B5E68] leading-8">
               {inContentLinks.map((item) => (
                 <p key={`${post.slug}-${item.slug}-${item.anchor}`}>
@@ -164,7 +164,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {hubPosts.length ? (
         <section className="pb-8 max-w-5xl mx-auto px-6">
           <div className="rounded-[2rem] border border-[#EDE0F5] bg-[#F5F0F8] p-8 md:p-10">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merkez Rehber</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merkez Rehber</p>
             <h2
               className="text-3xl font-semibold leading-snug text-[#1A1218] mb-4"
               style={{ fontFamily: "var(--font-playfair), serif" }}
@@ -192,7 +192,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {relatedPosts.length ? (
         <section className="pb-20 max-w-5xl mx-auto px-6">
           <div className="border-t border-[#EDE0F5] pt-10">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">İlgili Yazılar</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">İlgili Yazılar</p>
             <h2
               className="text-3xl font-semibold leading-snug text-[#1A1218] mb-8"
               style={{ fontFamily: "var(--font-playfair), serif" }}
@@ -206,7 +206,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   href={`/blog/${relatedPost.slug}`}
                   className="group rounded-[1.5rem] border border-[#EDE0F5] bg-white p-6 hover:border-[#9B7FAD] hover:shadow-sm transition-all"
                 >
-                  <p className="text-xs uppercase tracking-[0.12em] text-[#9B7FAD] mb-3">{relatedPost.category}</p>
+                  <p className="text-xs uppercase tracking-[0.12em] text-[#6B3D7A] mb-3">{relatedPost.category}</p>
                   <h3 className="text-2xl font-semibold text-[#1A1218] mb-3 group-hover:text-[#9B7FAD] transition-colors">
                     {relatedPost.title}
                   </h3>

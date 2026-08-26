@@ -31,7 +31,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={handleLogoClick} className="flex flex-col leading-tight">
           <span className="text-base font-semibold tracking-widest uppercase text-[#1A1218]">Elvin Öztürk</span>
-          <span className="text-[10px] tracking-[0.12em] text-[#9B7FAD] uppercase">Online Pilates</span>
+          <span className="text-[10px] tracking-[0.12em] text-[#6B3D7A] uppercase">Online Pilates</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -42,7 +42,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm tracking-wide transition-colors ${
                 pathname === link.href
-                  ? 'text-[#9B7FAD] font-medium'
+                  ? 'text-[#6B3D7A] font-medium'
                   : 'text-[#6B5E68] hover:text-[#1A1218]'
               }`}
             >
@@ -80,7 +80,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setMenuOpen(false)}
               className={`text-sm tracking-wide py-1 ${
-                pathname === link.href ? 'text-[#9B7FAD] font-medium' : 'text-[#6B5E68]'
+                pathname === link.href ? 'text-[#6B3D7A] font-medium' : 'text-[#6B5E68]'
               }`}
             >
               {link.label}

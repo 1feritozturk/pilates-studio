@@ -45,7 +45,7 @@ export default function HakkimdaPage() {
         <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(31,31,31,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(31,31,31,0.08)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merhaba</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merhaba</p>
             <h1
               className="text-5xl md:text-6xl font-semibold text-[#1A1218] mb-6"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -104,7 +104,7 @@ export default function HakkimdaPage() {
 
           {/* Sertifikalar */}
           <div>
-            <p className="text-xs text-[#9E9E9E] uppercase tracking-wider mb-3">Sertifika & Eğitimler</p>
+            <p className="text-xs text-[#6B5E68] uppercase tracking-wider mb-3">Sertifika & Eğitimler</p>
             <ul className="space-y-2">
               {sertifikalar.map((s) => (
                 <li key={s} className="flex items-center gap-2 text-sm text-[#6B5E68]">
@@ -121,7 +121,7 @@ export default function HakkimdaPage() {
       <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">Yaklaşımım</p>
+            <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Yaklaşımım</p>
             <h2
               className="text-3xl font-semibold text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
