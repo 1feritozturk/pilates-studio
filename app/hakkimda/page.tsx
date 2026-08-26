@@ -6,7 +6,7 @@ import { createMetadata, defaultKeywords } from '@/lib/seo';
 const sertifikalar = [
   '2. Seviye Türkiye Cimnastik Federasyonu Onaylı Pilates Eğitmenliği',
   'Türkiye Cimnastik Federasyonu Pilates Gelişim Semineri',
-  'Hamile Pilatesi Egitimi',
+  'Hamile Pilatesi Eğitimi',
 ];
 
 const degerler = [
@@ -28,11 +28,11 @@ const degerler = [
 ];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Hakkimda',
+  title: 'Hakkımda',
   description:
-    'Elvin Ozturk’un Pilates yaklasimini, egitimlerini ve online derslerdeki calisma bicimini kesfedin.',
+    'Elvin Öztürk’ün Pilates yaklaşımını, eğitimlerini ve online derslerdeki çalışma biçimini keşfedin.',
   path: '/hakkimda',
-  keywords: [...defaultKeywords, 'pilates egitmeni', 'elvin ozturk hakkinda'],
+  keywords: [...defaultKeywords, 'pilates eğitmeni', 'elvin öztürk hakkında'],
 });
 
 export default function HakkimdaPage() {
@@ -87,19 +87,19 @@ export default function HakkimdaPage() {
             Ben Elvin Öztürk.
           </h2>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
-            Pilatesle 7 yil once, bir teknoloji sirketinde beyaz yaka olarak calistigim donemde tanistim. Spor, hayatimin her zaman onemli bir parcasiydi; ancak pilatesle birlikte bedenimi cok daha yakindan tanimaya, gucun ve dengenin yalnizca fiziksel degil, zihinsel bir karsiligi da oldugunu kesfetmeye basladim.
+            Pilatesle 7 yıl önce, bir teknoloji şirketinde beyaz yaka olarak çalıştığım dönemde tanıştım. Spor, hayatımın her zaman önemli bir parçasıydı; ancak pilatesle birlikte bedenimi çok daha yakından tanımaya, gücün ve dengenin yalnızca fiziksel değil, zihinsel bir karşılığı da olduğunu keşfetmeye başladım.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
-            Kendi bedenimde gordugum degisim, pilatese olan bagliligimi zamanla gercek bir uzmanlik yolculuguna donusturdu. Bu alanda derinlesmeye karar vererek TCF sinavlarina hazirlandim ve bugun 2. seviye TCF onayli pilates egitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi ozel uzmanlik alanlarinda ise BAPS Akademi’den egitimler alarak bilgi ve pratigimi daha da guclendirdim.
+            Kendi bedenimde gördüğüm değişim, pilatese olan bağlılığımı zamanla gerçek bir uzmanlık yolculuğuna dönüştürdü. Bu alanda derinleşmeye karar vererek TCF sınavlarına hazırlandım ve bugün 2. seviye TCF onaylı pilates eğitmeni olarak yoluma devam ediyorum. Hamile pilatesi gibi özel uzmanlık alanlarında ise BABS Akademi’den eğitimler alarak bilgi ve pratiğimi daha da güçlendirdim.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
-            Bir sure beyaz yaka kariyerimi surdururken part-time olarak pilates egitmenligi yaptim. Zamanla pilates, hayatimda bir ilgi alaninin otesine gecti; yasam kalitemi donusturen, beni besleyen ve baskalarina da katki sunmak istedigim guclu bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yone cevirerek, bugun tum odagimi pilatese ve ogrencilerime ayiriyorum.
+            Bir süre beyaz yaka kariyerimi sürdürürken part-time olarak pilates eğitmenliği yaptım. Zamanla pilates, hayatımda bir ilgi alanının ötesine geçti; yaşam kalitemi dönüştüren, beni besleyen ve başkalarına da katkı sunmak istediğim güçlü bir alan haline geldi. Bu nedenle kariyerimi tamamen bu yöne çevirerek, bugün tüm odağımı pilatese ve öğrencilerime ayırıyorum.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-4">
-            Online bireysel ve grup derslerimde amacim; her seviyeden katilimcinin kendi bedenini daha iyi tanimasina, daha guclu, dengeli ve iyi hissetmesine destek olmak. Her dersi, kisinin ihtiyacini merkeze alan; guvenli, etkili ve surdurulebilir bir deneyim olarak planliyorum.
+            Online bireysel ve grup derslerimde amacım; her seviyeden katılımcının kendi bedenini daha iyi tanımasına, daha güçlü, dengeli ve iyi hissetmesine destek olmak. Her dersi, kişinin ihtiyacını merkeze alan; güvenli, etkili ve sürdürülebilir bir deneyim olarak planlıyorum.
           </p>
           <p className="text-base text-[#6B5E68] leading-relaxed mb-8">
-            Pilates benim icin yalnizca bir egzersiz yontemi degil; bedenle daha bilincli, guclu ve dengeli bir bag kurmanin yolu.
+            Pilates benim için yalnızca bir egzersiz yöntemi değil; bedenle daha bilinçli, güçlü ve dengeli bir bağ kurmanın yolu.
           </p>
 
           {/* Sertifikalar */}
