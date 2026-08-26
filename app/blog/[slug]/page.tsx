@@ -111,7 +111,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <article className="py-16 max-w-3xl mx-auto px-6">
         <div className="mb-10 overflow-hidden rounded-[2rem] border border-[#EDE0F5] bg-white">
           <div className="relative aspect-[4/3] w-full">
-            <Image src={postImage.src} alt={postImage.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+            <Image src={postImage.src} alt={postImage.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" preload fetchPriority="high" />
           </div>
         </div>
 

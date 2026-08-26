@@ -158,8 +158,10 @@ export default function Home() {
             src="/images/grup-ders-2.webp"
             alt="Online Pilates"
             fill
+            sizes="100vw"
             className="object-cover object-center"
-            priority
+            preload
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-[#FAF8F4]/87" />
         </div>

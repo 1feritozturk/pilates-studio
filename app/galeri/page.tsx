@@ -78,8 +78,10 @@ export default function GaleriPage() {
             src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=85&fit=crop"
             alt="Galeri"
             fill
+            sizes="100vw"
             className="object-cover"
-            priority
+            preload
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-[#1C1C1C]/55" />
         </div>
