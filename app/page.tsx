@@ -112,8 +112,18 @@ export default function Home() {
     worksFor: {
       '@type': 'SportsActivityLocation',
       name: siteConfig.name,
+      url: siteConfig.url,
+      telephone: '+905380188954',
+      email: siteConfig.email,
+      image: `${siteConfig.url}/images/elvin-hakkimda.webp`,
+      priceRange: '₺₺',
+      areaServed: 'TR',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'TR',
+      },
     },
-    sameAs: ['https://www.instagram.com/elvinozturk.pilates'],
+    sameAs: ['https://www.instagram.com/elvinozturkpilates/'],
     knowsAbout: ['Pilates', 'Online Pilates', 'Beden Farkındalığı'],
   };
 

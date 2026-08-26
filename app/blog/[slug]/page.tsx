@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts, getBlogImage, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
-import { createMetadata, defaultKeywords } from "@/lib/seo";
+import { blogPosts, getBlogImage, getFaqsForPost, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
+import { createMetadata, defaultKeywords, siteConfig } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -41,9 +41,57 @@ export default async function BlogPostPage({ params }: PageProps) {
   const inContentLinks = getInContentLinks(post.slug);
   const relatedPosts = getRelatedPosts(post.slug);
   const postImage = getBlogImage(post.slug);
+  const faqs = getFaqsForPost(post);
+  const canonicalUrl = `${siteConfig.url}/blog/${post.slug}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: post.title,
+        image: `${siteConfig.url}${postImage.src}`,
+        author: {
+          "@type": "Person",
+          name: "Elvin Öztürk",
+          url: `${siteConfig.url}/hakkimda`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: siteConfig.name,
+          url: siteConfig.url,
+        },
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        description: post.description,
+        mainEntityOfPage: canonicalUrl,
+        url: canonicalUrl,
+      },
+      ...(faqs.length
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       <section className="bg-[#F5F0F8] py-20">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-[#9B7FAD] text-sm font-medium tracking-[0.12em] uppercase mb-3">{post.category}</p>
