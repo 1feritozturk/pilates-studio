@@ -75,7 +75,7 @@ export default function GaleriPage() {
       <section className="relative h-64 flex items-end">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=85&fit=crop"
+            src="/images/galeri-hero.webp"
             alt="Galeri"
             fill
             sizes="100vw"
