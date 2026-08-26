@@ -16,11 +16,20 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function handleLogoClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    if (pathname !== '/') {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F4]/95 backdrop-blur-sm border-b border-[#EDE0F5]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight">
+        <Link href="/" onClick={handleLogoClick} className="flex flex-col leading-tight">
           <span className="text-base font-semibold tracking-widest uppercase text-[#1A1218]">Elvin Öztürk</span>
           <span className="text-[10px] tracking-[0.12em] text-[#9B7FAD] uppercase">Online Pilates</span>
         </Link>
