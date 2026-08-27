@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { formatPhone, isValidPhone, toE164 } from '@/lib/phone';
 
 const dersTipiSecenekleri = ['Grup Dersi', 'Bireysel Ders'] as const;
 const grupSeviyeSecenekleri = ['Başlangıç', 'Orta Seviye'] as const;
@@ -46,6 +47,12 @@ export default function RandevuPage() {
       return;
     }
 
+    if (!isValidPhone(form.telefon)) {
+      setHata('Telefon numarası 5 ile başlayan 10 haneli olmalıdır. Örnek: 538 018 89 54');
+      setGonderiliyor(false);
+      return;
+    }
+
     const secilenDers = getSecilenDersLabel(form.dersTipi, form.grupSeviyesi);
 
     try {
@@ -58,7 +65,7 @@ export default function RandevuPage() {
           first_name: form.ad,
           last_name: form.soyad,
           email: form.email,
-          phone: form.telefon,
+          phone: toE164(form.telefon),
           lesson: secilenDers,
           experience_level: form.deneyim,
           note: form.not,
@@ -201,13 +208,20 @@ export default function RandevuPage() {
             </div>
             <div>
               <label className="block text-sm font-medium text-[#1A1218] mb-1.5">Telefon</label>
-              <input
-                type="tel"
-                value={form.telefon}
-                onChange={(e) => setForm({ ...form, telefon: e.target.value })}
-                className="w-full px-4 py-3 border border-[#EDE0F5] rounded-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors"
-                placeholder="5xx xxx xx xx"
-              />
+              <div className="flex items-stretch">
+                <span className="inline-flex items-center px-3 border border-r-0 border-[#EDE0F5] rounded-l-xl bg-[#F5F0F8] text-sm text-[#6B5E68] select-none">
+                  +90
+                </span>
+                <input
+                  type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel-national"
+                  value={form.telefon}
+                  onChange={(e) => setForm({ ...form, telefon: formatPhone(e.target.value) })}
+                  className="w-full px-4 py-3 border border-[#EDE0F5] rounded-r-xl text-sm focus:outline-none focus:border-[#9B7FAD] bg-white transition-colors"
+                  placeholder="5xx xxx xx xx"
+                />
+              </div>
             </div>
           </div>
 
