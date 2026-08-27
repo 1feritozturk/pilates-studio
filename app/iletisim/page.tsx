@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const iletisimBilgileri = [
   { emoji: '📞', baslik: 'Telefon', icerik: '0538 018 89 54', href: 'tel:+905380188954' },
-  { emoji: '✉️', baslik: 'E-posta', icerik: '1elvinozturk@gmail.com' },
+  { emoji: '✉️', baslik: 'E-posta', icerik: 'info@elvinozturk.com' },
 ];
 
 export default function IletisimPage() {

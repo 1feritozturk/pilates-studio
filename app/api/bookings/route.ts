@@ -1,16 +1,8 @@
 import { NextResponse } from "next/server";
-import { hasSupabaseAdminEnv } from "@/lib/supabase/env";
-import { getSupabaseAdminClient } from "@/lib/supabase/admin";
+import { buildEmailHtml, sendNotificationEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   try {
-    if (!hasSupabaseAdminEnv()) {
-      return NextResponse.json(
-        { error: "Supabase ayarlari eksik." },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json();
 
     const requiredFields = ["first_name", "last_name", "email"];
@@ -23,22 +15,27 @@ export async function POST(request: Request) {
       );
     }
 
-    const supabase = getSupabaseAdminClient();
-    const { error } = await supabase.from("bookings").insert({
-      first_name: body.first_name,
-      last_name: body.last_name,
-      email: body.email,
-      phone: body.phone || null,
-      lesson: body.lesson || null,
-      preferred_date: body.preferred_date || null,
-      preferred_time: body.preferred_time || null,
-      experience_level: body.experience_level || null,
-      note: body.note || null,
-      status: "new",
+    const fullName = `${body.first_name} ${body.last_name}`.trim();
+
+    const html = buildEmailHtml("Yeni Randevu Talebi", [
+      ["Ad Soyad", fullName],
+      ["E-posta", body.email],
+      ["Telefon", body.phone],
+      ["Ders", body.lesson],
+      ["Deneyim", body.experience_level],
+      ["Tercih edilen gün", body.preferred_date],
+      ["Tercih edilen saat", body.preferred_time],
+      ["Not", body.note],
+    ]);
+
+    const result = await sendNotificationEmail({
+      subject: `[RANDEVU] ${fullName}${body.lesson ? ` — ${body.lesson}` : ""}`,
+      html,
+      replyTo: body.email,
     });
 
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    if (!result.ok) {
+      return NextResponse.json({ error: result.error }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true });

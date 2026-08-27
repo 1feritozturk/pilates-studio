@@ -8,7 +8,7 @@ export const siteConfig = {
   url: "https://www.elvinozturk.com",
   locale: "tr_TR",
   ogImage: "/opengraph-image",
-  email: "1elvinozturk@gmail.com",
+  email: "info@elvinozturk.com",
   phone: "05380188954",
 } as const;
 

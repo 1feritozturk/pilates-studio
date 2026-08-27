@@ -58,8 +58,8 @@ export default function Footer() {
             <p className="text-white text-sm font-medium tracking-wider uppercase mb-4">İletişim</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="mailto:1elvinozturk@gmail.com" className="hover:text-white transition-colors">
-                  1elvinozturk@gmail.com
+                <a href="mailto:info@elvinozturk.com" className="hover:text-white transition-colors">
+                  info@elvinozturk.com
                 </a>
               </li>
               <li>

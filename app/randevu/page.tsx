@@ -126,7 +126,7 @@ export default function RandevuPage() {
             ) : null}
           </div>
           <p className="text-xs text-[#6B5E68]">
-            Sorularınız için: <a href="mailto:1elvinozturk@gmail.com" className="text-[#6B3D7A]">1elvinozturk@gmail.com</a>
+            Sorularınız için: <a href="mailto:info@elvinozturk.com" className="text-[#6B3D7A]">info@elvinozturk.com</a>
           </p>
         </div>
       </div>

@@ -1,16 +1,8 @@
 import { NextResponse } from "next/server";
-import { hasSupabaseAdminEnv } from "@/lib/supabase/env";
-import { getSupabaseAdminClient } from "@/lib/supabase/admin";
+import { buildEmailHtml, sendNotificationEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   try {
-    if (!hasSupabaseAdminEnv()) {
-      return NextResponse.json(
-        { error: "Supabase ayarlari eksik." },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json();
 
     const requiredFields = ["full_name", "email", "message"];
@@ -23,17 +15,21 @@ export async function POST(request: Request) {
       );
     }
 
-    const supabase = getSupabaseAdminClient();
-    const { error } = await supabase.from("contact_messages").insert({
-      full_name: body.full_name,
-      email: body.email,
-      phone: body.phone || null,
-      message: body.message,
-      status: "unread",
+    const html = buildEmailHtml("Yeni İletişim Mesajı", [
+      ["Ad Soyad", body.full_name],
+      ["E-posta", body.email],
+      ["Telefon", body.phone],
+      ["Mesaj", body.message],
+    ]);
+
+    const result = await sendNotificationEmail({
+      subject: `[İLETİŞİM] ${body.full_name}`,
+      html,
+      replyTo: body.email,
     });
 
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    if (!result.ok) {
+      return NextResponse.json({ error: result.error }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true });
