@@ -12,6 +12,12 @@ export const siteConfig = {
   phone: "05380188954",
 } as const;
 
+export const socialLinks = {
+  instagram: "https://www.instagram.com/elvinozturkpilates/",
+  facebook: "https://www.facebook.com/profile.php?id=61593998752136",
+  youtube: "https://www.youtube.com/channel/UCMiFv04aJrQbRoMe940ASQQ",
+} as const;
+
 type MetadataInput = {
   title: string;
   description: string;

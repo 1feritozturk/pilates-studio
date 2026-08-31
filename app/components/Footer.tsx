@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SocialIconLinks from './SocialIcons';
 
 export default function Footer() {
   return (
@@ -56,28 +57,40 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p className="text-white text-sm font-medium tracking-wider uppercase mb-4">İletişim</p>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm text-[#C4C4C4]">
               <li>
-                <a href="mailto:info@elvinozturk.com" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:info@elvinozturk.com"
+                  className="flex items-center gap-2.5 hover:text-white transition-colors"
+                >
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 fill-none stroke-[#C9A87A]" strokeWidth="1.8">
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                    <path d="m4 7 8 6 8-6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   info@elvinozturk.com
                 </a>
               </li>
               <li>
-                <a href="tel:+905380188954" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+905380188954"
+                  className="flex items-center gap-2.5 hover:text-white transition-colors"
+                >
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 fill-none stroke-[#C9A87A]" strokeWidth="1.8">
+                    <path
+                      d="M5 3h3.5l1.8 4.4-2.2 1.6a12.5 12.5 0 0 0 6.9 6.9l1.6-2.2L21 15.5V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                   0538 018 89 54
                 </a>
               </li>
-              <li className="pt-2">
-                <a
-                  href="https://www.instagram.com/elvinozturkpilates/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  @elvinozturkpilates
-                </a>
-              </li>
             </ul>
+
+            <div className="mt-5 pt-5 border-t border-white/10">
+              <p className="text-[#8A8A8A] text-xs tracking-[0.08em] uppercase mb-3">Takip edin</p>
+              <SocialIconLinks />
+            </div>
           </div>
         </div>
 

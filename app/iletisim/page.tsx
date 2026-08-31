@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { formatPhone, isValidPhone, toE164 } from '@/lib/phone';
+import { socialLinks } from '@/lib/seo';
+import { FacebookIcon, InstagramIcon, YoutubeIcon } from '@/app/components/SocialIcons';
 
 const iletisimBilgileri = [
   { emoji: '📞', baslik: 'Telefon', icerik: '0538 018 89 54', href: 'tel:+905380188954' },
@@ -119,26 +121,43 @@ export default function IletisimPage() {
                 </div>
               </div>
             ))}
-            <div className="flex gap-4">
-              <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center flex-shrink-0">
-                <svg aria-hidden="true" viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-[#6B5E68]" strokeWidth="1.8">
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.3" cy="6.8" r="0.8" className="fill-[#6B5E68] stroke-none" />
-                </svg>
+            {[
+              {
+                baslik: 'Instagram',
+                metin: '@elvinozturkpilates',
+                href: socialLinks.instagram,
+                Icon: InstagramIcon,
+              },
+              {
+                baslik: 'Facebook',
+                metin: 'Elvin Öztürk Pilates',
+                href: socialLinks.facebook,
+                Icon: FacebookIcon,
+              },
+              {
+                baslik: 'YouTube',
+                metin: 'Elvin Öztürk Pilates',
+                href: socialLinks.youtube,
+                Icon: YoutubeIcon,
+              },
+            ].map(({ baslik, metin, href, Icon }) => (
+              <div key={baslik} className="flex gap-4">
+                <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center flex-shrink-0 text-[#6B5E68]">
+                  <Icon />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-[#1A1218] mb-1">{baslik}</p>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
+                  >
+                    {metin}
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-medium text-[#1A1218] mb-1">Instagram</p>
-                <a
-                  href="https://www.instagram.com/elvinozturkpilates/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
-                >
-                  @elvinozturkpilates
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
 
         </div>

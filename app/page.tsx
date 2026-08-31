@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogPosts } from '@/lib/blog';
-import { createMetadata, defaultKeywords, siteConfig } from '@/lib/seo';
+import { createMetadata, defaultKeywords, siteConfig, socialLinks } from '@/lib/seo';
 
 const dersler = [
   {
@@ -123,7 +123,7 @@ export default function Home() {
         addressCountry: 'TR',
       },
     },
-    sameAs: ['https://www.instagram.com/elvinozturkpilates/'],
+    sameAs: [socialLinks.instagram, socialLinks.facebook, socialLinks.youtube],
     knowsAbout: ['Pilates', 'Online Pilates', 'Beden Farkındalığı'],
   };
 
