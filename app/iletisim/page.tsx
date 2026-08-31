@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { formatPhone, isValidPhone, toE164 } from '@/lib/phone';
 import { socialLinks } from '@/lib/seo';
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from '@/app/components/SocialIcons';
+import { InstagramIcon } from '@/app/components/SocialIcons';
 
 const iletisimBilgileri = [
   { emoji: '📞', baslik: 'Telefon', icerik: '0538 018 89 54', href: 'tel:+905380188954' },
@@ -121,43 +121,22 @@ export default function IletisimPage() {
                 </div>
               </div>
             ))}
-            {[
-              {
-                baslik: 'Instagram',
-                metin: '@elvinozturkpilates',
-                href: socialLinks.instagram,
-                Icon: InstagramIcon,
-              },
-              {
-                baslik: 'Facebook',
-                metin: 'Elvin Öztürk Pilates',
-                href: socialLinks.facebook,
-                Icon: FacebookIcon,
-              },
-              {
-                baslik: 'YouTube',
-                metin: 'Elvin Öztürk Pilates',
-                href: socialLinks.youtube,
-                Icon: YoutubeIcon,
-              },
-            ].map(({ baslik, metin, href, Icon }) => (
-              <div key={baslik} className="flex gap-4">
-                <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center flex-shrink-0 text-[#6B5E68]">
-                  <Icon />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-[#1A1218] mb-1">{baslik}</p>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
-                  >
-                    {metin}
-                  </a>
-                </div>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 bg-[#EDE0F5] rounded-full flex items-center justify-center flex-shrink-0 text-[#6B5E68]">
+                <InstagramIcon />
               </div>
-            ))}
+              <div>
+                <p className="text-sm font-medium text-[#1A1218] mb-1">Instagram</p>
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
+                >
+                  Takip edin
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
