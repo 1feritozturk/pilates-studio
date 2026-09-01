@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { blogPosts } from '@/lib/blog';
 import { createMetadata, defaultKeywords, siteConfig, socialLinks } from '@/lib/seo';
 
+const HERO_IMAGE = '/images/grup-ders-2.webp';
+
 const dersler = [
   {
     ad: 'Online Grup Ders',
@@ -152,19 +154,20 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/grup-ders-2.webp"
-            alt="Online Pilates"
-            fill
-            sizes="(max-width: 768px) 160vw, 100vw"
-            className="object-cover object-center"
-            preload
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 bg-[rgba(250,248,244,0.87)]" />
-        </div>
+      {/*
+        Arka plan görseli next/image yerine CSS background-image ile veriliyor.
+        iOS Safari, absolute konumlu <img> için ayrı bir kompozisyon katmanı
+        kuruyor ve iPhone XR'da bu katmanın bir bölümü siyah boyanıyordu
+        (Chrome ve iPhone 16'da tekrarlanmıyordu). background-image ayrı katman
+        gerektirmediği için sorun ortadan kalkıyor. LCP'yi korumak adına görsel
+        aşağıdaki link ile önden yükleniyor.
+      */}
+      <link rel="preload" as="image" href={HERO_IMAGE} fetchPriority="high" />
+      <section
+        className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
+      >
+        <div className="absolute inset-0 z-0 bg-[rgba(250,248,244,0.87)]" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
