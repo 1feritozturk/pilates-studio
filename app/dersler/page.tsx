@@ -47,8 +47,21 @@ export default function DerslerPage() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden border-b border-[#EDE0F5] bg-[radial-gradient(circle_at_top_left,_rgba(237,224,245,0.95),_rgba(250,248,244,1)_45%,_rgba(245,240,248,1)_100%)]">
-        <div className="absolute -top-24 right-[-4rem] h-64 w-64 rounded-full bg-[#EDE0F5]/70 blur-3xl" />
-        <div className="absolute bottom-[-6rem] left-[-2rem] h-52 w-52 rounded-full bg-[#F3EBDD]/70 blur-3xl" />
+        {/* blur-3xl yerine radyal gradient — gerekçe app/page.tsx'teki CTA banner notunda. */}
+        <div
+          className="absolute -top-24 right-[-4rem] h-64 w-64 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(237,224,245,0.9) 0%, rgba(237,224,245,0.4) 45%, rgba(237,224,245,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute bottom-[-6rem] left-[-2rem] h-52 w-52 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(243,235,221,0.9) 0%, rgba(243,235,221,0.4) 45%, rgba(243,235,221,0) 70%)',
+          }}
+        />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(155,127,173,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(155,127,173,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">

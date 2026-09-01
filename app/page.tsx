@@ -154,20 +154,19 @@ export default function Home() {
       />
 
       {/* HERO */}
-      {/*
-        Arka plan görseli next/image yerine CSS background-image ile veriliyor.
-        iOS Safari, absolute konumlu <img> için ayrı bir kompozisyon katmanı
-        kuruyor ve iPhone XR'da bu katmanın bir bölümü siyah boyanıyordu
-        (Chrome ve iPhone 16'da tekrarlanmıyordu). background-image ayrı katman
-        gerektirmediği için sorun ortadan kalkıyor. LCP'yi korumak adına görsel
-        aşağıdaki link ile önden yükleniyor.
-      */}
-      <link rel="preload" as="image" href={HERO_IMAGE} fetchPriority="high" />
-      <section
-        className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
-      >
-        <div className="absolute inset-0 z-0 bg-[rgba(250,248,244,0.87)]" />
+      <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={HERO_IMAGE}
+            alt="Online Pilates"
+            fill
+            sizes="(max-width: 768px) 160vw, 100vw"
+            className="object-cover object-center"
+            preload
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-[rgba(250,248,244,0.87)]" />
+        </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
@@ -386,8 +385,27 @@ export default function Home() {
       {/* CTA BANNER */}
       <section className="relative py-24 overflow-hidden bg-[#1A1218]">
         <div className="absolute inset-0 bg-gradient-to-br from-[#6B3D7A]/70 via-[#1A1218]/90 to-[#1A1218]" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#9B7FAD]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A87A]/10 rounded-full blur-3xl" />
+        {/*
+          Bu iki dekoratif haleyi blur-3xl (filter: blur(64px)) üretiyordu.
+          iOS Safari o filtre için ayrı bir GPU katmanı kuruyor ve iPhone XR'da
+          sayfanın tepesindeki hero görselinin bir bölümü siyah boyanıyordu
+          (teşhis: /test-hero/cta blok veriyordu, /test-hero/ctafix vermiyordu).
+          Radyal gradient aynı yumuşak haleyi filtre olmadan üretiyor.
+        */}
+        <div
+          className="absolute top-0 right-0 w-96 h-96 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(155,127,173,0.22) 0%, rgba(155,127,173,0.08) 45%, rgba(155,127,173,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-64 h-64 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(201,168,122,0.22) 0%, rgba(201,168,122,0.08) 45%, rgba(201,168,122,0) 70%)',
+          }}
+        />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <p className="text-[#C9A87A] text-xs font-medium tracking-[0.18em] uppercase mb-4 flex items-center justify-center gap-3">
             <span className="inline-block w-6 h-px bg-[#C9A87A]/50" />

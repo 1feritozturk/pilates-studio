@@ -40,8 +40,21 @@ export default function HakkimdaPage() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden border-b border-[#EDE0F5] bg-[radial-gradient(circle_at_top_right,_rgba(237,224,245,0.9),_rgba(250,248,244,1)_42%,_rgba(245,240,248,1)_100%)]">
-        <div className="absolute top-[-4rem] left-[-3rem] h-56 w-56 rounded-full bg-[#EDE0F5]/75 blur-3xl" />
-        <div className="absolute bottom-[-5rem] right-[-2rem] h-48 w-48 rounded-full bg-[#F3EBDD]/80 blur-3xl" />
+        {/* blur-3xl yerine radyal gradient — gerekçe app/page.tsx'teki CTA banner notunda. */}
+        <div
+          className="absolute top-[-4rem] left-[-3rem] h-56 w-56 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(237,224,245,0.95) 0%, rgba(237,224,245,0.45) 45%, rgba(237,224,245,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute bottom-[-5rem] right-[-2rem] h-48 w-48 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(243,235,221,0.95) 0%, rgba(243,235,221,0.45) 45%, rgba(243,235,221,0) 70%)',
+          }}
+        />
         <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(31,31,31,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(31,31,31,0.08)_1px,transparent_1px)] [background-size:40px_40px]" />
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
