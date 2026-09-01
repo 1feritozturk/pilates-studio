@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { formatPhone, isValidPhone, toE164 } from '@/lib/phone';
 import { socialLinks } from '@/lib/seo';
 import { InstagramIcon } from '@/app/components/SocialIcons';
+import PhoneLink from '@/app/components/PhoneLink';
 
 const iletisimBilgileri = [
   { emoji: '📞', baslik: 'Telefon', icerik: '0538 018 89 54', href: 'tel:+905380188954' },
@@ -102,19 +103,9 @@ export default function IletisimPage() {
                 <div>
                   <p className="text-sm font-medium text-[#1A1218] mb-1">{bilgi.baslik}</p>
                   {bilgi.href ? (
-                    <a
-                      href={bilgi.href}
-                      className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors"
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          window.dataLayer = window.dataLayer || [];
-                          window.dataLayer.push({
-                            event: 'phone_click',
-                            phone_number: bilgi.icerik,
-                          });
-                        }
-                      }}
-                    >{bilgi.icerik}</a>
+                    <PhoneLink className="text-base text-[#6B5E68] hover:text-[#9B7FAD] transition-colors">
+                      {bilgi.icerik}
+                    </PhoneLink>
                   ) : (
                     <p className="text-base text-[#6B5E68] whitespace-pre-line">{bilgi.icerik}</p>
                   )}
