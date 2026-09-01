@@ -208,7 +208,7 @@ export default function Home() {
           <div className="hidden md:flex flex-col gap-4">
             <Link
               href="/dersler#grup-dersleri"
-              className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-[#E8D8F0] hover:shadow-md transition-shadow group"
+              className="bg-white rounded-2xl p-6 shadow-sm border border-[#E8D8F0] hover:shadow-md transition-shadow group"
             >
               <p className="text-xs text-[#6B3D7A] font-medium tracking-wider uppercase mb-2">Grup Ders</p>
               <h3 className="text-lg font-semibold text-[#1A1218] mb-1" style={{ fontFamily: 'var(--font-playfair), serif' }}>Online Grup Pilates</h3>
