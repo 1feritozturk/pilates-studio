@@ -153,20 +153,20 @@ export default function Home() {
 
       {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/grup-ders-2.webp"
             alt="Online Pilates"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 160vw, 100vw"
             className="object-cover object-center"
             preload
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-[#FAF8F4]/87" />
+          <div className="absolute inset-0 bg-[rgba(250,248,244,0.87)]" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
               <span className="inline-block w-8 h-px bg-[#C9A87A]" />
