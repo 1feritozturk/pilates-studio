@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogImage, getFaqsForPost, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { createMetadata, defaultKeywords, siteConfig } from "@/lib/seo";
+import { formatTarih } from "@/lib/date";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -102,7 +103,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
           <div className="flex gap-4 text-sm text-[#6B5E68]">
-            <span>{post.publishedAt}</span>
+            <time dateTime={post.publishedAt}>{formatTarih(post.publishedAt)}</time>
             <span>{post.readingTime}</span>
           </div>
         </div>
