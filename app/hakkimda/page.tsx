@@ -87,8 +87,9 @@ export default function HakkimdaPage() {
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
             src="/images/elvin-hakkimda.webp"
-            alt="Elvin Öztürk"
+            alt="Elvin Öztürk, stüdyosunda reformer üzerinde Pilates hareketi yaparken"
             fill
+            sizes="(min-width: 768px) 544px, 100vw"
             className="object-cover object-center"
           />
         </div>
