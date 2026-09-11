@@ -154,7 +154,7 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+      <section className="relative overflow-hidden md:min-h-[90vh] md:flex md:flex-col md:justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src={HERO_IMAGE}
@@ -168,7 +168,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[rgba(250,248,244,0.87)]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
               <span className="inline-block w-8 h-px bg-[#C9A87A]" />

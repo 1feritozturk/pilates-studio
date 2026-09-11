@@ -24,7 +24,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="bg-[#F5F0F8] py-20">
+      <section className="bg-[#F5F0F8] py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Blog</p>
           <h1
@@ -40,7 +40,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 max-w-6xl mx-auto px-6">
+      <section className="py-12 md:py-16 max-w-6xl mx-auto px-6">
         <BlogList posts={posts} />
       </section>
     </>

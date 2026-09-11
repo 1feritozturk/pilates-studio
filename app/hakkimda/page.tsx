@@ -56,7 +56,7 @@ export default function HakkimdaPage() {
           }}
         />
         <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(31,31,31,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(31,31,31,0.08)_1px,transparent_1px)] [background-size:40px_40px]" />
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div className="relative max-w-6xl mx-auto px-6 py-12 md:py-24">
           <div className="max-w-3xl">
             <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Merhaba</p>
             <h1
@@ -83,7 +83,7 @@ export default function HakkimdaPage() {
       </section>
 
       {/* Tanıtım */}
-      <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-14 md:py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
             src="/images/elvin-hakkimda.webp"

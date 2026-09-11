@@ -63,7 +63,7 @@ export default function DerslerPage() {
           }}
         />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(155,127,173,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(155,127,173,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div className="relative max-w-6xl mx-auto px-6 py-12 md:py-24">
           <div className="max-w-3xl">
             <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
             <h1
@@ -90,14 +90,14 @@ export default function DerslerPage() {
       </section>
 
       {/* Giriş */}
-      <section className="py-12 max-w-6xl mx-auto px-6 border-b border-[#EDE0F5]">
+      <section className="py-8 md:py-12 max-w-6xl mx-auto px-6 border-b border-[#EDE0F5]">
         <p className="text-base text-[#6B5E68] max-w-2xl leading-relaxed">
           İki farklı ders formatı sunuyorum: küçük gruplarla yapılan canlı online grup dersleri ve tamamen size özel bireysel seanslar. İkisi de Zoom üzerinden gerçekleşiyor, kayıt opsiyonu mevcut.
         </p>
       </section>
 
       {/* GRUP DERSLERİ */}
-      <section id="grup-dersleri" className="scroll-mt-28 py-16 max-w-6xl mx-auto px-6">
+      <section id="grup-dersleri" className="scroll-mt-28 py-14 md:py-16 max-w-6xl mx-auto px-6">
         <div className="flex items-baseline gap-4 mb-10">
           <h2
             className="text-3xl font-semibold text-[#1A1218]"
