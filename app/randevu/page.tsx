@@ -143,7 +143,7 @@ export default function RandevuPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#F5F0F8] py-12 md:py-16">
+      <section className="bg-[#F5F0F8] pt-12 pb-8 md:py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kayıt Formu</p>
           <h1
@@ -159,7 +159,7 @@ export default function RandevuPage() {
       </section>
 
       {/* Form */}
-      <section className="py-12 md:py-16 max-w-2xl mx-auto px-6">
+      <section className="py-8 md:py-16 max-w-2xl mx-auto px-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           {hata ? (
             <div className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">

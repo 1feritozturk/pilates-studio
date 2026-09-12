@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <section className="bg-[#F5F0F8] py-20">
+      <section className="bg-[#F5F0F8] pt-12 pb-8 md:py-20">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">{post.category}</p>
           <h1
@@ -109,8 +109,8 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </section>
 
-      <article className="py-16 max-w-3xl mx-auto px-6">
-        <div className="mb-10 overflow-hidden rounded-[2rem] border border-[#EDE0F5] bg-white">
+      <article className="pt-8 pb-16 md:pt-16 max-w-3xl mx-auto px-6">
+        <div className="mb-8 md:mb-10 overflow-hidden rounded-[2rem] border border-[#EDE0F5] bg-white">
           <div className="relative aspect-[4/3] w-full">
             <Image src={postImage.src} alt={postImage.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" preload fetchPriority="high" />
           </div>
@@ -191,7 +191,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       ) : null}
 
       {relatedPosts.length ? (
-        <section className="pb-20 max-w-5xl mx-auto px-6">
+        <section className="pb-8 md:pb-20 max-w-5xl mx-auto px-6">
           <div className="border-t border-[#EDE0F5] pt-10">
             <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">İlgili Yazılar</p>
             <h2

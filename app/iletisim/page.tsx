@@ -67,7 +67,7 @@ export default function IletisimPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#F5F0F8] py-12 md:py-20">
+      <section className="bg-[#F5F0F8] pt-12 pb-8 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Bize ulaşın</p>
           <h1
@@ -85,7 +85,7 @@ export default function IletisimPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-16">
+      <section className="py-8 md:py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-16">
         {/* Sol: İletişim Bilgileri */}
         <div>
           <h2

@@ -168,7 +168,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[rgba(250,248,244,0.87)]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-8 md:py-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-5 flex items-center gap-3">
               <span className="inline-block w-8 h-px bg-[#C9A87A]" />
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* 3-SÜTUN TANITIM */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-8 md:py-16">
         <div className="grid gap-8 rounded-[2rem] border border-[#E8D8F0] bg-white p-8 md:grid-cols-3">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#6B3D7A]">Online Pilates Dersi</p>
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* İSTATİSTİKLER */}
-      <section className="py-12 max-w-6xl mx-auto px-6">
+      <section className="py-8 md:py-12 max-w-6xl mx-auto px-6">
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {istatistikler.map((item) => (
             <div key={item.etiket} className="rounded-[1.75rem] border border-[#E8D8F0] bg-[#FAF8F4] p-6 text-center">
@@ -272,8 +272,8 @@ export default function Home() {
       </section>
 
       {/* ONLINE DERSLER */}
-      <section className="py-24 max-w-6xl mx-auto px-6">
-        <div className="mb-14 text-center">
+      <section className="py-8 md:py-24 max-w-6xl mx-auto px-6">
+        <div className="mb-8 md:mb-14 text-center">
           <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
             <span className="inline-block w-6 h-px bg-[#C9A87A]" />
             Programlar
@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* KİMLER İÇİN */}
-      <section className="py-20 max-w-6xl mx-auto px-6">
+      <section className="py-8 md:py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-10 md:grid-cols-2 items-start">
           <div>
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
@@ -353,9 +353,9 @@ export default function Home() {
       </section>
 
       {/* AVANTAJLAR */}
-      <section className="bg-[#FAF8F4] py-20">
+      <section className="bg-[#FAF8F4] py-8 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
               Neden online?
@@ -383,7 +383,7 @@ export default function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="relative py-24 overflow-hidden bg-[#1A1218]">
+      <section className="relative py-12 md:py-24 overflow-hidden bg-[#1A1218]">
         <div className="absolute inset-0 bg-gradient-to-br from-[#6B3D7A]/70 via-[#1A1218]/90 to-[#1A1218]" />
         {/*
           Bu iki dekoratif haleyi blur-3xl (filter: blur(64px)) üretiyordu.
@@ -439,7 +439,7 @@ export default function Home() {
       </section>
 
       {/* KARŞILAŞTIRMA */}
-      <section className="py-20 max-w-6xl mx-auto px-6">
+      <section className="py-8 md:py-20 max-w-6xl mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-[2rem] border border-[#E8D8F0] bg-white p-8">
             <p className="text-xs uppercase tracking-[0.12em] text-[#6B3D7A]">Karsilastirma</p>
@@ -471,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* HAKKIMDA */}
-      <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-8 md:py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div className="relative rounded-3xl overflow-hidden aspect-square">
           <Image
             src="/images/elvin-hakkimda.webp"
@@ -508,9 +508,9 @@ export default function Home() {
       </section>
 
       {/* SSS */}
-      <section className="bg-[#F5F0F8] py-20">
+      <section className="bg-[#F5F0F8] py-8 md:py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center justify-center gap-3">
               <span className="inline-block w-6 h-px bg-[#C9A87A]" />
               Sik Sorulan Sorular
@@ -535,9 +535,9 @@ export default function Home() {
       </section>
 
       {/* BLOG */}
-      <section className="bg-[#FAF8F4] py-20">
+      <section className="bg-[#FAF8F4] py-8 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-8 md:mb-10">
             <div>
               <p className="text-[#6B3D7A] text-xs font-medium tracking-[0.18em] uppercase mb-3 flex items-center gap-3">
                 <span className="inline-block w-8 h-px bg-[#C9A87A]" />
