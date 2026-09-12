@@ -75,10 +75,6 @@ const blogImageMap: Record<string, BlogImage> = {
     src: "/images/blog/blog-evde-pilates-icin-neler-gerekir.webp",
     alt: "Evde pilates için gerekli temel hazırlıklar",
   },
-  "evde-pilates-nedir-nasil-baslanir": {
-    src: "/images/blog/blog-evde-pilates-nedir-nasil-baslanir.webp",
-    alt: "Evde pilatese başlamak için hazırlık",
-  },
   "evde-pilates-yaparken-en-sik-yapilan-hatalar": {
     src: "/images/blog/blog-evde-pilates-hatalar.webp",
     alt: "Evde pilates yaparken dikkat edilmesi gerekenler",
@@ -752,19 +748,87 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "evde-pilates-icin-neler-gerekir",
-    title: "Evde Pilates İçin Neler Gerekir? Başlangıç Rehberi",
+    title: "Evde Pilates: Neler Gerekir, Nasıl Başlanır? Kapsamlı Rehber",
     excerpt:
-      "Evde pilatese başlamak için gerekli temel düzeni, mat seçimini, uygun alanı ve başlangıçta gerçekten nelere ihtiyaç olduğunu keşfedin.",
+      "Evde pilatesin ne olduğunu, nasıl başlanacağını, gerekli mat ve alan düzenini, haftalık planı ve başlangıçta gerçekten nelere ihtiyaç olduğunu keşfedin.",
     description:
-      "Evde pilates için neler gerekir? Pilates matı, uygun alan, kıyafet ve temel ekipmanlarla evde pilatese başlamak için bilmeniz gerekenleri keşfedin.",
+      "Evde pilates nedir, nasıl başlanır ve neler gerekir? Mat seçimi, uygun alan, kıyafet, ekipman ve haftalık plan ile evde pilatese başlamanın tüm adımları.",
     publishedAt: "2026-04-13",
-    readingTime: "6 dk",
+    readingTime: "11 dk",
     category: "Evde Pilates",
+    faqs: [
+      {
+        question: "Evde pilates için neler gerekir?",
+        answer:
+          "Başlangıç için kaymayan bir pilates matı, hareket özgürlüğü veren rahat kıyafetler, mat serilebilecek kadar boş bir alan ve dersi takip edeceğiniz bir ekran yeterlidir. Bant, küçük top veya blok gibi ekipmanlar sonradan eklenebilir.",
+      },
+      {
+        question: "Evde pilates yapmak için ne kadar alan gerekir?",
+        answer:
+          "Bir pilates matının serilebildiği ve kolların yanlara, bacakların ileri geri rahatça açılabildiği kadar alan yeterlidir. Pratikte yaklaşık 2 metreye 1,5 metrelik boş bir zemin çoğu hareket için yeterli olur; ayrı bir odaya ihtiyaç yoktur.",
+      },
+      {
+        question: "Evde pilatese haftada kaç gün başlamalıyım?",
+        answer:
+          "Yeni başlayanlar için haftada 2-3 gün gerçekçi ve sürdürülebilir bir başlangıçtır. Günde 20-30 dakikalık kısa ama düzenli seanslar, haftada bir kez yapılan uzun seanslardan daha iyi sonuç verir.",
+      },
+      {
+        question: "Evde pilates yaparken eğitmen gerekli mi?",
+        answer:
+          "Zorunlu değildir, ancak özellikle ilk haftalarda yönlendirme almak duruş hatalarının yerleşmesini önler. Canlı online derslerde eğitmen hareketinizi görüp anında düzeltme verebildiği için başlangıç aşamasında belirgin fark yaratır.",
+      },
+      {
+        question: "Evde pilatesin etkisi ne zaman görülür?",
+        answer:
+          "Düzenli çalışıldığında ilk birkaç hafta içinde beden farkındalığı ve duruşta fark edilir bir değişim başlar. Kas dayanıklılığı ve esneklikteki belirgin gelişim genellikle 6-8 haftalık düzenli pratik sonrasında hissedilir.",
+      },
+      {
+        question: "Evde pilates için pilates matı şart mı?",
+        answer:
+          "Yerde yapılan hareketlerde omurga, diz ve dirsekleri korumak için mat önemlidir. Halı veya kalın bir battaniye kısa vadede iş görebilir, ancak kaymayan yüzeyi olmadığı için hareket güvenliğini azaltır. Orta kalınlıkta kaymaz bir mat başlangıç için yeterlidir.",
+      },
+      {
+        question: "Evde pilates mi stüdyo pilatesi mi daha etkilidir?",
+        answer:
+          "Etkiyi belirleyen ortam değil, düzenliliktir. Stüdyo, ekipman çeşitliliği ve birebir düzeltme avantajı sunar; evde pilates ise ulaşım ve zaman engelini kaldırdığı için sürdürülebilirliği artırır. Düzenli yapılan evde pilates, aksatılan stüdyo derslerinden daha iyi sonuç verir.",
+      },
+      {
+        question: "Aç karnına mı tok karnına mı pilates yapılmalı?",
+        answer:
+          "Genellikle yemekten 1,5-2 saat sonra çalışmak en rahatıdır. Tok karnına yapılan pilateste nefes çalışması ve merkez bölge aktivasyonu zorlaşır; tamamen aç karnına ise enerji düşüklüğü yaşanabilir.",
+      },
+    ],
     content: [
       {
         paragraphs: [
-          "Evde pilates yapmak isteyen birçok kişinin ilk sorusu genellikle aynıdır: Evde pilates için neler gerekir? Aslında pilatese başlamak için çok karmaşık bir hazırlığa ihtiyaç yoktur.",
+          "Evde pilates yapmak isteyen birçok kişinin ilk sorusu genellikle aynıdır: Evde pilates için neler gerekir ve nereden başlanır? Aslında pilatese başlamak için çok karmaşık bir hazırlığa ihtiyaç yoktur.",
           "Pilatesin en güçlü yönlerinden biri, sade bir düzenle başlayabilen ve zamanla kişiye göre geliştirilebilen bir egzersiz sistemi olmasıdır. Özellikle evde düzenli hareket etmek isteyenler için pilates, ulaşılabilir ve sürdürülebilir bir seçenek sunar. Ancak evde pilates yaparken hem daha rahat hem de daha verimli bir deneyim için bazı temel unsurları bilmek faydalıdır.",
+          "Bu rehberde evde pilatesin ne olduğunu, kimler için uygun olduğunu, başlangıçta gerçekten nelere ihtiyaç duyulduğunu, nasıl bir haftalık plan kurulabileceğini ve ilk haftalarda nelere dikkat edilmesi gerektiğini adım adım ele alıyoruz.",
+        ],
+      },
+      {
+        heading: "Evde Pilates Nedir?",
+        paragraphs: [
+          "Evde pilates, pilates egzersizlerinin stüdyo dışında, kişinin kendi yaşam alanında uygulanmasıdır. Bu sistem canlı online derslerle, kayıtlı içeriklerle ya da kişiye özel hazırlanmış bir planla ilerleyebilir. Amaç her durumda aynıdır: bedeni kontrollü, dengeli ve farkındalıkla çalıştırmak.",
+          "Evde pilates, sadece hareketleri ekrandan izleyip tekrar etmekten ibaret değildir. Pilatesin doğası gereği nefes, tempo, merkez bölge aktivasyonu ve beden farkındalığı ön planda olmalıdır. Bir hareketi hızlıca yirmi kez tekrarlamak yerine, sekiz tekrarı doğru nefes ve kontrollü tempoyla yapmak çok daha değerlidir.",
+          "Günümüzde zaman yönetimi, ulaşım kolaylığı ve düzenli hareket ihtiyacı nedeniyle evde pilates birçok kişi için cazip bir seçenek haline gelmiştir. Yoğun çalışanlar, evden spor yapmayı sevenler ve egzersizi günlük hayatına kolayca yerleştirmek isteyenler için güçlü bir başlangıç sunar.",
+        ],
+      },
+      {
+        heading: "Evde Pilates Kimler İçin Uygundur?",
+        paragraphs: [
+          "Evde pilates özellikle zamandan tasarruf etmek isteyenler, egzersizi ev rahatlığında yapmayı tercih edenler ve kendi alanında daha rahat hissedenler için uygundur. Stüdyo ortamına gitmek istemeyen ya da günlük temposu nedeniyle düzenli dışarı çıkamayan kişiler için de güçlü bir alternatiftir.",
+          "Masa başında uzun saatler geçirenler, gün içinde hareketsiz kalan ve buna bağlı olarak omuz, boyun veya bel bölgesinde gerginlik hisseden kişiler evde pilatesten belirgin fayda görebilir. Aynı şekilde egzersize yeni başlayanlar için de uygundur, çünkü pilates düşük etkili bir sistemdir ve seviyeye göre uyarlanabilir.",
+          "Bununla birlikte bazı durumlarda önce uzman görüşü almak gerekir. Yakın zamanda geçirilmiş bir ameliyat, akut bel veya boyun fıtığı, ileri düzey eklem problemleri ya da hamilelik söz konusuysa pilatese başlamadan önce hekiminize danışmanız ve eğitmeninizi bilgilendirmeniz önemlidir.",
+        ],
+      },
+      {
+        heading: "Evde Pilatese Nasıl Başlanır? Adım Adım",
+        paragraphs: [
+          "Evde pilatese başlarken en önemli adım seviyeye uygun başlamaktır. Daha önce pilates yapmadıysanız temel düzeydeki akışlarla ilerlemek gerekir. Başlangıçta zorlayıcı içeriklere yönelmek, hem hareketlerin yanlış öğrenilmesine hem de motivasyonun hızla düşmesine yol açar.",
+          "İkinci adım, hareket için uygun bir alan hazırlamaktır. Büyük bir odaya ihtiyaç yoktur; bir mat serilebilecek ve rahatça hareket edilebilecek kadar boşluk çoğu zaman yeterlidir. Bu alanı her seansta aynı yerde kurmak, zamanla zihinsel bir alışkanlık sinyali oluşturur.",
+          "Üçüncü adım gerçekçi bir plan kurmaktır. Haftada iki veya üç gün, günde 20-30 dakika iyi bir başlangıç noktasıdır. Çok iddialı bir programla başlamak yerine, aksatmadan sürdürebileceğiniz bir tempo seçmek uzun vadede çok daha etkilidir.",
+          "Dördüncü adım ise ilerlemeyi takip etmektir. Hangi günlerde çalıştığınızı basitçe not etmek bile devamlılığı belirgin şekilde artırır. Pilateste ilerleme, ağırlık veya tekrar sayısından çok hareket kalitesinde görülür.",
         ],
       },
       {
@@ -817,10 +881,35 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "Evde Pilates İçin Haftalık Plan Nasıl Kurulur?",
+        paragraphs: [
+          "Yeni başlayanlar için haftada iki veya üç gün, günde 20-30 dakikalık seanslar gerçekçi bir başlangıçtır. Örneğin pazartesi, çarşamba ve cuma günlerini seçip bu günleri sabit tutmak, planı takvime bağlamanın en kolay yoludur. Günleri her hafta değiştirmek yerine aynı saatlerde çalışmak alışkanlık oluşumunu hızlandırır.",
+          "İlk iki hafta temel akışlara ve nefes çalışmasına ayrılabilir. Üçüncü haftadan itibaren seans süresi 35-40 dakikaya çıkarılabilir veya hareketlerin tekrar sayısı kademeli olarak artırılabilir. Buradaki kritik nokta, süreyi ve zorluğu aynı anda artırmamaktır.",
+          "Arka arkaya iki gün çalışmak sakıncalı değildir, ancak özellikle başlangıçta kasların toparlanması için aralara dinlenme günü koymak daha iyi sonuç verir. Bir seansı kaçırdığınızda ertesi gün telafi etmeye çalışmak yerine planın kaldığı yerden devam etmesi yeterlidir.",
+        ],
+      },
+      {
+        heading: "Canlı Ders mi, Kayıtlı İçerik mi?",
+        paragraphs: [
+          "Evde pilates iki şekilde ilerleyebilir: canlı online dersler veya önceden kaydedilmiş içerikler. İkisinin de kendine göre avantajı vardır ve seçim büyük ölçüde başlangıç seviyenize bağlıdır.",
+          "Canlı derslerin en belirgin faydası anlık geri bildirimdir. Eğitmen hareketinizi görüp duruşunuzu düzeltebilir, tempoyu size göre ayarlayabilir. Ayrıca belirli bir saate randevulu olmak, devamlılığı ciddi şekilde artırır. Yeni başlayanlar için ilk haftalarda canlı ders, yanlış alışkanlıkların yerleşmesini engellediği için genellikle daha doğru bir tercihtir.",
+          "Kayıtlı içerikler ise zaman esnekliği sunar; istediğiniz saatte, istediğiniz hareketi tekrar ederek çalışabilirsiniz. Temel hareketleri oturttuktan sonra kayıtlı içeriklerle ilerlemek pratik bir yöntemdir. Birçok kişi için en verimli düzen, haftada bir canlı ders ile bir veya iki kayıtlı seansı birleştirmektir.",
+        ],
+      },
+      {
         heading: "Yeni Başlayanlar Evde Pilates İçin Ne Kadar Hazırlık Yapmalı?",
         paragraphs: [
           "Yeni başlayanlar için evde pilates konusunda aşırı hazırlık yapmaya gerek yoktur. Hatta fazla ekipman, fazla beklenti ya da kusursuz ortam arayışı bazen başlamayı geciktirebilir.",
           "Pilates için en iyi başlangıç, sade ama gerçekçi bir düzendir. Bir mat, rahat kıyafetler, uygun bir alan ve seviyeye uygun bir ders çoğu zaman yeterlidir. Önemli olan eksiksiz hazırlık değil, devam edilebilir bir başlangıç yapmaktır.",
+          "İlk haftalarda en sık yapılan hata, hareketleri hızlı yapmak ve nefesi tutmaktır. Pilateste tempo bilinçli olarak yavaştır; asıl çalışma bu yavaşlıkta gerçekleşir. Bir diğer yaygın hata da ağrı ile zorlanmayı karıştırmaktır. Kasta hissedilen yorgunluk normaldir, ancak eklemde veya belde keskin bir ağrı hissediliyorsa hareket durdurulmalıdır.",
+        ],
+      },
+      {
+        heading: "Evde Pilatesin Avantajları Nelerdir?",
+        paragraphs: [
+          "Evde pilatesin en önemli avantajı ulaşım ve zaman engelini ortadan kaldırmasıdır. Stüdyoya gidiş dönüş için ayrılan süre ortadan kalktığında, egzersizi yoğun bir güne yerleştirmek çok daha kolay hale gelir. Bu da pilatesin sürdürülebilirliğini doğrudan artırır.",
+          "Kişi kendi alanında çalıştığı için daha rahat hisseder. Özellikle egzersize yeni başlayanlar ya da kalabalık ortamlarda kendini rahat hissetmeyenler için bu önemli bir avantajdır. Kendi temponuzda ilerleyebilir, bir hareketi gerektiği kadar tekrar edebilirsiniz.",
+          "Düzenli uygulandığında evde pilates yalnızca bir egzersiz değil, bir hareket alışkanlığına dönüşür. Bu yönüyle kısa süreli motivasyon dalgaları yerine uzun vadeli bir düzen kurmak isteyenler için değerlidir.",
         ],
       },
       {
@@ -834,7 +923,8 @@ export const blogPosts: BlogPost[] = [
         heading: "Sonuç: Evde Pilates İçin Neler Gerekir?",
         paragraphs: [
           "Evde pilates için neler gerekir sorusunun cevabı aslında oldukça sadedir: rahat hareket edilebilecek bir alan, bir pilates matı, uygun kıyafetler ve düzenli pratik için doğru bir plan. Gelişmiş ekipmanlar başlangıçta şart değildir.",
-          "Evde pilates yaparken en önemli konu, sade ama işlevsel bir ortam kurmak ve pilatesi sürdürülebilir bir alışkanlık haline getirmektir. Doğru başlangıç yapıldığında evde pilates, hem erişilebilir hem de oldukça verimli bir egzersiz rutini sunabilir.",
+          "Evde pilates yaparken en önemli konu, sade ama işlevsel bir ortam kurmak ve pilatesi sürdürülebilir bir alışkanlık haline getirmektir. Haftada iki üç gün, kısa ama düzenli seanslarla başlamak; zamanla süreyi ve zorluğu kademeli artırmak çoğu kişi için en sağlıklı yoldur.",
+          "Doğru başlangıç yapıldığında evde pilates, hem erişilebilir hem de oldukça verimli bir egzersiz rutini sunabilir. Başlangıç aşamasında bir eğitmenden yönlendirme almak ise hareketleri baştan doğru öğrenmenizi sağlayarak süreci hem güvenli hem de daha hızlı hale getirir.",
         ],
       },
     ],
@@ -1731,66 +1821,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "evde-pilates-nedir-nasil-baslanir",
-    title: "Evde Pilates Nedir? Nasıl Başlanır?",
-    excerpt:
-      "Evde pilatesin ne olduğunu, nasıl başlanacağını, temel ihtiyaçları ve doğru başlangıç ipuçlarını keşfedin.",
-    description:
-      "Evde pilates nedir, nasıl başlanır? Evde pilates yapmaya başlamak için gerekli adımları, temel ihtiyaçları ve doğru başlangıç ipuçlarını keşfedin.",
-    publishedAt: "2026-04-21",
-    readingTime: "5 dk",
-    category: "Evde Pilates",
-    content: [
-      {
-        paragraphs: [
-          "Evde pilates, pilates egzersizlerinin stüdyo dışında, kişinin kendi yaşam alanında uygulanmasıdır. Günümüzde zaman yönetimi, ulaşım kolaylığı ve düzenli hareket ihtiyacı nedeniyle evde pilates, birçok kişi için oldukça cazip bir seçenek haline gelmiştir. Özellikle yoğun çalışanlar, evden spor yapmayı sevenler ve egzersizi günlük hayatına daha kolay entegre etmek isteyenler için evde pilates güçlü bir başlangıç sunabilir.",
-          "Evde pilatesin en önemli avantajı erişilebilir olmasıdır. Kişi kendi alanında, kendi ritmine uygun şekilde pilates yapabilir. Ancak verimli bir deneyim için yalnızca evde olmak yeterli değildir. Doğru alan, doğru tempo ve seviyeye uygun çalışma yapısı da önemlidir.",
-        ],
-      },
-      {
-        heading: "Evde Pilates Nedir?",
-        paragraphs: [
-          "Evde pilates, pilatesin temel prensiplerinin ev ortamında uygulanmasıdır. Bu sistem canlı derslerle, kayıtlı içeriklerle ya da kişisel bir planla ilerleyebilir. Amaç yine aynıdır: bedeni kontrollü, dengeli ve farkındalıkla çalıştırmak.",
-          "Evde pilates, sadece hareketleri videodan izleyip tekrar etmekten ibaret değildir. Pilatesin doğası gereği nefes, tempo, merkez bölge aktivasyonu ve beden farkındalığı ön planda olmalıdır. Bu yüzden evde pilates, doğru yönlendirme ile çok daha etkili hale gelir.",
-        ],
-      },
-      {
-        heading: "Evde Pilatese Nasıl Başlanır?",
-        paragraphs: [
-          "Evde pilatese başlarken en önemli adım, seviyeye uygun başlamak olur. Daha önce pilates yapmadıysan temel düzeyde akışlarla ilerlemek gerekir. Başlangıçta çok zorlayıcı içeriklere yönelmek yerine sade ve kontrollü bir yapı seçmek daha sağlıklıdır.",
-          "İkinci adım, hareket için uygun bir alan oluşturmaktır. Büyük bir odaya ihtiyaç yoktur; bir mat serilebilecek ve rahatça hareket edilebilecek kadar boşluk çoğu zaman yeterlidir. Sonrasında ise düzenli bir plan oluşturmak gerekir. Haftada iki veya üç gün gerçekçi bir başlangıç sağlar.",
-        ],
-      },
-      {
-        heading: "Evde Pilates İçin Neler Gerekir?",
-        paragraphs: [
-          "Evde pilatese başlamak için genelde çok az şey yeterlidir. Bir mat, rahat kıyafetler ve dersi takip edeceğin bir ekran çoğu zaman başlangıç için yeterlidir. Ekipman eksikliği, evde pilatese başlamak için engel olmamalıdır.",
-          "Burada asıl önemli konu, kullanılan ekipmanın fazlalığı değil; pilatesin düzenli ve kontrollü uygulanmasıdır. Zamanla ihtiyaçlara göre pilates bandı, küçük top ya da blok gibi destekleyici ürünler eklenebilir.",
-        ],
-      },
-      {
-        heading: "Evde Pilates Kimler İçin Uygundur?",
-        paragraphs: [
-          "Evde pilates özellikle zamandan tasarruf etmek isteyenler, egzersizi ev rahatlığında yapmak isteyenler ve kendi alanında daha rahat hissedenler için uygundur. Ayrıca stüdyo ortamına gitmek istemeyen ya da günlük temposu nedeniyle düzenli dışarı çıkamayan kişiler için de güçlü bir alternatiftir.",
-          "Yeni başlayanlar için de evde pilates uygun olabilir. Ancak başlangıç aşamasında doğru yönlendirme almak süreci daha güvenli ve verimli hale getirir.",
-        ],
-      },
-      {
-        heading: "Evde Pilatesin Avantajları Nelerdir?",
-        paragraphs: [
-          "Evde pilatesin en önemli avantajı ulaşım ve zaman engelini azaltmasıdır. Egzersizi hayatın içine daha kolay yerleştirmek mümkün olur. Ayrıca kişi kendi alanında çalıştığı için daha rahat hissedebilir. Bu da pilatesin sürdürülebilirliğini artırabilir.",
-          "Düzenli uygulandığında evde pilates, yalnızca egzersiz değil, bir hareket alışkanlığına dönüşebilir. Bu yönüyle kısa süreli motivasyon yerine uzun vadeli düzen kurmak isteyenler için değerlidir.",
-        ],
-      },
-      {
-        heading: "Sonuç: Evde Pilates Nasıl Başlanır?",
-        paragraphs: [
-          "Evde pilatese başlamak için kusursuz bir hazırlık gerekmez. Seviyene uygun bir başlangıç planı, rahat hareket edebileceğin bir alan ve düzenli bir tempo çoğu zaman yeterlidir. Önemli olan eksiksiz hazırlık değil, sürdürülebilir bir başlangıç yapmaktır. Doğru yaklaşımla evde pilates, günlük yaşamın verimli bir parçası haline gelebilir.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "reformer-pilates-nedir",
     title: "Reformer Pilates Nedir? Nasıl Yapılır?",
     excerpt:
@@ -2208,16 +2238,10 @@ const relatedPostsMap: Record<string, string[]> = {
     "online-pilatese-yeni-baslayanlar-icin-rehber",
   ],
   "evde-pilates-icin-neler-gerekir": [
-    "evde-pilates-nedir-nasil-baslanir",
-    "online-pilates-nedir-rehber",
-    "online-pilates-nasil-yapilir",
-    "evde-pilates-yaparken-en-sik-yapilan-hatalar",
-  ],
-  "evde-pilates-nedir-nasil-baslanir": [
     "evde-pilates-icin-neler-gerekir",
+    "online-pilates-nedir-rehber",
     "online-pilates-nasil-yapilir",
     "evde-pilates-yaparken-en-sik-yapilan-hatalar",
-    "online-pilates-nedir-rehber",
   ],
   "online-pilates-mi-yuz-yuze-pilates-mi": [
     "online-pilates-nedir-rehber",
@@ -2238,7 +2262,7 @@ const relatedPostsMap: Record<string, string[]> = {
     "online-pilatesin-faydalari-nelerdir",
   ],
   "evde-pilates-yaparken-en-sik-yapilan-hatalar": [
-    "evde-pilates-nedir-nasil-baslanir",
+    "evde-pilates-icin-neler-gerekir",
     "online-pilates-nedir-rehber",
     "online-pilates-nasil-yapilir",
     "evde-pilates-icin-neler-gerekir",
@@ -2317,7 +2341,7 @@ const relatedPostsMap: Record<string, string[]> = {
     "online-pilates-mi-yuz-yuze-pilates-mi",
   ],
   "mat-pilates-nedir": [
-    "evde-pilates-nedir-nasil-baslanir",
+    "evde-pilates-icin-neler-gerekir",
     "reformer-pilates-nedir",
     "reformer-pilates-mi-mat-pilates-mi",
     "evde-pilates-icin-neler-gerekir",
@@ -2326,7 +2350,7 @@ const relatedPostsMap: Record<string, string[]> = {
   "reformer-pilates-mi-mat-pilates-mi": [
     "reformer-pilates-nedir",
     "mat-pilates-nedir",
-    "evde-pilates-nedir-nasil-baslanir",
+    "evde-pilates-icin-neler-gerekir",
     "pilates-nedir",
   ],
   "masa-basi-calisanlar-icin-pilates-rutini": [
@@ -2357,7 +2381,7 @@ const hubPostsMap: Record<string, string[]> = {
     "online-pilatese-yeni-baslayanlar-icin-rehber",
     "online-pilates-nasil-yapilir",
     "evde-pilates-icin-neler-gerekir",
-    "evde-pilates-nedir-nasil-baslanir",
+    "evde-pilates-icin-neler-gerekir",
     "online-pilates-mi-yuz-yuze-pilates-mi",
     "online-pilates-dersleri-nasil-gecer",
     "canli-online-pilates-derslerinin-avantajlari",
@@ -2464,7 +2488,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     {
       lead: "Evden başlamak isteyenler için ",
       anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-nedir-nasil-baslanir",
+      slug: "evde-pilates-icin-neler-gerekir",
       tail: " yazısı da süreci kolaylaştırır.",
     },
   ],
@@ -2478,7 +2502,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     {
       lead: "Evde başlamanın temel adımlarını görmek için ",
       anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-nedir-nasil-baslanir",
+      slug: "evde-pilates-icin-neler-gerekir",
       tail: " içeriğini de inceleyebilirsin.",
     },
     {
@@ -2492,7 +2516,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     {
       lead: "Evde pilatese genel bir başlangıç yapmak istersen önce ",
       anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-nedir-nasil-baslanir",
+      slug: "evde-pilates-icin-neler-gerekir",
       tail: " yazısını okuyabilirsin.",
     },
     {
@@ -2512,32 +2536,6 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       anchor: "evde pilates yaparken en sık yapılan hatalar",
       slug: "evde-pilates-yaparken-en-sik-yapilan-hatalar",
       tail: " yazısına da göz atabilirsin.",
-    },
-  ],
-  "evde-pilates-nedir-nasil-baslanir": [
-    {
-      lead: "Hazırlık tarafını genişletmek için ",
-      anchor: "Evde Pilates İçin Neler Gerekir? Başlangıç Rehberi",
-      slug: "evde-pilates-icin-neler-gerekir",
-      tail: " içeriğine geçebilirsiniz.",
-    },
-    {
-      lead: "Uygulama adımlarını daha detaylı görmek için ",
-      anchor: "Online Pilates Nasıl Yapılır? Adım Adım Başlangıç Rehberi",
-      slug: "online-pilates-nasil-yapilir",
-      tail: " yazısı iyi bir devam noktasıdır.",
-    },
-    {
-      lead: "Hata önleme tarafında ",
-      anchor: "Evde Pilates Yaparken En Sık Yapılan Hatalar",
-      slug: "evde-pilates-yaparken-en-sik-yapilan-hatalar",
-      tail: " yazısını da inceleyebilirsiniz.",
-    },
-    {
-      lead: "Merkez rehber olarak ",
-      anchor: "Online Pilates: Evde Başlamak İçin Kapsamlı Rehber",
-      slug: "online-pilates-nedir-rehber",
-      tail: " içeriği tüm süreci bir arada görmenize yardımcı olur.",
     },
   ],
   "online-pilates-mi-yuz-yuze-pilates-mi": [
@@ -2976,7 +2974,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     {
       lead: "Evde uygulanabilirlik tarafını derinleştirmek için ",
       anchor: "Evde Pilates Nedir? Nasıl Başlanır?",
-      slug: "evde-pilates-nedir-nasil-baslanir",
+      slug: "evde-pilates-icin-neler-gerekir",
       tail: " yazısına geçebilirsiniz.",
     },
     {
@@ -3020,7 +3018,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     {
       lead: "Evde başlangıç niyetiyle okuyorsanız ",
       anchor: "Evde Pilates Nedir? Nasıl Başlanır?",
-      slug: "evde-pilates-nedir-nasil-baslanir",
+      slug: "evde-pilates-icin-neler-gerekir",
       tail: " yazısı da karar vermenizi kolaylaştırabilir.",
     },
     {
