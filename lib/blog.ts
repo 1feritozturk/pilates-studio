@@ -51,29 +51,9 @@ const blogImageMap: Record<string, BlogImage> = {
     src: "/images/blog/blog-online-pilates-rehber.webp",
     alt: "Evde online pilates rehberi",
   },
-  "online-pilates-kimler-icin-uygundur": {
-    src: "/images/blog/blog-online-pilates-kimler-icin-uygundur.webp",
-    alt: "Online pilates dersi için evde hazırlık",
-  },
-  "online-pilatesin-faydalari-nelerdir": {
-    src: "/images/blog/blog-online-pilatesin-faydalari-nelerdir.webp",
-    alt: "Online pilatesin bedene faydaları",
-  },
-  "online-pilatese-yeni-baslayanlar-icin-rehber": {
-    src: "/images/blog/blog-online-pilates-baslangic.webp",
-    alt: "Online pilatese yeni başlayanlar için başlangıç",
-  },
-  "online-pilates-nasil-yapilir": {
-    src: "/images/blog/blog-online-pilates-nasil-yapilir.webp",
-    alt: "Evde online pilates başlangıcı",
-  },
   "online-pilates-dersleri-nasil-gecer": {
     src: "/images/blog/blog-online-pilates-dersleri-nasil-gecer.webp",
     alt: "Canlı online pilates dersi deneyimi",
-  },
-  "canli-online-pilates-derslerinin-avantajlari": {
-    src: "/images/blog/blog-canli-online-pilates.webp",
-    alt: "Canlı online pilates derslerinin avantajları",
   },
   "online-pilates-mi-yuz-yuze-pilates-mi": {
     src: "/images/blog/blog-online-pilates-mi-yuz-yuze-pilates-mi.webp",
@@ -165,221 +145,268 @@ export function getBlogImage(slug: string) {
 export const blogPosts: BlogPost[] = [
   {
     slug: "online-pilates-nedir-rehber",
-    title: "Online Pilates: Evde Başlamak İçin Kapsamlı Rehber",
+    title: "Online Pilates: Nedir, Kimler İçin Uygundur, Nasıl Başlanır?",
     excerpt:
-      "Online pilatesin ne olduğunu, kimler için uygun olduğunu, faydalarını ve evde nasıl başlanacağını tek rehberde keşfedin.",
+      "Online pilatesin ne olduğu, kimler için uygun olduğu, evde gereken düzen, kamera kurulumu, canlı ve kayıtlı ders farkı ve adım adım başlangıç: tek rehberde.",
     description:
-      "Online pilates nedir, kimler için uygundur ve evde nasıl başlanır? Başlayanlar için online pilates rehberi ile dersler, faydalar ve sık sorulanları keşfedin.",
+      "Online pilates nedir, kimler için uygundur ve evde nasıl başlanır? Gerekli ekipman, kamera düzeni, canlı ve kayıtlı ders farkı, haftalık plan ve sık yapılan hatalarla kapsamlı başlangıç rehberi.",
     publishedAt: "2026-04-13",
-    readingTime: "10 dk",
+    updatedAt: "2026-09-13",
+    readingTime: "15 dk",
     category: "Baslangic Rehberi",
     faqs: [
       {
         question: "Online pilates nedir?",
         answer:
-          "Online pilates, pilates egzersizlerinin internet üzerinden canlı veya kayıtlı içeriklerle yapılmasını sağlayan modern bir egzersiz modelidir.",
+          "Online pilates, pilates derslerinin internet üzerinden canlı ya da kayıtlı olarak yapılmasıdır. Pilatesin prensipleri değişmez; nefes, kontrol, merkez bölge aktivasyonu ve omurga farkındalığı aynı şekilde çalışılır. Değişen tek şey dersin hangi ortamda verildiğidir.",
       },
       {
         question: "Online pilates için evde neler gerekir?",
         answer:
-          "Kaymayan bir mat, rahat kıyafet, telefon veya bilgisayar ve hareket edebileceğiniz küçük bir alan genellikle yeterlidir.",
+          "8-10 mm kalınlığında kaymayan bir pilates matı, matın etrafında kollarınızı açabileceğiniz kadar boşluk (yaklaşık 2x2 metre), rahat kıyafet ve dersi takip edebileceğiniz bir ekran yeterlidir. Başlangıç için ek ekipman gerekmez.",
       },
       {
         question: "Online pilates kimler için uygundur?",
         answer:
-          "Zamanı kısıtlı olanlar, masa başı çalışanlar, evden spor yapmayı tercih edenler ve pilatese yeni başlamak isteyenler için uygundur.",
+          "Zamanı kısıtlı olanlar, masa başı çalışanlar, evden spor yapmayı tercih edenler, stüdyo ortamında çekingen hissedenler ve pilatese sıfırdan başlamak isteyenler için uygundur. Tanı almış bir rahatsızlığı olanlar da çalışabilir, ancak bunu eğitmene başta bildirmek gerekir.",
+      },
+      {
+        question: "Online pilates yeni başlayanlar için güvenli mi?",
+        answer:
+          "Canlı ve eğitmen eşliğinde yapıldığında güvenlidir. Risk pilatesin kendisinden değil, yanlış seviye seçiminden ve hatalı formun fark edilmemesinden gelir. Başlangıç döneminde eğitmenin sizi görebildiği bir formatla çalışmak bu riski büyük ölçüde ortadan kaldırır.",
       },
       {
         question: "Haftada kaç gün online pilates yapılmalı?",
         answer:
-          "Yeni başlayanlar için haftada 2-3 gün düzenli pratik, sürdürülebilir ve verimli bir başlangıç noktası sunar.",
+          "Yeni başlayanlar için haftada iki gün iyi bir başlangıçtır, beden alıştıkça üçe çıkarılabilir. Sıklıktan daha belirleyici olan devamlılıktır: haftada iki gün üç ay çalışmak, haftada beş gün üç hafta çalışmaktan daha iyi sonuç verir.",
+      },
+      {
+        question: "Canlı ders mi kayıtlı video mu daha iyi?",
+        answer:
+          "Başlangıç aşamasında canlı ders belirgin şekilde daha iyidir, çünkü form hataları ancak biri görüp söylediğinde düzelir. Temel oturduktan sonra kayıtlı içerikler ara günlerde destekleyici olarak kullanılabilir. Yaygın kullanılan model budur: canlı derslerle temel, kayıtlı içerikle tekrar.",
+      },
+      {
+        question: "Online pilates derslerinde eğitmen beni görebiliyor mu?",
+        answer:
+          "Canlı derslerde evet, kameranızı açtığınız sürece. Bunun işe yaraması için kameranın tüm bedeninizi yandan görecek şekilde yerleştirilmesi gerekir; sadece yüzü gösteren bir açıda eğitmen omurga hizanızı göremez, dolayısıyla düzeltemez.",
+      },
+      {
+        question: "Online pilates gerçekten etkili mi, stüdyo kadar sonuç verir mi?",
+        answer:
+          "Mat pilatesi söz konusu olduğunda aradaki fark düşünüldüğü kadar büyük değildir, çünkü aynı hareketler aynı prensiplerle çalışılır. Belirleyici olan format değil devamlılıktır. Reformer gibi ekipmanlı çalışma ise stüdyo gerektirir, bu online olarak yapılamaz.",
+      },
+      {
+        question: "Online pilatesin etkisi ne zaman görülür?",
+        answer:
+          "İlk fark edilen şey genellikle birkaç ders içinde gelen farkındalıktır: gün içinde duruşunuzu ya da nefesinizi tuttuğunuzu fark etmeye başlarsınız. Gerginlik ve yorgunlukta hissedilir azalma için düzenli çalışılan dört ila altı hafta, dışarıdan görülebilen duruş değişimi için daha uzun bir süre gerekir.",
+      },
+      {
+        question: "Online pilatese başlamak için forma girmem gerekir mi?",
+        answer:
+          "Hayır. Pilates başlangıç seviyesinden itibaren uyarlanabilen bir sistemdir ve hiç egzersiz geçmişi olmayan biri de başlayabilir. Hazır olmayı beklemek yerine başlangıç seviyesine uygun derslerle başlamak doğru yaklaşımdır.",
       },
     ],
     content: [
       {
         paragraphs: [
-          "Online Pilates, pilates derslerinin dijital ortamda, canlı ya da kayıtlı içerikler aracılığıyla uygulanmasını sağlayan modern ve erişilebilir bir egzersiz modelidir. Günümüzde yoğun çalışma temposu, ulaşım zorlukları ve evden yaşam alışkanlıklarının artmasıyla birlikte online pilates, pilatesle tanışmak veya pilates rutinini sürdürmek isteyen pek çok kişi için güçlü bir alternatif haline gelmiştir. Özellikle evde hareket etmek isteyen, düzenli bir egzersiz düzeni kurmakta zorlanan ya da zamanını daha verimli kullanmak isteyen kişiler için online pilates oldukça pratik bir çözüm sunar.",
-          "Pilatesin temelinde nefes, kontrol, denge, akış ve beden farkındalığı yer alır. Bu nedenle online pilates sadece ekrandan hareket izlemekten ibaret değildir. Doğru planlandığında ve seviyeye uygun içeriklerle ilerlediğinde, kişi ev ortamında da pilatesin temel prensiplerini öğrenebilir, bedenini daha bilinçli kullanabilir ve düzenli bir hareket alışkanlığı kazanabilir. Özellikle yeni başlayanlar için online pilates, stüdyo baskısı yaşamadan kendi alanında ilerleme fırsatı sunduğu için rahatlatıcı bir başlangıç sağlayabilir.",
-          "Bu kapsamlı rehberde online pilatesin ne olduğunu, kimler için uygun olduğunu, faydalarını, nasıl başlanacağını, evde nelere dikkat edilmesi gerektiğini ve sık yapılan hataları detaylı şekilde ele alacağız. Aynı zamanda bu yazı, blog içindeki diğer pilates içeriklerine bağlanan merkez bir sayfa olarak düşünüldüğü için, ilgili alt başlıklarda daha derin okumalar için iç link önerileri de sunar.",
+          "Online pilates, pilates derslerinin internet üzerinden canlı ya da kayıtlı içeriklerle uygulanmasıdır. Yoğun çalışma temposu, ulaşım süreleri ve evden yaşama alışkanlığının artmasıyla birlikte, pilatesle tanışmak veya mevcut rutinini sürdürmek isteyen pek çok kişi için stüdyoya gitmenin gerçekçi bir alternatifi haline geldi.",
+          "Pilatesin temelinde nefes, kontrol, denge, akış ve beden farkındalığı vardır. Bu yüzden online pilates ekrandan hareket kopyalamaktan ibaret değildir; doğru kurulduğunda kişi kendi evinde de bu prensipleri öğrenebilir ve bedenini daha bilinçli kullanmaya başlayabilir. Stüdyo ortamında çekingen hisseden kişiler için ise kendi alanında ilerleyebilmek çoğu zaman daha rahat bir başlangıç sağlar.",
+          "Bu rehberde online pilatesin ne olduğunu, kimler için uygun olduğunu, evde neye ihtiyaç duyulduğunu, kamera düzeninin neden önemli olduğunu, canlı ve kayıtlı ders arasındaki farkı, adım adım nasıl başlanacağını ve sık yapılan hataları ele alıyoruz.",
         ],
       },
       {
         heading: "Online Pilates Nedir?",
         paragraphs: [
-          "Online Pilates, pilates egzersizlerinin internet üzerinden sunulduğu bir ders modelidir. Bu model canlı dersler, birebir seanslar, küçük grup çalışmaları veya önceden kaydedilmiş ders videoları şeklinde ilerleyebilir. Temel amaç aynıdır: kişinin bedenini daha kontrollü, dengeli ve bilinçli kullanmasına destek olmak.",
-          "Online pilatesin klasik stüdyo derslerinden farkı, mekân bağımsız olmasıdır. Kişi evinden, ofisinden ya da uygun gördüğü herhangi bir alandan pilates yapabilir. Bu da pilatesi günlük hayatın içine daha kolay yerleştirmeyi sağlar. Ulaşım için ekstra vakit ayırmaya gerek kalmaması, belirli saatlerde daha esnek plan yapılabilmesi ve kişinin kendi alanında daha rahat hissetmesi online pilatesi öne çıkaran başlıca unsurlardır.",
-          "Ancak burada önemli olan nokta şudur: online pilates, sadece “evde spor” anlamına gelmez. Pilatesin doğası gereği hareketlerin kalitesi, nefesin kullanımı ve bedenin hizalanması çok önemlidir. Bu yüzden online pilatesin etkili olabilmesi için ders yapısı, eğitmen yaklaşımı ve seviyeye uygun yönlendirme büyük rol oynar.",
+          "Online pilates, pilates egzersizlerinin internet üzerinden sunulduğu bir ders modelidir. Canlı grup dersleri, birebir seanslar, küçük grup çalışmaları veya önceden kaydedilmiş videolar şeklinde ilerleyebilir. Amaç her durumda aynıdır: kişinin bedenini daha kontrollü, dengeli ve bilinçli kullanmasına destek olmak.",
+          "Stüdyo derslerinden farkı mekân bağımsız olmasıdır. Kişi evinden ya da uygun gördüğü herhangi bir alandan katılabilir; ulaşım için ayrı zaman ayırmak gerekmez ve plan yapmak çok daha esnektir. Pratikte bu, derse katılma oranını doğrudan etkiler: rutinini bırakma sebebi genellikle motivasyon kaybı değil, lojistiktir.",
+          "Burada önemli bir ayrım var: online pilates sadece evde spor yapmak anlamına gelmez. Pilatesin doğası gereği hareketin kalitesi, nefesin kullanımı ve bedenin hizalanması belirleyicidir. Bu yüzden online pilatesin işe yarayıp yaramaması, ders yapısına, eğitmenin yaklaşımına ve seviyeye uygun yönlendirmeye bağlıdır.",
         ],
       },
       {
-        heading: "Online Pilates ile Klasik Pilates Arasındaki Fark Nedir?",
+        heading: "Online Pilates ile Stüdyo Pilatesi Arasındaki Fark Nedir?",
         paragraphs: [
-          "Aslında online pilates ile yüz yüze pilates arasındaki temel fark, egzersizin yapıldığı ortamdır. Pilatesin prensipleri değişmez. Yine nefes, kontrol, merkez bölge aktivasyonu, omurga farkındalığı ve akıcı hareket ön plandadır. Değişen şey, bu pratiğin hangi kanal üzerinden sunulduğudur.",
-          "Yüz yüze pilateste fiziksel olarak aynı ortamda bulunmak bazı kişiler için motive edici olabilir. Buna karşılık online pilates, zaman yönetimi ve erişilebilirlik açısından çok daha esnek bir yapı sunar. Özellikle düzenli derslere katılmak isteyen ancak trafik, mesafe veya gün içi yoğunluğu nedeniyle stüdyoya gitmekte zorlanan kişiler için online pilates daha sürdürülebilir olabilir.",
-          "Canlı online pilates dersleri ise iki dünyanın avantajlarını bir araya getirir. Kişi ev konforunda çalışırken aynı zamanda eğitmenin yönlendirmesini anlık olarak alabilir. Bu da online pilatesin kalitesini ciddi şekilde artırır.",
+          "Mat pilatesi söz konusu olduğunda aradaki fark, çoğu kişinin düşündüğünden küçüktür. Hareketler aynıdır, prensipler aynıdır, hatta ders akışı bile büyük ölçüde aynıdır. Değişen tek şey eğitmenin sizi ekrandan görmesidir.",
+          "Stüdyonun iki gerçek avantajı vardır: eğitmenin elle düzeltme yapabilmesi ve reformer gibi ekipmanlı çalışmanın mümkün olması. Buna karşılık online tarafta erişilebilirlik ve süreklilik çok daha güçlüdür. Bu iki avantajı karşılaştırırken şunu hatırlamak gerekir: düzenli yapılan orta kalitede bir çalışma, ara ara yapılan mükemmel bir çalışmadan daha iyi sonuç verir.",
+          "Ekipmanlı pilates ilginizi çekiyorsa buna ayrı bakmak gerekir, çünkü reformer evde uygulanabilecek bir sistem değildir. Mat pilatesi ise online formatta bütünüyle çalışılabilir.",
         ],
       },
       {
         heading: "Online Pilates Kimler İçin Uygundur?",
         paragraphs: [
-          "Online Pilates oldukça geniş bir kitleye hitap eder. Özellikle aşağıdaki gruplar için güçlü bir seçenek olabilir:",
+          "Online pilates geniş bir kitleye hitap eder. Özellikle şu gruplar için güçlü bir seçenektir:",
         ],
         bullets: [
-          "Zamanı kısıtlı olanlar.",
-          "Yoğun çalışanlar.",
+          "Zamanı kısıtlı olanlar ve yoğun çalışanlar.",
           "Masa başında uzun süre oturanlar.",
           "Evden spor yapmayı tercih edenler.",
-          "Pilatese yeni başlamak isteyenler.",
+          "Stüdyo ortamında çekingen hisseden ya da kalabalıkta çalışmaktan hoşlanmayanlar.",
+          "Pilatese sıfırdan başlamak isteyenler.",
           "Daha sakin ve kontrollü bir egzersiz sistemi arayanlar.",
-          "Kendi temposunda ilerlemek isteyenler.",
+          "Küçük çocuğu olduğu için evden ayrılması zor olanlar.",
         ],
       },
       {
         paragraphs: [
-          "Yeni başlayan biri için online pilatesin en büyük avantajlarından biri, daha rahat bir giriş sunmasıdır. Stüdyo ortamında çekingen hisseden kişiler, evlerinde daha konforlu biçimde derslere adapte olabilir. Aynı şekilde yoğun bir iş gününden sonra dışarı çıkmadan pilates yapmak isteyen biri için de online pilates oldukça işlevseldir.",
-          "Burada kritik nokta, kişinin seviyesine uygun içeriklerle başlamasıdır. Her online pilates dersi her kullanıcı için doğru olmayabilir. Bu yüzden başlangıç seviyesi, tempo ve ders yapısı mutlaka göz önünde bulundurulmalıdır.",
+          "Yeni başlayan biri için en büyük avantaj, giriş eşiğinin düşük olmasıdır. Stüdyoya ilk kez gitmenin yarattığı çekinceyi yaşamadan, kendi alanında ve kendi temposunda başlanabilir.",
+          "Bunun yanında dürüst bir sınır çizmek gerekir: tanı almış bir rahatsızlığınız varsa, yakın zamanda ameliyat geçirdiyseniz ya da hamileyseniz online pilates yapamazsınız demek doğru olmaz, ancak bunu eğitmene başta bildirmek zorunludur. Bu durumlarda hareket seçiminin ve yüklemenin kişiye göre düzenlenmesi gerekir; kayıtlı bir video bunu yapamaz, canlı ders yapabilir.",
         ],
       },
       {
         heading: "Online Pilatesin Faydaları Nelerdir?",
         paragraphs: [
-          "Online Pilatesin faydaları, pilatesin kendi doğasından gelir; dijital erişim kolaylığı ise bu faydaların sürdürülebilir hale gelmesini destekler. Düzenli uygulandığında online pilates şu alanlarda olumlu katkı sağlayabilir:",
+          "Faydaların çoğu pilatesin kendisinden gelir; online format bu faydaların sürdürülebilir hale gelmesini sağlar. Düzenli uygulandığında şu alanlarda katkı beklenebilir:",
         ],
         bullets: [
-          "Beden farkındalığını artırabilir.",
-          "Duruş kalitesini destekleyebilir.",
-          "Merkez bölgeyi daha bilinçli kullanmayı öğretebilir.",
-          "Esneklik hissini geliştirebilir.",
-          "Gün içindeki sertlik ve hareketsizlik hissini azaltmaya yardımcı olabilir.",
-          "Düzenli hareket alışkanlığı kazanmayı kolaylaştırabilir.",
-          "Nefes ve odaklanma farkındalığını artırabilir.",
+          "Beden farkındalığının artması ve duruşun fark edilip düzeltilebilmesi.",
+          "Merkez bölgenin daha bilinçli kullanılması ve gövde kontrolünün gelişmesi.",
+          "Omurga hareketliliğinin korunması, gün içindeki sertlik hissinin azalması.",
+          "Esneklik ve hareket açıklığının kademeli olarak gelişmesi.",
+          "Nefes ve odaklanma farkındalığının artması.",
+          "Düzenli hareket alışkanlığının kurulması ve sürdürülebilmesi.",
         ],
       },
       {
         paragraphs: [
-          "Pilatesin en güçlü taraflarından biri, hareketi sadece “yapmak” değil, “doğru hissetmek” üzerine kurulu olmasıdır. Online pilates de doğru şekilde yapılandırıldığında bu farkındalığı destekler. Kişi zaman içinde bedenini daha dengeli taşımayı, hareketleri daha kontrollü yapmayı ve günlük hayat içinde daha bilinçli durmayı öğrenebilir.",
-          "Özellikle evde düzenli ders alabilmek, pilatesin bir heves olmaktan çıkıp gerçek bir rutine dönüşmesine yardımcı olur. Bu yönüyle online pilates, yalnızca egzersiz yaptıran değil, hareket alışkanlığı kazandıran bir sistem haline gelebilir.",
-        ],
-      },
-      {
-        heading: "Online Pilatese Nasıl Başlanır?",
-        paragraphs: [
-          "Online Pilatese başlamak için kusursuz bir düzene sahip olmak gerekmez. Önemli olan, sürdürülebilir ve gerçekçi bir başlangıç yapmaktır. Başlangıç için şu adımlar faydalı olabilir:",
-          "İlk olarak seviyeni doğru belirlemek gerekir. Daha önce hiç pilates yapmadıysan başlangıç seviyesine uygun derslerle ilerlemek en sağlıklısıdır. İkinci olarak ders türüne karar verilmelidir. Canlı grup dersi, birebir ders veya kayıtlı içerik arasında kişinin ihtiyacına en uygun model seçilmelidir. Sonrasında ise ev içinde rahat hareket edilebilecek küçük bir alan ve temel ekipman hazırlanmalıdır.",
-          "Başlangıç aşamasında en sık yapılan hata, çok hızlı ilerlemeye çalışmaktır. Oysa pilatesin mantığı, hareketleri bir anda mükemmel yapmak değil; zamanla daha kontrollü ve daha bilinçli hale getirmektir. Bu nedenle haftada iki ya da üç gün düzenli dersle başlamak çoğu kişi için ideal bir ritim sağlar.",
+          "Pilatesin ayırt edici yanı, hareketi yapmaktan çok doğru hissetmek üzerine kurulu olmasıdır. Bu farkındalık ders bittiğinde sona ermez: kişi gün içinde omuzlarının kapandığını, nefesini tuttuğunu ya da bir tarafına yüklendiğini fark etmeye başlar. Pratikte en çok değer yaratan kısım budur.",
+          "Online formatın buna katkısı dolaylı ama belirleyicidir: egzersizi günlük hayata sığdırmayı kolaylaştırdığı için pilates bir heves olmaktan çıkıp rutine dönüşür, faydalar da ancak süreklilikle ortaya çıkar.",
         ],
       },
       {
         heading: "Evde Online Pilates İçin Neler Gerekir?",
         paragraphs: [
-          "Online Pilatesin güzel tarafı, başlamak için büyük bir altyapı gerektirmemesidir. Çoğu kullanıcı için temel ihtiyaçlar oldukça basittir:",
+          "Başlamak için büyük bir altyapı gerekmez. Temel ihtiyaçlar oldukça sadedir:",
         ],
         bullets: [
-          "Kaymayan bir pilates matı.",
-          "Rahat hareket etmeyi sağlayan kıyafetler.",
-          "Telefon, tablet veya bilgisayar.",
-          "Sessiz ve yeterli genişlikte bir alan.",
-          "Derse odaklanmayı kolaylaştıracak düzenli bir ortam.",
+          "Kaymayan bir pilates matı: 8-10 mm kalınlık çoğu kişi için uygundur. Halı üzerinde ya da kalın yatak matında çalışmak dengeyi bozar.",
+          "Yeterli alan: Mat serildiğinde etrafında kollarınızı ve bacaklarınızı açabileceğiniz kadar boşluk. Yaklaşık 2x2 metrelik bir alan çoğu ders için yeterlidir.",
+          "Rahat kıyafet: Bol olmayan, hareketi kısıtlamayan ve eğitmenin beden hizanızı görebilmesini engellemeyen kıyafetler.",
+          "Bir ekran: Telefon, tablet ya da bilgisayar. Ekran ne kadar büyükse takip o kadar kolaydır.",
+          "Sabit bir internet bağlantısı: Canlı derslerde görüntünün donmaması, eğitmenin sizi düzeltebilmesi için önemlidir.",
         ],
       },
       {
         paragraphs: [
-          "Bazı derslerde küçük ekipmanlar kullanılabilir. Pilates bandı, küçük top veya blok gibi yardımcı materyaller zaman zaman faydalı olabilir. Ancak yeni başlayanlar için en önemli konu ekipman değil, doğru yönlendirmedir.",
-          "Ev ortamının çok büyük olması gerekmez. Bir mat serilebilecek kadar alan çoğu zaman yeterlidir. Burada asıl önemli olan, hareket sırasında güvenli hissetmek ve dikkati dağıtmayacak bir düzen kurmaktır.",
+          "Pilates bandı, küçük top veya blok gibi yardımcı ekipmanlar bazı derslerde kullanılır ama başlangıç için zorunlu değildir. İhtiyaç duyulduğunda eğitmen zaten önceden söyler; peşin almaya gerek yoktur.",
         ],
       },
       {
-        heading: "Canlı Online Pilates mi, Kayıtlı Ders mi?",
+        heading: "Kamera ve Ekran Düzeni Nasıl Kurulur?",
         paragraphs: [
-          "Bu sorunun cevabı büyük ölçüde kişinin öğrenme tarzına ve hedeflerine bağlıdır. Canlı online pilates dersleri, anlık yönlendirme ve takip imkânı sunduğu için özellikle yeni başlayanlar açısından daha avantajlı olabilir. Eğitmen gerektiğinde alternatif hareketler önerebilir, tempo konusunda yönlendirebilir ve kişinin daha kontrollü ilerlemesine yardımcı olabilir.",
-          "Kayıtlı dersler ise saat esnekliği sunar. Kendi programına göre hareket etmek isteyen kişiler için kullanışlı olabilir. Ancak yeni başlayanlar için yalnızca video izleyerek hareketleri kopyalamak bazen yetersiz kalabilir. Çünkü pilatesin önemli kısmı form, nefes ve kontrol detaylarında gizlidir.",
-          "İdeal senaryo çoğu zaman şudur: başlangıçta canlı online pilates dersleriyle temel oturtulur, sonrasında kayıtlı içeriklerle destekleyici pratikler yapılabilir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yaparken En Sık Yapılan Hatalar",
-        paragraphs: [
-          "Online Pilates çok erişilebilir olduğu için bazen fazla kolay görünür. Ancak bu da bazı temel hatalara yol açabilir. En yaygın hatalar şunlardır:",
+          "Online pilatesin en çok gözden kaçan ama sonucu en çok etkileyen ayrıntısı budur. Canlı dersin stüdyoya göre tek dezavantajı eğitmenin size dokunamaması; buna karşılık sizi görebilmesi neredeyse aynı işi görür. Ancak bu, kameranın doğru yerleştirilmiş olmasına bağlıdır.",
+          "Pratikte işe yarayan düzen şudur:",
         ],
         bullets: [
-          "Hareketi sadece görüntüden kopyalamaya çalışmak.",
-          "Nefesi ihmal etmek.",
-          "Hareketleri gereğinden hızlı yapmak.",
-          "Seviyeye uygun olmayan ders seçmek.",
-          "Düzenli olmadan sonuç beklemek.",
-          "Bedenin verdiği sinyalleri göz ardı etmek.",
+          "Kamerayı matın yan tarafına, boydan görecek şekilde yerleştirin. Baş ve ayaklar kadrajın içinde olmalı. Karşıdan çekim omurga hizasını göstermez.",
+          "Cihazı yere yakın bir yüksekliğe koyun. Yaklaşık diz hizası, hem ayakta hem yerde yapılan hareketlerde iyi sonuç verir.",
+          "Işık kameranın arkasında olsun. Pencerenin önüne kurulan düzen sizi siluet haline getirir, eğitmen hiçbir şey göremez.",
+          "Ekranı kameranın yanına, dönüp bakabileceğiniz bir açıya yerleştirin. Hareket sırasında boynunuzu çevirmek zorunda kalmamalısınız.",
+          "Sesi ders öncesi kontrol edin. Eğitmenin uyarısını duyamamak, görüntü sorunundan daha çok vakit kaybettirir.",
         ],
       },
       {
         paragraphs: [
-          "Pilatesin özü, hareket sayısından çok hareket kalitesidir. Bu yüzden daha zor egzersiz yapmak ya da daha hızlı ilerlemek her zaman daha iyi değildir. Özellikle başlangıç aşamasında kişi kendi bedenini tanımaya odaklanmalı, temel prensipleri sindirerek ilerlemelidir.",
+          "Bu düzeni bir kez kurup cihazın yerini işaretlemek en pratik çözümdür; her derste yeniden ayarlamak zorunda kalmazsınız. İlk derste eğitmene görüntünün yeterli olup olmadığını sormak da iyi bir alışkanlıktır.",
         ],
       },
       {
-        heading: "Masa Başı Çalışanlar İçin Online Pilates Neden Değerlidir?",
+        heading: "Canlı Ders mi, Kayıtlı İçerik mi?",
         paragraphs: [
-          "Gün boyunca masa başında çalışmak, omuzların öne kapanmasına, sırtın yorulmasına ve bedende genel bir sıkışma hissine neden olabilir. Bu nedenle masa başı çalışanlar için online pilates oldukça değerli bir destek sunar. Özellikle omurga farkındalığı, nefes ve merkez bölge aktivasyonu odaklı çalışmalar gün içindeki hareketsizlik hissini dengelemeye yardımcı olabilir.",
-          "Ayrıca masa başı çalışanlar için en büyük engellerden biri, egzersiz için zaman yaratamamaktır. Online pilates bu engeli azaltır. Kişi evine döndüğünde ya da uygun bir arada kısa sürede derse katılabilir. Böylece pilates, teoride istenen ama pratikte ertelenen bir aktivite olmaktan çıkar.",
+          "Bu sorunun cevabı seviyeye göre değişir. Başlangıç aşamasında canlı ders belirgin şekilde daha iyidir ve sebebi basittir: yeni başlayan biri hatasını fark edemez. Nefesi tuttuğunuzu, belinizin yerden kalktığını ya da hareketi boynunuzla telafi ettiğinizi ancak biri görüp söylediğinde anlarsınız. Kayıtlı video bunu yapamaz, hatalar da düzelmeden haftalarca tekrarlanır.",
+          "Canlı dersin ikinci avantajı uyarlanabilirlik: bir hareket size uygun değilse eğitmen anında alternatif verir. Üçüncüsü ise devamlılık üzerindeki etkisidir. Belirli bir saatte başlayan ve sizi bekleyen bir ders, ne zaman izleyeceğinize karar vermeniz gereken bir videodan çok daha fazla katılım üretir.",
+          "Kayıtlı içeriğin avantajı esnekliktir ve bu gerçek bir avantajdır. Yaygın olarak işe yarayan model ikisini birleştirir: temel canlı derslerle oturtulur, ara günlerde kayıtlı içerikle tekrar yapılır.",
+        ],
+      },
+      {
+        heading: "Online Pilatese Nasıl Başlanır? Adım Adım",
+        paragraphs: [
+          "Başlamak için kusursuz bir düzene ihtiyaç yok; gerçekçi bir başlangıç yeterli. Sıra şöyle kurulabilir:",
+        ],
+        bullets: [
+          "1. Seviyenizi belirleyin. Daha önce hiç pilates yapmadıysanız başlangıç seviyesi dersleriyle ilerleyin; deneyiminiz varsa bile online formata geçerken bir seviye geriden başlamak zarar vermez.",
+          "2. Ders modelini seçin. Başlangıç için canlı grup dersi ya da birebir seans. Birebir, özellikle mevcut bir şikayetiniz varsa daha uygundur.",
+          "3. Alanı ve kamerayı bir kez kurun. Yerini işaretleyin, her derste tekrar uğraşmayın.",
+          "4. Eğitmene durumunuzu bildirin. Tanı almış bir rahatsızlık, geçirilmiş ameliyat, hamilelik ya da sürekli bir ağrı varsa ilk ders öncesi söyleyin.",
+          "5. Haftada iki gün ile başlayın ve günleri takvime sabitleyin. Ardışık olmayan günler seçmek daha iyi sonuç verir.",
+          "6. İlk dört haftayı ölçmeden geçirin. Bu dönemde hedef sonuç almak değil, rutini oturtmaktır.",
+        ],
+      },
+      {
+        paragraphs: [
+          "En sık yapılan başlangıç hatası çok hızlı ilerlemeye çalışmaktır. Pilatesin mantığı hareketleri bir anda mükemmel yapmak değil, zamanla daha kontrollü hale getirmektir. İlk haftalarda az sayıda hareketi doğru yapmak, çok sayıda hareketi yaklaşık olarak yapmaktan daha değerlidir.",
         ],
       },
       {
         heading: "Haftada Kaç Gün Online Pilates Yapılmalı?",
         paragraphs: [
-          "Bu sorunun net cevabı kişiye göre değişir; ancak genel yaklaşım olarak yeni başlayanlar için haftada iki veya üç gün online pilates oldukça iyi bir başlangıçtır. Burada önemli olan yoğunluk değil, devamlılıktır.",
-          "Haftada iki gün düzenli pilates yapmak, düzensiz şekilde haftada beş gün çalışmaktan daha faydalı olabilir. Çünkü pilates bir disiplin ve alışkanlık işidir. Hareketlerin bedende yer etmesi, nefesin ritim kazanması ve beden farkındalığının gelişmesi zaman ister.",
-          "Program oluştururken kişinin günlük hayatı, iş temposu ve enerjisi dikkate alınmalıdır. Sürdürülebilir olmayan bir plan, kısa sürede bırakılma riski taşır. Bu nedenle gerçekçi bir ritim oluşturmak her zaman daha doğrudur.",
+          "Yeni başlayanlar için haftada iki gün iyi bir başlangıçtır, beden alıştıkça üçe çıkarılabilir. Burada belirleyici olan yoğunluk değil devamlılıktır.",
+          "Haftada iki gün düzenli çalışmak, düzensiz şekilde haftada beş gün çalışmaktan daha faydalıdır. Hareketlerin bedende yer etmesi, nefesin ritim kazanması ve farkındalığın gelişmesi zaman ister; bu süreç sıkıştırılamaz.",
+          "Program kurarken kendi iş temponuzu ve enerjinizi hesaba katın. Sürdüremeyeceğiniz bir plan kısa sürede bırakılır, bırakılan plan da hiç başlamamış sayılır. Gerçekçi bir ritim her zaman daha doğrudur.",
         ],
       },
       {
-        heading: "Online Pilates Yeni Başlayanlar İçin Güvenli midir?",
+        heading: "Online Pilates Yaparken En Sık Yapılan Hatalar",
         paragraphs: [
-          "Doğru yönlendirme, uygun seviye ve kontrollü ilerleme ile online pilates yeni başlayanlar için güvenli ve etkili bir seçenek olabilir. Risk, genellikle pilatesin kendisinden değil; yanlış seviye seçimi, dikkatsiz uygulama veya bedenin sınırlarını zorlamaktan kaynaklanır.",
-          "Bu nedenle yeni başlayanların mümkünse eğitmen desteğiyle ilerlemesi, temel akışları öğrenmesi ve hareketleri zorlayarak değil anlayarak yapması önemlidir. Canlı online dersler bu açıdan daha güvenli bir başlangıç zemini oluşturabilir.",
-          "Kişinin herhangi bir özel sağlık durumu varsa, ders yapısının buna göre planlanması gerekir. Böylece online pilates çok daha verimli ve kontrollü bir deneyime dönüşebilir.",
+          "Online pilates erişilebilir olduğu için bazen fazla kolay görünür. En yaygın hatalar şunlardır:",
+        ],
+        bullets: [
+          "Hareketi sadece ekrandan kopyalamaya çalışmak, içeride hangi bölgenin çalışması gerektiğini bilmemek.",
+          "Zorlanınca nefesi tutmak. Genel kural efor anında nefes vermektir.",
+          "Hareketleri hızlı yapmak ve tekrar sayısına odaklanmak; bu durumda işi kaslar değil momentum yapar.",
+          "Seviyeye uygun olmayan ders seçmek ve hareketleri telafi ederek tamamlamak.",
+          "Kamerayı yanlış yerleştirip eğitmenin düzeltme şansını ortadan kaldırmak.",
+          "Düzenli olmadan sonuç beklemek.",
+          "Keskin ağrıya rağmen hareketi sürdürmek.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Pilatesin özü hareket sayısı değil hareket kalitesidir. Daha zor egzersiz yapmak ya da daha hızlı ilerlemek her zaman daha iyi değildir; özellikle başlangıçta kişi kendi bedenini tanımaya odaklanmalı ve temel prensipleri sindirerek ilerlemelidir.",
         ],
       },
       {
         heading: "Online Pilates ile Evde Rutin Nasıl Kurulur?",
         paragraphs: [
-          "Evde egzersiz yapmanın en zor tarafı başlamak değil, devam etmektir. Bu yüzden online pilatesin gerçek faydası, düzenli rutin oluşturulabildiğinde ortaya çıkar. Bunun için bazı küçük stratejiler işe yarar:",
+          "Evde egzersizin zor tarafı başlamak değil, devam etmektir. Online pilatesin gerçek faydası ancak rutin oturduğunda ortaya çıkar. İşe yarayan birkaç basit strateji var:",
         ],
         bullets: [
-          "Ders günlerini önceden belirlemek.",
-          "Pilates saatini takvimine sabitlemek.",
-          "Matı ve ekipmanları hazır tutmak.",
-          "Kısa süreli ama düzenli hedefler koymak.",
-          "İlerlemeyi sonuçla değil devamlılıkla ölçmek.",
-        ],
-      },
-      {
-        paragraphs: [
-          "Örneğin “Her hafta üç kilo vereceğim” gibi sonuç odaklı hedefler yerine, “Bu hafta iki derse katılacağım” gibi davranış odaklı hedefler çok daha sürdürülebilirdir. Pilatesin doğasına da bu yaklaşım daha uygundur.",
+          "Ders günlerini önceden belirleyin ve takvime sabit bir randevu gibi yazın.",
+          "Matı ve cihaz düzenini kurulu bırakın; her seferinde hazırlık yapmak caydırıcıdır.",
+          "Davranış odaklı hedef koyun: kilo ya da ölçü yerine bu hafta iki derse katılmak.",
+          "Bir dersi kaçırdığınızda telafi etmeye çalışmayın, bir sonrakine devam edin.",
+          "İlerlemeyi sonuçla değil devamlılıkla ölçün; ilk sekiz hafta bunun için ayrılmış sayılır.",
         ],
       },
       {
         heading: "Online Pilates Seçerken Nelere Dikkat Edilmeli?",
         paragraphs: [
-          "Online Pilates dersi veya eğitmeni seçerken yalnızca popülerliğe bakmak yeterli değildir. Şu konular önemlidir:",
+          "Ders veya eğitmen seçerken popülerliğe bakmak yeterli değildir. Şunlar belirleyicidir:",
         ],
         bullets: [
-          "Derslerin seviye ayrımının net olması.",
-          "Eğitmenin anlatımının açık ve anlaşılır olması.",
-          "Canlı derslerde yönlendirme kalitesinin güçlü olması.",
-          "Başlangıç seviyesine uygun akışların bulunması.",
+          "Seviye ayrımının net olması ve başlangıç seviyesine uygun akışların bulunması.",
+          "Canlı derslerde grubun küçük olması; eğitmenin herkesi görebilmesi buna bağlıdır.",
+          "Eğitmenin anlatımının hareketi tarif etmekle kalmayıp neyin hissedilmesi gerektiğini de söylemesi.",
+          "Mevcut bir şikayete göre alternatif hareket sunabilmesi.",
           "Ders süresinin günlük hayata uyumlu olması.",
-          "Sürdürülebilir bir program yapısının sunulması.",
+          "Deneme dersi imkânı olması; formatın size uyup uymadığı ancak deneyince anlaşılır.",
         ],
       },
       {
         paragraphs: [
-          "İyi bir online pilates deneyimi, kullanıcıyı sadece derse sokmaz; onu düzenli bir pratiğe taşır. Bu nedenle seçim yaparken “en zor ders” yerine “en doğru yönlendirme” kriterine odaklanmak daha sağlıklıdır.",
+          "İyi bir online pilates deneyimi kişiyi sadece derse sokmaz, düzenli bir pratiğe taşır. Bu yüzden seçim yaparken en zor ders yerine en doğru yönlendirme kriterine odaklanmak daha sağlıklıdır.",
         ],
       },
       {
-        heading: "Sonuç: Online Pilates Neden Güçlü Bir Başlangıç Seçeneğidir?",
+        heading: "Ne Zaman Uzman Desteği Gerekir?",
         paragraphs: [
-          "Online Pilates, pilatesle tanışmak isteyen ya da mevcut pratiğini daha düzenli hale getirmeyi hedefleyen kişiler için güçlü, erişilebilir ve sürdürülebilir bir seçenektir. Evden uygulanabilmesi, zaman esnekliği sunması, canlı derslerle yönlendirme alınabilmesi ve günlük hayatın içine daha kolay entegre olabilmesi online pilatesi öne çıkarır.",
-          "En önemli nokta, online pilatesi yalnızca pratik bir egzersiz modeli olarak değil, uzun vadeli bir hareket alışkanlığı olarak görmek gerekir. Doğru seviye, düzenli ritim ve bilinçli yönlendirme ile online pilates; beden farkındalığını artıran, duruşu destekleyen ve kişinin kendine ayırdığı zamanı daha nitelikli hale getiren değerli bir araç olabilir.",
+          "Kas yorgunluğu ile zorlanma belirtisini ayırt etmek önemlidir. Ders sonrası birkaç gün süren hafif kas ağrısı beklenen bir durumdur. Buna karşılık kola ya da bacağa yayılan ağrı, uyuşma, karıncalanma, hareketle artan keskin eklem ağrısı ve dinlenmekle geçmeyen süreklilik egzersizle çözülmesi beklenecek tablolar değildir; bu durumlarda önce bir hekime başvurmak gerekir.",
+          "Bel fıtığı, boyun düzleşmesi, omuz sıkışması gibi tanı almış bir durumunuz varsa, yakın zamanda ameliyat geçirdiyseniz ya da hamileyseniz, kayıtlı video takip etmek yerine eğitmen eşliğinde çalışın. Pilates bu tablolarda çoğu zaman uygundur, ancak hareket seçiminin ve yüklemenin kişiye göre düzenlenmesi gerekir.",
+        ],
+      },
+      {
+        heading: "Sonuç: Online Pilates Kimin İçin Doğru Seçim?",
+        paragraphs: [
+          "Online pilates, pilatesle tanışmak isteyen ya da mevcut pratiğini düzenli hale getirmeyi hedefleyen kişiler için erişilebilir ve sürdürülebilir bir seçenektir. Mat pilatesi söz konusu olduğunda stüdyoyla arasındaki fark, devamlılığın yarattığı farkın yanında küçük kalır.",
+          "İşe yaraması için gereken üç şey sade: canlı ve eğitmenin sizi görebildiği bir format, doğru kurulmuş bir kamera düzeni ve haftada iki günlük gerçekçi bir tempo. Bu üçü sağlandığında online pilates, kısa vadeli bir denemeden çıkıp uzun vadeli bir hareket alışkanlığına dönüşür.",
         ],
       },
     ],
@@ -565,89 +592,182 @@ export const blogPosts: BlogPost[] = [
     slug: "online-pilates-dersleri-nasil-gecer",
     title: "Online Pilates Dersleri Nasıl Geçer? İlk Ders Öncesi Rehber",
     excerpt:
-      "Online pilates derslerinin nasıl başladığını, ilk derste neler olacağını ve daha rahat bir başlangıç için bilmen gerekenleri keşfedin.",
+      "İlk online pilates dersinden önce bilmeniz gereken her şey: hazırlık, dersin dakika dakika akışı, kamera düzeni, eğitmen takibi ve ilk derste zorlanmak normal mi.",
     description:
-      "Online pilates dersleri nasıl geçer? İlk dersten önce bilmeniz gerekenleri, ders akışını, eğitmen yönlendirmesini ve online pilates deneyimini keşfedin.",
+      "Online pilates dersleri nasıl geçer? Ders öncesi hazırlık, dersin akışı, kamera kullanımı, eğitmen takibi, ders süresi ve ilk derste yaşananlar hakkında kapsamlı rehber.",
     publishedAt: "2026-04-13",
-    readingTime: "6 dk",
+    updatedAt: "2026-09-13",
+    readingTime: "10 dk",
     category: "Online Dersler",
     content: [
       {
         paragraphs: [
-          "Online pilates derslerine başlamayı düşünen birçok kişinin aklında benzer sorular olur: Ders nasıl işliyor, ilk derste ne yapılıyor, kamera açık mı oluyor, nasıl hazırlanmak gerekiyor? Özellikle daha önce online pilates deneyimi yaşamamış kişiler için bu süreç ilk başta biraz belirsiz görünebilir.",
-          "Oysa online pilates dersleri, doğru planlandığında oldukça akıcı, rahat ve verimli bir yapıya sahiptir. Kişi evinin konforunda pilates yaparken aynı zamanda eğitmen yönlendirmesiyle daha kontrollü bir egzersiz deneyimi yaşayabilir.",
-          "Pilatesin temelinde nefes, kontrol, denge ve beden farkındalığı yer aldığı için online pilates dersleri de bu prensipleri merkeze alır. Dersin yapısı stüdyodan ekrana taşınmış gibi düşünülmemelidir. Aksine, online ders modeli kişinin bulunduğu ortamda daha sürdürülebilir bir pilates rutini kurmasına yardımcı olur. Bu nedenle online pilates derslerinin nasıl geçtiğini bilmek, özellikle yeni başlayanlar için süreci daha rahat hale getirir.",
+          "Online pilates derslerine başlamayı düşünen hemen herkesin aklında aynı sorular var: ders nasıl işliyor, ilk derste ne yapılıyor, kamera açık mı oluyor, hiç pilates yapmamış biri zorlanır mı? Daha önce deneyimi olmayan biri için bu belirsizlik, başlamayı ertelemenin en yaygın sebebi.",
+          "Bu yazıda bir online pilates dersinin baştan sona nasıl ilerlediğini, ders öncesi neye ihtiyacınız olduğunu ve ilk derste gerçekte ne yaşandığını anlatıyoruz. Amaç, ilk derse belirsizlikle değil ne olacağını bilerek girmenizi sağlamak.",
         ],
       },
       {
-        heading: "Online Pilates Dersine Başlamadan Önce Neler Yapılır?",
+        heading: "Ders Öncesi Hazırlık: Ne Yapmanız Gerekiyor?",
         paragraphs: [
-          "Online pilates dersinden önce genellikle kısa bir hazırlık süreci olur. Kişinin rahat hareket edebileceği bir alan hazırlaması, matını sermesi ve dersi takip edeceği ekranı uygun bir yere yerleştirmesi yeterlidir. Eğer canlı online pilates dersi yapılıyorsa, bağlantının kontrol edilmesi ve ders başlamadan birkaç dakika önce hazır olunması faydalı olur.",
-          "Bu aşamada büyük bir hazırlık gerekmez. Önemli olan, pilates sırasında dikkatini dağıtmayacak sade bir ortam oluşturmak ve ders boyunca rahatça hareket edebilmektir. Online pilatesin en önemli avantajlarından biri zaten tam olarak budur: başlamak için karmaşık bir hazırlığa ihtiyaç duyulmaması.",
+          "Hazırlık sanıldığından basittir ve beş dakikadan az sürer. İlk dersten önce şunları yapmanız yeterli:",
+        ],
+        bullets: [
+          "Matınızı serin ve etrafında kollarınızı açabileceğiniz kadar boşluk bırakın.",
+          "Cihazınızı matın yan tarafına, sizi boydan görecek şekilde ve yaklaşık diz hizasında konumlandırın.",
+          "Bağlantıyı derse 5-10 dakika kala kontrol edin; ilk derste bu marj işe yarar.",
+          "Yanınıza su alın ve telefonun bildirimlerini kapatın.",
+          "Rahat, hareketi kısıtlamayan bir kıyafet giyin.",
         ],
       },
       {
-        heading: "Online Pilates Dersleri Genelde Nasıl Başlar?",
         paragraphs: [
-          "Online pilates dersleri genellikle bedeni harekete hazırlayan daha yumuşak bir başlangıçla açılır. Nefes farkındalığı, omurga hareketliliği ve temel aktivasyon çalışmaları ile kişi derse adapte olur. Bu başlangıç bölümü, doğrudan zorlayıcı hareketlere geçmek yerine bedeni pilates akışına hazırlamayı amaçlar.",
-          "Özellikle yeni başlayanlar için bu bölüm oldukça önemlidir. Çünkü pilates sadece egzersiz yapmak değil, aynı zamanda bedeni derse zihinsel olarak da hazırlamaktır. Online pilates derslerinde bu hazırlık aşaması, kişinin bulunduğu ortamdan kopup derse odaklanmasına yardımcı olur.",
+          "Daha fazlasına gerek yok. Online pilatesin en büyük avantajlarından biri zaten bu: başlamak için karmaşık bir kuruluma ihtiyaç duymaması. Düzeni bir kez kurup cihazın yerini işaretlerseniz, sonraki derslerde hazırlık bir dakikaya iner.",
         ],
       },
       {
-        heading: "Ders Sırasında Neler Yapılır?",
+        heading: "Bir Online Pilates Dersi Dakika Dakika Nasıl İlerler?",
         paragraphs: [
-          "Online pilates dersinin ana bölümünde, dersin seviyesine ve amacına göre farklı hareket akışları uygulanır. Bu bölümde genellikle merkez bölge aktivasyonu, omurga farkındalığı, denge, esneklik ve kontrollü kuvvet çalışmaları ön planda olur. Pilates hareketleri hızlı tekrar mantığıyla değil, kontrollü ve bilinçli şekilde yapılır.",
-          "Ders sırasında eğitmen yönlendirmesi, nefesin nasıl kullanılacağını, hareketin hangi bölgesini hissetmek gerektiğini ve ritmin nasıl korunacağını anlatır. Böylece online pilates, sadece hareketleri izleyip tekrar edilen bir çalışma olmaktan çıkar; daha bilinçli bir egzersiz pratiğine dönüşür.",
+          "Ders formatına göre değişmekle birlikte, tipik bir 50 dakikalık canlı ders şu yapıda ilerler:",
+        ],
+        bullets: [
+          "İlk 5 dakika: Kısa karşılama, o gün nasıl hissettiğinizin sorulması ve varsa ağrı ya da yorgunluk durumuna göre akışın küçük ayarlaması.",
+          "5-15. dakika: Nefes çalışması ve omurga mobilitesi. Bedeni derse hazırlayan, yumuşak ve yavaş bölüm. Yeni başlayanlar için en önemli kısım burasıdır.",
+          "15-40. dakika: Ana akış. Merkez bölge aktivasyonu, omurga farkındalığı, denge ve kontrollü kuvvet çalışmaları. Hareketler hızlı tekrarla değil, az sayıda ve kontrollü yapılır.",
+          "40-48. dakika: Esneme ve toparlanma. Çalışılan bölgelerin serbestleşmesi ve nefesin yavaşlaması.",
+          "Son 2 dakika: Kısa değerlendirme, soru sorma ve bir sonraki derse kadar dikkat edilecekler.",
         ],
       },
       {
-        heading: "Canlı Online Pilates Derslerinde Eğitmen Takibi Olur mu?",
         paragraphs: [
-          "Evet, canlı online pilates derslerinde eğitmen yönlendirmesi önemli bir rol oynar. Ders formatına göre bu takip değişebilir; ancak genel olarak canlı online pilates derslerinin en büyük avantajlarından biri, anlık yönlendirme sunmasıdır. Eğitmen hareket akışını anlatır, tempoyu belirler ve katılımcının süreci daha kontrollü yaşamasına yardımcı olur.",
-          "Özellikle yeni başlayanlar için bu yapı oldukça değerlidir. Çünkü pilatesin mantığını anlamak, yalnızca hareketin dış görünüşünü kopyalamaktan çok daha önemlidir. Eğitmenin verdiği sözel yönlendirmeler, online pilates deneyimini daha net ve güvenli hale getirebilir.",
+          "Bu akışın en çok şaşırtan tarafı genellikle temposudur. Pilates, birçok kişinin alışık olduğu egzersiz sistemlerinden daha yavaştır ve bu kasıtlıdır: etki tekrar sayısından değil kontrolden gelir.",
         ],
       },
       {
         heading: "Kamera Açık mı Olur?",
         paragraphs: [
-          "Bu konu ders yapısına göre değişebilir. Bazı online pilates derslerinde kamera açık katılım tercih edilirken, bazı derslerde bu tamamen kişinin rahatlığına bırakılabilir. Burada önemli olan, kişinin kendini rahat ve güvende hissetmesidir. Canlı derslerde kamera açık olması bazen eğitmen takibini kolaylaştırabilir; ancak bu durum dersin formatına göre farklılık gösterebilir.",
-          "Kamera konusu ne olursa olsun, online pilatesin temel amacı kişinin rahat bir ortamda düzenli pilates yapabilmesini sağlamaktır. Bu nedenle ders deneyimi mümkün olduğunca kullanıcı dostu şekilde ilerlemelidir.",
+          "Canlı derslerde kameranın açık olması esastır, çünkü eğitmenin sizi düzeltebilmesinin tek yolu budur. Sizi göremeyen bir eğitmenle yapılan canlı ders, pratikte kayıtlı video izlemekten çok farklı olmaz.",
+          "Bunun işe yaraması kameranın doğru yerleşmesine bağlı: matın yanından, tüm bedeni görecek şekilde ve yere yakın bir yükseklikte. Karşıdan çekim omurga hizasını göstermez, dolayısıyla en sık yapılan hataların fark edilmesini de sağlamaz. Işığın kameranın arkasında olması da önemlidir; pencere önüne kurulan düzen sizi siluet haline getirir.",
+          "Bu konuda çekinceniz varsa ilk derste eğitmene söyleyebilirsiniz. Çoğu eğitmen ilk dersi daha çok tanışma ve seviye belirleme olarak kullanır, böylece süreç daha rahat ilerler.",
+        ],
+      },
+      {
+        heading: "Canlı Ders ile Kayıtlı Video Arasındaki Fark Nedir?",
+        paragraphs: [
+          "Kayıtlı içerikte hareketi gördüğünüz kadar uygularsınız; canlı derste ise yaptığınız hareket üzerine geri bildirim alırsınız. Fark burada başlar ve özellikle başlangıç aşamasında belirleyicidir.",
+          "Sebebi basit: yeni başlayan biri hatasını fark edemez. Nefesi tuttuğunuzu, belinizin yerden kalktığını ya da karın hareketini boynunuzla telafi ettiğinizi ancak biri görüp söylediğinde anlarsınız. Fark edilmeyen hata düzelmez, haftalarca tekrarlanır ve düzenli çalışmanıza rağmen ilerleme durur.",
+          "Kayıtlı içeriğin esneklik avantajı gerçektir ve yok sayılmamalı. Pratikte en iyi sonucu veren model ikisini birleştirir: temel canlı derslerle oturtulur, ara günlerde kayıtlı içerikle tekrar yapılır.",
+        ],
+      },
+      {
+        heading: "Eğitmen Sizi Nasıl Takip Eder ve Düzeltir?",
+        paragraphs: [
+          "Pilateste dışarıdan küçük görünen ayrıntılar hareketin etkisini tümüyle değiştirir: omuzların pozisyonu, omurganın hizası, merkez bölgenin gerçekten aktif olup olmadığı, nefesin ritmi. Bunlar kişinin kendi kendine göremeyeceği şeylerdir.",
+          "Canlı derste eğitmen bunları ekrandan görür ve çoğu zaman hareketi durdurmadan sözlü olarak düzeltir: kaburgaları içeri al, omuzları kulaklardan uzaklaştır, bacağı bu kadar indirme gibi. Bir hareket size uygun değilse anında alternatif verir; ağrı varsa akışı o gün için değiştirir.",
+          "Grubun küçük olması bu takibin kalitesini doğrudan etkiler. Eğitmenin herkesi ekranda gerçekten görebildiği bir grup, kalabalık bir dersten çok daha fazla değer üretir.",
+        ],
+      },
+      {
+        heading: "Canlı Dersin Devamlılık Üzerindeki Etkisi",
+        paragraphs: [
+          "Evde tek başına egzersiz yapmanın zor tarafı hareketleri yapmak değil, düzenli yapmaktır. Kayıtlı bir video her zaman erteleyebileceğiniz bir şeydir; belirli bir saatte başlayan ve sizi bekleyen bir ders ise değildir.",
+          "Pratikte en çok fark yaratan unsurlardan biri budur. Takvimde sabit bir yeri olan ders, pilatesi yapılacaklar listesindeki bir maddeden çıkarıp haftanın düzenli bir parçası haline getirir. Uzun vadede sonucu belirleyen de zaten budur: hangi hareketi yaptığınız değil, kaç hafta devam ettiğiniz.",
         ],
       },
       {
         heading: "Online Pilates Dersleri Kaç Dakika Sürer?",
         paragraphs: [
-          "Online pilates derslerinin süresi ders formatına göre değişebilir. Bazı dersler daha kısa ve odaklı akışlarla ilerlerken, bazıları daha kapsamlı bir seans yapısına sahip olabilir. Burada asıl önemli olan süreden çok dersin verimidir. Pilates, çok uzun süre yapılmak zorunda olan bir çalışma değildir. Kontrollü ve bilinçli bir ders akışı, daha uzun ama dikkatsiz bir çalışmadan çok daha değerli olabilir.",
-          "Yeni başlayan biri için ders süresinin günlük hayata uyum sağlayacak şekilde planlanması daha önemlidir. Çünkü sürdürülebilirlik, pilates pratiğinde en kritik unsurlardan biridir.",
+          "Yaygın format 45-50 dakikadır; bazı dersler 30 dakikalık daha kısa ve odaklı akışlar şeklinde ilerler. Süreden çok dersin yapısı belirleyicidir. Kontrollü ilerleyen 30 dakikalık bir ders, dikkatsiz geçen 60 dakikadan daha değerlidir.",
+          "Yeni başlıyorsanız, günlük hayatınıza gerçekten sığdırabileceğiniz bir süre seçin. Sürdürülebilirlik pilates pratiğinde en kritik unsur ve haftada iki kez katılabildiğiniz 45 dakikalık bir ders, katılamadığınız 60 dakikalık dersten her zaman iyidir.",
         ],
       },
       {
-        heading: "İlk Online Pilates Dersinde Zorlanmak Normal mi?",
+        heading: "İlk Derste Zorlanmak Normal mi?",
         paragraphs: [
-          "Evet, ilk derste bazı hareketlerin yeni gelmesi ya da bedenin farklı çalışması oldukça normaldir. Pilatesin yapısı, birçok kişinin alışık olduğu egzersiz sistemlerinden farklı olabilir. Daha kontrollü tempo, nefes farkındalığı ve merkez bölge aktivasyonu, ilk derslerde biraz yabancı hissedilebilir. Ancak bu durum pilatesin doğasının bir parçasıdır.",
-          "İlk derste amaç kusursuz olmak değildir. Amaç, pilatesin mantığını tanımak ve bedeni bu yeni sisteme yavaş yavaş adapte etmektir. Bu yüzden online pilates derslerinde ilk aşamada sabırlı olmak ve bedenin öğrenme sürecine alan tanımak çok önemlidir.",
+          "Evet, tamamen normal. Pilatesin yapısı birçok kişinin alışık olduğu egzersizlerden farklıdır: tempo daha yavaş, nefes daha bilinçli, çalışan bölgeler daha derindir. İlk derste hareketleri anlamakta zorlanmak ya da hangi kasın çalışması gerektiğini hissedememek beklenen bir durumdur.",
+          "İlk derste amaç kusursuz olmak değil, sistemi tanımak. Genellikle üçüncü dersten itibaren hareketler tanıdık gelmeye, beşinci ders civarında ise doğru bölgeyi hissetmeye başlarsınız. Bu süreci hızlandırmaya çalışmak yerine, ilk birkaç dersi öğrenme dönemi olarak kabul etmek daha iyi sonuç verir.",
+          "Kendinizi gruptaki başkalarıyla kıyaslamayın. Her bedenin öğrenme hızı farklıdır ve pilatesin faydası zamanla gelişen kontrolde ortaya çıkar.",
         ],
       },
       {
-        heading: "Online Pilates Derslerinden Önce Bir Seviyede Olmak Gerekir mi?",
+        heading: "İlk Derse Başlarken Eğitmene Ne Söylemelisiniz?",
         paragraphs: [
-          "Hayır, online pilates derslerine başlamak için önceden belli bir seviyede olmak gerekmez. Önemli olan, kişinin kendi seviyesine uygun bir ders yapısıyla başlamasıdır. Başlangıç seviyesi online pilates dersleri, daha önce hiç pilates yapmamış kişiler için uygun şekilde planlanabilir. Böylece kişi kendini baskı altında hissetmeden pilates pratiğine giriş yapabilir.",
-          "Bu da online pilatesi geniş bir kullanıcı kitlesi için erişilebilir hale getirir. Özellikle pilatese başlamak isteyen ama nereden başlayacağını bilmeyen kişiler için online dersler güçlü bir ilk adım olabilir.",
+          "Bu, ilk dersin en önemli ama en çok atlanan kısmı. Eğitmenin akışı size göre düzenleyebilmesi için şunları bilmesi gerekir:",
+        ],
+        bullets: [
+          "Daha önce pilates ya da düzenli egzersiz deneyiminiz olup olmadığı.",
+          "Tanı almış bir rahatsızlık: bel fıtığı, boyun düzleşmesi, omuz sıkışması gibi.",
+          "Yakın zamanda geçirilmiş bir ameliyat ya da sakatlık.",
+          "Hamilelik veya yeni doğum sonrası dönem.",
+          "Sürekli hissettiğiniz bir ağrı ya da o gün özellikle rahatsız olan bir bölge.",
+          "Günlük hayatınız: masa başı mı çalışıyorsunuz, ayakta mı?",
         ],
       },
       {
-        heading: "Online Pilates Derslerinden En Yüksek Verim Nasıl Alınır?",
         paragraphs: [
-          "Online pilates derslerinden verim almak için en önemli konu düzenli katılım ve dikkatli uygulamadır. Derslere sadece katılmış olmak değil, hareketleri bilinçli şekilde uygulamak önemlidir. Bunun için ekranı rahat görebilmek, sessiz bir ortam oluşturmak, nefese odaklanmak ve hareketleri acele etmeden yapmak büyük fark yaratır.",
-          "Ayrıca online pilates sürecinde kişi kendini başkalarıyla kıyaslamamalıdır. Her bedenin hareketi öğrenme süresi farklıdır. Pilatesin faydası, zamanla gelişen kontrol ve farkındalıkta ortaya çıkar. Bu nedenle verimi artıran şey mükemmellik değil, istikrardır.",
+          "Bunları söylemek dersten dışlanmanıza yol açmaz; tam tersine hareket seçiminin size göre uyarlanmasını sağlar. Pilates bu tabloların çoğunda uygundur, yeter ki yükleme doğru ayarlansın.",
+        ],
+      },
+      {
+        heading: "Derslerden En Yüksek Verim Nasıl Alınır?",
+        paragraphs: [
+          "Verimi belirleyen en büyük etken düzenli katılım; ikincisi ise derse nasıl katıldığınız. Birkaç pratik nokta fark yaratır:",
+        ],
+        bullets: [
+          "Ekranı hareket sırasında boynunuzu çevirmeden görebileceğiniz bir açıya yerleştirin.",
+          "Nefese odaklanın; hareket boyunca sesli sayabiliyorsanız nefesinizi tutmuyorsunuz demektir.",
+          "Anlamadığınız bir yönlendirme olduğunda sorun. Canlı dersin amacı bu.",
+          "Keskin ağrı hissettiğinizde durun ve eğitmene söyleyin; zorlamak ilerleme getirmez.",
+          "İlk sekiz haftayı ölçmeden geçirin; bu dönemde hedef rutini oturtmak.",
         ],
       },
       {
         heading: "Sonuç: Online Pilates Dersleri Nasıl Geçer?",
         paragraphs: [
-          "Online pilates dersleri, sade bir hazırlıkla başlayan, nefes ve beden farkındalığıyla ilerleyen, kontrollü hareket akışlarıyla devam eden verimli bir egzersiz deneyimi sunar. Canlı ya da farklı ders modellerine göre değişse de, temel amaç aynıdır: pilatesi erişilebilir ve sürdürülebilir hale getirmek. Özellikle yeni başlayanlar için online pilates derslerinin nasıl geçtiğini bilmek, sürece daha rahat ve güvenli bir başlangıç yapmayı kolaylaştırır.",
-          "Doğru yönlendirme, seviyeye uygun akış ve düzenli katılımla online pilates dersleri, evde güçlü bir pilates rutini kurmanın etkili yollarından biri haline gelebilir.",
+          "Kısa bir hazırlıkla başlayan, nefes ve omurga mobilitesiyle ısınan, kontrollü bir ana akışla devam eden ve esnemeyle biten yaklaşık 50 dakikalık bir seans. Canlı formatta eğitmen sizi ekrandan takip eder, hareketleri sözlü olarak düzeltir ve gerektiğinde size özel alternatif verir.",
+          "İlk derse girerken bilmeniz gereken tek şey, kusursuz olmanızın beklenmediği. İlk birkaç ders sistemi tanıma dönemidir; asıl fark, dördüncü haftadan sonra devam edip etmediğinizle ortaya çıkar.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "İlk online pilates dersinde ne yapılır?",
+        answer:
+          "İlk ders genellikle tanışma ve seviye belirlemeyle başlar; eğitmen deneyiminizi ve varsa şikayetlerinizi sorar. Ardından nefes ve omurga mobilitesi çalışmasıyla ısınılır, temel hareketlerle devam edilir. İlk derste kusursuz olmanız beklenmez, amaç sistemi tanımanızdır.",
+      },
+      {
+        question: "Online pilates dersinde kamera açık olmak zorunda mı?",
+        answer:
+          "Canlı derslerde kameranın açık olması esastır, çünkü eğitmenin sizi düzeltebilmesinin tek yolu budur. Kamera kapalıysa ders pratikte kayıtlı video izlemeye dönüşür. Çekinceniz varsa ilk derste eğitmene söyleyebilirsiniz.",
+      },
+      {
+        question: "Online pilates dersi kaç dakika sürer?",
+        answer:
+          "Yaygın format 45-50 dakikadır; 30 dakikalık kısa ve odaklı dersler de vardır. Süreden çok dersin yapısı ve düzenli katılım belirleyicidir. Haftada iki kez katılabildiğiniz 45 dakikalık ders, katılamadığınız 60 dakikalık dersten daha iyidir.",
+      },
+      {
+        question: "Eğitmen online derste hareketlerimi düzeltebilir mi?",
+        answer:
+          "Evet. Kamera doğru yerleştirildiğinde eğitmen omuz pozisyonunuzu, omurga hizanızı ve merkez bölgenizin aktif olup olmadığını görebilir; hareketi durdurmadan sözlü olarak düzeltir. Gerekirse size uygun alternatif hareket verir.",
+      },
+      {
+        question: "İlk derste zorlanmak normal mi?",
+        answer:
+          "Evet. Pilatesin temposu daha yavaş, nefesi daha bilinçli ve çalıştırdığı bölgeler daha derindir; bu birçok kişiye ilk başta yabancı gelir. Genellikle üçüncü dersten itibaren hareketler tanıdık gelmeye, beşinci ders civarında doğru bölge hissedilmeye başlar.",
+      },
+      {
+        question: "Derse başlamak için pilates deneyimim olması gerekir mi?",
+        answer:
+          "Hayır. Başlangıç seviyesi dersler hiç pilates yapmamış kişiler için planlanır. Önemli olan seviyenize uygun bir dersle başlamak; ileri seviye bir akışa girmek hareketleri telafi ederek yapmanıza yol açar ve ilerlemeyi yavaşlatır.",
+      },
+      {
+        question: "Derse başlamadan önce eğitmene ne söylemeliyim?",
+        answer:
+          "Egzersiz geçmişinizi, tanı almış bir rahatsızlığınızı, geçirilmiş ameliyatı, hamilelik durumunu ve sürekli hissettiğiniz bir ağrıyı mutlaka bildirin. Bu bilgiler dersten dışlanmanıza değil, hareket seçiminin size göre uyarlanmasına yarar.",
+      },
+      {
+        question: "Online pilates dersi için neye ihtiyacım var?",
+        answer:
+          "Kaymayan bir pilates matı, matın etrafında kollarınızı açabileceğiniz kadar alan, rahat kıyafet, dersi takip edeceğiniz bir ekran ve sabit bir internet bağlantısı. Ek ekipman başlangıç için gerekli değildir.",
       },
     ],
   },
@@ -934,88 +1054,6 @@ export const blogPosts: BlogPost[] = [
           "Evde pilates için neler gerekir sorusunun cevabı aslında oldukça sadedir: rahat hareket edilebilecek bir alan, bir pilates matı, uygun kıyafetler ve düzenli pratik için doğru bir plan. Gelişmiş ekipmanlar başlangıçta şart değildir.",
           "Evde pilates yaparken en önemli konu, sade ama işlevsel bir ortam kurmak ve pilatesi sürdürülebilir bir alışkanlık haline getirmektir. Haftada iki üç gün, kısa ama düzenli seanslarla başlamak; zamanla süreyi ve zorluğu kademeli artırmak çoğu kişi için en sağlıklı yoldur.",
           "Doğru başlangıç yapıldığında evde pilates, hem erişilebilir hem de oldukça verimli bir egzersiz rutini sunabilir. Başlangıç aşamasında bir eğitmenden yönlendirme almak ise hareketleri baştan doğru öğrenmenizi sağlayarak süreci hem güvenli hem de daha hızlı hale getirir.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "online-pilates-nasil-yapilir",
-    title: "Online Pilates Nasıl Yapılır? Adım Adım Başlangıç Rehberi",
-    excerpt:
-      "Online pilatese evde nasıl başlanacağını, doğru ders seçimini ve verimli bir rutin için temel adımları keşfedin.",
-    description:
-      "Online pilates nasıl yapılır? Evde online pilatese başlamak için gerekli adımları, dikkat edilmesi gerekenleri ve doğru başlangıç için temel ipuçlarını keşfedin.",
-    publishedAt: "2026-04-13",
-    readingTime: "6 dk",
-    category: "Online Pilates",
-    content: [
-      {
-        paragraphs: [
-          "Online pilates, evde düzenli hareket etmek ve pilatesi günlük hayatın bir parçası haline getirmek isteyenler için pratik bir egzersiz modelidir. Ancak online pilatese başlamak isteyen birçok kişinin aklında benzer bir soru vardır: Online pilates nasıl yapılır?",
-          "Aslında online pilates, doğru yönlendirme, uygun alan ve seviyeye uygun bir ders planı ile oldukça verimli şekilde uygulanabilir. Önemli olan, pilatesi sadece hareketleri tekrar etmek olarak değil; nefes, kontrol ve beden farkındalığı ile birlikte değerlendirmektir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yapmak İçin Önce Ne Gerekir?",
-        paragraphs: [
-          "Online pilates yapmak için büyük bir hazırlığa ihtiyaç yoktur. Çoğu zaman rahat hareket edilebilecek küçük bir alan, bir pilates matı ve dersi takip edebileceğin bir ekran yeterlidir.",
-          "Burada önemli olan ekipmanın çokluğu değil, pilates sırasında kendini rahat ve güvende hissedebileceğin bir düzen kurmaktır. Online pilatesin en güçlü taraflarından biri de tam olarak budur: evden, sade bir düzenle başlanabilir olması.",
-        ],
-      },
-      {
-        heading: "Online Pilates İçin Doğru Ders Nasıl Seçilir?",
-        paragraphs: [
-          "Online pilates yaparken en önemli adımlardan biri, seviyene uygun ders seçmektir. Daha önce hiç pilates yapmadıysan başlangıç seviyesi online pilates dersleri ile ilerlemek gerekir. Çünkü pilatesin temelinde hareketi doğru kaslarla, doğru nefesle ve kontrollü şekilde yapmak vardır.",
-          "Başlangıç seviyesinde çok zorlayıcı akışlara yönelmek, fayda sağlamak yerine süreci zorlaştırabilir. Bu nedenle online pilates dersi seçerken içerik seviyesi, ders süresi ve eğitmenin anlatım biçimi dikkatle değerlendirilmelidir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yaparken Alan Nasıl Hazırlanmalı?",
-        paragraphs: [
-          "Online pilates için hazırlanan alanın büyük olması gerekmez. Bir mat serilebilecek kadar boşluk çoğu zaman yeterlidir. Ancak alanın dikkat dağıtmayacak şekilde sade olması faydalıdır.",
-          "Hareket sırasında ekrana rahatça bakabilmek, kolları ve bacakları güvenli şekilde açabilmek önemlidir. Online pilates yaparken alanın sessiz ve düzenli olması, derse odaklanmayı da kolaylaştırır. Böylece pilates pratiği daha verimli hale gelir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yaparken Nelere Dikkat Edilmeli?",
-        paragraphs: [
-          "Online pilates sırasında en önemli konu, hareketleri acele etmeden ve kontrollü şekilde uygulamaktır. Pilates hızlı tekrarlarla değil, doğru form ve farkındalıkla etkili olur.",
-          "Bu nedenle online pilates yaparken nefesi tutmamak, hareketleri görüntüden birebir kopyalamaya çalışmamak ve bedenin verdiği sinyalleri dikkate almak gerekir. Pilatesin amacı sadece hareketi tamamlamak değil, hareketi doğru hissetmektir.",
-        ],
-      },
-      {
-        heading: "Canlı Online Pilates mi, Kayıttan Ders mi Daha Uygundur?",
-        paragraphs: [
-          "Online pilates yaparken tercih edilen ders modeli de önemlidir. Canlı online pilates dersleri, özellikle yeni başlayanlar için daha yönlendirici olabilir. Eğitmenin anlık anlatımı ve düzenli ders yapısı, pilates pratiğini daha kontrollü hale getirebilir.",
-          "Kayıttan dersler ise daha esnek zaman planlaması sunar. Ancak başlangıç aşamasında canlı online pilates, temel mantığı öğrenmek ve hareketlere daha bilinçli yaklaşmak açısından genellikle daha avantajlıdır.",
-        ],
-      },
-      {
-        heading: "Online Pilates Haftada Kaç Gün Yapılmalı?",
-        paragraphs: [
-          "Online pilates yaparken önemli olan yoğunluk değil, düzenliliktir. Yeni başlayanlar için haftada iki ya da üç gün online pilates yapmak çoğu zaman iyi bir başlangıçtır.",
-          "Bu sıklık, bedenin harekete adapte olmasını ve pilates alışkanlığının gelişmesini destekler. Daha sık ders yapmak her zaman daha iyi anlamına gelmez. Pilates, istikrarlı ve sürdürülebilir bir ritimle çok daha etkili hale gelir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yaparken En Sık Hangi Hatalar Yapılır?",
-        paragraphs: [
-          "Online pilates sürecinde en sık yapılan hatalar arasında yanlış seviye seçmek, nefes kontrolünü ihmal etmek, hareketleri hızlı yapmak ve bedenin sınırlarını zorlamak yer alır. Özellikle yeni başlayanlar, hareketleri yalnızca dış görünüşüne göre değerlendirebilir.",
-          "Oysa pilatesin etkisi hareketin derinliğinde, kontrolünde ve beden farkındalığında ortaya çıkar. Bu yüzden online pilates yaparken sabırlı olmak ve temel prensipleri oturtarak ilerlemek gerekir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Evde Gerçekten Verimli Olur mu?",
-        paragraphs: [
-          "Evet, doğru şekilde planlandığında online pilates evde oldukça verimli olabilir. Düzenli yapılan pilates dersleri, kişinin bedenini daha kontrollü kullanmasına, hareket alışkanlığı kazanmasına ve egzersizi günlük hayatına daha kolay dahil etmesine yardımcı olabilir.",
-          "Online pilatesin verimi, büyük ölçüde düzenli katılım, doğru yönlendirme ve seviyeye uygun çalışma ile ilişkilidir. Yani mesele evde olmak değil, pilatesi nasıl uyguladığındır.",
-        ],
-      },
-      {
-        heading: "Sonuç: Online Pilates Nasıl Yapılır?",
-        paragraphs: [
-          "Online pilates yapmak için öncelikle seviyene uygun bir ders seçmek, kendine rahat bir alan hazırlamak ve pilatesin temel prensiplerine odaklanmak gerekir. Nefes, kontrol, tempo ve beden farkındalığı; online pilates pratiğinin merkezinde yer alır.",
-          "Düzenli ve gerçekçi bir programla ilerlediğinde online pilates, evde sürdürülebilir ve etkili bir egzersiz rutini haline gelebilir. Özellikle başlangıç aşamasında sade ama doğru adımlarla ilerlemek, pilates yolculuğunu çok daha verimli hale getirir.",
         ],
       },
     ],
@@ -1436,280 +1474,6 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Haftada kaç gün pilates yapılması gerektiği; kişinin seviyesi, yaşam temposu ve hedeflerine göre değişebilir. Ancak genel olarak pilatese yeni başlayanlar için haftada iki ya da üç gün pilates yapmak ideal bir başlangıç sunar.",
           "Online pilates sayesinde bu düzeni günlük hayata adapte etmek çok daha kolay hale gelir. Pilates pratiğinde asıl önemli olan, kısa süreli yoğunluk değil; düzenli, kontrollü ve sürdürülebilir bir ritim oluşturmaktır. Doğru planlanan bir pilates rutini, zamanla hem fiziksel hem de zihinsel olarak daha dengeli hissetmeye destek olabilir.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "canli-online-pilates-derslerinin-avantajlari",
-    title: "Canlı Online Pilates Derslerinin Avantajları",
-    excerpt:
-      "Canlı online pilates derslerinin anlık yönlendirme, eğitmen takibi, motivasyon ve esneklik açısından sunduğu avantajları keşfedin.",
-    description:
-      "Canlı online pilates derslerinin avantajlarını keşfedin. Online pilates ile anlık eğitmen takibi, doğru yönlendirme ve düzenli pilates rutini oluşturmanın faydalarını öğrenin.",
-    publishedAt: "2026-04-11",
-    readingTime: "5 dk",
-    category: "Online Dersler",
-    content: [
-      {
-        paragraphs: [
-          "Canlı online pilates dersleri, evden egzersiz yapmanın konforunu profesyonel yönlendirme ile birleştiren etkili bir yöntemdir. Özellikle düzenli hareket etmek isteyen, ancak zaman ve ulaşım açısından daha esnek bir çözüm arayan kişiler için online pilates oldukça güçlü bir alternatiftir.",
-          "Pilates ise yalnızca hareketleri tekrar etmekten ibaret olmayan; nefes, kontrol, denge ve beden farkındalığı temelli bir egzersiz sistemidir. Bu nedenle canlı online pilates dersleri, pilates pratiğini daha verimli, daha kontrollü ve daha sürdürülebilir hale getirebilir.",
-        ],
-      },
-      {
-        heading: "Canlı Online Pilates Dersleri Neden Daha Etkilidir?",
-        paragraphs: [
-          "Canlı online pilates derslerinin en önemli avantajlarından biri, anlık yönlendirme sunmasıdır. Kayıttan izlenen içeriklerde kişi hareketi yalnızca gördüğü kadar uygularken, canlı derslerde eğitmenin yönlendirmesiyle pilates egzersizleri daha bilinçli şekilde yapılabilir.",
-          "Bu da hareket kalitesini artırır ve kişinin bedenini daha doğru kullanmasına yardımcı olur. Pilates pratiğinde doğru form, nefes ve tempo önemli olduğu için canlı dersler daha etkili bir deneyim sunabilir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Derslerinde Eğitmen Takibi Neden Önemlidir?",
-        paragraphs: [
-          "Pilates yaparken dışarıdan küçük görünen detaylar, hareketin etkisini büyük ölçüde değiştirebilir. Omuzların pozisyonu, omurganın hizası, merkez bölgenin aktif kullanımı ve nefes ritmi gibi unsurlar pilatesin temelini oluşturur.",
-          "Canlı online pilates derslerinde eğitmen takibi sayesinde bu detaylara daha fazla dikkat edilir. Böylece online pilates süreci daha kontrollü ilerler ve kişi kendi bedenine daha uygun bir çalışma deneyimi yaşayabilir.",
-        ],
-      },
-      {
-        heading: "Canlı Online Pilates Motivasyonu Artırır mı?",
-        paragraphs: [
-          "Evet, canlı online pilates dersleri motivasyonu artırabilir. Belirli bir gün ve saatte derse katılmak, kişinin pilates rutinini daha düzenli hale getirmesine destek olur.",
-          "Evde tek başına egzersiz yaparken süreklilik sağlamak bazen zor olabilir. Ancak canlı online pilates dersleri, bir program duygusu oluşturduğu için düzenli katılımı kolaylaştırabilir. Bu da pilatesin uzun vadede bir alışkanlığa dönüşmesine katkı sağlar.",
-        ],
-      },
-      {
-        heading: "Online Pilates ile Zaman ve Mekân Esnekliği Sağlanır",
-        paragraphs: [
-          "Canlı online pilates derslerinin bir diğer önemli avantajı, zamandan tasarruf sağlamasıdır. Stüdyoya gitmek için ekstra zaman ayırmadan, bulunduğun ortamdan pilates yapabilmek büyük bir kolaylık sunar.",
-          "Özellikle yoğun çalışanlar, anneler ve günlük temposu yüksek olan kişiler için online pilates bu yönüyle oldukça pratiktir. Pilates derslerine evden katılabilmek, hem sürekliliği artırır hem de egzersizi hayatın doğal bir parçası haline getirmeyi kolaylaştırır.",
-        ],
-      },
-      {
-        heading: "Canlı Online Pilates Dersleri Hangi Seviyeler İçin Uygundur?",
-        paragraphs: [
-          "Canlı online pilates dersleri hem yeni başlayanlar hem de pilates pratiğini düzenli hale getirmek isteyenler için uygundur. Başlangıç seviyesinde olan kişiler, temel hareketleri daha kontrollü öğrenebilir. Daha önce pilates deneyimi olanlar ise mevcut pratiğini daha disiplinli şekilde sürdürebilir.",
-          "Online pilates derslerinin canlı olması, farklı seviyelere uygun alternatiflerin sunulmasını da kolaylaştırır. Bu sayede pilates herkes için daha erişilebilir hale gelir.",
-        ],
-      },
-      {
-        heading: "Canlı Online Pilates Derslerinin En Büyük Avantajı Nedir?",
-        paragraphs: [
-          "Canlı online pilates derslerinin en büyük avantajı, ev konforunda birebir yönlendirme hissi sunmasıdır. Kişi hem online pilatesin esnekliğinden yararlanır hem de canlı dersin getirdiği dikkat, takip ve düzen avantajını yaşar.",
-          "Bu birleşim, pilatesi yalnızca yapılması gereken bir egzersiz olmaktan çıkarıp daha bilinçli ve keyifli bir rutine dönüştürebilir.",
-        ],
-      },
-      {
-        heading: "Sonuç: Canlı Online Pilates Dersleri Kimler İçin İyi Bir Seçenektir?",
-        paragraphs: [
-          "Canlı online pilates dersleri; düzenli egzersiz alışkanlığı kazanmak isteyenler, evden spor yapmayı tercih edenler, hareketlerini daha kontrollü uygulamak isteyenler ve pilates pratiğinde profesyonel yönlendirme arayanlar için oldukça iyi bir seçenektir.",
-          "Pilatesin temel prensiplerini daha doğru uygulamak, motivasyonu korumak ve sürdürülebilir bir rutin oluşturmak açısından online pilates dersleri güçlü bir destek sunar. Bu nedenle canlı online pilates, günümüz yaşam temposuna uyum sağlayan etkili ve erişilebilir bir egzersiz çözümü olarak öne çıkar.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "online-pilatesin-faydalari-nelerdir",
-    title: "Online Pilatesin Faydaları Nelerdir?",
-    excerpt:
-      "Online pilatesin beden farkındalığı, duruş, esneklik ve düzenli hareket alışkanlığı üzerindeki etkilerini keşfedin.",
-    description:
-      "Online pilatesin faydaları nelerdir? Pilates ile duruşunu destekle, esnekliğini artır, beden farkındalığını geliştir ve düzenli hareket alışkanlığı kazan.",
-    publishedAt: "2026-04-11",
-    readingTime: "5 dk",
-    category: "Faydalar",
-    content: [
-      {
-        paragraphs: [
-          "Online pilates, hem bedensel hem zihinsel olarak daha dengeli hissetmek isteyenler için etkili ve sürdürülebilir bir egzersiz yöntemidir. Özellikle yoğun günlük tempo içinde düzenli hareket etmeye zaman ayırmakta zorlanan kişiler için online pilates, erişilebilir ve pratik bir çözüm sunar.",
-          "Pilates ise yalnızca belirli kas gruplarını çalıştıran bir egzersiz sistemi değil; nefes, denge, kontrol, esneklik ve beden farkındalığını birlikte geliştiren bütüncül bir yaklaşımdır. Bu nedenle online pilatesin faydaları, yalnızca fiziksel görünümle sınırlı kalmaz; duruş kalitesinden hareket kontrolüne kadar birçok alanda hissedilebilir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Beden Farkındalığını Artırır",
-        paragraphs: [
-          "Online pilatesin en önemli faydalarından biri, beden farkındalığını geliştirmesidir. Pilates sırasında hareketlerin nasıl yapıldığı, hangi kasların devrede olduğu ve nefesin nasıl kullanıldığı daha bilinçli şekilde takip edilir.",
-          "Bu süreç, kişinin bedenini daha kontrollü kullanmasına yardımcı olur. Düzenli pilates pratiği, günlük yaşam içinde duruşu, oturuşu ve genel hareket kalitesini fark etmeyi kolaylaştırabilir.",
-        ],
-      },
-      {
-        heading: "Pilates Duruşu ve Merkez Bölge Gücünü Destekler",
-        paragraphs: [
-          "Pilates, özellikle merkez bölge olarak adlandırılan core kaslarının daha aktif kullanılmasını destekler. Bu da gövde kontrolünün gelişmesine ve daha dengeli bir duruş hissine katkı sağlayabilir.",
-          "Uzun süre masa başında çalışanlar, gün içinde hareketsiz kalanlar ve omurga çevresindeki kaslarını daha bilinçli çalıştırmak isteyenler için online pilates oldukça faydalı olabilir. Düzenli pilates çalışmaları, bedeni daha dengeli taşımayı ve hareket ederken daha kontrollü hissetmeyi destekler.",
-        ],
-      },
-      {
-        heading: "Online Pilates Esnekliği ve Hareket Kalitesini Geliştirir",
-        paragraphs: [
-          "Online pilatesin faydaları arasında esneklik ve hareket akışının gelişmesi de önemli bir yer tutar. Pilates egzersizleri, bedeni zorlamadan kontrollü bir şekilde çalıştırmayı hedefler.",
-          "Bu sayede kişi zamanla daha rahat hareket edebilir, günlük yaşam içindeki sertlik hissini azaltabilir ve eklem hareket açıklığını daha verimli kullanabilir. Pilatesin düzenli uygulanması, hareketlerin kalitesini artıran güçlü bir destek sunar.",
-        ],
-      },
-      {
-        heading: "Nefes ve Konsantrasyon Üzerinde Olumlu Etki Sağlar",
-        paragraphs: [
-          "Pilatesin temel prensiplerinden biri doğru nefes kullanımıdır. Bu nedenle online pilates, sadece fiziksel değil zihinsel anlamda da destekleyici olabilir.",
-          "Hareketlerle birlikte nefesi kontrollü kullanmak, odaklanmayı artırabilir ve egzersiz süresince kişinin anda kalmasına yardımcı olabilir. Pilates pratiği sırasında gelişen bu dikkat ve nefes farkındalığı, günlük yaşamın temposu içinde daha dengeli hissetmeye katkı sağlayabilir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Düzenli Hareket Alışkanlığı Kazandırır",
-        paragraphs: [
-          "Online pilatesin en güçlü avantajlarından biri, egzersizi hayatın içine daha kolay dahil edebilmesidir. Evden katılım imkânı sayesinde zaman planlaması daha rahat yapılabilir ve bu durum düzenli spor alışkanlığı oluşturmayı kolaylaştırır.",
-          "Pilatesin sürdürülebilir olması, uzun vadede faydalarının daha net hissedilmesini sağlar. Bu yönüyle online pilates, yoğun çalışanlar, evden spor yapmak isteyenler ve kendi rutinini oluşturmak isteyen kişiler için oldukça uygun bir seçenektir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Kimler İçin Faydalıdır?",
-        paragraphs: [
-          "Online pilates; yeni başlayanlar, masa başı çalışanlar, evde spor yapmayı tercih edenler ve bedeniyle daha güçlü bir bağ kurmak isteyen herkes için faydalı olabilir.",
-          "Pilatesin farklı seviyelere uyarlanabilen yapısı sayesinde kişi kendi temposuna uygun şekilde ilerleyebilir. Bu da online pilatesi hem erişilebilir hem de sürdürülebilir bir egzersiz modeli haline getirir.",
-        ],
-      },
-      {
-        heading: "Sonuç: Online Pilatesin Faydaları Neden Bu Kadar Önemlidir?",
-        paragraphs: [
-          "Online pilatesin faydaları; beden farkındalığını artırması, duruşu desteklemesi, esnekliği geliştirmesi, nefes kontrolünü güçlendirmesi ve düzenli hareket alışkanlığı kazandırmasıyla öne çıkar.",
-          "Pilates, bedeni sadece çalıştırmak değil, daha bilinçli kullanmayı öğrenmek isteyenler için güçlü bir egzersiz sistemidir. Bu nedenle online pilates, günümüz yaşam temposuna uyum sağlayan, erişilebilir ve etkili bir destek olarak öne çıkar.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "online-pilatese-yeni-baslayanlar-icin-rehber",
-    title: "Online Pilatese Yeni Başlayanlar İçin Rehber",
-    excerpt:
-      "Online pilatese yeni başlayanlar için temel ipuçlarını, pilatese başlarken dikkat edilmesi gerekenleri ve sürdürülebilir bir başlangıç için önemli noktaları keşfedin.",
-    description:
-      "Online pilatese yeni başlayanlar için rehber. Pilatese nasıl başlanır, nelere dikkat edilir ve online pilates süreci nasıl daha verimli hale gelir keşfedin.",
-    publishedAt: "2026-04-11",
-    readingTime: "6 dk",
-    category: "Baslangic",
-    content: [
-      {
-        paragraphs: [
-          "Online pilates, egzersize dengeli ve kontrollü bir başlangıç yapmak isteyenler için oldukça uygun bir yöntemdir. Özellikle evden spor yapmayı tercih edenler, yoğun günlük tempo içinde düzenli hareket etmek isteyenler ve pilates ile beden farkındalığını geliştirmeyi hedefleyenler için online pilates güçlü bir başlangıç sunar.",
-          "Pilates; duruş, nefes, denge, kontrol ve merkez bölge aktivasyonu üzerine kurulu bir egzersiz sistemidir. Bu nedenle pilatese yeni başlayan kişiler için önemli olan, hızlı ilerlemekten çok doğru temelle başlamaktır.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yeni Başlayanlar İçin Uygun mudur?",
-        paragraphs: [
-          "Evet, online pilates yeni başlayanlar için oldukça uygundur. Çünkü pilates egzersizleri kişinin seviyesine göre uyarlanabilir ve kontrollü şekilde ilerletilebilir. Daha önce düzenli egzersiz yapmamış olan kişiler bile, uygun yönlendirme ile pilatesin temel prensiplerini öğrenebilir.",
-          "Özellikle başlangıç seviyesinde hazırlanan online pilates dersleri, hareketleri tanımayı, bedeni dinlemeyi ve doğru form geliştirmeyi kolaylaştırır. Bu da pilatese daha güvenli ve sürdürülebilir bir şekilde başlamaya yardımcı olur.",
-        ],
-      },
-      {
-        heading: "Pilatese Başlarken Nelere Dikkat Edilmeli?",
-        paragraphs: [
-          "Pilatese başlarken en önemli noktalardan biri, hareketleri sadece yapmak için değil doğru hissetmek için uygulamaktır. Pilates pratiğinde nefes kontrolü, ritim, merkez bölge aktivasyonu ve omurga farkındalığı büyük önem taşır.",
-          "Bu nedenle yeni başlayan biri için tüm hareketleri eksiksiz yapmak yerine, temel akışı anlayarak ilerlemek çok daha değerlidir. Pilatesin verimli olması için bedenin verdiği sinyalleri dikkate almak ve kendi seviyene uygun bir tempoda devam etmek gerekir.",
-        ],
-      },
-      {
-        heading: "Online Pilates İçin Ekipman Gerekir mi?",
-        paragraphs: [
-          "Online pilatese başlamak için çoğu zaman büyük ekipmanlara ihtiyaç yoktur. Rahat hareket edilebilecek bir alan ve bir egzersiz matı, başlangıç için genellikle yeterlidir.",
-          "Bazı pilates derslerinde küçük destekleyici ekipmanlar kullanılabilir; ancak yeni başlayanlar için esas önemli olan ekipmandan çok doğru yönlendirme ve düzenli pratiktir. Bu yüzden online pilates, erişilebilir ve pratik bir egzersiz modeli olarak öne çıkar.",
-        ],
-      },
-      {
-        heading: "Haftada Kaç Gün Pilates Yapılmalı?",
-        paragraphs: [
-          "Yeni başlayanlar için pilates rutini oluştururken önemli olan yoğunluk değil, düzenliliktir. Haftada iki ya da üç gün yapılan online pilates dersleri, bedenin hareket sistemine adapte olması ve pilates alışkanlığının gelişmesi için iyi bir başlangıç olabilir.",
-          "Düzenli pilates pratiği, zamanla beden farkındalığını artırır ve hareketlerin daha kontrollü uygulanmasını kolaylaştırır. Başlangıç aşamasında sürdürülebilir bir program oluşturmak, kısa sürede çok yoğun çalışmaktan daha etkilidir.",
-        ],
-      },
-      {
-        heading: "Yeni Başlayanlar En Sık Hangi Hataları Yapar?",
-        paragraphs: [
-          "Pilatese yeni başlayanlar en sık olarak hareketleri hızla tamamlama, nefesi ihmal etme ve seviyelerinin üzerinde egzersizlere yönelme hatasına düşebilir. Oysa pilatesin temelinde kontrol ve farkındalık vardır.",
-          "Hareketleri daha zor yapmak ya da daha hızlı ilerlemek, daha iyi sonuç almak anlamına gelmez. Özellikle online pilates sürecinde kişinin kendi bedenini tanıması, temel hareket kalitesine odaklanması ve gerektiğinde daha sade varyasyonlarla ilerlemesi çok daha sağlıklı bir gelişim sağlar.",
-        ],
-      },
-      {
-        heading: "Online Pilates Dersleri Neden İyi Bir Başlangıç Sunar?",
-        paragraphs: [
-          "Online pilates dersleri, özellikle başlangıç aşamasında düzen kurmayı kolaylaştırır. Kişi kendi alanında, zaman kaybetmeden ve günlük hayatına daha kolay uyum sağlayacak şekilde pilates yapabilir.",
-          "Ayrıca canlı online pilates dersleri, hareketlerin daha kontrollü uygulanmasına ve kişiye uygun alternatiflerle ilerlenmesine destek olur. Bu da yeni başlayan biri için hem motivasyon hem de sürdürülebilirlik açısından önemli bir avantaj yaratır.",
-        ],
-      },
-      {
-        heading: "Sonuç: Online Pilatese Başlamak İçin Doğru Zaman Ne Zaman?",
-        paragraphs: [
-          "Online pilatese başlamak için kusursuz bir zaman beklemek gerekmez. Düzenli hareket etmek, bedenini daha bilinçli kullanmak ve pilates ile güçlü bir temel oluşturmak isteyen herkes için doğru zaman, sürdürülebilir bir başlangıç yapabildiği zamandır.",
-          "Online pilates; yeni başlayanlara erişilebilir, kontrollü ve dengeli bir egzersiz deneyimi sunar. Doğru yönlendirme ve uygun seviye ile pilates, kısa vadeli bir hedeften çok uzun vadeli bir yaşam alışkanlığına dönüşebilir.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "online-pilates-kimler-icin-uygundur",
-    title: "Online Pilates Kimler İçin Uygundur?",
-    excerpt:
-      "Online pilatesin yeni başlayanlardan yoğun çalışanlara kadar kimler için uygun olduğunu ve günlük hayata nasıl kolayca uyum sağladığını keşfedin.",
-    description:
-      "Online pilates kimler için uygundur? Yeni başlayanlardan yoğun çalışanlara kadar pilatesin kimlere hitap ettiğini ve online pilatesin avantajlarını keşfedin.",
-    publishedAt: "2026-04-10",
-    readingTime: "6 dk",
-    category: "Baslangic",
-    content: [
-      {
-        paragraphs: [
-          "Online Pilates, günün yoğun temposunda bedenini güçlendirmek, esnekliğini artırmak ve daha dengeli bir yaşam rutini oluşturmak isteyen herkes için uygun bir egzersiz modelidir. Özellikle evden spor yapmayı tercih edenler, zamandan tasarruf etmek isteyenler ve düzenli hareket etmeyi hayatının bir parçası haline getirmek isteyenler için online pilates oldukça güçlü bir seçenektir.",
-          "Pilates ise sadece fiziksel görünümü destekleyen bir sistem değil; duruş, denge, nefes ve beden farkındalığı üzerinde de etkili bir egzersiz yaklaşımıdır.",
-        ],
-      },
-      {
-        heading: "Online Pilates Yeni Başlayanlar İçin Uygun mudur?",
-        paragraphs: [
-          "Evet, online pilates yeni başlayanlar için oldukça uygundur. Daha önce hiç pilates yapmamış kişiler, kendi seviyelerine uygun derslerle temel hareketleri öğrenebilir ve bedenlerini kontrollü şekilde çalıştırmaya başlayabilir.",
-          "Pilatesin en önemli avantajlarından biri, hareketlerin farklı seviyelere göre uyarlanabilmesidir. Bu nedenle online pilates, spora sıfırdan başlamak isteyen kişiler için güvenli ve sürdürülebilir bir başlangıç sunar.",
-        ],
-      },
-      {
-        heading: "Yoğun Çalışanlar İçin Online Pilates Neden Avantajlıdır?",
-        paragraphs: [
-          "Yoğun iş temposu içinde stüdyoya gitmek için zaman ayırmak her zaman kolay olmayabilir. Online pilates, bu noktada büyük bir kolaylık sağlar. Evden, ofisten ya da uygun olunan herhangi bir ortamdan pilates yapabilmek; düzenli egzersiz alışkanlığını korumayı çok daha mümkün hale getirir.",
-          "Özellikle masa başında çalışan, uzun saatler oturan ve gün içinde boyun, sırt veya bel bölgesinde gerginlik hisseden kişiler için pilates önemli bir destek sunabilir.",
-        ],
-      },
-      {
-        heading: "Evde Spor Yapmak İsteyenler İçin Pilates Doğru Bir Tercih midir?",
-        paragraphs: [
-          "Evde spor yapmak isteyenler için pilates en doğru egzersiz seçeneklerinden biridir. Çünkü pilates, büyük ekipmanlara ihtiyaç duymadan da uygulanabilir. Uygun bir alan, bir mat ve doğru yönlendirme ile online pilates dersleri oldukça verimli şekilde gerçekleştirilebilir.",
-          "Bu durum, online pilatesi hem pratik hem de erişilebilir hale getirir. Düzenli pilates yapan kişiler, zaman içinde beden kontrolü, esneklik ve duruş kalitesinde gelişim fark edebilir.",
-        ],
-      },
-      {
-        heading: "Online Pilates Kimlere Özellikle Hitap Eder?",
-        paragraphs: [
-          "Online pilates özellikle şu kişiler için uygundur:",
-          "Pilates, her yaşta ve farklı yaşam temposunda olan bireylere hitap edebilen bir egzersiz sistemidir. Bu nedenle online pilates, yalnızca fit görünmek isteyenler için değil; bedeniyle daha güçlü ve dengeli bir bağ kurmak isteyen herkes için uygundur.",
-        ],
-        bullets: [
-          "Pilatese başlamak isteyenler",
-          "Evden spor yapmayı tercih edenler",
-          "Yoğun çalışma temposuna sahip olanlar",
-          "Duruşunu desteklemek isteyenler",
-          "Bedensel esnekliğini artırmayı hedefleyenler",
-          "Core bölgesini güçlendirmek isteyenler",
-          "Düzenli ve sürdürülebilir bir egzersiz rutini arayanlar",
-        ],
-      },
-      {
-        heading: "Online Pilatesin En Büyük Avantajları Nelerdir?",
-        paragraphs: [
-          "Online pilatesin en büyük avantajı, zamandan ve mekândan bağımsız olarak pilates yapma fırsatı sunmasıdır. Kişi kendi programına uygun saatlerde ders planlayabilir ve bu sayede egzersizi günlük hayatına daha kolay adapte edebilir.",
-          "Ayrıca pilatesin düzenli yapılması, hareket disiplininin oluşmasına yardımcı olur. Ev konforunda pilates yapmak, birçok kişi için daha rahat ve sürdürülebilir bir deneyim yaratır.",
-        ],
-      },
-      {
-        heading: "Sonuç: Online Pilates Kimler İçin Uygundur?",
-        paragraphs: [
-          "Online pilates; yeni başlayanlar, yoğun çalışanlar, evde spor yapmak isteyenler, düzenli hareket etmeyi hedefleyenler ve bedenini güçlendirmek isteyen herkes için uygundur.",
-          "Pilates, bedeni daha kontrollü kullanmayı, duruşu desteklemeyi ve hareket kalitesini artırmayı hedefleyen etkili bir egzersiz sistemidir. Bu nedenle online pilates, günümüz yaşam tarzına uyum sağlayan en erişilebilir ve verimli egzersiz seçeneklerinden biri olarak öne çıkar.",
         ],
       },
     ],
@@ -2414,64 +2178,26 @@ export function getBlogPostsForListing(): BlogPost[] {
 
 const relatedPostsMap: Record<string, string[]> = {
   "online-pilates-nedir-rehber": [
-    "online-pilates-kimler-icin-uygundur",
-    "online-pilatesin-faydalari-nelerdir",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
-    "online-pilates-nasil-yapilir",
-  ],
-  "online-pilates-kimler-icin-uygundur": [
-    "online-pilates-nedir-rehber",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
-    "online-pilatesin-faydalari-nelerdir",
-    "canli-online-pilates-derslerinin-avantajlari",
-  ],
-  "online-pilatesin-faydalari-nelerdir": [
-    "online-pilates-nedir-rehber",
-    "online-pilates-kimler-icin-uygundur",
-    "canli-online-pilates-derslerinin-avantajlari",
-    "pilatesin-vucuda-faydalari-nelerdir",
-  ],
-  "online-pilatese-yeni-baslayanlar-icin-rehber": [
-    "online-pilates-nedir-rehber",
-    "online-pilates-nasil-yapilir",
     "online-pilates-dersleri-nasil-gecer",
-    "evde-pilates-yaparken-en-sik-yapilan-hatalar",
-  ],
-  "online-pilates-nasil-yapilir": [
-    "online-pilates-nedir-rehber",
+    "online-pilates-mi-yuz-yuze-pilates-mi",
     "evde-pilates-icin-neler-gerekir",
-    "online-pilates-dersleri-nasil-gecer",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
   ],
   "evde-pilates-icin-neler-gerekir": [
-    "evde-pilates-icin-neler-gerekir",
     "online-pilates-nedir-rehber",
-    "online-pilates-nasil-yapilir",
     "evde-pilates-yaparken-en-sik-yapilan-hatalar",
   ],
   "online-pilates-mi-yuz-yuze-pilates-mi": [
     "online-pilates-nedir-rehber",
-    "online-pilates-kimler-icin-uygundur",
-    "canli-online-pilates-derslerinin-avantajlari",
     "online-pilates-dersleri-nasil-gecer",
   ],
   "online-pilates-dersleri-nasil-gecer": [
     "online-pilates-nedir-rehber",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
-    "canli-online-pilates-derslerinin-avantajlari",
-    "online-pilates-nasil-yapilir",
-  ],
-  "canli-online-pilates-derslerinin-avantajlari": [
-    "online-pilates-nedir-rehber",
-    "online-pilates-dersleri-nasil-gecer",
     "online-pilates-mi-yuz-yuze-pilates-mi",
-    "online-pilatesin-faydalari-nelerdir",
+    "evde-pilates-icin-neler-gerekir",
   ],
   "evde-pilates-yaparken-en-sik-yapilan-hatalar": [
     "evde-pilates-icin-neler-gerekir",
     "online-pilates-nedir-rehber",
-    "online-pilates-nasil-yapilir",
-    "evde-pilates-icin-neler-gerekir",
   ],
   "pilates-nedir": [
     "pilates-nedir-ne-ise-yarar",
@@ -2503,7 +2229,6 @@ const relatedPostsMap: Record<string, string[]> = {
     "pilatese-yeni-baslayanlar-icin-bilinmesi-gerekenler",
     "haftada-kac-gun-pilates-yapilmali",
     "pilates-haftada-2-gun-yeterli-mi",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
     "online-pilates-nedir-rehber",
   ],
   "haftada-kac-gun-pilates-yapilmali": [
@@ -2550,7 +2275,6 @@ const relatedPostsMap: Record<string, string[]> = {
     "evde-pilates-icin-neler-gerekir",
     "reformer-pilates-nedir",
     "reformer-pilates-mi-mat-pilates-mi",
-    "evde-pilates-icin-neler-gerekir",
     "pilates-nedir-ne-ise-yarar",
   ],
   "reformer-pilates-mi-mat-pilates-mi": [
@@ -2563,7 +2287,7 @@ const relatedPostsMap: Record<string, string[]> = {
     "pilates-durusu-duzeltir-mi",
     "pilatesin-vucuda-faydalari-nelerdir",
     "haftada-kac-gun-pilates-yapilmali",
-    "online-pilatesin-faydalari-nelerdir",
+    "online-pilates-nedir-rehber",
   ],
   "pilates-durusu-duzeltir-mi": [
     "pilates-nedir-ne-ise-yarar",
@@ -2582,15 +2306,9 @@ const relatedPostsMap: Record<string, string[]> = {
 
 const hubPostsMap: Record<string, string[]> = {
   "online-pilates-nedir-rehber": [
-    "online-pilates-kimler-icin-uygundur",
-    "online-pilatesin-faydalari-nelerdir",
-    "online-pilatese-yeni-baslayanlar-icin-rehber",
-    "online-pilates-nasil-yapilir",
-    "evde-pilates-icin-neler-gerekir",
     "evde-pilates-icin-neler-gerekir",
     "online-pilates-mi-yuz-yuze-pilates-mi",
     "online-pilates-dersleri-nasil-gecer",
-    "canli-online-pilates-derslerinin-avantajlari",
     "evde-pilates-yaparken-en-sik-yapilan-hatalar",
     "haftada-kac-gun-pilates-yapilmali",
     "masa-basi-calisanlar-icin-pilates-rutini",
@@ -2614,128 +2332,18 @@ export function getHubPosts(slug: string): BlogPost[] {
 const inContentLinksMap: Record<string, BlogInlineLink[]> = {
   "online-pilates-nedir-rehber": [
     {
-      lead: "Öncelikle ",
-      anchor: "online pilates kimler için uygundur",
-      slug: "online-pilates-kimler-icin-uygundur",
-      tail: " sorusuna doğru cevap vermek, doğru başlangıç için önemlidir.",
-    },
-    {
-      lead: "Düzenli pratiğin sağlayabileceği katkıları daha detaylı görmek istersen ",
-      anchor: "online pilatesin faydaları",
-      slug: "online-pilatesin-faydalari-nelerdir",
-      tail: " yazısına göz atabilirsin.",
-    },
-    {
-      lead: "İlk kez başlayacaksan ",
-      anchor: "online pilatese yeni başlayanlar için rehber",
-      slug: "online-pilatese-yeni-baslayanlar-icin-rehber",
-      tail: " içeriği sana iyi bir başlangıç sunar.",
-    },
-    {
       lead: "Başlamadan önce ",
       anchor: "evde pilates için neler gerekir",
       slug: "evde-pilates-icin-neler-gerekir",
       tail: " sorusunun cevabını bilmek faydalıdır.",
     },
   ],
-  "online-pilates-kimler-icin-uygundur": [
-    {
-      lead: "Konuya daha geniş açıdan bakmak istersen ",
-      anchor: "online pilates hakkında kapsamlı bilgi",
-      slug: "online-pilates-nedir-rehber",
-      tail: " içeren rehbere göz atabilirsin.",
-    },
-    {
-      lead: "İlk kez başlamak isteyenler için ",
-      anchor: "online pilatese yeni başlayanlar için rehber",
-      slug: "online-pilatese-yeni-baslayanlar-icin-rehber",
-      tail: " yazısı da faydalı olacaktır.",
-    },
-    {
-      lead: "Bu yöntemin sağladığı katkıları daha detaylı incelemek için ",
-      anchor: "online pilatesin faydaları",
-      slug: "online-pilatesin-faydalari-nelerdir",
-      tail: " içeriğini okuyabilirsin.",
-    },
-  ],
-  "online-pilatesin-faydalari-nelerdir": [
-    {
-      lead: "Henüz bu yönteme yeniysen önce ",
-      anchor: "online pilates nedir",
-      slug: "online-pilates-nedir-rehber",
-      tail: " rehberini inceleyebilirsin.",
-    },
-    {
-      lead: "Bu modelin sana uygun olup olmadığını anlamak için ",
-      anchor: "online pilates kimler için uygundur",
-      slug: "online-pilates-kimler-icin-uygundur",
-      tail: " yazısı da yardımcı olur.",
-    },
-    {
-      lead: "Özellikle gün boyu oturan biriysen ",
-      anchor: "masa başı çalışanlar için pilates rutini",
-      slug: "masa-basi-calisanlar-icin-pilates-rutini",
-      tail: " içeriği senin için daha ilgili olabilir.",
-    },
-  ],
-  "online-pilatese-yeni-baslayanlar-icin-rehber": [
-    {
-      lead: "Temel yapıyı anlamak için önce ",
-      anchor: "online pilates nedir",
-      slug: "online-pilates-nedir-rehber",
-      tail: " rehberine bakabilirsin.",
-    },
-    {
-      lead: "Pratik olarak sürecin nasıl ilerlediğini görmek için ",
-      anchor: "online pilates nasıl yapılır",
-      slug: "online-pilates-nasil-yapilir",
-      tail: " yazısı faydalıdır.",
-    },
-    {
-      lead: "Evden başlamak isteyenler için ",
-      anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-icin-neler-gerekir",
-      tail: " yazısı da süreci kolaylaştırır.",
-    },
-  ],
-  "online-pilates-nasil-yapilir": [
-    {
-      lead: "Daha geniş çerçeveyi görmek için önce ",
-      anchor: "online pilates nedir",
-      slug: "online-pilates-nedir-rehber",
-      tail: " rehberine bakabilirsin.",
-    },
-    {
-      lead: "Evde başlamanın temel adımlarını görmek için ",
-      anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-icin-neler-gerekir",
-      tail: " içeriğini de inceleyebilirsin.",
-    },
-    {
-      lead: "İlk ders deneyimini merak ediyorsan ",
-      anchor: "online pilates dersleri nasıl geçer",
-      slug: "online-pilates-dersleri-nasil-gecer",
-      tail: " içeriği sana yardımcı olur.",
-    },
-  ],
   "evde-pilates-icin-neler-gerekir": [
-    {
-      lead: "Evde pilatese genel bir başlangıç yapmak istersen önce ",
-      anchor: "evde pilates nedir, nasıl başlanır",
-      slug: "evde-pilates-icin-neler-gerekir",
-      tail: " yazısını okuyabilirsin.",
-    },
     {
       lead: "Konuya daha geniş açıdan bakmak istersen ",
       anchor: "online pilates nedir",
       slug: "online-pilates-nedir-rehber",
       tail: " rehberini de inceleyebilirsin.",
-    },
-    {
-      lead: "Kurulumu yaptıktan sonra sıradaki adım doğal olarak ",
-      anchor: "online pilates nasıl yapılır",
-      slug: "online-pilates-nasil-yapilir",
-      tail: " sorusudur.",
     },
     {
       lead: "Yanlış başlangıç yapmamak için ",
@@ -2752,12 +2360,6 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       tail: " rehberi okunabilir.",
     },
     {
-      lead: "Kendin için doğru modeli seçmeden önce ",
-      anchor: "online pilates kimler için uygundur",
-      slug: "online-pilates-kimler-icin-uygundur",
-      tail: " yazısı da fikir verebilir.",
-    },
-    {
       lead: "Deneyimin nasıl olduğunu merak ediyorsan ",
       anchor: "online pilates dersleri nasıl geçer",
       slug: "online-pilates-dersleri-nasil-gecer",
@@ -2772,36 +2374,10 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       tail: " rehberine göz atabilirsin.",
     },
     {
-      lead: "İlk kez katılacaksan ",
-      anchor: "online pilatese yeni başlayanlar için rehber",
-      slug: "online-pilatese-yeni-baslayanlar-icin-rehber",
-      tail: " yazısı süreci kolaylaştırır.",
-    },
-    {
       lead: "Ders öncesi hazırlık için ",
       anchor: "evde pilates için neler gerekir",
       slug: "evde-pilates-icin-neler-gerekir",
       tail: " içeriği de faydalı olur.",
-    },
-  ],
-  "canli-online-pilates-derslerinin-avantajlari": [
-    {
-      lead: "Önce genel çerçeveyi anlamak için ",
-      anchor: "online pilates nedir",
-      slug: "online-pilates-nedir-rehber",
-      tail: " rehberine bakabilirsin.",
-    },
-    {
-      lead: "Canlı ders deneyiminin akışını merak edenler için ",
-      anchor: "online pilates dersleri nasıl geçer",
-      slug: "online-pilates-dersleri-nasil-gecer",
-      tail: " yazısı da faydalıdır.",
-    },
-    {
-      lead: "Karar aşamasındaysan ",
-      anchor: "online pilates mi yüz yüze pilates mi",
-      slug: "online-pilates-mi-yuz-yuze-pilates-mi",
-      tail: " karşılaştırması yardımcı olabilir.",
     },
   ],
   "evde-pilates-yaparken-en-sik-yapilan-hatalar": [
@@ -2810,12 +2386,6 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       anchor: "online pilates nedir",
       slug: "online-pilates-nedir-rehber",
       tail: " rehberini incelemek faydalıdır.",
-    },
-    {
-      lead: "Doğru başlangıç için ",
-      anchor: "online pilates nasıl yapılır",
-      slug: "online-pilates-nasil-yapilir",
-      tail: " yazısı da okunabilir.",
     },
     {
       lead: "Programı çok sık kurmak yerine önce ",
@@ -3067,7 +2637,7 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
     },
     {
       lead: "Evde yönlendirmeli ve sürdürülebilir bir rutin kurmak isterseniz ",
-      anchor: "Online Pilates: Evde Başlamak İçin Kapsamlı Rehber",
+      anchor: "Online Pilates: Nedir, Kimler İçin Uygundur, Nasıl Başlanır?",
       slug: "online-pilates-nedir-rehber",
       tail: " bağlantısını inceleyebilirsiniz.",
     },
@@ -3200,12 +2770,6 @@ const inContentLinksMap: Record<string, BlogInlineLink[]> = {
       anchor: "Pilates Nedir, Ne İşe Yarar?",
       slug: "pilates-nedir-ne-ise-yarar",
       tail: " yazısını da okuyabilirsiniz.",
-    },
-    {
-      lead: "Pratik hazırlık tarafında ",
-      anchor: "Evde Pilates İçin Neler Gerekir? Başlangıç Rehberi",
-      slug: "evde-pilates-icin-neler-gerekir",
-      tail: " bağlantısı faydalı olur.",
     },
   ],
   "reformer-pilates-mi-mat-pilates-mi": [
