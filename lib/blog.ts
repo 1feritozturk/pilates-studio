@@ -10,6 +10,14 @@ export type BlogPost = {
   excerpt: string;
   description: string;
   publishedAt: string;
+  /**
+   * Yazı esaslı biçimde güncellendiğinde (birleştirme, kapsamlı genişletme)
+   * buraya ISO tarih yazılır. Sitemap lastmod ve Article dateModified bu
+   * değeri kullanır; olmadığında publishedAt'e düşer. Bu alan olmadan
+   * güncellenen yazılar Google'a "değişmedi" sinyali verir ve yeniden
+   * taranmaz.
+   */
+  updatedAt?: string;
   readingTime: string;
   category: string;
   content: BlogSection[];
@@ -754,6 +762,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Evde pilates nedir, nasıl başlanır ve neler gerekir? Mat seçimi, uygun alan, kıyafet, ekipman ve haftalık plan ile evde pilatese başlamanın tüm adımları.",
     publishedAt: "2026-04-13",
+    updatedAt: "2026-09-12",
     readingTime: "11 dk",
     category: "Evde Pilates",
     faqs: [
@@ -1707,116 +1716,313 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "evde-pilates-yaparken-en-sik-yapilan-hatalar",
-    title: "Evde Pilates Yaparken En Sık Yapılan Hatalar",
+    title: "Evde Pilates Yaparken En Sık Yapılan 10 Hata ve Çözümleri",
     excerpt:
-      "Evde pilates yaparken yapılan temel hataları, hareket kalitesini düşüren alışkanlıkları ve daha verimli bir pilates deneyimi için dikkat edilmesi gerekenleri keşfedin.",
+      "Evde pilates yaparken en sık yapılan hataları tek tek ele alıyoruz: nefes, nötr omurga, boyun pozisyonu, tempo ve seviye seçimi. Her hatanın yanında nasıl düzeltileceği de var.",
     description:
-      "Evde pilates yaparken en sık yapılan hataları keşfedin. Nefes, hız, hareket seçimi ve online pilates desteğiyle daha verimli bir pilates deneyimi yaşayın.",
+      "Evde pilates yaparken en sık yapılan 10 hata ve her birinin çözümü: nefesi tutmak, nötr omurgayı kaybetmek, boynu zorlamak, tempoyu kaçırmak ve seviyeye uygun olmayan akış seçmek.",
     publishedAt: "2026-04-10",
-    readingTime: "5 dk",
+    updatedAt: "2026-09-13",
+    readingTime: "10 dk",
     category: "Rehber",
     content: [
       {
         paragraphs: [
-          "Evde pilates yapmak, düzenli hareket alışkanlığı kazanmak ve bedeni güçlendirmek için oldukça etkili bir yöntemdir. Ancak pilates uygulamalarında bazı temel noktaların gözden kaçırılması, egzersizin verimini azaltabilir.",
-          "Özellikle evde pilates yaparken yapılan hatalar; hareket kalitesini düşürebilir, beden farkındalığını zayıflatabilir ve gelişim sürecini yavaşlatabilir. Bu nedenle pilates pratiğinde doğru teknik, kontrollü tempo ve uygun seviye seçimi büyük önem taşır.",
+          "Evde pilates, düzenli hareket alışkanlığı kazanmanın en ulaşılabilir yollarından biri. Ancak eğitmen gözetimi olmadan çalışırken hataların fark edilmesi zordur: hareket aynada doğru görünebilir, buna rağmen içeride çalışması gereken kaslar hiç devreye girmemiş olabilir. Bu durumda haftalarca düzenli çalışıldığı halde beklenen ilerleme görülmez.",
+          "Aşağıda evde pilates yapanlarda en sık karşılaşılan on hatayı, her birinin neden sorun oluşturduğunu ve pratikte nasıl düzeltileceğini tek tek ele alıyoruz.",
         ],
       },
       {
-        heading: "Hareketi Sadece Görüntüden Kopyalamak",
+        heading: "1. Hareketi Sadece Ekrandan Kopyalamak",
         paragraphs: [
-          "Evde pilates yaparken en sık yapılan hatalardan biri, hareketi yalnızca izleyerek kopyalamaya çalışmaktır. Pilates sadece pozisyon almak ya da hareketi tekrar etmekten ibaret değildir.",
-          "Doğru pilates pratiğinde nefes kontrolü, ritim, merkez bölge aktivasyonu ve bedenin verdiği sinyalleri fark etmek önemli bir yer tutar. Hareket dışarıdan doğru görünse bile, içeride doğru kas grupları aktif değilse egzersiz beklenen faydayı sağlamayabilir.",
+          "Videoyu izleyip aynı şekli almaya çalışmak, evde pilatesin en yaygın hatası. Pilateste hareketin dış görüntüsü sonuçtur, yöntem değil. Aynı pozisyon, merkez bölge aktifken de tamamen pasifken de alınabilir; dışarıdan bakan ikisini ayırt edemez.",
+          "Nasıl düzeltilir: Hareketi almadan önce hangi bölgenin çalışması gerektiğini bilerek başlayın. Hareket sırasında yorulan yer beklediğiniz bölge değilse, hareketi başka bir kas grubuyla telafi ediyorsunuz demektir. Bu durumda tekrarı azaltıp hareketin küçük halini doğru bölgeyle yapmak, büyük halini yanlış bölgeyle yapmaktan daha değerlidir.",
         ],
       },
       {
-        heading: "Nefes ve Hız Kontrolünü İhmal Etmek",
+        heading: "2. Nefesi Tutmak",
         paragraphs: [
-          "Pilatesin temel yapı taşlarından biri doğru nefes kullanımıdır. Evde pilates sırasında birçok kişi harekete odaklanırken nefesini tutabilir ya da hareketleri gereğinden hızlı uygulayabilir.",
-          "Oysa pilates, kontrollü ve bilinçli bir akış gerektirir. Nefes ve hız kontrolü olmadan yapılan pilates egzersizleri, hem hareket kalitesini düşürür hem de bedenin çalışmasını zorlaştırabilir. Daha etkili bir pilates deneyimi için her hareketin kontrollü, dengeli ve farkındalıkla uygulanması gerekir.",
+          "Zorlandığı anda nefesini tutmak neredeyse refleks bir davranıştır ve pilatesin en temel prensibiyle çelişir. Nefes tutulduğunda karın içi basınç artar, derin karın kasları devreden çıkar ve yük yüzeysel kaslara biner.",
+          "Nasıl düzeltilir: Genel kural, efor anında nefes vermektir. Karın hareketlerinde yukarı kalkarken nefes verilir, geri dönerken alınır. Hareket boyunca sayı sayabiliyorsanız nefesinizi tutmuyorsunuz demektir; bu, kendinizi kontrol etmenin en pratik yoludur.",
         ],
       },
       {
-        heading: "Seviyeye Uygun Olmayan Egzersizler Seçmek",
+        heading: "3. Nötr Omurgayı Kaybetmek",
         paragraphs: [
-          "Bir diğer yaygın hata ise seviyeye uygun olmayan pilates egzersizleri tercih etmektir. Özellikle başlangıç seviyesinde olan kişilerin zorlayıcı akışlara yönelmesi, gelişimi hızlandırmak yerine tam tersine süreci zorlaştırabilir.",
-          "Evde pilates yaparken bedenin hazır olmadığı hareketleri denemek; gereksiz zorlanmaya, motivasyon kaybına ve düzenin bozulmasına neden olabilir. Pilatesin sürdürülebilir olması için kişinin kendi seviyesine uygun içeriklerle ilerlemesi çok daha sağlıklı bir yaklaşımdır.",
+          "Mat pilatesinde en sık görülen teknik hata, sırtüstü yapılan hareketlerde belin yerden kalkması. Bacaklar uzatıldığında ya da indirildiğinde merkez bölge yükü taşıyamazsa bel boşluğu artar ve hareketi karın kasları yerine bel bölgesi üstlenir.",
+          "Nasıl düzeltilir: Bacakları indirirken belin yerden kalktığını hissettiğiniz noktada durun; hareketin sizin için doğru aralığı orasıdır. Bacakları daha az indirmek geri adım değil, doğru yükleme demektir. Zamanla merkez bölge güçlendikçe aralık kendiliğinden genişler.",
         ],
       },
       {
-        heading: "Beden Farkındalığını Geri Planda Bırakmak",
+        heading: "4. Karın Hareketlerinde Boynu Zorlamak",
         paragraphs: [
-          "Pilatesin en önemli yönlerinden biri beden farkındalığını artırmasıdır. Ancak evde pilates yapan birçok kişi, sadece egzersizi tamamlamaya odaklandığı için bedenini yeterince dinlemez.",
-          "Oysa pilates sürecinde önemli olan sadece hareketi bitirmek değil, hareketin bedende nasıl hissedildiğini anlamaktır. Bu farkındalık geliştiğinde pilates çok daha verimli, güvenli ve etkili hale gelir.",
+          "Ellerini ensesinde birleştirip başını yukarı çekmek, karın çalışmalarında çok sık rastlanan bir alışkanlıktır. Sonuç olarak gövde kalkar ama işi karın değil boyun yapar; ders sonunda hissedilen ağrı da genellikle buradan gelir.",
+          "Nasıl düzeltilir: Eller başı desteklemeli, çekmemelidir. Çene ile göğüs arasında bir yumruk kadar boşluk bırakın ve yukarı kalkma hareketini göğüs kafesinin alt kısmından başlatın. Boyun yoruluyorsa hareketi küçültün ya da başı yerde bırakarak sadece nefes ve merkez bölge aktivasyonuyla çalışın.",
         ],
       },
       {
-        heading: "Online Pilates Desteğini Değerlendirmemek",
+        heading: "5. Hızlı Çalışmak ve Tekrar Sayısına Odaklanmak",
         paragraphs: [
-          "Evde pilates yaparken canlı yönlendirme almamak da önemli eksiklerden biri olabilir. Özellikle online pilates dersleri, hareketlerin daha kontrollü uygulanmasına destek olur.",
-          "Eğitmen takibi sayesinde kişinin seviyesine uygun alternatifler sunulabilir, form hataları daha kolay fark edilebilir ve pilates süreci daha sağlıklı ilerleyebilir. Bu nedenle online pilates, evde pilates yapmak isteyen kişiler için hem güvenli hem de motive edici bir destek sağlar.",
+          "Pilateste on yavaş ve kontrollü tekrar, otuz hızlı tekrardan daha etkilidir. Hız arttığında hareketi kaslar değil momentum taşımaya başlar; çalıştırmak istediğiniz bölge ise devreden çıkar.",
+          "Nasıl düzeltilir: Tekrar sayısını hedef almaktan vazgeçin. Her hareketi, o bölgede çalışmayı hissettiğiniz tempoda yapın ve hissi kaybettiğiniz anda durun. Pilateste ilerleme, tekrar sayısının değil kontrolün artmasıyla ölçülür.",
+        ],
+      },
+      {
+        heading: "6. Isınmadan Başlamak",
+        paragraphs: [
+          "Evde çalışırken zaman kazanmak için ısınmayı atlamak yaygındır. Oysa gün boyu oturmuş bir bedende omurga hareketliliği düşüktür ve doğrudan yükleme yapmak hem verimi düşürür hem de zorlanma riskini artırır.",
+          "Nasıl düzeltilir: Beş dakikalık nefes ve omurga mobilitesi çalışması yeterlidir. Segmental omurga hareketleri ve birkaç derin diyafram nefesi, bedeni asıl akışa hazırlar. Süre kısıtlıysa dersi kısaltın, ısınmayı değil.",
+        ],
+      },
+      {
+        heading: "7. Seviyeye Uygun Olmayan Akış Seçmek",
+        paragraphs: [
+          "İnternette en çok izlenen video, sizin seviyenize en uygun video değildir. Başlangıç aşamasındaki biri ileri seviye bir akışa girdiğinde hareketleri ancak telafi ederek tamamlayabilir; bu da yanlış kas gruplarının çalışması anlamına gelir.",
+          "Nasıl düzeltilir: Bir akıştaki hareketlerin çoğunu formu bozmadan tamamlayabiliyorsanız o seviye size uygundur. Yarısından fazlasını zorlanarak yapıyorsanız bir seviye geri gidin. Seviye atlamak için acele etmeye gerek yok; temel hareketlerde kontrol kazanmak, ileri hareketleri kötü yapmaktan daha hızlı ilerletir.",
+        ],
+      },
+      {
+        heading: "8. Uygun Olmayan Zeminde Çalışmak",
+        paragraphs: [
+          "Halı üzerinde ya da çok kalın bir yatak matında çalışmak, dengeyi bozar ve omurganın zemine temasını hissetmeyi zorlaştırır. Çok ince bir mat ise omurga ve kuyruk sokumu gibi bölgelerde rahatsızlık yaratır, bu da hareketin yarıda kesilmesine yol açar.",
+          "Nasıl düzeltilir: Sert bir zemin üzerine serilen 8-10 mm kalınlığında bir pilates matı çoğu kişi için uygundur. Kaymayan bir yüzey, özellikle ayakta ve yan yatış hareketlerinde güvenliği doğrudan etkiler.",
+        ],
+      },
+      {
+        heading: "9. Ağrıyı Zorlamak",
+        paragraphs: [
+          "Egzersizin işe yaraması için acı vermesi gerektiği düşüncesi pilateste geçerli değildir. Çalışan bir kasta hissedilen yanma hissi normaldir; eklemde hissedilen keskin ağrı, boyuna ya da bele yayılan zorlanma ise değildir.",
+          "Nasıl düzeltilir: Keskin ağrı hissettiğiniz hareketi zorlamayın, durun. Hareket aralığını küçültmek ya da o hareketi atlayıp akışa devam etmek her zaman doğru seçimdir. Ağrı tekrar ediyorsa hareketi tamamen çıkarıp bir uzmana danışın.",
+        ],
+      },
+      {
+        heading: "10. Canlı Yönlendirme Almamak",
+        paragraphs: [
+          "Yukarıdaki dokuz hatanın ortak noktası şudur: hepsi kişinin kendi kendine fark etmesi zor hatalardır. Nefesi tuttuğunuzu, belinizin kalktığını ya da boynunuzu çektiğinizi fark edebilmek için genellikle dışarıdan bir göze ihtiyaç vardır.",
+          "Nasıl düzeltilir: Canlı ve eğitmen eşliğinde yapılan online pilates dersleri bu boşluğu doğrudan kapatır. Eğitmen form hatasını anında görüp düzeltebilir, seviyenize uygun alternatif hareket sunabilir ve varsa mevcut bir şikayetinize göre akışı düzenleyebilir. Kayıtlı videoların yapamadığı şey tam olarak budur.",
+        ],
+      },
+      {
+        heading: "Kendi Kendinizi Kontrol Etmek İçin Kısa Bir Liste",
+        paragraphs: [
+          "Eğitmen eşliğinde çalışmadığınız günlerde, hareket sırasında kendinize şu soruları sorabilirsiniz:",
+        ],
+        bullets: [
+          "Nefesimi tutuyor muyum? Hareket sırasında sesli sayabiliyor muyum?",
+          "Belim yerden kalkıyor mu? Kalkıyorsa hareket aralığını küçültmem gerekiyor.",
+          "Boynum mu yoruluyor, karnım mı? Boyunsa eller başı çekiyor demektir.",
+          "Hareketi momentumla mı yapıyorum? Durdurup tekrar başlatabiliyor muyum?",
+          "Çalışmasını beklediğim bölge gerçekten çalışıyor mu?",
+          "Ertesi gün hissettiğim şey kas yorgunluğu mu, eklem ağrısı mı?",
+        ],
+      },
+      {
+        heading: "Ne Zaman Durmak ve Uzmana Danışmak Gerekir?",
+        paragraphs: [
+          "Kas yorgunluğu ile zorlanma belirtisini ayırt etmek önemlidir. Ders sonrası birkaç gün süren hafif kas ağrısı beklenen bir durumdur. Buna karşılık kola ya da bacağa yayılan ağrı, uyuşma, karıncalanma, hareketle artan keskin eklem ağrısı ve dinlenmekle geçmeyen süreklilik egzersizle çözülmesi beklenecek tablolar değildir; bu durumlarda bir hekime başvurmak gerekir.",
+          "Bel fıtığı, boyun düzleşmesi, omuz sıkışması gibi tanı almış bir durumunuz varsa, yakın zamanda ameliyat geçirdiyseniz ya da hamileyseniz, evde tek başınıza video takip etmek yerine eğitmen eşliğinde çalışmak çok daha güvenlidir. Pilates bu tablolarda çoğu zaman uygundur, ancak hareket seçiminin ve yüklemenin kişiye göre düzenlenmesi gerekir.",
         ],
       },
       {
         heading: "Sonuç: Evde Pilates Yaparken Nelere Dikkat Edilmeli?",
         paragraphs: [
-          "Evde pilates yaparken en sık yapılan hatalar arasında hareketi sadece görüntüden kopyalamak, nefes ve hız kontrolünü ihmal etmek, seviyeye uygun olmayan egzersizler seçmek ve beden farkındalığını geri planda bırakmak yer alır.",
-          "Daha verimli bir pilates deneyimi için hareketleri bilinçli uygulamak, kendi seviyene uygun ilerlemek ve gerektiğinde online pilates desteği almak büyük fark yaratır. Doğru bir yaklaşımla evde pilates, hem güvenli hem de sürdürülebilir bir egzersiz rutinine dönüşebilir.",
+          "Evde pilateste hataların çoğu bilgi eksikliğinden değil, geri bildirim eksikliğinden kaynaklanır. Nefesi tutmak, nötr omurgayı kaybetmek ya da boynu zorlamak bilerek yapılan şeyler değildir; sadece kimse fark edip söylemediği için haftalarca tekrarlanırlar.",
+          "Bu yüzden en etkili yaklaşım, az sayıda hareketi doğru yapmaya odaklanmak, kontrolü tekrar sayısının önüne koymak ve en azından başlangıç döneminde canlı yönlendirme almaktır. Doğru kurulan bir temel üzerine evde pilates, uzun vadede sürdürülebilir ve güvenli bir rutine dönüşür.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Evde pilates yaparken en sık yapılan hata nedir?",
+        answer:
+          "En yaygın hata, hareketi sadece ekrandan kopyalamaktır. Pozisyon dışarıdan doğru görünse bile çalışması gereken kaslar devrede olmayabilir. Bunun hemen ardından nefesi tutmak ve sırtüstü hareketlerde belin yerden kalkması gelir.",
+      },
+      {
+        question: "Pilateste nefes ne zaman alınır, ne zaman verilir?",
+        answer:
+          "Genel kural, efor anında nefes vermektir. Karın hareketlerinde gövde yukarı kalkarken nefes verilir, başlangıç pozisyonuna dönerken alınır. Hareket boyunca sesli sayabiliyorsanız nefesinizi tutmuyorsunuz demektir.",
+      },
+      {
+        question: "Pilates yaparken belim yerden kalkıyor, ne yapmalıyım?",
+        answer:
+          "Bu, merkez bölgenin o hareket aralığını henüz taşıyamadığını gösterir. Bacakları indirirken belin kalktığını hissettiğiniz noktada durun ve hareketi o aralıkta yapın. Aralığı küçültmek geri adım değil, doğru yüklemedir; merkez bölge güçlendikçe aralık kendiliğinden genişler.",
+      },
+      {
+        question: "Karın hareketlerinde boynum ağrıyor, normal mi?",
+        answer:
+          "Normal değil, genellikle ellerin başı desteklemek yerine çekmesinden kaynaklanır. Çene ile göğüs arasında bir yumruk kadar boşluk bırakın ve hareketi göğüs kafesinin alt kısmından başlatın. Ağrı devam ediyorsa başı yerde bırakıp sadece nefes ve merkez bölge aktivasyonuyla çalışın.",
+      },
+      {
+        question: "Evde pilates için hangi mat kullanılmalı?",
+        answer:
+          "Sert bir zemin üzerine serilen 8-10 mm kalınlığında bir pilates matı çoğu kişi için uygundur. Halı ya da kalın yatak matı dengeyi bozar; çok ince mat ise omurga ve kuyruk sokumu bölgesinde rahatsızlık yaratır. Kaymayan bir yüzey özellikle ayakta yapılan hareketlerde önemlidir.",
+      },
+      {
+        question: "Pilateste ağrı hissetmek normal mi?",
+        answer:
+          "Çalışan kasta hissedilen yanma ve ders sonrası birkaç gün süren hafif kas ağrısı normaldir. Eklemde hissedilen keskin ağrı, boyuna ya da bele yayılan zorlanma ise normal değildir. Bu durumda hareketi zorlamayın, aralığı küçültün ya da o hareketi atlayın.",
+      },
+      {
+        question: "Videodan pilates yapmak yeterli mi?",
+        answer:
+          "Temel hareketlerde kontrol kazanmış kişiler için videolar iyi bir destek olabilir. Ancak başlangıç aşamasında form hatalarını kendi kendine fark etmek çok zordur; bu hatalar fark edilmediği için haftalarca tekrarlanır. En azından ilk dönemde canlı ve eğitmen eşliğinde çalışmak belirgin fark yaratır.",
+      },
+      {
+        question: "Evde pilatese haftada kaç gün ayırmalıyım?",
+        answer:
+          "Haftada iki düzenli gün çoğu kişi için iyi bir başlangıçtır ve sürdürülebilirliği yüksektir. Ders süresini uzatmak yerine sıklığı korumak daha etkilidir; haftada bir kez uzun ders yapmak, kısa ama düzenli çalışmanın gerisinde kalır.",
       },
     ],
   },
   {
     slug: "masa-basi-calisanlar-icin-pilates-rutini",
-    title: "Masa Başı Çalışanlar İçin Pilates Rutini",
+    title: "Masa Başı Çalışanlar İçin Pilates Rutini: Kapsamlı Rehber",
     excerpt:
-      "Masa başı çalışanlar için pilatesin neden önemli olduğunu, online pilates rutininin nasıl destek sağladığını ve hangi alanlara odaklanılması gerektiğini keşfedin.",
+      "Uzun süre oturmanın bedende yarattığı yükü dengelemek için hazırlanmış bir rehber: öncelikli çalışma bölgeleri, haftalık plan, gün içinde uygulanabilecek mikro molalar ve online pilatesin sağladığı destek.",
     description:
-      "Masa başı çalışanlar için pilates rutini ile duruşunu destekle, sırt ve omuz bölgesindeki gerginliği azalt. Online pilates ile düzenli hareket alışkanlığı kazan.",
+      "Masa başı çalışanlar için pilates rutini: uzun oturmanın bedene etkileri, öncelikli çalışma bölgeleri, örnek haftalık plan, gün içi mikro molalar ve online pilatesle sürdürülebilir bir alışkanlık kurma.",
     publishedAt: "2026-04-10",
-    readingTime: "4 dk",
+    updatedAt: "2026-09-13",
+    readingTime: "9 dk",
     category: "Ofis Yasami",
     content: [
       {
         paragraphs: [
-          "Uzun süre oturmak, gün içinde omuzların kapanmasına, sırt bölgesinde yorgunluk hissine ve omurga çevresindeki kaslarda dengesizlik oluşmasına neden olabilir. Özellikle masa başında çalışan kişiler için hareketsizlik, zamanla duruş kalitesini ve beden farkındalığını olumsuz etkileyebilir.",
-          "Pilates ise tam bu noktada bedeni destekleyen, dengeleyen ve daha kontrollü kullanmayı öğreten etkili bir egzersiz sistemidir. Bu nedenle masa başı çalışanlar için pilates, hem fiziksel rahatlama hem de sürdürülebilir hareket alışkanlığı açısından güçlü bir destek sunar.",
+          "Günün sekiz ya da dokuz saatini bilgisayar karşısında geçirmek, bedeni tek bir pozisyonda uzun süre sabit tutmak anlamına gelir. Omuzlar öne kapanır, göğüs ön tarafı kısalır, kalça ön bölgesi sürekli bükülü kalır ve omurgayı taşıyan derin kaslar devreden çıkar. Bu, gün sonunda hissedilen yorgunluğun ve sırttaki gerginliğin en yaygın sebeplerinden biridir.",
+          "Pilates tam da bu tabloyu dengelemek için elverişli bir sistemdir: nefes, omurga farkındalığı ve merkez bölge aktivasyonu üzerine kuruludur, yani oturmanın zayıflattığı alanları doğrudan hedefler. Bu rehberde masa başı çalışanlar için pilates rutininin nasıl kurulacağını, hangi bölgelere öncelik verilmesi gerektiğini ve yoğun bir takvimde bunun nasıl sürdürülebilir hale getirileceğini adım adım ele alıyoruz.",
+        ],
+      },
+      {
+        heading: "Uzun Süre Oturmak Bedende Neye Yol Açar?",
+        paragraphs: [
+          "Oturma pozisyonu kendi başına zararlı değildir; sorun, aynı pozisyonda geçirilen sürenin uzunluğudur. Beden hareket etmediğinde bazı kas grupları sürekli kısa kalır, bazıları ise hiç devreye girmediği için zamanla zayıflar. Ortaya çıkan dengesizlik, kişinin dik durmak için daha fazla çaba harcamasına ve bu çabayı da yanlış kaslarla vermesine neden olur.",
+          "Masa başı çalışanlarda en sık görülen tablo şu bölgelerde yoğunlaşır:",
+        ],
+        bullets: [
+          "Boyun ve omuz çevresi: Ekrana doğru öne uzanan baş pozisyonu, boyun arkasındaki kasların sürekli yük altında kalmasına yol açar.",
+          "Göğüs ön bölgesi: Klavye başında omuzlar içe döndüğü için göğüs kasları kısalır, sırt üst bölgesi ise açık kalmakta zorlanır.",
+          "Kalça ön bölgesi: Saatlerce bükülü kalan kalça fleksörleri kısalır ve ayağa kalkıldığında bel bölgesine ekstra yük biner.",
+          "Kalça ve merkez bölge kasları: Oturma sırasında neredeyse hiç devreye girmedikleri için zamanla aktivasyonları azalır.",
+          "Omurga hareketliliği: Gün boyunca aynı eğrilikte kalan omurga, dönme ve yana eğilme gibi hareketlerde sertlik hissi verebilir.",
         ],
       },
       {
         heading: "Masa Başı Çalışanlar İçin Pilates Neden Önemlidir?",
         paragraphs: [
-          "Gün boyunca bilgisayar karşısında çalışmak; boyun, omuz, sırt ve bel bölgesinde yoğunluk yaratabilir. Zaman içinde bu durum, postürde bozulma hissine ve hareket kalitesinde azalmaya yol açabilir.",
-          "Pilates, nefes, merkez bölge aktivasyonu ve omurga farkındalığı üzerine kurulu yapısıyla masa başı çalışanların bedenlerini daha dengeli kullanmalarına yardımcı olur. Düzenli pilates pratiği, gün içindeki sıkışma hissini azaltmaya ve daha açık bir duruş geliştirmeye katkı sağlayabilir.",
+          "Pilatesin bu tabloya iyi gelmesinin sebebi, sadece kas çalıştırması değil, hareketi nasıl yaptığınıza odaklanmasıdır. Her harekette nefesin nereye gittiği, omurganın hangi bölümünün çalıştığı ve merkez bölgenin ne zaman devreye girdiği üzerinde durulur. Bu farkındalık, ders bittikten sonra da devam eder: kişi gün içinde omuzlarının kapandığını fark etmeye ve pozisyonunu kendiliğinden düzeltmeye başlar.",
+          "İkinci sebep, pilatesin zayıflayan ve kısalan alanları aynı anda ele almasıdır. Kısalmış göğüs bölgesini açarken sırt üst bölgesini güçlendirmek, kalça ön kısmını serbestleştirirken merkez bölgeyi aktive etmek aynı akış içinde mümkündür. Masa başı çalışanlarda ihtiyaç duyulan şey tam olarak budur: tek bir bölgeyi yormak değil, bozulan dengeyi geri kurmak.",
+          "Üçüncü sebep pratik: pilates yüksek tempolu bir kardiyo çalışması olmadığı için iş çıkışı yorgun bir bedenle de yapılabilir. Bu, rutinin sürdürülebilirliği açısından küçük görünen ama belirleyici bir avantajdır.",
+        ],
+      },
+      {
+        heading: "Pilates Rutininde Hangi Bölgelere Öncelik Verilmeli?",
+        paragraphs: [
+          "Masa başı çalışanlar için hazırlanan bir rutin, genel bir pilates dersinden biraz farklı ağırlıklandırılır. Öncelik sırası şöyle kurulabilir:",
+        ],
+        bullets: [
+          "Nefes ve diyafram çalışması: Gün boyu yüzeysel nefes alan bir bedende, derin nefes hem merkez bölgeyi aktive eder hem de omuz çevresindeki gerginliği azaltır. Her rutinin başlangıcı buradır.",
+          "Omurga mobilitesi: Kedi-deve benzeri segmental omurga hareketleri, gün boyunca tek pozisyonda kalan omurgaya hareket aralığını hatırlatır.",
+          "Sırt üst bölgesi ve skapula kontrolü: Kürek kemiklerini geriye ve aşağıya yerleştirmeyi öğrenmek, kapanan omuz pozisyonunun en doğrudan karşılığıdır.",
+          "Merkez bölge aktivasyonu: Karın derin kaslarının devreye girmesi, bel bölgesinin yükünü paylaşmasını sağlar.",
+          "Kalça ön bölgesi ve kalça kasları: Kısalan ön kısmı serbestleştirip zayıflayan kalça kaslarını çalıştırmak, ayakta durma ve yürüme kalitesini de etkiler.",
+        ],
+      },
+      {
+        heading: "Masa Başı Çalışanlar İçin Haftalık Pilates Planı Nasıl Kurulur?",
+        paragraphs: [
+          "Yoğun bir çalışma temposunda plan yapmanın en sık yapılan hatası, gerçekçi olmayan bir sıklıkla başlamaktır. Haftada beş gün planlanan bir rutin genelde ikinci hafta terk edilirken, haftada iki gün üzerine kurulmuş bir program aylarca sürdürülebilir. Başlangıç için önerilen çerçeve şudur:",
+        ],
+        bullets: [
+          "Haftada 2 tam ders: 40-50 dakikalık, eğitmen eşliğinde yapılan düzenli dersler. Rutinin omurgası budur.",
+          "İsteğe bağlı 1 ek gün: İkinci haftadan sonra beden alıştıkça üçüncü bir gün eklenebilir.",
+          "Her iş günü 5-10 dakikalık mikro mola: Kısa ama düzenli hareket araları, tek başına ders kadar değerlidir.",
+          "Ders günlerini ardışık seçmemek: Araya bir gün koymak, bedenin toparlanmasına ve rutinin yük gibi hissedilmemesine yardımcı olur.",
+        ],
+      },
+      {
+        heading: "Gün İçinde Masa Başında Uygulanabilecek Mikro Molalar",
+        paragraphs: [
+          "Haftada iki ders, sekiz saatlik oturmanın etkisini tek başına dengelemez. Asıl fark, gün içine serpiştirilen kısa aralarla ortaya çıkar. Bunlar özel kıyafet, mat ya da ayrı bir alan gerektirmez; sandalyede ya da masanın yanında ayakta yapılabilir.",
+          "Yaklaşık her saat başı bir hatırlatıcı kurup aşağıdakilerden birini uygulamak iyi bir başlangıçtır:",
+        ],
+        bullets: [
+          "Sandalyede oturarak omurga dönüşü: Ayaklar yere basarken gövdeyi yavaşça sağa ve sola çevirmek, omurgaya gün içinde unuttuğu hareketi hatırlatır.",
+          "Omuz çevirme ve kürek kemiği sıkıştırma: Beş-altı tekrar, kapanan omuz pozisyonunu geçici olarak tersine çevirir.",
+          "Ayakta kalça ön bölgesi açma: Bir adım öne çıkıp arkadaki kalçayı hafifçe öne itmek, saatlerce bükülü kalan bölgeyi serbestleştirir.",
+          "Boyun yan esnetme: Başı yavaşça yana yatırıp birkaç nefes beklemek, boyun yan bölgesindeki birikmiş gerginliği azaltır.",
+          "Üç derin diyafram nefesi: Ekrandan gözleri ayırıp sadece nefese odaklanmak, hem duruşu hem konsantrasyonu tazeler.",
         ],
       },
       {
         heading: "Online Pilates Rutini Masa Başı Çalışanlara Nasıl Destek Olur?",
         paragraphs: [
-          "Özellikle masa başı çalışanlar için oluşturulan bir online pilates rutini, yoğun günlük tempoya rağmen hareketi hayatın içine dahil etmeyi kolaylaştırır. Online pilates sayesinde kişi, zaman kaybetmeden kendi alanında düzenli derslere katılabilir.",
-          "Nefes çalışmaları, core aktivasyonu ve omurga farkındalığı odaklı pilates egzersizleri; gün içinde daha rahat hissetmeye ve bedeni daha kontrollü kullanmaya destek olabilir. Bu yönüyle online pilates, çalışma temposu yüksek kişiler için oldukça pratik bir çözümdür.",
+          "Masa başı çalışanların rutin kurarken karşılaştığı en büyük engel genellikle motivasyon değil, lojistiktir: stüdyoya gidiş-dönüş süresi, trafik, sabit ders saatleri. Online pilates bu engeli ortadan kaldırdığı için, aynı kişinin haftada iki derse devam etme ihtimali belirgin biçimde artar.",
+          "Kayıtlı videolar yerine canlı ve eğitmen eşliğinde yapılan derslerin burada ayrı bir önemi vardır. Masa başı çalışanlarda sorun genellikle hareketi yapamamak değil, yanlış bölgeyle yapmaktır; örneğin omuz açma hareketini sırt yerine boyunla telafi etmek. Eğitmen bunu ekran üzerinden görüp anında düzeltebilir, kayıtlı bir video ise düzeltemez.",
+          "Ayrıca çalışma düzeni kişiden kişiye değiştiği için rutinin kişiselleştirilmesi gerekir. Günde on saat oturan biriyle ayakta çalışan biri aynı programa ihtiyaç duymaz. Eğitmenle çalışmak, rutini kendi gününüze göre ayarlamayı mümkün kılar.",
         ],
       },
       {
-        heading: "Haftada Kaç Gün Pilates Yapılmalı?",
+        heading: "Etkiler Ne Zaman Hissedilmeye Başlar?",
         paragraphs: [
-          "Masa başı çalışanlar için pilates rutininde düzenli olmak, yoğun ve zorlayıcı bir program uygulamaktan daha değerlidir. Haftada iki veya üç derslik bir pilates programı, hareket alışkanlığı kazanmak ve gün içindeki sertlik hissini azaltmak için iyi bir başlangıç olabilir.",
-          "Düzenli tekrar edilen pilates çalışmaları, zamanla beden farkındalığını artırır ve kişinin kendi duruşunu daha iyi gözlemlemesini sağlar.",
+          "İlk fark edilen şey genellikle fiziksel bir değişim değil, farkındalıktır: birkaç ders sonra kişi gün içinde omuzlarının kapandığını ya da nefesini tuttuğunu fark etmeye başlar. Bu, rutinin işlediğinin ilk işaretidir.",
+          "Gün sonundaki sırt ve omuz yorgunluğunda hissedilir bir azalma için genellikle düzenli çalışılan dört ila altı haftalık bir süre gerekir. Duruşta dışarıdan da görülebilen değişim ise daha uzun sürer; burada belirleyici olan ders sayısından çok devamlılıktır. Haftada iki gün üç ay boyunca çalışmak, haftada dört gün üç hafta çalışmaktan daha iyi sonuç verir.",
         ],
       },
       {
-        heading: "Pilates Rutininde Hangi Alanlara Odaklanılmalı?",
+        heading: "Nelere Dikkat Edilmeli?",
         paragraphs: [
-          "Masa başı çalışanlar için pilates rutini oluşturulurken özellikle nefes, omurga mobilitesi, core aktivasyonu ve duruş desteği ön planda tutulmalıdır.",
-          "Bu alanlara odaklanan pilates egzersizleri, yalnızca kasları çalıştırmakla kalmaz; aynı zamanda daha dengeli, kontrollü ve akışkan bir hareket yapısı oluşturmaya da yardımcı olur. Böylece pilates, sadece egzersiz değil, gün içindeki yaşam kalitesini destekleyen bir alışkanlığa dönüşebilir.",
+          "Masa başı kaynaklı gerginlikle, altta yatan bir sorunun belirtisi olan ağrıyı ayırt etmek önemlidir. Kola ya da bacağa yayılan ağrı, uyuşma veya karıncalanma, geceleri artan şikayetler ve dinlenmekle geçmeyen süreklilik, egzersizle çözülmesi beklenecek tablolar değildir. Bu durumlarda önce bir hekime başvurmak gerekir.",
+          "Bel fıtığı, boyun düzleşmesi, omuz sıkışması gibi tanı almış bir durumunuz varsa ya da yakın zamanda ameliyat geçirdiyseniz, derslere başlamadan önce bunu eğitmeninize bildirin. Pilates bu tablolarda çoğu zaman uygundur, ancak hareket seçimi ve yükleme buna göre düzenlenmelidir. Ders sırasında keskin bir ağrı hissedildiğinde hareketi zorlamak yerine durmak esastır; pilatesde ilerleme, dayanmakla değil kontrolle sağlanır.",
         ],
       },
       {
         heading: "Sonuç: Masa Başı Çalışanlar İçin Pilates Etkili Bir Destek midir?",
         paragraphs: [
-          "Masa başı çalışanlar için pilates, uzun süreli oturmanın bedende yarattığı yükü dengelemek açısından oldukça faydalı bir egzersiz yaklaşımıdır.",
-          "Özellikle online pilates rutini ile nefes, merkez bölge gücü ve omurga farkındalığı üzerine düzenli çalışmak; daha açık bir duruş, daha kontrollü hareket ve gün içinde daha iyi bir beden hissi sağlayabilir. Haftada iki ya da üç gün uygulanan pilates programı, hem fiziksel rahatlama hem de sürdürülebilir bir rutin oluşturmak için güçlü bir başlangıç sunar.",
+          "Masa başı çalışmanın bedende yarattığı tablo, tek bir kasın yorulmasından ibaret değildir; kısalan ve zayıflayan alanların birlikte oluşturduğu bir dengesizliktir. Pilatesin bu tabloya uygun olmasının sebebi, her iki tarafı aynı anda ele alması ve bunu beden farkındalığı üzerinden yapmasıdır.",
+          "Pratikte işe yarayan formül sade: haftada iki düzenli ders, gün içine serpiştirilmiş kısa hareket molaları ve aylar boyu sürdürülebilen gerçekçi bir tempo. Online pilates bu formülü yoğun bir çalışma takvimine sığdırmayı kolaylaştırdığı için, masa başı çalışanlar açısından en ulaşılabilir seçeneklerden biridir.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Masa başı çalışanlar için pilates gerçekten işe yarar mı?",
+        answer:
+          "Evet, çünkü pilates uzun süre oturmanın yarattığı iki sorunu birden ele alır: kısalan göğüs ve kalça ön bölgesini serbestleştirirken zayıflayan sırt ve merkez bölge kaslarını güçlendirir. Ayrıca beden farkındalığı kazandırdığı için, ders dışındaki saatlerde de duruşun fark edilip düzeltilmesine yardımcı olur.",
+      },
+      {
+        question: "Masa başı çalışanlar haftada kaç gün pilates yapmalı?",
+        answer:
+          "Haftada iki düzenli ders çoğu kişi için iyi bir başlangıçtır. Beden alıştıkça üçüncü bir gün eklenebilir. Sıklığı artırmaktan daha belirleyici olan devamlılıktır: haftada iki gün üç ay çalışmak, haftada dört gün üç hafta çalışmaktan daha iyi sonuç verir.",
+      },
+      {
+        question: "Masa başında otururken pilates hareketi yapılabilir mi?",
+        answer:
+          "Tam bir pilates dersi sandalyede yapılamaz, ancak gün içinde uygulanabilecek kısa hareketler vardır: oturarak omurga dönüşü, omuz çevirme, kürek kemiği sıkıştırma ve derin diyafram nefesi bunların başında gelir. Bu mikro molalar dersin yerini tutmaz ama etkisini belirgin biçimde destekler.",
+      },
+      {
+        question: "Ofiste pilates için özel ekipman gerekir mi?",
+        answer:
+          "Gün içindeki kısa molalar için hiçbir ekipman gerekmez; sandalye ve birkaç dakika yeterlidir. Evde yapılan tam dersler için ise bir pilates matı ve hareket edebileceğiniz kadar boş alan çoğu başlangıç seviyesi rutin için yeterlidir.",
+      },
+      {
+        question: "Boyun ve omuz ağrısı için pilates uygun mudur?",
+        answer:
+          "Uzun süre oturmaya bağlı gerginlik hissinde pilates genellikle destekleyicidir. Ancak kola yayılan ağrı, uyuşma, karıncalanma veya dinlenmekle geçmeyen süreklilik varsa önce bir hekime başvurmak gerekir. Tanı almış bir durum varsa derslere başlamadan önce eğitmene bildirilmelidir.",
+      },
+      {
+        question: "İş çıkışı yorgunken pilates yapmak doğru mu?",
+        answer:
+          "Evet. Pilates yüksek tempolu bir kardiyo çalışması olmadığı için yorgun bir bedenle de yapılabilir; nefes ve kontrol odaklı yapısı çoğu kişide gün sonunda rahatlatıcı etki yaratır. Rutini sürdürülebilir kılmak açısından da iş çıkışı saatleri genellikle sabah saatlerinden daha gerçekçidir.",
+      },
+      {
+        question: "Masa başı çalışanlar için pilates mi yoga mı daha uygun?",
+        answer:
+          "İkisi de faydalıdır, ancak odakları farklıdır. Yoga esneklik ve duruşta kalma üzerine kuruluyken, pilates merkez bölge aktivasyonu ve kontrollü hareket üzerine yoğunlaşır. Masa başı çalışmanın yarattığı kas dengesizliğini hedefleme açısından pilates genellikle daha doğrudan bir karşılık sunar.",
+      },
+      {
+        question: "Online pilates masa başı çalışanlar için yeterli mi?",
+        answer:
+          "Canlı ve eğitmen eşliğinde yapıldığında yeterlidir. Masa başı çalışanlarda sık görülen hata, hareketi yanlış bölgeyle telafi etmektir; örneğin omuz açmayı sırt yerine boyunla yapmak. Canlı derste eğitmen bunu görüp anında düzeltebildiği için, kayıtlı videolara kıyasla belirgin bir avantaj sağlar.",
       },
     ],
   },
