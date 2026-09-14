@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts, getBlogImage, getFaqsForPost, getHubPosts, getInContentLinks, getPostBySlug, getRelatedPosts } from "@/lib/blog";
+import { blogPosts, getBlogImage, getFaqsForPost, getHubPosts, getInContentLinks, getPostBySlug, getReadingTime, getRelatedPosts } from "@/lib/blog";
 import { createMetadata, defaultKeywords, siteConfig } from "@/lib/seo";
 import { formatTarih } from "@/lib/date";
 
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </h1>
           <div className="flex gap-4 text-sm text-[#6B5E68]">
             <time dateTime={post.publishedAt}>{formatTarih(post.publishedAt)}</time>
-            <span>{post.readingTime}</span>
+            <span>{getReadingTime(post)}</span>
           </div>
         </div>
       </section>

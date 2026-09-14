@@ -18,7 +18,6 @@ export type BlogPost = {
    * taranmaz.
    */
   updatedAt?: string;
-  readingTime: string;
   category: string;
   content: BlogSection[];
   faqs?: BlogFaqItem[];
@@ -152,7 +151,6 @@ export const blogPosts: BlogPost[] = [
       "Online pilates nedir, kimler için uygundur ve evde nasıl başlanır? Gerekli ekipman, kamera düzeni, canlı ve kayıtlı ders farkı, haftalık plan ve sık yapılan hatalarla kapsamlı başlangıç rehberi.",
     publishedAt: "2026-04-13",
     updatedAt: "2026-09-13",
-    readingTime: "15 dk",
     category: "Baslangic Rehberi",
     faqs: [
       {
@@ -163,7 +161,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Online pilates için evde neler gerekir?",
         answer:
-          "8-10 mm kalınlığında kaymayan bir pilates matı, matın etrafında kollarınızı açabileceğiniz kadar boşluk (yaklaşık 2x2 metre), rahat kıyafet ve dersi takip edebileceğiniz bir ekran yeterlidir. Başlangıç için ek ekipman gerekmez.",
+          "8-10 mm kalınlığında kaymayan bir pilates matı, matın etrafında kollarınızı açabileceğiniz kadar boşluk (yaklaşık 2 metreye 1,5 metre), rahat kıyafet ve dersi takip edebileceğiniz bir ekran yeterlidir. Başlangıç için ek ekipman gerekmez.",
       },
       {
         question: "Online pilates kimler için uygundur?",
@@ -278,7 +276,7 @@ export const blogPosts: BlogPost[] = [
         ],
         bullets: [
           "Kaymayan bir pilates matı: 8-10 mm kalınlık çoğu kişi için uygundur. Halı üzerinde ya da kalın yatak matında çalışmak dengeyi bozar.",
-          "Yeterli alan: Mat serildiğinde etrafında kollarınızı ve bacaklarınızı açabileceğiniz kadar boşluk. Yaklaşık 2x2 metrelik bir alan çoğu ders için yeterlidir.",
+          "Yeterli alan: Mat serildiğinde etrafında kollarınızı ve bacaklarınızı açabileceğiniz kadar boşluk. Yaklaşık 2 metreye 1,5 metrelik boş bir zemin çoğu ders için yeterlidir; ayrı bir odaya ihtiyaç yoktur.",
           "Rahat kıyafet: Bol olmayan, hareketi kısıtlamayan ve eğitmenin beden hizanızı görebilmesini engellemeyen kıyafetler.",
           "Bir ekran: Telefon, tablet ya da bilgisayar. Ekran ne kadar büyükse takip o kadar kolaydır.",
           "Sabit bir internet bağlantısı: Canlı derslerde görüntünün donmaması, eğitmenin sizi düzeltebilmesi için önemlidir.",
@@ -327,7 +325,7 @@ export const blogPosts: BlogPost[] = [
           "3. Alanı ve kamerayı bir kez kurun. Yerini işaretleyin, her derste tekrar uğraşmayın.",
           "4. Eğitmene durumunuzu bildirin. Tanı almış bir rahatsızlık, geçirilmiş ameliyat, hamilelik ya da sürekli bir ağrı varsa ilk ders öncesi söyleyin.",
           "5. Haftada iki gün ile başlayın ve günleri takvime sabitleyin. Ardışık olmayan günler seçmek daha iyi sonuç verir.",
-          "6. İlk dört haftayı ölçmeden geçirin. Bu dönemde hedef sonuç almak değil, rutini oturtmaktır.",
+          "6. İlk sekiz haftayı ölçmeden geçirin. Bu dönemde hedef sonuç almak değil, rutini oturtmaktır.",
         ],
       },
       {
@@ -419,7 +417,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates esnekliği artırır mı? Pilatesin esneklik, hareket kalitesi, kas dengesi ve beden farkındalığı üzerindeki etkilerini keşfedin.",
     publishedAt: "2026-04-13",
-    readingTime: "6 dk",
     category: "Esneklik",
     content: [
       {
@@ -507,7 +504,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates duruşu düzeltir mi? Pilatesin duruş, omurga farkındalığı, merkez bölge gücü ve beden dengesi üzerindeki etkilerini keşfedin.",
     publishedAt: "2026-04-13",
-    readingTime: "6 dk",
     category: "Postur",
     content: [
       {
@@ -597,7 +593,6 @@ export const blogPosts: BlogPost[] = [
       "Online pilates dersleri nasıl geçer? Ders öncesi hazırlık, dersin akışı, kamera kullanımı, eğitmen takibi, ders süresi ve ilk derste yaşananlar hakkında kapsamlı rehber.",
     publishedAt: "2026-04-13",
     updatedAt: "2026-09-13",
-    readingTime: "10 dk",
     category: "Online Dersler",
     content: [
       {
@@ -779,7 +774,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Online pilates mi yüz yüze pilates mi daha uygun? Pilates yaparken iki yöntem arasındaki farkları, avantajları ve hangi seçeneğin size daha uygun olabileceğini keşfedin.",
     publishedAt: "2026-04-13",
-    readingTime: "7 dk",
     category: "Karsilastirma",
     content: [
       {
@@ -883,7 +877,6 @@ export const blogPosts: BlogPost[] = [
       "Evde pilates nedir, nasıl başlanır ve neler gerekir? Mat seçimi, uygun alan, kıyafet, ekipman ve haftalık plan ile evde pilatese başlamanın tüm adımları.",
     publishedAt: "2026-04-13",
     updatedAt: "2026-09-12",
-    readingTime: "11 dk",
     category: "Evde Pilates",
     faqs: [
       {
@@ -909,7 +902,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Evde pilatesin etkisi ne zaman görülür?",
         answer:
-          "Düzenli çalışıldığında ilk birkaç hafta içinde beden farkındalığı ve duruşta fark edilir bir değişim başlar. Kas dayanıklılığı ve esneklikteki belirgin gelişim genellikle 6-8 haftalık düzenli pratik sonrasında hissedilir.",
+          "İlk fark edilen şey genellikle birkaç ders içinde gelen farkındalıktır: gün içinde duruşunuzu ya da nefesinizi tuttuğunuzu fark etmeye başlarsınız. Gerginlik ve yorgunlukta hissedilir azalma için düzenli çalışılan dört ila altı hafta, kas dayanıklılığı ve esneklikte belirgin gelişim için 6-8 hafta gerekir. Dışarıdan görülebilen duruş değişimi ise daha uzun sürer; burada belirleyici olan ders sayısından çok devamlılıktır.",
       },
       {
         question: "Evde pilates için pilates matı şart mı?",
@@ -1014,6 +1007,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Yeni başlayanlar için haftada iki veya üç gün, günde 20-30 dakikalık seanslar gerçekçi bir başlangıçtır. Örneğin pazartesi, çarşamba ve cuma günlerini seçip bu günleri sabit tutmak, planı takvime bağlamanın en kolay yoludur. Günleri her hafta değiştirmek yerine aynı saatlerde çalışmak alışkanlık oluşumunu hızlandırır.",
           "İlk iki hafta temel akışlara ve nefes çalışmasına ayrılabilir. Üçüncü haftadan itibaren seans süresi 35-40 dakikaya çıkarılabilir veya hareketlerin tekrar sayısı kademeli olarak artırılabilir. Buradaki kritik nokta, süreyi ve zorluğu aynı anda artırmamaktır.",
+          "Bu süreler kendi başınıza yaptığınız seanslar içindir. Eğitmen eşliğinde yapılan canlı dersler genellikle 45-50 dakika sürer; çünkü ısınma, ana akış ve toparlanma bölümlerini birlikte içerir. İkisini karşılaştırırken bu farkı hesaba katmak gerekir.",
           "Arka arkaya iki gün çalışmak sakıncalı değildir, ancak özellikle başlangıçta kasların toparlanması için aralara dinlenme günü koymak daha iyi sonuç verir. Bir seansı kaçırdığınızda ertesi gün telafi etmeye çalışmak yerine planın kaldığı yerden devam etmesi yeterlidir.",
         ],
       },
@@ -1066,7 +1060,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilatese yeni başlayanlar için bilinmesi gerekenleri keşfedin. Pilatese başlarken dikkat edilmesi gerekenler, doğru tempo ve temel pilates yaklaşımı hakkında bilgi alın.",
     publishedAt: "2026-04-11",
-    readingTime: "5 dk",
     category: "Baslangic",
     content: [
       {
@@ -1141,7 +1134,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilatesin vücuda faydaları nelerdir? Pilates ile duruşunu destekle, esnekliğini artır, kaslarını dengeli çalıştır ve beden farkındalığını geliştir.",
     publishedAt: "2026-04-11",
-    readingTime: "5 dk",
     category: "Faydalar",
     content: [
       {
@@ -1216,7 +1208,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates nedir, ne işe yarar? Pilatesin vücuda etkilerini, duruş, esneklik, denge ve beden farkındalığı üzerindeki faydalarını keşfedin.",
     publishedAt: "2026-04-11",
-    readingTime: "5 dk",
     category: "Temel Bilgiler",
     content: [
       {
@@ -1291,7 +1282,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates nedir? Pilatesin ne işe yaradığını, nasıl uygulandığını, kimler için uygun olduğunu ve vücuda sağladığı temel faydaları keşfedin.",
     publishedAt: "2026-04-17",
-    readingTime: "5 dk",
     category: "Temel Bilgiler",
     content: [
       {
@@ -1350,7 +1340,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilatese başlamak için en doğru zaman ne zaman? Online pilates ve pilates rutini için doğru başlangıç zamanını, motivasyonu ve sürdürülebilir alışkanlık oluşturmanın ipuçlarını keşfedin.",
     publishedAt: "2026-04-11",
-    readingTime: "5 dk",
     category: "Baslangic",
     content: [
       {
@@ -1418,7 +1407,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Haftada kaç gün pilates yapılmalı? Online pilates ve pilates rutini için ideal sıklığı, başlangıç seviyesine uygun program önerilerini ve düzenli çalışmanın önemini keşfedin.",
     publishedAt: "2026-04-11",
-    readingTime: "5 dk",
     category: "Rutin",
     content: [
       {
@@ -1487,7 +1475,6 @@ export const blogPosts: BlogPost[] = [
       "Evde pilates yaparken en sık yapılan 10 hata ve her birinin çözümü: nefesi tutmak, nötr omurgayı kaybetmek, boynu zorlamak, tempoyu kaçırmak ve seviyeye uygun olmayan akış seçmek.",
     publishedAt: "2026-04-10",
     updatedAt: "2026-09-13",
-    readingTime: "10 dk",
     category: "Rehber",
     content: [
       {
@@ -1647,7 +1634,6 @@ export const blogPosts: BlogPost[] = [
       "Masa başı çalışanlar için pilates rutini: uzun oturmanın bedene etkileri, öncelikli çalışma bölgeleri, örnek haftalık plan, gün içi mikro molalar ve online pilatesle sürdürülebilir bir alışkanlık kurma.",
     publishedAt: "2026-04-10",
     updatedAt: "2026-09-13",
-    readingTime: "9 dk",
     category: "Ofis Yasami",
     content: [
       {
@@ -1798,7 +1784,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Reformer pilates nedir? Reformer pilatesin nasıl yapıldığını, kimler için uygun olduğunu ve mat pilatesten farklarını keşfedin.",
     publishedAt: "2026-04-25",
-    readingTime: "4 dk",
     category: "Reformer Pilates",
     content: [
       {
@@ -1856,7 +1841,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Mat pilates nedir? Mat pilatesin nasıl yapıldığını, kimler için uygun olduğunu ve reformer pilatesten farklarını keşfedin.",
     publishedAt: "2026-04-25",
-    readingTime: "4 dk",
     category: "Mat Pilates",
     content: [
       {
@@ -1912,7 +1896,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Reformer pilates mi mat pilates mi daha uygun? İki sistemin farklarını, avantajlarını ve hangi seçeneğin size daha uygun olabileceğini keşfedin.",
     publishedAt: "2026-04-25",
-    readingTime: "4 dk",
     category: "Pilates Karşılaştırma",
     content: [
       {
@@ -1967,7 +1950,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates ne zaman etki eder? Düzenli pilates yaptığınızda bedende hissedilebilecek değişimlerin ne zaman ortaya çıkabileceğini keşfedin.",
     publishedAt: "2026-04-28",
-    readingTime: "4 dk",
     category: "Pilates Rutini",
     content: [
       {
@@ -2017,7 +1999,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates haftada 2 gün yeterli mi? Başlangıç seviyesinde pilates sıklığının nasıl planlanması gerektiğini ve haftada iki gün pilatesin etkilerini keşfedin.",
     publishedAt: "2026-08-25",
-    readingTime: "4 dk",
     category: "Pilates Rutini",
     content: [
       {
@@ -2066,7 +2047,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates ile bel ağrısı azalır mı? Pilatesin merkez bölge, duruş farkındalığı ve hareket kalitesi üzerindeki etkileriyle bel bölgesine nasıl destek olabileceğini keşfedin.",
     publishedAt: "2026-09-01",
-    readingTime: "4 dk",
     category: "Beden Farkındalığı",
     content: [
       {
@@ -2121,7 +2101,6 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pilates mi yoga mı daha uygun? İki sistemin farklarını, amaçlarını ve hangi yaklaşımın size daha uygun olabileceğini keşfedin.",
     publishedAt: "2026-09-02",
-    readingTime: "3 dk",
     category: "Pilates Rehberi",
     content: [
       {
@@ -2824,4 +2803,30 @@ export function getFaqsForPost(post: BlogPost): BlogFaqItem[] {
       };
     })
     .filter((item) => item.answer.length > 0);
+}
+
+const KELIME_PER_DAKIKA = 160;
+
+/**
+ * Okuma süresi elle yazılmaz, içerikten hesaplanır. Elle yazıldığı dönemde
+ * yazı her genişletildiğinde güncellenmesi unutuluyordu ve değerler gerçek
+ * uzunluktan kopmuştu (263 kelimelik yazı "3 dk" diyordu). Birleştirmelerde
+ * içerik sürekli değiştiği için bu alanın türetilmiş olması gerekiyor.
+ */
+export function getReadingTime(post: BlogPost): string {
+  const parcalar: string[] = [];
+
+  for (const section of post.content) {
+    if (section.heading) parcalar.push(section.heading);
+    if (section.paragraphs) parcalar.push(...section.paragraphs);
+    if (section.bullets) parcalar.push(...section.bullets);
+  }
+
+  for (const faq of post.faqs ?? []) {
+    parcalar.push(faq.question, faq.answer);
+  }
+
+  const kelimeSayisi = parcalar.join(" ").split(/\s+/).filter(Boolean).length;
+
+  return `${Math.max(2, Math.round(kelimeSayisi / KELIME_PER_DAKIKA))} dk`;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getBlogImage, getBlogPostsForListing } from "@/lib/blog";
+import { getBlogImage, getBlogPostsForListing, getReadingTime } from "@/lib/blog";
 import { createMetadata, defaultKeywords } from "@/lib/seo";
 import BlogList from "./BlogList";
 
@@ -18,13 +18,13 @@ export default function BlogPage() {
     excerpt: post.excerpt,
     category: post.category,
     publishedAt: post.publishedAt,
-    readingTime: post.readingTime,
+    readingTime: getReadingTime(post),
     image: getBlogImage(post.slug),
   }));
 
   return (
     <>
-      <section className="bg-[#F5F0F8] pt-12 pb-8 md:py-20">
+      <section className="bg-[#F5F0F8] pt-12 pb-8 md:pt-14 md:pb-12">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Blog</p>
           <h1
@@ -40,7 +40,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-8 md:py-16 max-w-6xl mx-auto px-6">
+      <section className="py-8 md:py-12 max-w-6xl mx-auto px-6">
         <BlogList posts={posts} />
       </section>
     </>
