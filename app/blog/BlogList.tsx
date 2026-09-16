@@ -20,16 +20,23 @@ export type BlogListItem = {
 
 export default function BlogList({ posts }: { posts: BlogListItem[] }) {
   const [gosterilen, setGosterilen] = useState(ILK_GOSTERIM);
-  const gorunenler = posts.slice(0, gosterilen);
   const kalan = posts.length - gosterilen;
 
+  // Kartların tamamı DOM'a basılır, fazlalıkları yalnızca CSS ile gizlenir.
+  // Daha önce dizi slice ediliyordu; o durumda ilk dokuz yazının dışındaki
+  // linkler HTML'de hiç oluşmuyor ve Googlebot butona basmadığı için o
+  // yazılara blog sayfasından hiçbir iç link gitmiyordu. Gizli kartlardaki
+  // görseller lazy yüklendiği ve display:none kutu üretmediği için
+  // tarayıcı bunları indirmez; yani bu değişimin performans maliyeti yok.
   return (
     <>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {gorunenler.map((post, index) => (
+        {posts.map((post, index) => (
           <article
             key={post.slug}
-            className="overflow-hidden rounded-3xl border border-[#EDE0F5] bg-white shadow-sm transition-shadow hover:shadow-md"
+            className={`overflow-hidden rounded-3xl border border-[#EDE0F5] bg-white shadow-sm transition-shadow hover:shadow-md${
+              index >= gosterilen ? " hidden" : ""
+            }`}
           >
             <Link href={`/blog/${post.slug}`} className="group block h-full">
               <div className="relative h-40 overflow-hidden bg-[#F5F0F8]">
