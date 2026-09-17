@@ -32,11 +32,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
-  },
+  // icons alanı bilerek tanımlanmıyor. app/icon.png, app/apple-icon.png ve
+  // app/favicon.ico dosya kuralları etiketleri kendisi üretiyor; burada ayrıca
+  // tanımlandığında aynı dosya için üç fazladan <link> daha basılıyordu.
   openGraph: {
     title: "Online Pilates Dersleri | Evden Canlı Dersler – Elvin Öztürk",
     description: siteConfig.description,
