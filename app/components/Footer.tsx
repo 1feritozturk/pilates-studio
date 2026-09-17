@@ -24,6 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: '/dersler', label: 'Dersler' },
+                { href: '/ders-takvimi', label: 'Ders Takvimi' },
                 { href: '/blog', label: 'Blog' },
 
                 { href: '/hakkimda', label: 'Hakkımda' },

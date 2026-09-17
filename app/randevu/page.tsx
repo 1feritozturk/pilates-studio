@@ -1,7 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { formatPhone, isValidPhone, toE164 } from '@/lib/phone';
+import { getScheduledLesson, formatLessonDate, formatLessonTime } from '@/lib/schedule';
 
 const dersTipiSecenekleri = ['Grup Dersi', 'Bireysel Ders'] as const;
 const grupSeviyeSecenekleri = ['Başlangıç', 'Orta Seviye'] as const;
@@ -15,6 +18,13 @@ function getSecilenDersLabel(dersTipi: string, grupSeviyesi: string) {
 }
 
 export default function RandevuPage() {
+  return <Suspense fallback={<p className="p-8 text-center">Kayıt formu yükleniyor…</p>}><RandevuForm /></Suspense>;
+}
+
+function RandevuForm() {
+  const searchParams = useSearchParams();
+  const sessionId = searchParams.get('ders');
+  const scheduledLesson = getScheduledLesson(sessionId);
   const [form, setForm] = useState({
     ad: '',
     soyad: '',
@@ -28,20 +38,26 @@ export default function RandevuPage() {
   const [gonderildi, setGonderildi] = useState(false);
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState('');
-  const deneyimGoster = form.dersTipi === 'Grup Dersi' && form.grupSeviyesi === 'Başlangıç';
+  const deneyimGoster = !scheduledLesson && form.dersTipi === 'Grup Dersi' && form.grupSeviyesi === 'Başlangıç';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setGonderiliyor(true);
     setHata('');
 
-    if (!form.dersTipi) {
+    if (sessionId !== null && !scheduledLesson) {
+      setHata('Seçilen ders bulunamadı. Lütfen ders takviminden tekrar seçim yapın.');
+      setGonderiliyor(false);
+      return;
+    }
+
+    if (!scheduledLesson && !form.dersTipi) {
       setHata('Lütfen katılmak istediğiniz ders tipini seçin.');
       setGonderiliyor(false);
       return;
     }
 
-    if (form.dersTipi === 'Grup Dersi' && !form.grupSeviyesi) {
+    if (!scheduledLesson && form.dersTipi === 'Grup Dersi' && !form.grupSeviyesi) {
       setHata('Lütfen grup dersi için seviyenizi seçin.');
       setGonderiliyor(false);
       return;
@@ -53,7 +69,7 @@ export default function RandevuPage() {
       return;
     }
 
-    const secilenDers = getSecilenDersLabel(form.dersTipi, form.grupSeviyesi);
+    const secilenDers = scheduledLesson?.title ?? getSecilenDersLabel(form.dersTipi, form.grupSeviyesi);
 
     try {
       const response = await fetch('/api/bookings', {
@@ -67,7 +83,8 @@ export default function RandevuPage() {
           email: form.email,
           phone: toE164(form.telefon),
           lesson: secilenDers,
-          experience_level: form.deneyim,
+          session_id: scheduledLesson?.id,
+          experience_level: scheduledLesson ? '' : form.deneyim,
           note: form.not,
         }),
       });
@@ -86,10 +103,11 @@ export default function RandevuPage() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'generate_lead',
-          lesson_type: secilenDers,
-          lesson_category: form.dersTipi,
-          lesson_level: form.grupSeviyesi || null,
-          experience_level: form.deneyim,
+          // Do not send health-related lesson names to analytics.
+          lesson_type: scheduledLesson ? 'Takvim dersi' : secilenDers,
+          lesson_category: scheduledLesson ? 'scheduled' : form.dersTipi,
+          lesson_level: scheduledLesson ? null : form.grupSeviyesi || null,
+          experience_level: scheduledLesson ? '' : form.deneyim,
         });
       }
     } catch {
@@ -112,7 +130,7 @@ export default function RandevuPage() {
             className="text-3xl font-semibold text-[#1A1218] mb-3"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
-            Kaydınız alındı!
+            Kayıt talebiniz alındı!
           </h2>
           <p className="text-[#6B5E68] mb-2">
             Merhaba <span className="font-medium text-[#1A1218]">{form.ad}</span>, talebiniz başarıyla alındı.
@@ -121,7 +139,10 @@ export default function RandevuPage() {
             Kaydınız netleştirildikten sonra <span className="font-medium">{form.email}</span> adresinize Zoom bağlantısı ve ders bilgileriniz gönderilecek.
           </p>
           <div className="bg-[#F5F0F8] rounded-2xl p-5 text-left text-sm space-y-2 mb-8">
-            <div className="flex justify-between">
+            {scheduledLesson ? <div>
+              <p className="font-medium text-[#1A1218]">{scheduledLesson.title}</p>
+              <p className="text-[#6B5E68] mt-2">{formatLessonDate(scheduledLesson.startsAt)} · {formatLessonTime(scheduledLesson.startsAt)}–{formatLessonTime(scheduledLesson.endsAt)} (Türkiye saati)</p>
+            </div> : <><div className="flex justify-between">
               <span className="text-[#6B5E68]">Ders tipi</span>
               <span className="font-medium text-[#1A1218]">{form.dersTipi || 'Belirtilmedi'}</span>
             </div>
@@ -131,6 +152,7 @@ export default function RandevuPage() {
                 <span className="font-medium text-[#1A1218]">{form.grupSeviyesi || 'Belirtilmedi'}</span>
               </div>
             ) : null}
+            </>}
           </div>
           <p className="text-xs text-[#6B5E68]">
             Sorularınız için: <a href="mailto:info@elvinozturk.com" className="text-[#6B3D7A]">info@elvinozturk.com</a>
@@ -143,7 +165,7 @@ export default function RandevuPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#F5F0F8] pt-12 pb-8 md:py-16">
+      <section className="bg-[#F5F0F8] pt-12 pb-8 md:pt-14 md:pb-12">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Kayıt Formu</p>
           <h1
@@ -159,11 +181,23 @@ export default function RandevuPage() {
       </section>
 
       {/* Form */}
-      <section className="py-8 md:py-16 max-w-2xl mx-auto px-6">
+      <section className="py-8 md:py-12 max-w-2xl mx-auto px-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           {hata ? (
-            <div className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">
+            <div role="alert" className="rounded-2xl border border-[#E7C1C1] bg-[#FFF3F2] px-4 py-3 text-sm text-[#9B3D3D]">
               {hata}
+            </div>
+          ) : null}
+
+          {sessionId !== null ? (
+            <div className="rounded-2xl border border-[#E8D8F0] bg-[#F5F0F8] p-5">
+              <p className="text-sm text-[#6B3D7A] mb-2">Seçilen ders</p>
+              {scheduledLesson ? <>
+                <h2 className="text-lg font-medium leading-relaxed">{scheduledLesson.title}</h2>
+                <p className="text-sm text-[#6B5E68] mt-2">{formatLessonDate(scheduledLesson.startsAt)} · {formatLessonTime(scheduledLesson.startsAt)}–{formatLessonTime(scheduledLesson.endsAt)} (Türkiye saati)</p>
+                <p className="text-sm text-[#6B5E68] mt-3">Bu form kayıt talebi oluşturur; katılımınız sizinle iletişime geçildikten sonra netleştirilir.</p>
+              </> : <p role="alert">Seçilen ders bulunamadı. Lütfen takvimden yeniden seçim yapın.</p>}
+              <Link href="/ders-takvimi" className="inline-block mt-3 text-sm text-[#6B3D7A] underline">Ders takvimine dön</Link>
             </div>
           ) : null}
 
@@ -226,6 +260,7 @@ export default function RandevuPage() {
           </div>
 
           {/* Ders Seçimi */}
+          {!scheduledLesson && sessionId === null ? <>
           <div>
             <label className="block text-sm font-medium text-[#1A1218] mb-2">Katılmak istediğiniz ders *</label>
             <div className="flex flex-wrap gap-2">
@@ -281,6 +316,8 @@ export default function RandevuPage() {
             </div>
           ) : null}
 
+          </> : null}
+
           {/* Deneyim */}
           {deneyimGoster ? (
             <div>
@@ -318,10 +355,10 @@ export default function RandevuPage() {
 
           <button
             type="submit"
-            disabled={gonderiliyor}
+            disabled={gonderiliyor || (sessionId !== null && !scheduledLesson)}
             className="w-full py-4 bg-[#C9A87A] text-[#1A1218] font-medium rounded-xl hover:bg-[#B8976A] transition-colors text-sm tracking-wide disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {gonderiliyor ? 'Kayit gonderiliyor...' : 'Kaydi Tamamla'}
+            {gonderiliyor ? 'Talep gönderiliyor...' : scheduledLesson ? 'Kayıt talebi oluştur' : 'Kaydı Tamamla'}
           </button>
         </form>
       </section>
