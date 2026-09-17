@@ -7,6 +7,7 @@ import { useState } from 'react';
 const links = [
   { href: '/', label: 'Ana Sayfa' },
   { href: '/dersler', label: 'Dersler' },
+  { href: '/ders-takvimi', label: 'Ders Takvimi' },
   { href: '/blog', label: 'Blog' },
   { href: '/hakkimda', label: 'Hakkımda' },
   { href: '/iletisim', label: 'İletişim' },
@@ -35,7 +36,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -54,16 +55,17 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href="/randevu"
-          className="hidden md:inline-flex items-center px-5 py-2 bg-[#C9A87A] text-[#1A1218] text-sm font-medium rounded-full hover:bg-[#b8976a] transition-colors"
+          className="hidden lg:inline-flex items-center px-5 py-2 bg-[#C9A87A] text-[#1A1218] text-sm font-medium rounded-full hover:bg-[#b8976a] transition-colors"
         >
           Derse Kaydol
         </Link>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menü"
+          aria-expanded={menuOpen}
         >
           <span className={`block w-6 h-0.5 bg-[#1A1218] transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-[#1A1218] transition-all ${menuOpen ? 'opacity-0' : ''}`} />
@@ -73,7 +75,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#FAF8F4] border-t border-[#EDE0F5] px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-[#FAF8F4] border-t border-[#EDE0F5] px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <Link
               key={link.href}

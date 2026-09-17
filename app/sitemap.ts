@@ -6,6 +6,7 @@ const routes = [
   "",
   "/blog",
   "/dersler",
+  "/ders-takvimi",
   "/galeri",
   "/hakkimda",
   "/iletisim",
