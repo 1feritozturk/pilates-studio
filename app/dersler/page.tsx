@@ -63,7 +63,7 @@ export default function DerslerPage() {
           }}
         />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(155,127,173,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(155,127,173,0.12)_1px,transparent_1px)] [background-size:42px_42px]" />
-        <div className="relative max-w-6xl mx-auto px-6 pt-12 pb-8 md:py-24">
+        <div className="relative max-w-6xl mx-auto px-6 pt-12 pb-8 md:pt-14 md:pb-12">
           <div className="max-w-3xl">
             <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-3">Programlar</p>
             <h1
@@ -90,15 +90,15 @@ export default function DerslerPage() {
       </section>
 
       {/* Giriş */}
-      <section className="py-8 md:py-12 max-w-6xl mx-auto px-6 border-b border-[#EDE0F5]">
+      <section className="pt-8 pb-0 md:pt-10 max-w-6xl mx-auto px-6">
         <p className="text-base text-[#6B5E68] max-w-2xl leading-relaxed">
-          İki farklı ders formatı sunuyorum: küçük gruplarla yapılan canlı online grup dersleri ve tamamen size özel bireysel seanslar. İkisi de Zoom üzerinden gerçekleşiyor, kayıt opsiyonu mevcut.
+          En fazla 8 kişilik gruplar veya size özel bireysel seanslar arasından seçim yapın. Derslere canlı katılabilir, kayıt seçeneğinden yararlanabilirsiniz.
         </p>
       </section>
 
       {/* GRUP DERSLERİ */}
-      <section id="grup-dersleri" className="scroll-mt-28 py-8 md:py-16 max-w-6xl mx-auto px-6">
-        <div className="flex items-baseline gap-4 mb-8 md:mb-10">
+      <section id="grup-dersleri" className="scroll-mt-28 py-8 md:pt-12 md:pb-8 max-w-6xl mx-auto px-6">
+        <div className="flex items-baseline gap-4 mb-8">
           <h2
             className="text-3xl font-semibold text-[#1A1218]"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -144,7 +144,7 @@ export default function DerslerPage() {
         </div>
       </section>
 
-      <section className="py-8 md:py-16 max-w-6xl mx-auto px-6">
+      <section className="py-8 md:pt-8 md:pb-12 max-w-6xl mx-auto px-6">
         <div className="rounded-[2rem] border border-[#EDE0F5] bg-white p-8">
           <h2
             className="text-3xl font-semibold text-[#1A1218] mb-4"
@@ -176,9 +176,9 @@ export default function DerslerPage() {
       </section>
 
       {/* BİREYSEL DERS */}
-      <section id="bireysel-ders" className="scroll-mt-28 bg-[#F5F0F8] py-10 md:py-16">
+      <section id="bireysel-ders" className="scroll-mt-28 bg-[#F5F0F8] py-10 md:py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-8 md:mb-10">
+          <div className="mb-8">
             <h2
               className="text-3xl font-semibold text-[#1A1218]"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -228,10 +228,10 @@ export default function DerslerPage() {
       </section>
 
       {/* Platform bilgisi */}
-      <section className="py-10 md:py-16 max-w-4xl mx-auto px-6 text-center">
+      <section className="py-10 md:py-12 max-w-4xl mx-auto px-6 text-center">
         <p className="text-[#6B3D7A] text-sm font-medium tracking-[0.12em] uppercase mb-4">Nasıl çalışır?</p>
         <h2
-          className="text-3xl font-semibold leading-snug text-[#1A1218] mb-8 md:mb-10"
+          className="text-3xl font-semibold leading-snug text-[#1A1218] mb-8"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
           Dört adımda online derse başlayın

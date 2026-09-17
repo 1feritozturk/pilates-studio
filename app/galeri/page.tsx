@@ -91,7 +91,7 @@ export default function GaleriPage() {
       </section>
 
       {/* Galeri Grid */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
+      <section className="py-16 md:py-12 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {fotograflar.map((foto) => (
             <div
@@ -116,7 +116,7 @@ export default function GaleriPage() {
       </section>
 
       {/* Instagram CTA */}
-      <section className="bg-[#F4F3F1] py-16 text-center">
+      <section className="bg-[#F4F3F1] py-16 md:py-12 text-center">
         <p className="text-[#7D9B76] text-sm font-medium tracking-[0.2em] uppercase mb-3">Sosyal Medya</p>
         <h2
           className="text-3xl font-semibold text-[#1C1C1C] mb-3"
