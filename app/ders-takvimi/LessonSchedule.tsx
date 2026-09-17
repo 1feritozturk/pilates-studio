@@ -94,26 +94,23 @@ export default function LessonSchedule({ initialNow }: { initialNow: number }) {
                 .map((lesson) => {
                   const seri = dersSerileri[lesson.series];
                   const acik = isLessonOpen(lesson, now);
-                  const dakika = (Date.parse(lesson.endsAt) - Date.parse(lesson.startsAt)) / 60000;
 
                   return (
                     <article
                       key={lesson.id}
-                      className="grid grid-cols-1 sm:grid-cols-[100px_minmax(0,1fr)] lg:grid-cols-[110px_minmax(0,1fr)_auto] gap-5 items-center rounded-3xl border border-[#E8D8F0] bg-white p-5 md:p-7"
+                      className="grid grid-cols-1 sm:grid-cols-[auto_minmax(0,1fr)] lg:grid-cols-[auto_minmax(0,1fr)_auto] gap-5 items-center rounded-3xl border border-[#E8D8F0] bg-white p-5 md:p-7"
                     >
-                      <div className="flex sm:flex-col gap-2 sm:gap-1 sm:self-stretch sm:justify-center border-b sm:border-b-0 sm:border-r border-[#E8D8F0] pb-3 sm:pb-0">
-                        <time dateTime={lesson.startsAt} className="text-2xl font-medium tabular-nums">
-                          {formatLessonTime(lesson.startsAt)}
-                        </time>
-                        <span className="text-sm text-[#6B5E68] self-center sm:self-start">
-                          – <time dateTime={lesson.endsAt}>{formatLessonTime(lesson.endsAt)}</time>
-                        </span>
+                      <div className="flex sm:self-stretch sm:items-center border-b sm:border-b-0 sm:border-r border-[#E8D8F0] pb-3 sm:pb-0 sm:pr-5">
+                        <p className="text-xl font-medium tabular-nums whitespace-nowrap">
+                          <time dateTime={lesson.startsAt}>{formatLessonTime(lesson.startsAt)}</time>
+                          <span className="mx-1 text-[#6B5E68]">–</span>
+                          <time dateTime={lesson.endsAt}>{formatLessonTime(lesson.endsAt)}</time>
+                        </p>
                       </div>
 
                       <div className="min-w-0">
                         <p className="text-xs text-[#6B3D7A] mb-2">
-                          Canlı · Zoom <span className="mx-2">/</span> {dakika} dakika
-                          <span className="mx-2">/</span> {seri.kisaAd}
+                          Canlı · Zoom <span className="mx-2">/</span> {seri.kisaAd}
                         </p>
                         <h3 className="text-lg font-medium leading-relaxed mb-2">{lesson.title}</h3>
                         <p className="text-sm text-[#6B5E68]">Elvin Öztürk ile</p>
